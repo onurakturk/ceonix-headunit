@@ -39,4 +39,6 @@ CEONIX Ride does not integrate any third-party analytics SDKs, advertising netwo
 6. Contact Us
 
 If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us:
-https://github.com/onurakturk/ceonix-ride/issues
+
+* E-mail: info.ceonix@gmail.com
+* Issue tracker: https://github.com/onurakturk/ceonix-ride/issues
