@@ -19,7 +19,7 @@
 > **v1.0.83'te:** **Vehicle ID**, `Vehicle information` ekranından (eski S3.1.5) **Developer'a**
 > taşındı — yeni **S2.8 Vehicle** kategorisi, Audio ile Debug'ın tam arasında. Diğer 7 araç alanı
 > yerinde kaldı; hiçbir değer değişmedi. Sebep: bu alan telefonun aracı tanıdığı **eşleştirme
-> anahtarı**, son kullanıcının kurcalayacağı bir şey değil (bkz. CLAUDE.md v1.0.42 saha kaydı).
+> anahtarı**, son kullanıcının kurcalayacağı bir şey değil (v1.0.42 saha kaydı).
 >
 > **v1.0.82'de: Save butonu KALKTI — her ayar anında kaydediliyor.** Altı ekran (`SettingsFragment`
 > bölümleri, Dark Mode, Auto-start, Auto-Connect, Mikrofon, Vehicle information) `pending*` +
