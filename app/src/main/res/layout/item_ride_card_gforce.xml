@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    G-FORCE page of the Ride screen's third card slot: longitudinal acceleration and braking.
+
+    Root is match_parent/match_parent - ViewPager2 throws "Pages must fill the whole ViewPager2"
+    for anything else. paddingEnd is 16dp because the pager insets 10dp to clear the card's accent
+    bar, the same trade the sunset page makes.
+
+    The top-right corner is reserved for the page indicator (see RideCardDotsView) - keep it empty.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="18dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="18dp"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ride_gforce"
+        android:textColor="@color/m3_primary"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <com.andrerinas.headunitrevived.main.ride.GForceGaugeView
+            android:id="@+id/gforce_gauge"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="bottom">
+
+                <TextView
+                    android:id="@+id/tv_gforce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/m3_on_surface"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    android:includeFontPadding="false"
+                    android:fontFeatureSettings="tnum"
+                    tools:text="0.42" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="@string/ride_gforce_unit"
+                    android:textColor="@color/m3_primary"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:includeFontPadding="false" />
+
+            </LinearLayout>
+
+            <!-- The maxima sit side by side rather than stacked: on a short screen the card is only
+                 ~100dp wide here, and "MAX BRAKE" plus its value will not share a line. Value over
+                 label is the same arrangement the LEAN card uses for its recorded angles. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/bg_ride_readout_row"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:id="@+id/tv_gforce_max_acc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/m3_on_surface"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:includeFontPadding="false"
+                        android:fontFeatureSettings="tnum"
+                        tools:text="0.62" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/ride_gforce_max_acc"
+                        android:textColor="@color/m3_on_surface_variant"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:includeFontPadding="false"
+                        android:ellipsize="end"
+                        android:maxLines="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/bg_ride_readout_row"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:id="@+id/tv_gforce_max_brake"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/m3_on_surface"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:includeFontPadding="false"
+                        android:fontFeatureSettings="tnum"
+                        tools:text="0.90" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/ride_gforce_max_brake"
+                        android:textColor="@color/m3_on_surface_variant"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:includeFontPadding="false"
+                        android:ellipsize="end"
+                        android:maxLines="1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

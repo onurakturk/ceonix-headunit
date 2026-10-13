@@ -1,0 +1,47 @@
+<resources>
+    <string name="step_heading">Zanim zaczniesz</string>
+    <string name="intro">Jednostka główna nie może odczytać własnego adresu Wi-Fi – Android ukrywa go przed aplikacjami. Ten telefon go widzi, więc ta aplikacja wyszukuje go i przekazuje.\n\nOtwórz na jednostce <b>Ustawienia › Konfiguracja Wi-Fi</b> i upewnij się, że Android Auto <b>nie</b> jest połączone.</string>
+    <string name="working">Szukam… to potrwa około pół minuty.</string>
+    <string name="busy_label">Pracuję…</string>
+
+    <string name="action_fix">Znajdź jednostkę główną</string>
+    <string name="action_retry">Szukaj ponownie</string>
+    <string name="action_send">Wyślij do jednostki</string>
+    <string name="pick_device">Które urządzenie to jednostka główna?</string>
+    <string name="no_bonded_devices">Brak sparowanych urządzeń Bluetooth. Najpierw sparuj jednostkę główną z tym telefonem.</string>
+    <string name="sending">Przekazywanie adresu…</string>
+    <string name="sending_step">Przekazywanie adresu… (%1$s)\n\nKażdy krok może potrwać do pół minuty.</string>
+    <string name="action_copy">Kopiuj adres</string>
+    <string name="copied">Skopiowano</string>
+
+    <string name="found_heading">Znaleziono jednostkę główną</string>
+    <string name="found_body">To jej sieć Wi-Fi Direct. Przekaż adres poniżej albo wpisz go samodzielnie na jednostce.</string>
+    <string name="label_network">Sieć</string>
+    <string name="label_address">Adres</string>
+
+    <string name="not_found_heading">Nie widać jednostki głównej</string>
+    <string name="not_found_body">Ten telefon szukał na oba dostępne sposoby i nie znalazł sieci jednostki. Sprawdź, czy:</string>
+    <string name="check_power">jednostka jest włączona</string>
+    <string name="check_screen">jest na niej otwarty ekran Ustawienia › Konfiguracja Wi-Fi</string>
+    <string name="check_auto">Android Auto nie jest połączone</string>
+    <string name="near_miss">Najbliższe, co widział ten telefon, to %1$s (%2$s).</string>
+
+    <string name="action_send_anyway">Wyślij mimo to</string>
+    <string name="send_anyway_note">Mała szansa. Jednostka potrafi rozpoznać się także po nazwie urządzenia Wi-Fi Direct, której ten telefon nie może odczytać jako nazwy sieci – warto spróbować raz, zanim zrezygnujesz.</string>
+
+    <string name="handed_heading">Gotowe</string>
+    <string name="handed_body">Jednostka zapisała adres i powinna teraz połączyć się sama.</string>
+
+    <string name="details_heading">Szczegóły</string>
+    <string name="action_copy_details">Kopiuj szczegóły</string>
+
+    <string name="stored">Gotowe. Jednostka zapisała %1$s i powinna teraz połączyć się sama.</string>
+    <string name="stored_none">Wysłano, ale jednostka nie rozpoznała niczego, co widział ten telefon. Szukaj ponownie – podczas oczekiwania jednostka co kilka sekund zmienia nazwę swojej sieci, więc to, co odczytał telefon, może być już nieaktualne.</string>
+
+    <string name="error_permission">Ta aplikacja potrzebuje uprawnień do lokalizacji i urządzeń w pobliżu. Android wymaga ich do odczytu sieci Wi-Fi; nic nie jest zapisywane ani nigdzie wysyłane.</string>
+    <string name="error_location_off">Włącz Lokalizację w ustawieniach telefonu. Gdy jest wyłączona, Android nie zwraca żadnych sieci Wi-Fi.</string>
+    <string name="error_wifi_off">Włącz Wi-Fi w tym telefonie, aby mógł zobaczyć sieć jednostki.</string>
+    <string name="error_bluetooth_off">Bluetooth jest wyłączony, więc nie można przekazać adresu. Włącz go i spróbuj ponownie albo wpisz adres ręcznie na jednostce.</string>
+    <string name="error_no_listener">Jednostka nie nasłuchuje. Otwórz na niej <b>Ustawienia › Konfiguracja Wi-Fi</b> i spróbuj ponownie.</string>
+    <string name="error_connection">Utracono połączenie Bluetooth z jednostką. Spróbuj ponownie albo wpisz adres ręcznie na jednostce.</string>
+</resources>

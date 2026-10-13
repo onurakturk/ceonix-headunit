@@ -1,0 +1,38 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!--
+        Universal headlight symbol: reflector lens + three beam rays.
+
+        The group scale exists to match the crescent next to it on the sunset card. The moon's path
+        fills y 2..22 of the viewport (83%); this symbol only reached y 4..20 (67%), so at equal dp
+        it rendered about a third smaller and the pair looked mismatched. 1.18 is the ceiling: the
+        ray tips sit at x=21 and, with half their stroke, land near 23.9 - just inside the viewport.
+    -->
+    <group
+        android:scaleX="1.18"
+        android:scaleY="1.18"
+        android:pivotX="12"
+        android:pivotY="12">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M12,4C7,4 3,7.6 3,12c0,4.4 4,8 9,8c1.2,0 1.6,-1 1.4,-2.6c-0.3,-1.8 -0.4,-3.6 -0.4,-5.4c0,-1.8 0.1,-3.6 0.4,-5.4C13.6,5 13.2,4 12,4z" />
+        <path
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="2.2"
+            android:strokeLineCap="round"
+            android:pathData="M15.8,8 L21,9.4" />
+        <path
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="2.2"
+            android:strokeLineCap="round"
+            android:pathData="M15.8,12 L21,13.4" />
+        <path
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="2.2"
+            android:strokeLineCap="round"
+            android:pathData="M15.8,16 L21,17.4" />
+    </group>
+</vector>

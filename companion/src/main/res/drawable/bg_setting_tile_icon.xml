@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tonal container behind an icon. Same primary-container / on-primary-container pair the head
+     unit uses on its home tiles and settings hub, so the two apps read as one product. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/m3_primary_cont" />
+    <corners android:radius="16dp" />
+</shape>

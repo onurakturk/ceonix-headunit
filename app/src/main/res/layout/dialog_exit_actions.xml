@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Sizes come from @dimen so the dialog can shrink on short screens (see values/dimens.xml and
+    values-h380dp/dimens.xml). The ScrollView is a safety net only: when the content fits it has
+    no visual effect, but it scrolls instead of clipping on an unusually short screen or with a
+    large system font scale.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <!--
+        match_parent, not wrap_content: the dialog stretches its custom view to the window width,
+        and a wrap_content row would then sit against the start edge instead of centred.
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingStart="@dimen/exit_dialog_padding_h"
+        android:paddingEnd="@dimen/exit_dialog_padding_h"
+        android:paddingTop="@dimen/exit_dialog_padding_top"
+        android:paddingBottom="8dp">
+
+        <!-- Exit: stop the connection -->
+        <LinearLayout
+            android:id="@+id/action_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/exit_action_gap"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="@dimen/exit_action_icon"
+                android:layout_height="@dimen/exit_action_icon"
+                android:background="@drawable/bg_m3_chip"
+                android:backgroundTint="@color/m3_surface_container_high"
+                android:padding="@dimen/exit_action_icon_padding"
+                android:src="@drawable/ic_m3_logout"
+                android:contentDescription="@string/exit"
+                android:tint="@color/m3_error" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/exit_action_label_margin"
+                android:text="@string/exit"
+                android:textColor="@color/m3_on_surface"
+                android:textSize="@dimen/exit_action_label"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Pause: move the projection to the background -->
+        <LinearLayout
+            android:id="@+id/action_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/exit_action_gap"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="@dimen/exit_action_icon"
+                android:layout_height="@dimen/exit_action_icon"
+                android:background="@drawable/bg_m3_chip"
+                android:backgroundTint="@color/m3_surface_container_high"
+                android:padding="@dimen/exit_action_icon_padding"
+                android:src="@drawable/ic_m3_pause"
+                android:contentDescription="@string/exit_pause"
+                android:tint="@color/m3_on_surface" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/exit_action_label_margin"
+                android:text="@string/exit_pause"
+                android:textColor="@color/m3_on_surface"
+                android:textSize="@dimen/exit_action_label"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

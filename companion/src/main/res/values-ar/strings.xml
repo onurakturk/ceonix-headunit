@@ -1,0 +1,47 @@
+<resources>
+    <string name="step_heading">قبل أن تبدأ</string>
+    <string name="intro">لا تستطيع الوحدة الرئيسية قراءة عنوان Wi-Fi الخاص بها، لأن Android يخفيه عن التطبيقات. هذا الهاتف يستطيع رؤيته، لذا يبحث هذا التطبيق عنه ويسلّمه لها.\n\nافتح <b>الإعدادات › إعداد Wi-Fi</b> على الوحدة الرئيسية، وتأكد من أن Android Auto <b>غير</b> متصل.</string>
+    <string name="working">جارٍ البحث… يستغرق ذلك نحو نصف دقيقة.</string>
+    <string name="busy_label">جارٍ العمل…</string>
+
+    <string name="action_fix">البحث عن الوحدة الرئيسية</string>
+    <string name="action_retry">البحث مجددًا</string>
+    <string name="action_send">الإرسال إلى الوحدة الرئيسية</string>
+    <string name="pick_device">أيّ جهاز هو الوحدة الرئيسية؟</string>
+    <string name="no_bonded_devices">لا توجد أجهزة Bluetooth مقترنة. اقرن الوحدة الرئيسية بهذا الهاتف أولًا.</string>
+    <string name="sending">جارٍ تسليم العنوان…</string>
+    <string name="sending_step">جارٍ تسليم العنوان… (%1$s)\n\nقد تستغرق كل خطوة حتى نصف دقيقة.</string>
+    <string name="action_copy">نسخ العنوان</string>
+    <string name="copied">تم النسخ</string>
+
+    <string name="found_heading">تم العثور على الوحدة الرئيسية</string>
+    <string name="found_body">هذه شبكة Wi-Fi Direct الخاصة بها. سلّم العنوان من الأسفل أو اكتبه بنفسك على الوحدة الرئيسية.</string>
+    <string name="label_network">الشبكة</string>
+    <string name="label_address">العنوان</string>
+
+    <string name="not_found_heading">تعذّرت رؤية الوحدة الرئيسية</string>
+    <string name="not_found_body">بحث هذا الهاتف بالطريقتين المتاحتين له ولم يجد شبكة الوحدة الرئيسية. تأكد من أن:</string>
+    <string name="check_power">الوحدة الرئيسية قيد التشغيل</string>
+    <string name="check_screen">شاشة الإعدادات › إعداد Wi-Fi مفتوحة عليها</string>
+    <string name="check_auto">Android Auto غير متصل</string>
+    <string name="near_miss">أقرب ما رآه هذا الهاتف كان %1$s (%2$s).</string>
+
+    <string name="action_send_anyway">الإرسال على أي حال</string>
+    <string name="send_anyway_note">احتمال ضعيف. تستطيع الوحدة الرئيسية التعرّف على نفسها أيضًا من اسم جهاز Wi-Fi Direct الخاص بها، وهو ما لا يستطيع هذا الهاتف قراءته كاسم شبكة، لذا تستحق محاولة واحدة قبل الاستسلام.</string>
+
+    <string name="handed_heading">تم</string>
+    <string name="handed_body">حفظت الوحدة الرئيسية العنوان ويُفترض أن تتصل تلقائيًا الآن.</string>
+
+    <string name="details_heading">التفاصيل</string>
+    <string name="action_copy_details">نسخ التفاصيل</string>
+
+    <string name="stored">تم. حفظت الوحدة الرئيسية %1$s ويُفترض أن تتصل تلقائيًا الآن.</string>
+    <string name="stored_none">تم الإرسال، لكن الوحدة الرئيسية لم تتعرّف على أي شيء رآه هذا الهاتف. ابحث مجددًا: أثناء الانتظار تعيد الوحدة تسمية شبكتها كل بضع ثوانٍ، لذا قد يكون ما قرأه الهاتف قديمًا.</string>
+
+    <string name="error_permission">يحتاج هذا التطبيق إلى إذن الموقع وإذن الأجهزة المجاورة. يشترط Android ذلك لقراءة شبكات Wi-Fi؛ لا يُخزَّن أي شيء ولا يُرسَل إلى أي مكان آخر.</string>
+    <string name="error_location_off">شغّل الموقع من إعدادات الهاتف. لا يعرض Android أي شبكات Wi-Fi ما دام متوقفًا.</string>
+    <string name="error_wifi_off">شغّل Wi-Fi على هذا الهاتف ليتمكن من رؤية شبكة الوحدة الرئيسية.</string>
+    <string name="error_bluetooth_off">Bluetooth متوقف، لذا لا يمكن تسليم العنوان. شغّله وحاول مجددًا، أو اكتب العنوان يدويًا على الوحدة الرئيسية.</string>
+    <string name="error_no_listener">الوحدة الرئيسية لا تستمع. افتح <b>الإعدادات › إعداد Wi-Fi</b> عليها وحاول مجددًا.</string>
+    <string name="error_connection">انقطع اتصال Bluetooth بالوحدة الرئيسية. حاول مجددًا أو اكتب العنوان يدويًا على الوحدة الرئيسية.</string>
+</resources>

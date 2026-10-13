@@ -1,0 +1,47 @@
+<resources>
+    <string name="step_heading">Bevor es losgeht</string>
+    <string name="intro">Die Haupteinheit kann ihre eigene WLAN-Adresse nicht lesen – Android verbirgt sie vor Apps. Dieses Telefon kann sie sehen, also sucht diese App sie heraus und übergibt sie.\n\nÖffne auf der Haupteinheit <b>Einstellungen › WLAN-Einrichtung</b> und stelle sicher, dass Android Auto <b>nicht</b> verbunden ist.</string>
+    <string name="working">Suche läuft … das dauert etwa eine halbe Minute.</string>
+    <string name="busy_label">Läuft …</string>
+
+    <string name="action_fix">Haupteinheit suchen</string>
+    <string name="action_retry">Erneut suchen</string>
+    <string name="action_send">An die Haupteinheit senden</string>
+    <string name="pick_device">Welches Gerät ist die Haupteinheit?</string>
+    <string name="no_bonded_devices">Keine gekoppelten Bluetooth-Geräte. Kopple zuerst die Haupteinheit mit diesem Telefon.</string>
+    <string name="sending">Adresse wird übergeben …</string>
+    <string name="sending_step">Adresse wird übergeben … (%1$s)\n\nJeder Schritt kann bis zu einer halben Minute dauern.</string>
+    <string name="action_copy">Adresse kopieren</string>
+    <string name="copied">Kopiert</string>
+
+    <string name="found_heading">Haupteinheit gefunden</string>
+    <string name="found_body">Das ist ihr Wi-Fi-Direct-Netzwerk. Übergib die Adresse unten oder tippe sie selbst in die Haupteinheit ein.</string>
+    <string name="label_network">Netzwerk</string>
+    <string name="label_address">Adresse</string>
+
+    <string name="not_found_heading">Haupteinheit nicht gesehen</string>
+    <string name="not_found_body">Dieses Telefon hat auf beiden möglichen Wegen gesucht und das Netzwerk der Haupteinheit nicht gefunden. Prüfe, ob:</string>
+    <string name="check_power">die Haupteinheit eingeschaltet ist</string>
+    <string name="check_screen">dort Einstellungen › WLAN-Einrichtung geöffnet ist</string>
+    <string name="check_auto">Android Auto nicht verbunden ist</string>
+    <string name="near_miss">Am nächsten kam %1$s (%2$s).</string>
+
+    <string name="action_send_anyway">Trotzdem senden</string>
+    <string name="send_anyway_note">Ein Versuch ins Blaue. Die Haupteinheit kann sich auch an ihrem Wi-Fi-Direct-Gerätenamen erkennen, den dieses Telefon nicht als Netzwerknamen lesen kann – einen Versuch ist es wert, bevor du aufgibst.</string>
+
+    <string name="handed_heading">Fertig</string>
+    <string name="handed_body">Die Haupteinheit hat die Adresse gespeichert und sollte sich jetzt von selbst verbinden.</string>
+
+    <string name="details_heading">Details</string>
+    <string name="action_copy_details">Details kopieren</string>
+
+    <string name="stored">Fertig. Die Haupteinheit hat %1$s gespeichert und sollte sich jetzt von selbst verbinden.</string>
+    <string name="stored_none">Gesendet, aber die Haupteinheit hat nichts von dem erkannt, was dieses Telefon gesehen hat. Suche erneut – während sie wartet, benennt die Haupteinheit ihr Netzwerk alle paar Sekunden um, der gelesene Name kann also schon veraltet sein.</string>
+
+    <string name="error_permission">Diese App benötigt die Berechtigungen für Standort und Geräte in der Nähe. Android verlangt sie zum Lesen von WLAN-Netzwerken; nichts wird gespeichert oder woandershin gesendet.</string>
+    <string name="error_location_off">Schalte den Standort in den Telefoneinstellungen ein. Solange er aus ist, liefert Android keine WLAN-Netzwerke.</string>
+    <string name="error_wifi_off">Schalte WLAN auf diesem Telefon ein, damit es das Netzwerk der Haupteinheit sehen kann.</string>
+    <string name="error_bluetooth_off">Bluetooth ist aus, daher kann die Adresse nicht übergeben werden. Schalte es ein und versuche es erneut oder tippe die Adresse von Hand in die Haupteinheit ein.</string>
+    <string name="error_no_listener">Die Haupteinheit hört nicht zu. Öffne dort <b>Einstellungen › WLAN-Einrichtung</b> und versuche es erneut.</string>
+    <string name="error_connection">Die Bluetooth-Verbindung zur Haupteinheit ist abgebrochen. Versuche es erneut oder tippe die Adresse von Hand in die Haupteinheit ein.</string>
+</resources>

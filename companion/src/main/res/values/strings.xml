@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name" translatable="false">CEONIX Ride Helper</string>
+
+    <string name="step_heading">Before you start</string>
+    <string name="intro">Your head unit cannot read its own Wi‑Fi address — Android hides it from apps. This phone can see it, so this app looks it up and hands it over.\n\nOpen <b>Settings › Wi‑Fi Setup</b> on the head unit, and make sure Android Auto is <b>not</b> connected.</string>
+    <string name="working">Looking… this takes about half a minute.</string>
+    <string name="busy_label">Working…</string>
+
+    <string name="action_fix">Find the head unit</string>
+    <string name="action_retry">Search again</string>
+    <string name="action_send">Send to the head unit</string>
+    <string name="pick_device">Which one is the head unit?</string>
+    <string name="no_bonded_devices">No paired Bluetooth devices. Pair the head unit with this phone first.</string>
+    <string name="sending">Handing the address over…</string>
+    <string name="sending_step">Handing the address over… (%1$s)\n\nEach step can take up to half a minute.</string>
+    <string name="action_copy">Copy address</string>
+    <string name="copied">Copied</string>
+
+    <!-- Found: a DIRECT-…CEONIX network, which is the one thing this app is looking for. -->
+    <string name="found_heading">Found the head unit</string>
+    <string name="found_body">This is its Wi‑Fi Direct network. Hand the address over below, or type it into the head unit yourself.</string>
+    <string name="label_network">Network</string>
+    <string name="label_address">Address</string>
+
+    <!-- Not found. Careful with this wording: the naming convention is a hint, not proof, so this
+         must not claim the head unit is absent — only that this phone did not see its network. -->
+    <string name="not_found_heading">Could not see the head unit</string>
+    <string name="not_found_body">This phone looked both of the ways it can and did not find the head unit\'s network. Check that:</string>
+    <string name="check_power">the head unit is switched on</string>
+    <string name="check_screen">its Settings › Wi‑Fi Setup screen is open</string>
+    <string name="check_auto">Android Auto is not connected</string>
+    <string name="near_miss">The closest thing this phone saw was %1$s (%2$s).</string>
+
+    <string name="action_send_anyway">Send anyway</string>
+    <string name="send_anyway_note">A long shot. The head unit can also recognise itself by its Wi‑Fi Direct device name, which this phone cannot read as a network name — so it is worth one try before giving up.</string>
+
+    <string name="handed_heading">Done</string>
+    <string name="handed_body">The head unit stored the address and should connect on its own now.</string>
+
+    <!-- The report under Details is a diagnostic dump the rider copies to support, so its
+         headings stay in English like the notes the scanner writes into it. -->
+    <string name="details_heading">Details</string>
+    <string name="action_copy_details">Copy details</string>
+    <string name="report_handover_heading" translatable="false">Handover</string>
+    <string name="report_scan_heading" translatable="false">Wi‑Fi scan (%1$d networks, %2$s)</string>
+    <string name="report_scan_fresh" translatable="false">fresh sweep</string>
+    <string name="report_scan_cached" translatable="false">cached — Android refused a new sweep</string>
+    <string name="report_peers_heading" translatable="false">Wi‑Fi Direct discovery (%1$d peers)</string>
+    <string name="report_nothing" translatable="false">nothing</string>
+
+    <string name="stored">Done. The head unit stored %1$s and should connect on its own now.</string>
+    <string name="stored_none">Sent, but the head unit did not recognise anything this phone saw. Search again — while it waits, the head unit renames its network every few seconds, so what this phone read may already be stale.</string>
+
+    <string name="error_permission">This app needs location and nearby‑devices permission. Android requires it to read Wi‑Fi networks; nothing is stored or sent anywhere else.</string>
+    <string name="error_location_off">Turn on Location in your phone settings. Android returns no Wi‑Fi networks while it is off.</string>
+    <string name="error_wifi_off">Turn on Wi‑Fi on this phone so it can see the head unit\'s network.</string>
+    <string name="error_bluetooth_off">Bluetooth is off, so the address cannot be handed over. Turn it on and try again, or type the address into the head unit by hand.</string>
+    <string name="error_no_listener">The head unit is not listening. Open <b>Settings › Wi‑Fi Setup</b> on it and try again.</string>
+    <string name="error_connection">Lost the Bluetooth connection to the head unit. Try again, or type the address into the head unit by hand.</string>
+</resources>

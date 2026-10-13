@@ -1,0 +1,47 @@
+<resources>
+    <string name="step_heading">Antes de empezar</string>
+    <string name="intro">Tu unidad no puede leer su propia dirección Wi-Fi: Android la oculta a las aplicaciones. Este teléfono sí puede verla, así que esta aplicación la busca y se la entrega.\n\nAbre <b>Configuración › Configuración de Wi-Fi</b> en la unidad y asegúrate de que Android Auto <b>no</b> esté conectado.</string>
+    <string name="working">Buscando… tarda aproximadamente medio minuto.</string>
+    <string name="busy_label">Trabajando…</string>
+
+    <string name="action_fix">Buscar la unidad</string>
+    <string name="action_retry">Buscar de nuevo</string>
+    <string name="action_send">Enviar a la unidad</string>
+    <string name="pick_device">¿Cuál es la unidad?</string>
+    <string name="no_bonded_devices">No hay dispositivos Bluetooth emparejados. Empareja primero la unidad con este teléfono.</string>
+    <string name="sending">Entregando la dirección…</string>
+    <string name="sending_step">Entregando la dirección… (%1$s)\n\nCada paso puede tardar hasta medio minuto.</string>
+    <string name="action_copy">Copiar dirección</string>
+    <string name="copied">Copiado</string>
+
+    <string name="found_heading">Unidad encontrada</string>
+    <string name="found_body">Esta es su red Wi-Fi Direct. Entrega la dirección abajo o escríbela tú mismo en la unidad.</string>
+    <string name="label_network">Red</string>
+    <string name="label_address">Dirección</string>
+
+    <string name="not_found_heading">No se pudo ver la unidad</string>
+    <string name="not_found_body">Este teléfono buscó de las dos formas que puede y no encontró la red de la unidad. Comprueba que:</string>
+    <string name="check_power">la unidad está encendida</string>
+    <string name="check_screen">su pantalla Configuración › Configuración de Wi-Fi está abierta</string>
+    <string name="check_auto">Android Auto no está conectado</string>
+    <string name="near_miss">Lo más parecido que vio este teléfono fue %1$s (%2$s).</string>
+
+    <string name="action_send_anyway">Enviar de todos modos</string>
+    <string name="send_anyway_note">Es poco probable. La unidad también puede reconocerse por su nombre de dispositivo Wi-Fi Direct, que este teléfono no puede leer como nombre de red, así que vale la pena un intento antes de rendirse.</string>
+
+    <string name="handed_heading">Listo</string>
+    <string name="handed_body">La unidad guardó la dirección y ahora debería conectarse sola.</string>
+
+    <string name="details_heading">Detalles</string>
+    <string name="action_copy_details">Copiar detalles</string>
+
+    <string name="stored">Listo. La unidad guardó %1$s y ahora debería conectarse sola.</string>
+    <string name="stored_none">Enviado, pero la unidad no reconoció nada de lo que vio este teléfono. Busca de nuevo: mientras espera, la unidad cambia el nombre de su red cada pocos segundos, así que lo que leyó este teléfono puede estar ya obsoleto.</string>
+
+    <string name="error_permission">Esta aplicación necesita los permisos de ubicación y de dispositivos cercanos. Android los exige para leer redes Wi-Fi; no se guarda ni se envía nada a ningún otro lugar.</string>
+    <string name="error_location_off">Activa la ubicación en los ajustes del teléfono. Android no devuelve redes Wi-Fi mientras está desactivada.</string>
+    <string name="error_wifi_off">Activa el Wi-Fi en este teléfono para que pueda ver la red de la unidad.</string>
+    <string name="error_bluetooth_off">El Bluetooth está desactivado, así que no se puede entregar la dirección. Actívalo e inténtalo de nuevo, o escribe la dirección a mano en la unidad.</string>
+    <string name="error_no_listener">La unidad no está escuchando. Abre <b>Configuración › Configuración de Wi-Fi</b> en ella e inténtalo de nuevo.</string>
+    <string name="error_connection">Se perdió la conexión Bluetooth con la unidad. Inténtalo de nuevo o escribe la dirección a mano en la unidad.</string>
+</resources>

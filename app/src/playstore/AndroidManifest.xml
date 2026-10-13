@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Permissions the Play Store build drops from the shared manifest.
+
+        USE_FULL_SCREEN_INTENT: Play restricts it to calling and alarm apps and asks for a
+        declaration. Here it only backs the last-resort launch strategy, reached when the
+        overlay permission is missing, and the permission dashboard already requires overlay.
+        Without it the same notification is posted as a normal heads-up one.
+
+        ACCESS_SUPERUSER, READ_PHONE_STATE: inherited from upstream, read by no code.
+    -->
+    <uses-permission
+        android:name="android.permission.USE_FULL_SCREEN_INTENT"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.ACCESS_SUPERUSER"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"
+        tools:node="remove" />
+</manifest>

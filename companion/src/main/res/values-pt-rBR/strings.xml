@@ -1,0 +1,47 @@
+<resources>
+    <string name="step_heading">Antes de começar</string>
+    <string name="intro">Sua central não consegue ler o próprio endereço Wi-Fi: o Android o esconde dos apps. Este telefone consegue vê-lo, então este app o procura e o entrega.\n\nAbra <b>Configurações › Configuração de Wi-Fi</b> na central e confirme que o Android Auto <b>não</b> está conectado.</string>
+    <string name="working">Procurando… leva cerca de meio minuto.</string>
+    <string name="busy_label">Trabalhando…</string>
+
+    <string name="action_fix">Encontrar a central</string>
+    <string name="action_retry">Procurar de novo</string>
+    <string name="action_send">Enviar para a central</string>
+    <string name="pick_device">Qual deles é a central?</string>
+    <string name="no_bonded_devices">Nenhum dispositivo Bluetooth pareado. Pareie primeiro a central com este telefone.</string>
+    <string name="sending">Entregando o endereço…</string>
+    <string name="sending_step">Entregando o endereço… (%1$s)\n\nCada etapa pode levar até meio minuto.</string>
+    <string name="action_copy">Copiar endereço</string>
+    <string name="copied">Copiado</string>
+
+    <string name="found_heading">Central encontrada</string>
+    <string name="found_body">Esta é a rede Wi-Fi Direct dela. Entregue o endereço abaixo ou digite-o você mesmo na central.</string>
+    <string name="label_network">Rede</string>
+    <string name="label_address">Endereço</string>
+
+    <string name="not_found_heading">Não foi possível ver a central</string>
+    <string name="not_found_body">Este telefone procurou das duas formas que consegue e não encontrou a rede da central. Verifique se:</string>
+    <string name="check_power">a central está ligada</string>
+    <string name="check_screen">a tela Configurações › Configuração de Wi-Fi está aberta nela</string>
+    <string name="check_auto">o Android Auto não está conectado</string>
+    <string name="near_miss">O mais próximo que este telefone viu foi %1$s (%2$s).</string>
+
+    <string name="action_send_anyway">Enviar mesmo assim</string>
+    <string name="send_anyway_note">É uma tentativa improvável. A central também pode se reconhecer pelo nome de dispositivo Wi-Fi Direct, que este telefone não consegue ler como nome de rede; vale uma tentativa antes de desistir.</string>
+
+    <string name="handed_heading">Pronto</string>
+    <string name="handed_body">A central salvou o endereço e agora deve se conectar sozinha.</string>
+
+    <string name="details_heading">Detalhes</string>
+    <string name="action_copy_details">Copiar detalhes</string>
+
+    <string name="stored">Pronto. A central salvou %1$s e agora deve se conectar sozinha.</string>
+    <string name="stored_none">Enviado, mas a central não reconheceu nada do que este telefone viu. Procure de novo: enquanto espera, a central renomeia a rede a cada poucos segundos, então o que este telefone leu pode já estar desatualizado.</string>
+
+    <string name="error_permission">Este app precisa das permissões de localização e de dispositivos por perto. O Android exige isso para ler redes Wi-Fi; nada é armazenado nem enviado para outro lugar.</string>
+    <string name="error_location_off">Ative a Localização nas configurações do telefone. O Android não retorna redes Wi-Fi enquanto ela está desativada.</string>
+    <string name="error_wifi_off">Ative o Wi-Fi neste telefone para que ele possa ver a rede da central.</string>
+    <string name="error_bluetooth_off">O Bluetooth está desativado, então o endereço não pode ser entregue. Ative-o e tente de novo, ou digite o endereço manualmente na central.</string>
+    <string name="error_no_listener">A central não está escutando. Abra <b>Configurações › Configuração de Wi-Fi</b> nela e tente de novo.</string>
+    <string name="error_connection">A conexão Bluetooth com a central foi perdida. Tente de novo ou digite o endereço manualmente na central.</string>
+</resources>

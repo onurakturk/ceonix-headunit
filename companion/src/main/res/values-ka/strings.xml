@@ -1,0 +1,47 @@
+<resources>
+    <string name="step_heading">დაწყებამდე</string>
+    <string name="intro">მთავარი მოწყობილობა ვერ კითხულობს საკუთარ Wi-Fi მისამართს — Android მას აპებისგან მალავს. ეს ტელეფონი მას ხედავს, ამიტომ ეს აპი პოულობს მისამართს და გადასცემს.\n\nგახსენით მთავარ მოწყობილობაზე <b>პარამეტრები › Wi-Fi კონფიგურაცია</b> და დარწმუნდით, რომ Android Auto დაკავშირებული <b>არ</b> არის.</string>
+    <string name="working">მიმდინარეობს ძებნა… დაახლოებით ნახევარი წუთი სჭირდება.</string>
+    <string name="busy_label">მუშავდება…</string>
+
+    <string name="action_fix">მთავარი მოწყობილობის პოვნა</string>
+    <string name="action_retry">ხელახლა ძებნა</string>
+    <string name="action_send">მთავარ მოწყობილობაზე გაგზავნა</string>
+    <string name="pick_device">რომელია მთავარი მოწყობილობა?</string>
+    <string name="no_bonded_devices">დაწყვილებული Bluetooth მოწყობილობები არ არის. ჯერ დააწყვილეთ მთავარი მოწყობილობა ამ ტელეფონთან.</string>
+    <string name="sending">მისამართის გადაცემა…</string>
+    <string name="sending_step">მისამართის გადაცემა… (%1$s)\n\nთითოეულ ნაბიჯს შეიძლება ნახევარ წუთამდე დასჭირდეს.</string>
+    <string name="action_copy">მისამართის კოპირება</string>
+    <string name="copied">დაკოპირდა</string>
+
+    <string name="found_heading">მთავარი მოწყობილობა ნაპოვნია</string>
+    <string name="found_body">ეს მისი Wi-Fi Direct ქსელია. გადაეცით მისამართი ქვემოთ ან თავად შეიყვანეთ მთავარ მოწყობილობაზე.</string>
+    <string name="label_network">ქსელი</string>
+    <string name="label_address">მისამართი</string>
+
+    <string name="not_found_heading">მთავარი მოწყობილობა ვერ მოიძებნა</string>
+    <string name="not_found_body">ამ ტელეფონმა ორივე შესაძლო გზით მოძებნა და მთავარი მოწყობილობის ქსელი ვერ იპოვა. შეამოწმეთ, რომ:</string>
+    <string name="check_power">მთავარი მოწყობილობა ჩართულია</string>
+    <string name="check_screen">მასზე გახსნილია ეკრანი პარამეტრები › Wi-Fi კონფიგურაცია</string>
+    <string name="check_auto">Android Auto დაკავშირებული არ არის</string>
+    <string name="near_miss">ყველაზე ახლოს, რაც ამ ტელეფონმა ნახა, იყო %1$s (%2$s).</string>
+
+    <string name="action_send_anyway">მაინც გაგზავნა</string>
+    <string name="send_anyway_note">შანსი მცირეა. მთავარ მოწყობილობას თავის ამოცნობა Wi-Fi Direct მოწყობილობის სახელითაც შეუძლია, რომელსაც ეს ტელეფონი ქსელის სახელად ვერ კითხულობს — ერთი ცდა ღირს, სანამ დანებდებით.</string>
+
+    <string name="handed_heading">მზადაა</string>
+    <string name="handed_body">მთავარმა მოწყობილობამ მისამართი შეინახა და ახლა თავად უნდა დაუკავშირდეს.</string>
+
+    <string name="details_heading">დეტალები</string>
+    <string name="action_copy_details">დეტალების კოპირება</string>
+
+    <string name="stored">მზადაა. მთავარმა მოწყობილობამ შეინახა %1$s და ახლა თავად უნდა დაუკავშირდეს.</string>
+    <string name="stored_none">გაიგზავნა, მაგრამ მთავარმა მოწყობილობამ ვერაფერი ამოიცნო იქიდან, რაც ამ ტელეფონმა ნახა. მოძებნეთ ხელახლა: ლოდინის დროს მთავარი მოწყობილობა რამდენიმე წამში ერთხელ უცვლის სახელს თავის ქსელს, ამიტომ ტელეფონის წაკითხული შეიძლება უკვე მოძველებული იყოს.</string>
+
+    <string name="error_permission">ამ აპს სჭირდება მდებარეობისა და ახლომდებარე მოწყობილობების ნებართვა. Android ამას ითხოვს Wi-Fi ქსელების წასაკითხად; არაფერი ინახება და არსად იგზავნება.</string>
+    <string name="error_location_off">ჩართეთ მდებარეობა ტელეფონის პარამეტრებში. სანამ ის გამორთულია, Android Wi-Fi ქსელებს არ აბრუნებს.</string>
+    <string name="error_wifi_off">ჩართეთ Wi-Fi ამ ტელეფონზე, რომ მთავარი მოწყობილობის ქსელი დაინახოს.</string>
+    <string name="error_bluetooth_off">Bluetooth გამორთულია, ამიტომ მისამართის გადაცემა ვერ ხერხდება. ჩართეთ და სცადეთ ხელახლა, ან მისამართი ხელით შეიყვანეთ მთავარ მოწყობილობაზე.</string>
+    <string name="error_no_listener">მთავარი მოწყობილობა არ უსმენს. გახსენით მასზე <b>პარამეტრები › Wi-Fi კონფიგურაცია</b> და სცადეთ ხელახლა.</string>
+    <string name="error_connection">მთავარ მოწყობილობასთან Bluetooth კავშირი გაწყდა. სცადეთ ხელახლა ან მისამართი ხელით შეიყვანეთ მთავარ მოწყობილობაზე.</string>
+</resources>

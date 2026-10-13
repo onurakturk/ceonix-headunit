@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  A category card on the settings hub (S1). Material 3 "list item with leading icon":
+  tonal card, icon in its own rounded container, title + one-line summary, trailing chevron.
+  The card surface comes from the Settings palette (setting_background_color) so the hub and the
+  sub-screens it opens read as one family; the icon uses the same primary-container pair as the
+  home screen cards.
+-->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/setting_background_color"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="0dp"
+    app:rippleColor="?attr/colorAccent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/tileIcon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_setting_tile_icon"
+            android:padding="14dp"
+            android:tint="@color/m3_on_primary_cont"
+            android:contentDescription="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:src="@drawable/ic_m3_display" />
+
+        <TextView
+            android:id="@+id/tileTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@id/tileIcon"
+            app:layout_constraintEnd_toStartOf="@id/tileChevron"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tileSubtitle"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Display" />
+
+        <TextView
+            android:id="@+id/tileSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="14sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@id/tileIcon"
+            app:layout_constraintEnd_toStartOf="@id/tileChevron"
+            app:layout_constraintTop_toBottomOf="@id/tileTitle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="Interface size, dark mode and screen layout" />
+
+        <ImageView
+            android:id="@+id/tileChevron"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_m3_chevron_right"
+            android:tint="?android:attr/textColorSecondary"
+            android:contentDescription="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

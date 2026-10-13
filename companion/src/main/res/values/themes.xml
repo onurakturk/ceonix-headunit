@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        The head unit's design language, on the phone. Everything Material 3 would otherwise paint
+        in its stock purple is pointed at the same GS gold the head unit uses.
+
+        Day and night differ only in the colour values (values-night/colors.xml) and one boolean for
+        the system-bar icons, so there is deliberately no values-night/themes.xml to keep in sync.
+    -->
+    <style name="Theme.CEONIX.Helper" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/m3_primary</item>
+        <item name="colorOnPrimary">@color/m3_on_primary</item>
+        <item name="colorPrimaryContainer">@color/m3_primary_cont</item>
+        <item name="colorOnPrimaryContainer">@color/m3_on_primary_cont</item>
+        <item name="colorSecondary">@color/m3_primary</item>
+        <item name="colorOnSecondary">@color/m3_on_primary</item>
+        <item name="colorSecondaryContainer">@color/m3_surface_container_high</item>
+        <item name="colorOnSecondaryContainer">@color/m3_on_surface</item>
+
+        <item name="colorSurface">@color/m3_surface_container</item>
+        <item name="colorOnSurface">@color/m3_on_surface</item>
+        <item name="colorSurfaceVariant">@color/m3_surface_container_high</item>
+        <item name="colorOnSurfaceVariant">@color/m3_on_surface_variant</item>
+        <item name="colorOutline">@color/m3_outline</item>
+        <item name="colorError">@color/m3_error</item>
+        <item name="android:colorBackground">@color/m3_bg</item>
+
+        <!-- Without this the window flashes stock Material white or black before the layout paints. -->
+        <item name="android:windowBackground">@color/m3_bg</item>
+
+        <!-- AppCompat and framework widgets never learned the Material 3 attributes. Cheap insurance. -->
+        <item name="colorAccent">@color/m3_primary</item>
+        <item name="android:colorAccent">@color/m3_primary</item>
+
+        <!-- Hierarchy is tonal here, never elevation. Left on, dark mode tints raised surfaces with
+             colorPrimary, which with gold turns dialogs a muddy yellow-grey. -->
+        <item name="elevationOverlayEnabled">false</item>
+
+        <item name="android:statusBarColor">@color/m3_bg</item>
+        <item name="android:navigationBarColor">@color/m3_bg</item>
+        <item name="android:windowLightStatusBar">@bool/m3_light_system_bars</item>
+        <item name="android:windowLightNavigationBar">@bool/m3_light_system_bars</item>
+
+        <!-- The bonded-device picker is an androidx.appcompat AlertDialog, and it resolves the
+             *unprefixed* alertDialogTheme — android:alertDialogTheme is a different attribute and
+             is not what it reads. All three are set, and the call site passes the theme explicitly
+             as well, so there is no way for the picker to come out purple. -->
+        <item name="alertDialogTheme">@style/Theme.CEONIX.Helper.Dialog</item>
+        <item name="android:alertDialogTheme">@style/Theme.CEONIX.Helper.Dialog</item>
+        <item name="materialAlertDialogTheme">@style/Theme.CEONIX.Helper.Dialog</item>
+    </style>
+
+    <style name="Theme.CEONIX.Helper.Dialog" parent="Theme.Material3.DayNight.Dialog.Alert">
+        <item name="colorPrimary">@color/m3_primary</item>
+        <item name="colorOnPrimary">@color/m3_on_primary</item>
+        <item name="colorSecondary">@color/m3_primary</item>
+        <item name="colorOnSecondary">@color/m3_on_primary</item>
+        <item name="colorSurface">@color/m3_surface_container</item>
+        <item name="colorOnSurface">@color/m3_on_surface</item>
+        <item name="android:colorBackground">@color/m3_surface_container</item>
+        <item name="android:colorAccent">@color/m3_primary</item>
+        <item name="elevationOverlayEnabled">false</item>
+    </style>
+
+</resources>

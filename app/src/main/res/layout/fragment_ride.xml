@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ride_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/m3_bg">
+
+    <!-- Decorative radial glow -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_m3_glow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ===== STATUS BAR (identical to Home) ===== -->
+    <LinearLayout
+        android:id="@+id/status_bar"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/status_logo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_ceonix_mark_mono"
+            android:contentDescription="@string/app_name"
+            app:tint="@color/m3_primary" />
+
+        <TextView
+            android:id="@+id/tv_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/m3_on_surface"
+            android:textSize="30sp"
+            android:fontFamily="sans-serif-medium"
+            tools:text="12:45" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/gps_indicator"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            android:background="@drawable/bg_m3_chip"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="GPS"
+            android:src="@drawable/ic_m3_gps"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/bt_indicator"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="14dp"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            android:background="@drawable/bg_m3_chip"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_m3_bt" />
+
+        <ImageView
+            android:id="@+id/theme_toggle"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="14dp"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            android:background="@drawable/bg_m3_chip"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="@string/change_app_theme"
+            android:src="@drawable/ic_m3_dark" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="8dp"
+            android:alpha="0.4"
+            android:background="@color/m3_outline" />
+
+        <LinearLayout
+            android:id="@+id/battery_pill"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginStart="14dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingStart="16dp"
+            android:paddingEnd="18dp"
+            android:background="@drawable/bg_m3_pill">
+
+            <com.andrerinas.headunitrevived.main.BatteryView
+                android:id="@+id/battery_view"
+                android:layout_width="20dp"
+                android:layout_height="34dp"
+                android:contentDescription="@string/battery" />
+
+            <TextView
+                android:id="@+id/tv_battery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/m3_on_surface_variant"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-medium"
+                tools:text="82%" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ===== INSTRUMENT CLUSTER ===== -->
+    <LinearLayout
+        android:id="@+id/ride_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="14dp"
+        app:layout_constraintTop_toBottomOf="@id/status_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- three cards -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <!-- SPEED (left) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="@color/m3_surface_container"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- accent hugging the card's left (outer) wall -->
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_m3_accent_tertiary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp">
+
+                        <TextView
+                            android:id="@+id/tv_speed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:textColor="@color/m3_on_surface"
+                            android:textSize="112sp"
+                            android:textStyle="bold"
+                            android:includeFontPadding="false"
+                            android:fontFeatureSettings="tnum"
+                            app:autoSizeTextType="uniform"
+                            app:autoSizeMinTextSize="40sp"
+                            app:autoSizeMaxTextSize="112sp"
+                            tools:text="92" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/ride_speed_unit"
+                            android:textColor="@color/m3_primary"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.2" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- LEAN (visual centrepiece — gauge fills the whole card) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.25"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="@color/m3_surface_container"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <com.andrerinas.headunitrevived.main.LeanGaugeView
+                        android:id="@+id/lean_gauge"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|end"
+                        android:text="@string/ride_lean"
+                        android:textColor="@color/m3_on_tertiary_cont"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.14" />
+
+                    <!-- lean readout, positioned on the gauge's base line by RideFragment -->
+                    <TextView
+                        android:id="@+id/tv_lean"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/m3_on_surface"
+                        android:textSize="52sp"
+                        android:textStyle="bold"
+                        android:includeFontPadding="false"
+                        tools:text="14°" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|start"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_max_left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/m3_on_tertiary_cont"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            tools:text="23°" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ride_max_left"
+                            android:textColor="@color/m3_on_surface_variant"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:orientation="vertical"
+                        android:gravity="end">
+
+                        <TextView
+                            android:id="@+id/tv_max_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/m3_on_tertiary_cont"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            tools:text="20°" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ride_max_right"
+                            android:textColor="@color/m3_on_surface_variant"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.1" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- SUNSET (right) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                app:cardBackgroundColor="@color/m3_surface_container"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <!--
+                    Pageable slot. The card frame, its corners and the accent bar stay put; only the
+                    content pages. Which page is showing is persisted by RideCardsController under
+                    Settings "ride-card-id", so it survives a restart, a reboot and an app update.
+                -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- accent hugging the card's right (outer) wall; outside the pager, so it
+                         never slides with a page -->
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_m3_accent_primary" />
+
+                    <!-- The 10dp inset is the 5dp accent bar plus a 5dp gap, so a swiping page never
+                         crosses it; every page gives those 10dp back (paddingEnd 26dp to 16dp), so
+                         content still lands where it always did.
+                         saveEnabled=false: ViewPager2 would otherwise restore its own page after
+                         onViewCreated and fight ours. With it off, SharedPreferences is the single
+                         source of truth by construction. -->
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/ride_card_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:saveEnabled="false" />
+
+                    <!-- Page indicator. Hides itself below two pages, so a one-card build looks
+                         exactly as it did before. The top-right of every ride page is reserved
+                         for it. -->
+                    <com.andrerinas.headunitrevived.main.ride.RideCardDotsView
+                        android:id="@+id/ride_card_dots"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|end"
+                        android:layout_marginTop="22dp"
+                        android:layout_marginEnd="20dp"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- quick launch row (icons only; labels removed for a roomier layout) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/quick_home"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/bg_m3_chip"
+                android:backgroundTint="@color/m3_surface_container_high"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitCenter"
+                android:padding="15dp"
+                android:src="@drawable/ic_m3_home"
+                android:contentDescription="@string/home"
+                app:tint="@color/m3_on_surface" />
+
+            <ImageView
+                android:id="@+id/quick_android_auto"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/bg_m3_chip"
+                android:backgroundTint="@color/m3_surface_container_high"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitCenter"
+                android:padding="15dp"
+                android:src="@drawable/ic_m3_self"
+                android:contentDescription="@string/android_auto"
+                app:tint="@color/m3_on_surface" />
+
+            <ImageView
+                android:id="@+id/quick_apps"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/bg_m3_chip"
+                android:backgroundTint="@color/m3_surface_container_high"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitCenter"
+                android:padding="15dp"
+                android:src="@drawable/ic_m3_apps"
+                android:contentDescription="@string/apps"
+                app:tint="@color/m3_on_surface" />
+
+            <ImageView
+                android:id="@+id/quick_settings"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/bg_m3_chip"
+                android:backgroundTint="@color/m3_surface_container_high"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitCenter"
+                android:padding="15dp"
+                android:src="@drawable/ic_settings_white"
+                android:contentDescription="@string/settings"
+                app:tint="@color/m3_on_surface" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    The narrow fallback. layout-w720dp/ has the real one, where the three points sit side by side
+    so the card fits a landscape head unit without scrolling; below that width the columns would be
+    under ~190dp each, and three ribbons of body text that narrow wrap so much they end up taller
+    than a single column as well as harder to read. So here the points stack and the ScrollView
+    does its job.
+
+    Same three ids as the wide layout, so SafetyDisclaimerDialog fills either one without knowing
+    which it got. The compact header is shared: it was never about width, it was 132dp of height
+    spent on an icon above a title.
+-->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="?attr/colorSurface"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/material_orange_700"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:importantForAccessibility="no"
+                app:srcCompat="@drawable/ic_warning_white"
+                app:tint="@android:color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="@string/disclaimer_title"
+                android:textAppearance="?attr/textAppearanceTitleLarge"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <!-- wrap_content *and* a weight. On its own, wrap_content yields nothing: when the window
+             hits the screen ceiling the ScrollView still claims the height its content wants and
+             the accept button underneath gets clipped (seen on the Mi A3, 316dp). The weight lets
+             LinearLayout take the shortfall out of this child instead, so the header and the
+             button keep their size and the text scrolls by however much is missing. It cannot
+             grow past its content either: inside a wrap_content parent the surplus is always
+             zero, so there is nothing to distribute when the card does fit. -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:clipToPadding="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/disclaimer_point_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="?attr/colorOnSurface"
+                    android:lineSpacingMultiplier="1.1"
+                    tools:text="1. Focus on the Road"/>
+
+                <TextView
+                    android:id="@+id/disclaimer_point_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="?attr/colorOnSurface"
+                    android:lineSpacingMultiplier="1.1"
+                    tools:text="2. Limitation of Liability"/>
+
+                <TextView
+                    android:id="@+id/disclaimer_point_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="?attr/colorOnSurface"
+                    android:lineSpacingMultiplier="1.1"
+                    tools:text="3. No Affiliation"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="end"
+            android:background="?attr/colorSurfaceVariant">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_accept"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/disclaimer_accept"
+                android:textColor="@color/brand_on_accent"
+                app:backgroundTint="@color/brand_accent"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

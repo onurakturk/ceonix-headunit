@@ -1,0 +1,22 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="default_horizontal_margin">16dp</dimen>
+    <dimen name="default_vertical_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="list_padding">16dp</dimen>
+
+    <!--
+        Exit/Pause dialog shown over the AA projection. The projection is locked to landscape,
+        so the scarce dimension is height. These are the compact values used on short screens;
+        values-h350dp/ carries the full-size set for taller ones (Mi9T, Nexus 7).
+    -->
+    <dimen name="exit_action_icon">80dp</dimen>
+    <dimen name="exit_action_icon_padding">22dp</dimen>
+    <dimen name="exit_action_label">15sp</dimen>
+    <dimen name="exit_action_label_margin">8dp</dimen>
+    <dimen name="exit_action_gap">12dp</dimen>
+    <dimen name="exit_dialog_padding_h">12dp</dimen>
+    <dimen name="exit_dialog_padding_top">12dp</dimen>
+</resources>

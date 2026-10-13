@@ -1,0 +1,47 @@
+<resources>
+    <string name="step_heading">Než začnete</string>
+    <string name="intro">Vaše jednotka nedokáže přečíst svou vlastní Wi-Fi adresu – Android ji před aplikacemi skrývá. Tento telefon ji vidí, takže ji tato aplikace vyhledá a předá.\n\nNa jednotce otevřete <b>Nastavení › Nastavení Wi-Fi</b> a ujistěte se, že Android Auto <b>není</b> připojeno.</string>
+    <string name="working">Hledám… trvá to asi půl minuty.</string>
+    <string name="busy_label">Pracuji…</string>
+
+    <string name="action_fix">Najít jednotku</string>
+    <string name="action_retry">Hledat znovu</string>
+    <string name="action_send">Odeslat do jednotky</string>
+    <string name="pick_device">Které zařízení je jednotka?</string>
+    <string name="no_bonded_devices">Žádná spárovaná zařízení Bluetooth. Nejprve spárujte jednotku s tímto telefonem.</string>
+    <string name="sending">Předávám adresu…</string>
+    <string name="sending_step">Předávám adresu… (%1$s)\n\nKaždý krok může trvat až půl minuty.</string>
+    <string name="action_copy">Kopírovat adresu</string>
+    <string name="copied">Zkopírováno</string>
+
+    <string name="found_heading">Jednotka nalezena</string>
+    <string name="found_body">Toto je její síť Wi-Fi Direct. Předejte adresu níže, nebo ji do jednotky zadejte sami.</string>
+    <string name="label_network">Síť</string>
+    <string name="label_address">Adresa</string>
+
+    <string name="not_found_heading">Jednotku se nepodařilo najít</string>
+    <string name="not_found_body">Tento telefon hledal oběma způsoby, které má k dispozici, a síť jednotky nenašel. Zkontrolujte, že:</string>
+    <string name="check_power">jednotka je zapnutá</string>
+    <string name="check_screen">je na ní otevřená obrazovka Nastavení › Nastavení Wi-Fi</string>
+    <string name="check_auto">Android Auto není připojeno</string>
+    <string name="near_miss">Nejbližší, co tento telefon viděl, bylo %1$s (%2$s).</string>
+
+    <string name="action_send_anyway">Přesto odeslat</string>
+    <string name="send_anyway_note">Malá šance. Jednotka se umí poznat i podle svého názvu zařízení Wi-Fi Direct, který tento telefon nedokáže přečíst jako název sítě – za jeden pokus to stojí.</string>
+
+    <string name="handed_heading">Hotovo</string>
+    <string name="handed_body">Jednotka adresu uložila a měla by se nyní připojit sama.</string>
+
+    <string name="details_heading">Podrobnosti</string>
+    <string name="action_copy_details">Kopírovat podrobnosti</string>
+
+    <string name="stored">Hotovo. Jednotka uložila %1$s a měla by se nyní připojit sama.</string>
+    <string name="stored_none">Odesláno, ale jednotka nepoznala nic z toho, co tento telefon viděl. Hledejte znovu – během čekání jednotka každých pár sekund přejmenovává svou síť, takže to, co telefon přečetl, už může být zastaralé.</string>
+
+    <string name="error_permission">Tato aplikace potřebuje oprávnění k poloze a zařízením v okolí. Android je vyžaduje ke čtení sítí Wi-Fi; nic se neukládá ani nikam neodesílá.</string>
+    <string name="error_location_off">Zapněte polohu v nastavení telefonu. Dokud je vypnutá, Android nevrací žádné sítě Wi-Fi.</string>
+    <string name="error_wifi_off">Zapněte v tomto telefonu Wi-Fi, aby viděl síť jednotky.</string>
+    <string name="error_bluetooth_off">Bluetooth je vypnuté, takže adresu nelze předat. Zapněte ho a zkuste to znovu, nebo adresu zadejte do jednotky ručně.</string>
+    <string name="error_no_listener">Jednotka nenaslouchá. Otevřete na ní <b>Nastavení › Nastavení Wi-Fi</b> a zkuste to znovu.</string>
+    <string name="error_connection">Spojení Bluetooth s jednotkou bylo ztraceno. Zkuste to znovu, nebo adresu zadejte do jednotky ručně.</string>
+</resources>

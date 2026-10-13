@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.andrerinas.headunitrevived.main.HomeFragment"
+        android:label="@string/app_name">
+        <action
+            android:id="@+id/action_homeFragment_to_networkListFragment"
+            app:destination="@id/networkListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_appsDrawerFragment"
+            app:destination="@id/appsDrawerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_rideFragment"
+            app:destination="@id/rideFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <!-- First run: MainActivity's setup chain sends the rider here when something a
+             connection depends on is missing. -->
+        <action
+            android:id="@+id/action_homeFragment_to_permissionDashboardFragment"
+            app:destination="@id/permissionDashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!--
+      One destination serves both hosts: SettingsActivity inflates this same graph and only swaps
+      the start destination, so Settings › General reaches it too. The setupMode argument picks the
+      presentation (welcome header vs toolbar).
+    -->
+    <fragment
+        android:id="@+id/permissionDashboardFragment"
+        android:name="com.andrerinas.headunitrevived.main.PermissionDashboardFragment"
+        android:label="@string/permission_dashboard_title">
+        <argument
+            android:name="setupMode"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/rideFragment"
+        android:name="com.andrerinas.headunitrevived.main.RideFragment"
+        android:label="@string/ride">
+        <action
+            android:id="@+id/action_rideFragment_to_appsDrawerFragment"
+            app:destination="@id/appsDrawerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/appsDrawerFragment"
+        android:name="com.andrerinas.headunitrevived.main.AppsDrawerFragment"
+        android:label="@string/apps_drawer_title" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.andrerinas.headunitrevived.main.SettingsFragment"
+        android:label="@string/settings">
+        <argument
+            android:name="section"
+            app:argType="string"
+            android:defaultValue="ROOT" />
+        <!-- Self-navigation: opens another slice of the same screen (a category from the hub,
+             or the Developer Settings sub-screen). Same destination id keeps every
+             sub-navigation action below valid from any section. -->
+        <action
+            android:id="@+id/action_settingsFragment_self"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_settingsFragment_to_permissionDashboardFragment"
+            app:destination="@id/permissionDashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_settingsFragment_to_keymapFragment"
+            app:destination="@id/keymapFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_settingsFragment_to_autoConnectFragment"
+            app:destination="@id/autoConnectFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_settingsFragment_to_darkModeFragment"
+            app:destination="@id/darkModeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_settingsFragment_to_launcherModeFragment"
+            app:destination="@id/launcherModeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_settingsFragment_to_autoStartFragment"
+            app:destination="@id/autoStartFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_settingsFragment_to_vehicleInfoFragment"
+            app:destination="@id/vehicleInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_settingsFragment_to_loadingScreenFragment"
+            app:destination="@id/loadingScreenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_settingsFragment_to_bssidSetupFragment"
+            app:destination="@id/bssidSetupFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_settingsFragment_to_micSettingsFragment"
+            app:destination="@id/micSettingsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/keymapFragment"
+        android:name="com.andrerinas.headunitrevived.main.KeymapFragment"
+        android:label="@string/keymap" />
+
+    <fragment
+        android:id="@+id/autoConnectFragment"
+        android:name="com.andrerinas.headunitrevived.main.AutoConnectFragment"
+        android:label="@string/auto_connect_settings" />
+
+    <fragment
+        android:id="@+id/darkModeFragment"
+        android:name="com.andrerinas.headunitrevived.main.DarkModeFragment"
+        android:label="@string/dark_mode_settings" />
+
+    <fragment
+        android:id="@+id/launcherModeFragment"
+        android:name="com.andrerinas.headunitrevived.main.LauncherModeFragment"
+        android:label="@string/launcher_mode_settings" />
+
+    <fragment
+        android:id="@+id/autoStartFragment"
+        android:name="com.andrerinas.headunitrevived.main.AutoStartFragment"
+        android:label="@string/auto_start_settings" />
+
+    <fragment
+        android:id="@+id/vehicleInfoFragment"
+        android:name="com.andrerinas.headunitrevived.main.VehicleInfoFragment"
+        android:label="@string/vehicle_info_settings" />
+
+    <fragment
+        android:id="@+id/loadingScreenFragment"
+        android:name="com.andrerinas.headunitrevived.main.LoadingScreenFragment"
+        android:label="@string/loading_screen" />
+
+    <fragment
+        android:id="@+id/networkListFragment"
+        android:name="com.andrerinas.headunitrevived.main.NetworkListFragment"
+        android:label="@string/wifi" />
+
+    <fragment
+        android:id="@+id/bssidSetupFragment"
+        android:name="com.andrerinas.headunitrevived.main.BssidSetupFragment"
+        android:label="@string/wifi_setup_settings" />
+
+    <fragment
+        android:id="@+id/micSettingsFragment"
+        android:name="com.andrerinas.headunitrevived.main.MicSettingsFragment"
+        android:label="@string/microphone_settings" />
+
+</navigation>

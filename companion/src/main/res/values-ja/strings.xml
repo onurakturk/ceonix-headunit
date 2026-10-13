@@ -1,0 +1,47 @@
+<resources>
+    <string name="step_heading">はじめる前に</string>
+    <string name="intro">ヘッドユニットは自分の Wi-Fi アドレスを読み取れません。Android がアプリから隠しているためです。このスマートフォンからは見えるので、このアプリがアドレスを調べて渡します。\n\nヘッドユニットで<b>設定 › Wi-Fi セットアップ</b>を開き、Android Auto が接続されて<b>いない</b>ことを確認してください。</string>
+    <string name="working">検索中… 30 秒ほどかかります。</string>
+    <string name="busy_label">処理中…</string>
+
+    <string name="action_fix">ヘッドユニットを探す</string>
+    <string name="action_retry">もう一度検索</string>
+    <string name="action_send">ヘッドユニットに送信</string>
+    <string name="pick_device">どれがヘッドユニットですか？</string>
+    <string name="no_bonded_devices">ペアリング済みの Bluetooth デバイスがありません。先にヘッドユニットをこのスマートフォンとペアリングしてください。</string>
+    <string name="sending">アドレスを渡しています…</string>
+    <string name="sending_step">アドレスを渡しています…（%1$s）\n\n各ステップに最大 30 秒ほどかかることがあります。</string>
+    <string name="action_copy">アドレスをコピー</string>
+    <string name="copied">コピーしました</string>
+
+    <string name="found_heading">ヘッドユニットが見つかりました</string>
+    <string name="found_body">これはヘッドユニットの Wi-Fi Direct ネットワークです。下のボタンでアドレスを渡すか、ヘッドユニットに自分で入力してください。</string>
+    <string name="label_network">ネットワーク</string>
+    <string name="label_address">アドレス</string>
+
+    <string name="not_found_heading">ヘッドユニットが見つかりません</string>
+    <string name="not_found_body">このスマートフォンは可能な 2 通りの方法で探しましたが、ヘッドユニットのネットワークは見つかりませんでした。次を確認してください:</string>
+    <string name="check_power">ヘッドユニットの電源が入っている</string>
+    <string name="check_screen">設定 › Wi-Fi セットアップ画面が開いている</string>
+    <string name="check_auto">Android Auto が接続されていない</string>
+    <string name="near_miss">このスマートフォンが見つけた最も近いものは %1$s（%2$s）でした。</string>
+
+    <string name="action_send_anyway">それでも送信</string>
+    <string name="send_anyway_note">可能性は低めです。ヘッドユニットは Wi-Fi Direct のデバイス名でも自分を認識できますが、このスマートフォンはそれをネットワーク名として読み取れません。あきらめる前に一度試す価値はあります。</string>
+
+    <string name="handed_heading">完了</string>
+    <string name="handed_body">ヘッドユニットがアドレスを保存しました。これで自動的に接続されるはずです。</string>
+
+    <string name="details_heading">詳細</string>
+    <string name="action_copy_details">詳細をコピー</string>
+
+    <string name="stored">完了。ヘッドユニットが %1$s を保存しました。これで自動的に接続されるはずです。</string>
+    <string name="stored_none">送信しましたが、ヘッドユニットはこのスマートフォンが見つけたものをどれも認識しませんでした。もう一度検索してください。待機中、ヘッドユニットは数秒ごとにネットワーク名を変更するため、読み取った名前がすでに古くなっている可能性があります。</string>
+
+    <string name="error_permission">このアプリには位置情報と付近のデバイスの権限が必要です。Android では Wi-Fi ネットワークの読み取りにこれらが必須です。何も保存されず、他の場所へ送信されることもありません。</string>
+    <string name="error_location_off">スマートフォンの設定で位置情報をオンにしてください。オフの間、Android は Wi-Fi ネットワークを返しません。</string>
+    <string name="error_wifi_off">ヘッドユニットのネットワークが見えるよう、このスマートフォンの Wi-Fi をオンにしてください。</string>
+    <string name="error_bluetooth_off">Bluetooth がオフのため、アドレスを渡せません。オンにしてもう一度試すか、アドレスをヘッドユニットに手入力してください。</string>
+    <string name="error_no_listener">ヘッドユニットが待ち受けていません。ヘッドユニットで<b>設定 › Wi-Fi セットアップ</b>を開いて、もう一度お試しください。</string>
+    <string name="error_connection">ヘッドユニットとの Bluetooth 接続が切れました。もう一度試すか、アドレスをヘッドユニットに手入力してください。</string>
+</resources>

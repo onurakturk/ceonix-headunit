@@ -1,0 +1,47 @@
+<resources>
+    <string name="step_heading">Înainte de a începe</string>
+    <string name="intro">Unitatea ta nu își poate citi propria adresă Wi-Fi: Android o ascunde de aplicații. Acest telefon o poate vedea, așa că aplicația o caută și i-o transmite.\n\nDeschide <b>Setări › Configurare Wi-Fi</b> pe unitate și asigură-te că Android Auto <b>nu</b> este conectat.</string>
+    <string name="working">Se caută… durează aproximativ o jumătate de minut.</string>
+    <string name="busy_label">Se lucrează…</string>
+
+    <string name="action_fix">Găsește unitatea</string>
+    <string name="action_retry">Caută din nou</string>
+    <string name="action_send">Trimite către unitate</string>
+    <string name="pick_device">Care dintre ele este unitatea?</string>
+    <string name="no_bonded_devices">Niciun dispozitiv Bluetooth asociat. Asociază mai întâi unitatea cu acest telefon.</string>
+    <string name="sending">Se transmite adresa…</string>
+    <string name="sending_step">Se transmite adresa… (%1$s)\n\nFiecare pas poate dura până la o jumătate de minut.</string>
+    <string name="action_copy">Copiază adresa</string>
+    <string name="copied">Copiat</string>
+
+    <string name="found_heading">Unitatea a fost găsită</string>
+    <string name="found_body">Aceasta este rețeaua ei Wi-Fi Direct. Transmite adresa mai jos sau tasteaz-o chiar tu pe unitate.</string>
+    <string name="label_network">Rețea</string>
+    <string name="label_address">Adresă</string>
+
+    <string name="not_found_heading">Unitatea nu a putut fi văzută</string>
+    <string name="not_found_body">Acest telefon a căutat în ambele moduri posibile și nu a găsit rețeaua unității. Verifică dacă:</string>
+    <string name="check_power">unitatea este pornită</string>
+    <string name="check_screen">ecranul Setări › Configurare Wi-Fi este deschis pe ea</string>
+    <string name="check_auto">Android Auto nu este conectat</string>
+    <string name="near_miss">Cel mai apropiat lucru văzut de acest telefon a fost %1$s (%2$s).</string>
+
+    <string name="action_send_anyway">Trimite oricum</string>
+    <string name="send_anyway_note">Șanse mici. Unitatea se poate recunoaște și după numele ei de dispozitiv Wi-Fi Direct, pe care acest telefon nu îl poate citi ca nume de rețea, așa că merită o încercare înainte de a renunța.</string>
+
+    <string name="handed_heading">Gata</string>
+    <string name="handed_body">Unitatea a salvat adresa și ar trebui să se conecteze singură acum.</string>
+
+    <string name="details_heading">Detalii</string>
+    <string name="action_copy_details">Copiază detaliile</string>
+
+    <string name="stored">Gata. Unitatea a salvat %1$s și ar trebui să se conecteze singură acum.</string>
+    <string name="stored_none">Trimis, dar unitatea nu a recunoscut nimic din ce a văzut acest telefon. Caută din nou: cât timp așteaptă, unitatea își redenumește rețeaua la câteva secunde, așa că ce a citit telefonul poate fi deja depășit.</string>
+
+    <string name="error_permission">Această aplicație are nevoie de permisiunile pentru locație și dispozitive din apropiere. Android le cere pentru a citi rețelele Wi-Fi; nimic nu este stocat sau trimis în altă parte.</string>
+    <string name="error_location_off">Activează Locația din setările telefonului. Android nu returnează rețele Wi-Fi cât timp este dezactivată.</string>
+    <string name="error_wifi_off">Activează Wi-Fi pe acest telefon ca să poată vedea rețeaua unității.</string>
+    <string name="error_bluetooth_off">Bluetooth este oprit, deci adresa nu poate fi transmisă. Pornește-l și încearcă din nou sau tastează adresa manual pe unitate.</string>
+    <string name="error_no_listener">Unitatea nu ascultă. Deschide <b>Setări › Configurare Wi-Fi</b> pe ea și încearcă din nou.</string>
+    <string name="error_connection">Conexiunea Bluetooth cu unitatea s-a pierdut. Încearcă din nou sau tastează adresa manual pe unitate.</string>
+</resources>

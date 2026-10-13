@@ -1,0 +1,47 @@
+<resources>
+    <string name="step_heading">Voordat je begint</string>
+    <string name="intro">Je headunit kan zijn eigen wifi-adres niet lezen: Android verbergt het voor apps. Deze telefoon kan het wel zien, dus deze app zoekt het op en geeft het door.\n\nOpen <b>Instellingen › Wifi-installatie</b> op de headunit en zorg dat Android Auto <b>niet</b> verbonden is.</string>
+    <string name="working">Bezig met zoeken… dit duurt ongeveer een halve minuut.</string>
+    <string name="busy_label">Bezig…</string>
+
+    <string name="action_fix">Headunit zoeken</string>
+    <string name="action_retry">Opnieuw zoeken</string>
+    <string name="action_send">Naar de headunit sturen</string>
+    <string name="pick_device">Welke is de headunit?</string>
+    <string name="no_bonded_devices">Geen gekoppelde Bluetooth-apparaten. Koppel eerst de headunit met deze telefoon.</string>
+    <string name="sending">Adres wordt doorgegeven…</string>
+    <string name="sending_step">Adres wordt doorgegeven… (%1$s)\n\nElke stap kan tot een halve minuut duren.</string>
+    <string name="action_copy">Adres kopiëren</string>
+    <string name="copied">Gekopieerd</string>
+
+    <string name="found_heading">Headunit gevonden</string>
+    <string name="found_body">Dit is het Wi-Fi Direct-netwerk van de headunit. Geef het adres hieronder door of typ het zelf in op de headunit.</string>
+    <string name="label_network">Netwerk</string>
+    <string name="label_address">Adres</string>
+
+    <string name="not_found_heading">Headunit niet gezien</string>
+    <string name="not_found_body">Deze telefoon heeft op beide mogelijke manieren gezocht en het netwerk van de headunit niet gevonden. Controleer of:</string>
+    <string name="check_power">de headunit aan staat</string>
+    <string name="check_screen">het scherm Instellingen › Wifi-installatie open is</string>
+    <string name="check_auto">Android Auto niet verbonden is</string>
+    <string name="near_miss">Het dichtst in de buurt kwam %1$s (%2$s).</string>
+
+    <string name="action_send_anyway">Toch sturen</string>
+    <string name="send_anyway_note">Een gok. De headunit kan zichzelf ook herkennen aan zijn Wi-Fi Direct-apparaatnaam, die deze telefoon niet als netwerknaam kan lezen. Het is dus één poging waard voordat je opgeeft.</string>
+
+    <string name="handed_heading">Klaar</string>
+    <string name="handed_body">De headunit heeft het adres opgeslagen en zou nu vanzelf verbinding moeten maken.</string>
+
+    <string name="details_heading">Details</string>
+    <string name="action_copy_details">Details kopiëren</string>
+
+    <string name="stored">Klaar. De headunit heeft %1$s opgeslagen en zou nu vanzelf verbinding moeten maken.</string>
+    <string name="stored_none">Verstuurd, maar de headunit herkende niets van wat deze telefoon zag. Zoek opnieuw: tijdens het wachten hernoemt de headunit zijn netwerk om de paar seconden, dus wat deze telefoon las kan al verouderd zijn.</string>
+
+    <string name="error_permission">Deze app heeft toestemming nodig voor locatie en apparaten in de buurt. Android vereist dit om wifi-netwerken te lezen; er wordt niets opgeslagen of ergens anders naartoe gestuurd.</string>
+    <string name="error_location_off">Zet Locatie aan in de instellingen van je telefoon. Android geeft geen wifi-netwerken terug zolang die uit staat.</string>
+    <string name="error_wifi_off">Zet wifi aan op deze telefoon zodat hij het netwerk van de headunit kan zien.</string>
+    <string name="error_bluetooth_off">Bluetooth staat uit, dus het adres kan niet worden doorgegeven. Zet het aan en probeer opnieuw, of typ het adres met de hand in op de headunit.</string>
+    <string name="error_no_listener">De headunit luistert niet. Open daar <b>Instellingen › Wifi-installatie</b> en probeer opnieuw.</string>
+    <string name="error_connection">De Bluetooth-verbinding met de headunit is verbroken. Probeer opnieuw of typ het adres met de hand in op de headunit.</string>
+</resources>

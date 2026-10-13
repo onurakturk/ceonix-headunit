@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Splash ground. Deliberately holds NO mark: this drawable is the pre-inflate window
+  background, which can only centre its layers, while the splash overlay in
+  activity_main.xml places the mark at ~39% of the height (design composition). Drawing
+  the mark in both would make it jump on hand-off. The gradient is identical in both
+  layers, so the transition is seamless.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="270"
+        android:startColor="@color/ceonix_splash_top"
+        android:endColor="@color/ceonix_splash_bottom" />
+</shape>

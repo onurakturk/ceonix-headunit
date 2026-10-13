@@ -1,0 +1,47 @@
+<resources>
+    <string name="step_heading">Başlamadan önce</string>
+    <string name="intro">Kafa üniteniz kendi Wi-Fi adresini okuyamaz; Android bunu uygulamalardan gizler. Bu telefon adresi görebilir, bu uygulama da onu bulup kafa ünitesine iletir.\n\nKafa ünitesinde <b>Ayarlar › Wi-Fi Kurulumu</b> ekranını açın ve Android Auto\'nun bağlı <b>olmadığından</b> emin olun.</string>
+    <string name="working">Aranıyor… yaklaşık yarım dakika sürer.</string>
+    <string name="busy_label">Çalışıyor…</string>
+
+    <string name="action_fix">Kafa ünitesini bul</string>
+    <string name="action_retry">Tekrar ara</string>
+    <string name="action_send">Kafa ünitesine gönder</string>
+    <string name="pick_device">Kafa ünitesi hangisi?</string>
+    <string name="no_bonded_devices">Eşleştirilmiş Bluetooth cihazı yok. Önce kafa ünitesini bu telefonla eşleştirin.</string>
+    <string name="sending">Adres iletiliyor…</string>
+    <string name="sending_step">Adres iletiliyor… (%1$s)\n\nHer adım yarım dakikaya kadar sürebilir.</string>
+    <string name="action_copy">Adresi kopyala</string>
+    <string name="copied">Kopyalandı</string>
+
+    <string name="found_heading">Kafa ünitesi bulundu</string>
+    <string name="found_body">Bu, kafa ünitesinin Wi-Fi Direct ağı. Adresi aşağıdan iletin ya da kafa ünitesine kendiniz yazın.</string>
+    <string name="label_network">Ağ</string>
+    <string name="label_address">Adres</string>
+
+    <string name="not_found_heading">Kafa ünitesi görülemedi</string>
+    <string name="not_found_body">Bu telefon elindeki iki yolla da aradı ve kafa ünitesinin ağını bulamadı. Şunları kontrol edin:</string>
+    <string name="check_power">kafa ünitesi açık</string>
+    <string name="check_screen">üzerinde Ayarlar › Wi-Fi Kurulumu ekranı açık</string>
+    <string name="check_auto">Android Auto bağlı değil</string>
+    <string name="near_miss">Bu telefonun gördüğü en yakın şey %1$s (%2$s) oldu.</string>
+
+    <string name="action_send_anyway">Yine de gönder</string>
+    <string name="send_anyway_note">Düşük bir ihtimal. Kafa ünitesi kendini Wi-Fi Direct cihaz adından da tanıyabilir; bu telefon o adı ağ adı olarak okuyamaz. Vazgeçmeden önce bir kez denemeye değer.</string>
+
+    <string name="handed_heading">Tamam</string>
+    <string name="handed_body">Kafa ünitesi adresi kaydetti; artık kendiliğinden bağlanması gerekir.</string>
+
+    <string name="details_heading">Ayrıntılar</string>
+    <string name="action_copy_details">Ayrıntıları kopyala</string>
+
+    <string name="stored">Tamam. Kafa ünitesi %1$s adresini kaydetti; artık kendiliğinden bağlanması gerekir.</string>
+    <string name="stored_none">Gönderildi, ama kafa ünitesi bu telefonun gördüklerinden hiçbirini tanımadı. Tekrar arayın: kafa ünitesi beklerken ağının adını birkaç saniyede bir değiştirir, bu telefonun okuduğu ad bayatlamış olabilir.</string>
+
+    <string name="error_permission">Bu uygulamanın konum ve yakındaki cihazlar iznine ihtiyacı var. Android, Wi-Fi ağlarını okumak için bunu şart koşar; hiçbir şey saklanmaz veya başka bir yere gönderilmez.</string>
+    <string name="error_location_off">Telefon ayarlarından Konum\'u açın. Konum kapalıyken Android hiçbir Wi-Fi ağı döndürmez.</string>
+    <string name="error_wifi_off">Kafa ünitesinin ağını görebilmesi için bu telefonda Wi-Fi\'yi açın.</string>
+    <string name="error_bluetooth_off">Bluetooth kapalı, bu yüzden adres iletilemiyor. Açıp tekrar deneyin ya da adresi kafa ünitesine elle yazın.</string>
+    <string name="error_no_listener">Kafa ünitesi dinlemiyor. Üzerinde <b>Ayarlar › Wi-Fi Kurulumu</b> ekranını açıp tekrar deneyin.</string>
+    <string name="error_connection">Kafa ünitesiyle Bluetooth bağlantısı koptu. Tekrar deneyin ya da adresi kafa ünitesine elle yazın.</string>
+</resources>

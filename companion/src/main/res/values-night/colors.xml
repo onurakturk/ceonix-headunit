@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copied from app/src/main/res/values-night/colors.xml. See the note in values/colors.xml. -->
+<resources>
+    <color name="m3_bg">#0E1116</color>
+    <color name="m3_surface_container">#1B1F24</color>
+    <color name="m3_surface_container_high">#252A30</color>
+    <color name="m3_on_surface">#E4E2E9</color>
+    <color name="m3_on_surface_variant">#C2C7CF</color>
+    <color name="m3_outline">#8C9199</color>
+
+    <color name="m3_primary">#F5C518</color>
+    <color name="m3_on_primary">#1A1500</color>
+    <color name="m3_glow">#24F5C518</color>
+    <color name="m3_primary_cont">#4A3B00</color>
+    <color name="m3_on_primary_cont">#FFE083</color>
+
+    <color name="m3_error">#FFB4AB</color>
+</resources>

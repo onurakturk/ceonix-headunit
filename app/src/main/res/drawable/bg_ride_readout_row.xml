@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Tonal row behind a ride card's secondary readouts (the G-force maxima).
+
+    Deliberately not bg_m3_pill: that one is filled with m3_surface_container, which is also the
+    ride cards' own background, so a row drawn with it would be invisible. This sits one step up
+    the tonal ladder, the same relationship the status bar's chips have with the screen behind them.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/m3_surface_container_high" />
+    <corners android:radius="10dp" />
+</shape>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="setting_background_color">#2C2C2C</color>
+    <!-- App accent (DARK) — the GS gold, same value as m3_primary. See values/colors.xml. -->
+    <color name="brand_accent">#F5C518</color>
+    <color name="brand_on_accent">#1A1500</color>
+    <color name="primary_dark">#000000</color>
+    <color name="divider_color">#1FFFFFFF</color>
+    <color name="adaptive_text_color">#FFFFFF</color>
+    <color name="text_primary">#f7f7f7</color>
+    <color name="text_shadow">#00000000</color>
+    <color name="segmented_button_stroke">#CCCCCC</color>
+
+    <!-- Material 3 home tokens (DARK) -->
+    <color name="m3_bg">#0E1116</color>
+    <color name="m3_surface_container">#1B1F24</color>
+    <color name="m3_surface_container_high">#252A30</color>
+    <color name="m3_on_surface">#E4E2E9</color>
+    <color name="m3_on_surface_variant">#C2C7CF</color>
+    <color name="m3_outline">#8C9199</color>
+    <color name="m3_primary">#F5C518</color>
+    <color name="m3_on_primary">#1A1500</color>
+    <color name="m3_glow">#24F5C518</color>
+    <color name="m3_primary_cont">#4A3B00</color>
+    <color name="m3_on_primary_cont">#FFE083</color>
+    <color name="m3_secondary_cont">#3B4858</color>
+    <color name="m3_on_secondary_cont">#D7E3F8</color>
+    <color name="m3_ride_cont">#264A6E</color>
+    <color name="m3_on_ride_cont">#D3E4FF</color>
+    <color name="m3_tertiary_cont">#1C1C1C</color>
+    <color name="m3_on_tertiary_cont">#F5C518</color>
+    <color name="m3_neutral_cont">#2B3036</color>
+    <color name="m3_on_neutral_cont">#C6C6CE</color>
+    <color name="m3_apps_cont">#0F4C3A</color>
+    <color name="m3_on_apps_cont">#8DF0C4</color>
+    <color name="m3_error">#FFB4AB</color>
+    <color name="m3_sunset">#F0946A</color>
+    <color name="m3_headlight">#6FE38A</color>
+</resources>

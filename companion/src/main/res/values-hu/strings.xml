@@ -1,0 +1,47 @@
+<resources>
+    <string name="step_heading">Mielőtt elkezdené</string>
+    <string name="intro">A fejegység nem tudja kiolvasni a saját Wi-Fi-címét – az Android elrejti az alkalmazások elől. Ez a telefon látja, ezért ez az alkalmazás megkeresi és átadja.\n\nNyissa meg a fejegységen a <b>Beállítások › Wi-Fi beállítás</b> képernyőt, és győződjön meg róla, hogy az Android Auto <b>nincs</b> csatlakoztatva.</string>
+    <string name="working">Keresés… körülbelül fél percig tart.</string>
+    <string name="busy_label">Folyamatban…</string>
+
+    <string name="action_fix">Fejegység keresése</string>
+    <string name="action_retry">Keresés újra</string>
+    <string name="action_send">Küldés a fejegységnek</string>
+    <string name="pick_device">Melyik a fejegység?</string>
+    <string name="no_bonded_devices">Nincs párosított Bluetooth-eszköz. Először párosítsa a fejegységet ezzel a telefonnal.</string>
+    <string name="sending">Cím átadása…</string>
+    <string name="sending_step">Cím átadása… (%1$s)\n\nEgy-egy lépés akár fél percig is tarthat.</string>
+    <string name="action_copy">Cím másolása</string>
+    <string name="copied">Másolva</string>
+
+    <string name="found_heading">A fejegység megvan</string>
+    <string name="found_body">Ez a fejegység Wi-Fi Direct hálózata. Adja át a címet lent, vagy írja be saját kezűleg a fejegységen.</string>
+    <string name="label_network">Hálózat</string>
+    <string name="label_address">Cím</string>
+
+    <string name="not_found_heading">A fejegység nem látható</string>
+    <string name="not_found_body">Ez a telefon mindkét lehetséges módon keresett, és nem találta a fejegység hálózatát. Ellenőrizze, hogy:</string>
+    <string name="check_power">a fejegység be van kapcsolva</string>
+    <string name="check_screen">nyitva van rajta a Beállítások › Wi-Fi beállítás képernyő</string>
+    <string name="check_auto">az Android Auto nincs csatlakoztatva</string>
+    <string name="near_miss">A legközelebbi, amit ez a telefon látott: %1$s (%2$s).</string>
+
+    <string name="action_send_anyway">Küldés mindenképp</string>
+    <string name="send_anyway_note">Kis eséllyel sikerül. A fejegység a Wi-Fi Direct eszköznevéről is felismerheti magát, amelyet ez a telefon nem tud hálózatnévként kiolvasni – egy próbát megér, mielőtt feladná.</string>
+
+    <string name="handed_heading">Kész</string>
+    <string name="handed_body">A fejegység eltárolta a címet, és most már magától kell csatlakoznia.</string>
+
+    <string name="details_heading">Részletek</string>
+    <string name="action_copy_details">Részletek másolása</string>
+
+    <string name="stored">Kész. A fejegység eltárolta ezt: %1$s, és most már magától kell csatlakoznia.</string>
+    <string name="stored_none">Elküldve, de a fejegység semmit sem ismert fel abból, amit ez a telefon látott. Keressen újra – várakozás közben a fejegység néhány másodpercenként átnevezi a hálózatát, így a telefon által kiolvasott név már elavult lehet.</string>
+
+    <string name="error_permission">Az alkalmazásnak helymeghatározási és közeli eszközök engedélyre van szüksége. Az Android ezt megköveteli a Wi-Fi-hálózatok olvasásához; semmi sem kerül tárolásra vagy máshová elküldésre.</string>
+    <string name="error_location_off">Kapcsolja be a Helymeghatározást a telefon beállításaiban. Amíg ki van kapcsolva, az Android nem ad vissza Wi-Fi-hálózatokat.</string>
+    <string name="error_wifi_off">Kapcsolja be a Wi-Fi-t ezen a telefonon, hogy láthassa a fejegység hálózatát.</string>
+    <string name="error_bluetooth_off">A Bluetooth ki van kapcsolva, ezért a cím nem adható át. Kapcsolja be és próbálja újra, vagy írja be kézzel a címet a fejegységen.</string>
+    <string name="error_no_listener">A fejegység nem figyel. Nyissa meg rajta a <b>Beállítások › Wi-Fi beállítás</b> képernyőt, és próbálja újra.</string>
+    <string name="error_connection">Megszakadt a Bluetooth-kapcsolat a fejegységgel. Próbálja újra, vagy írja be kézzel a címet a fejegységen.</string>
+</resources>

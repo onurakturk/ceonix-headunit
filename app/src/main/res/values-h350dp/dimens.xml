@@ -1,0 +1,19 @@
+<resources>
+    <!--
+        Full-size Exit/Pause dialog — the values this dialog used before it had to scale.
+        The threshold is what the full-size window actually needs: ~310dp of dialog plus its
+        vertical window margins, so ~350dp of available height. Note the qualifier matches
+        Configuration.screenHeightDp, which is the display height minus the system bars: in the
+        projection's locked landscape the Mi A3 reports 332dp (720/2 = 360, minus a 28dp status
+        bar) and falls back to the compact values in values/dimens.xml, while the Mi9T (~364dp)
+        and the Nexus 7 (~550dp) keep the full size. The ScrollView in dialog_exit_actions.xml
+        covers any device that lands just the wrong side of this line.
+    -->
+    <dimen name="exit_action_icon">112dp</dimen>
+    <dimen name="exit_action_icon_padding">32dp</dimen>
+    <dimen name="exit_action_label">18sp</dimen>
+    <dimen name="exit_action_label_margin">12dp</dimen>
+    <dimen name="exit_action_gap">20dp</dimen>
+    <dimen name="exit_dialog_padding_h">20dp</dimen>
+    <dimen name="exit_dialog_padding_top">20dp</dimen>
+</resources>

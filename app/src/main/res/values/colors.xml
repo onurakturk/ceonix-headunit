@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="material_grey_500">#9E9E9E</color>
+    <color name="material_grey_700">#616161</color>
+    <color name="material_grey_900">#212121</color>
+
+    <color name="primary_dark">@color/material_grey_900</color>
+    <color name="primary_light">#fffbff</color>
+    <color name="material_orange_700">#f57c00</color>
+    <color name="material_green_700">#388e3c</color>
+
+    <color name="text_primary">#f7f7f7</color>
+    <color name="text_second">#bdbebd</color>
+    <color name="text_dark">#b5babd</color>
+    <color name="black_overlay">#66000000</color>
+    
+    <color name="setting_background_color">#F0F0F0</color>
+    <!-- App accent (LIGHT). Same value as m3_primary so the settings/dialog surfaces, which are
+         AppCompat-themed and cannot read the m3_* tokens, match the home and Ride screens.
+         Was teal (#009688) until v1.0.81. brand_on_accent is what stays readable on top of it. -->
+    <color name="brand_accent">#8A6800</color>
+    <color name="brand_on_accent">#FFFFFF</color>
+    <color name="divider_color">#1F000000</color>
+    <color name="adaptive_text_color">#DE000000</color>
+
+    <color name="text_shadow">@android:color/transparent</color>
+    <color name="extreme_dark_background">#000000</color>
+    <color name="splash_text_white">#FFFFFF</color>
+    <color name="splash_text_revived">#214876</color>
+
+    <!-- Custom Menu Colors -->
+    <color name="color_projection_blue">#3198ef</color>
+    <color name="color_usb_orange">#f57c00</color>
+    <color name="color_wifi_purple">#8e44ad</color>
+    <color name="color_settings_darkblue">#2c3e50</color>
+
+    <!-- Segmented Button Colors -->
+    <color name="segmented_button_stroke">#808080</color>
+
+    <!-- Material 3 home tokens (LIGHT) -->
+    <color name="m3_bg">#F7F9FF</color>
+    <color name="m3_surface_container">#ECEEF4</color>
+    <color name="m3_surface_container_high">#E5E8EE</color>
+    <color name="m3_on_surface">#191C20</color>
+    <color name="m3_on_surface_variant">#43474E</color>
+    <color name="m3_outline">#73777F</color>
+    <color name="m3_primary">#8A6800</color>
+    <color name="m3_on_primary">#FFFFFF</color>
+    <color name="m3_glow">#1F8A6800</color>
+    <color name="m3_primary_cont">#FFE083</color>
+    <color name="m3_on_primary_cont">#2A2000</color>
+    <color name="m3_secondary_cont">#D7E3F8</color>
+    <color name="m3_on_secondary_cont">#141C29</color>
+    <color name="m3_ride_cont">#D3E4FF</color>
+    <color name="m3_on_ride_cont">#0B3556</color>
+    <color name="m3_tertiary_cont">#FFE083</color>
+    <color name="m3_on_tertiary_cont">#8A6800</color>
+    <color name="m3_neutral_cont">#E1E2E9</color>
+    <color name="m3_on_neutral_cont">#43474E</color>
+    <color name="m3_apps_cont">#A8F2CE</color>
+    <color name="m3_on_apps_cont">#002014</color>
+    <color name="m3_error">#BA1A1A</color>
+    <color name="m3_sunset">#C15A2E</color>
+    <color name="m3_headlight">#2E9E4B</color>
+
+    <!-- Ceonix ground and splash tokens. The mark itself ships as raster PNGs (see
+         mipmap-*/ic_launcher_* and drawable-*/ic_ceonix_mark*), so it carries no colour
+         token. No values-night variant on purpose - the icon and the splash are always dark. -->
+    <color name="ceonix_ground_top">#23273A</color>
+    <color name="ceonix_ground_bottom">#12141D</color>
+    <color name="ceonix_splash_top">#191C29</color>
+    <color name="ceonix_splash_bottom">#101219</color>
+    <color name="ceonix_text">#E9E9ED</color>
+    <color name="ceonix_text_muted">#8A8DA0</color>
+    <color name="ceonix_accent">#9184D9</color>
+</resources>

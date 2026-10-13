@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The head unit's visual language, on the phone: tonal cards, no elevation anywhere, the same
+    radius vocabulary, the same gold. Whoever sets this up has just been looking at the head unit's
+    Wi-Fi Setup screen, and should not feel like they changed products.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/m3_bg">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_m3_glow"
+        android:importantForAccessibility="no" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:paddingLeft="20dp"
+        android:paddingTop="28dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="32dp">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Same mark and weight as the head unit's home status bar. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_m3_motorcycle"
+                    app:tint="@color/m3_primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/app_name"
+                    android:textColor="@color/m3_on_surface"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/step_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/m3_surface_container"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:background="@drawable/bg_setting_tile_icon"
+                            android:contentDescription="@null"
+                            android:padding="14dp"
+                            android:src="@drawable/ic_m3_wifi"
+                            app:tint="@color/m3_on_primary_cont" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/step_heading"
+                            android:textColor="@color/m3_on_surface"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:lineSpacingExtra="5dp"
+                        android:textColor="@color/m3_on_surface_variant"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/busy_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    app:indicatorColor="@color/m3_primary"
+                    app:indicatorSize="28dp"
+                    app:trackColor="@color/m3_surface_container_high"
+                    app:trackThickness="3dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:text="@string/busy_label"
+                    android:textColor="@color/m3_on_surface_variant"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <!-- The verdict. One card carries the found, not-found and handed-over variants, so its
+                 background, glyph and text colours are set in code. Everything that should read as
+                 secondary is dimmed here rather than given its own colour, because the gold
+                 container has no on-surface-variant of its own. -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/result_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/m3_surface_container_high"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/result_icon"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_m3_check" />
+
+                        <TextView
+                            android:id="@+id/result_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/result_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:alpha="0.85"
+                        android:lineSpacingExtra="4dp"
+                        android:textSize="15sp" />
+
+                    <!-- The address, big enough to read off the screen and type into the head unit
+                         by hand. Shown even after a successful handover, because that is the
+                         fallback path and the rider should never be left without one. -->
+                    <LinearLayout
+                        android:id="@+id/candidate_box"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/label_network"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.7"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/label_network"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/candidate_ssid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/label_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:alpha="0.7"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/label_address"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/candidate_bssid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:textIsSelectable="true"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:typeface="monospace" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/copy"
+                            style="@style/Widget.Material3.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="-8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/action_copy"
+                            android:textSize="14sp"
+                            app:icon="@drawable/ic_m3_copy"
+                            app:iconSize="18dp" />
+                    </LinearLayout>
+
+                    <!-- Filled in code from the three check_* strings so the bullets stay out of
+                         the translatable copy. -->
+                    <TextView
+                        android:id="@+id/checklist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:alpha="0.85"
+                        android:lineSpacingExtra="6dp"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/near_miss"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:alpha="0.7"
+                        android:lineSpacingExtra="4dp"
+                        android:textSize="13sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Send sits above Search again so that swapping which one is primary is two colour
+                 changes in code rather than a reparent. -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/send"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="20dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/action_send"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:cornerRadius="28dp"
+                app:icon="@drawable/ic_m3_bt" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/action"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="12dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/action_fix"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="28dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/send_anyway"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/action_send_anyway"
+                android:textColor="@color/m3_on_surface_variant"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/send_anyway_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:lineSpacingExtra="3dp"
+                android:text="@string/send_anyway_note"
+                android:textColor="@color/m3_on_surface_variant"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+            <!-- Everything the phone saw, unfiltered, folded away. The first attempt at this app
+                 reported only DIRECT-* networks, found none, and left us with no way of telling
+                 whether the scan was blocked, stale, or simply looking at the wrong moment — so the
+                 dump stays. It is just no longer the first thing anyone reads. -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/details_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/m3_surface_container"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/details_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:minHeight="56dp"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/details_heading"
+                            android:textColor="@color/m3_on_surface"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/details_chevron"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_m3_chevron_right"
+                            app:tint="@color/m3_on_surface_variant" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/details_body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="16dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/report"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/m3_on_surface_variant"
+                            android:textIsSelectable="true"
+                            android:textSize="13sp"
+                            android:typeface="monospace" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/copy_report"
+                            style="@style/Widget.Material3.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="-8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/action_copy_details"
+                            android:textSize="14sp"
+                            app:icon="@drawable/ic_m3_copy"
+                            app:iconSize="18dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

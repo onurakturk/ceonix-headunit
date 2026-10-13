@@ -1,0 +1,47 @@
+<resources>
+    <string name="step_heading">Trước khi bắt đầu</string>
+    <string name="intro">Đầu máy không thể đọc địa chỉ Wi-Fi của chính nó vì Android ẩn địa chỉ này với các ứng dụng. Điện thoại này nhìn thấy được, nên ứng dụng sẽ tìm và chuyển địa chỉ đó sang.\n\nMở <b>Cài đặt › Thiết lập Wi-Fi</b> trên đầu máy và đảm bảo Android Auto <b>không</b> được kết nối.</string>
+    <string name="working">Đang tìm… mất khoảng nửa phút.</string>
+    <string name="busy_label">Đang xử lý…</string>
+
+    <string name="action_fix">Tìm đầu máy</string>
+    <string name="action_retry">Tìm lại</string>
+    <string name="action_send">Gửi đến đầu máy</string>
+    <string name="pick_device">Thiết bị nào là đầu máy?</string>
+    <string name="no_bonded_devices">Không có thiết bị Bluetooth nào đã ghép nối. Hãy ghép nối đầu máy với điện thoại này trước.</string>
+    <string name="sending">Đang chuyển địa chỉ…</string>
+    <string name="sending_step">Đang chuyển địa chỉ… (%1$s)\n\nMỗi bước có thể mất tới nửa phút.</string>
+    <string name="action_copy">Sao chép địa chỉ</string>
+    <string name="copied">Đã sao chép</string>
+
+    <string name="found_heading">Đã tìm thấy đầu máy</string>
+    <string name="found_body">Đây là mạng Wi-Fi Direct của đầu máy. Chuyển địa chỉ ở bên dưới hoặc tự nhập vào đầu máy.</string>
+    <string name="label_network">Mạng</string>
+    <string name="label_address">Địa chỉ</string>
+
+    <string name="not_found_heading">Không thấy đầu máy</string>
+    <string name="not_found_body">Điện thoại này đã tìm bằng cả hai cách có thể và không thấy mạng của đầu máy. Hãy kiểm tra:</string>
+    <string name="check_power">đầu máy đã bật</string>
+    <string name="check_screen">màn hình Cài đặt › Thiết lập Wi-Fi đang mở trên đầu máy</string>
+    <string name="check_auto">Android Auto không được kết nối</string>
+    <string name="near_miss">Thứ gần giống nhất mà điện thoại này thấy là %1$s (%2$s).</string>
+
+    <string name="action_send_anyway">Vẫn gửi</string>
+    <string name="send_anyway_note">Khả năng thành công thấp. Đầu máy cũng có thể nhận ra chính nó qua tên thiết bị Wi-Fi Direct, thứ mà điện thoại này không đọc được dưới dạng tên mạng, nên đáng để thử một lần trước khi bỏ cuộc.</string>
+
+    <string name="handed_heading">Xong</string>
+    <string name="handed_body">Đầu máy đã lưu địa chỉ và giờ sẽ tự kết nối.</string>
+
+    <string name="details_heading">Chi tiết</string>
+    <string name="action_copy_details">Sao chép chi tiết</string>
+
+    <string name="stored">Xong. Đầu máy đã lưu %1$s và giờ sẽ tự kết nối.</string>
+    <string name="stored_none">Đã gửi, nhưng đầu máy không nhận ra bất kỳ thứ gì điện thoại này thấy. Hãy tìm lại: trong lúc chờ, đầu máy đổi tên mạng của nó vài giây một lần, nên thông tin điện thoại đọc được có thể đã cũ.</string>
+
+    <string name="error_permission">Ứng dụng này cần quyền vị trí và thiết bị ở gần. Android yêu cầu các quyền này để đọc mạng Wi-Fi; không có gì được lưu hay gửi đi nơi khác.</string>
+    <string name="error_location_off">Hãy bật Vị trí trong phần cài đặt của điện thoại. Khi tắt, Android không trả về mạng Wi-Fi nào.</string>
+    <string name="error_wifi_off">Hãy bật Wi-Fi trên điện thoại này để nó thấy được mạng của đầu máy.</string>
+    <string name="error_bluetooth_off">Bluetooth đang tắt nên không thể chuyển địa chỉ. Hãy bật lên và thử lại, hoặc tự nhập địa chỉ vào đầu máy.</string>
+    <string name="error_no_listener">Đầu máy không lắng nghe. Hãy mở <b>Cài đặt › Thiết lập Wi-Fi</b> trên đầu máy rồi thử lại.</string>
+    <string name="error_connection">Mất kết nối Bluetooth với đầu máy. Hãy thử lại hoặc tự nhập địa chỉ vào đầu máy.</string>
+</resources>

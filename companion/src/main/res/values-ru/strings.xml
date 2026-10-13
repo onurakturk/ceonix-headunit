@@ -1,0 +1,47 @@
+<resources>
+    <string name="step_heading">Перед началом</string>
+    <string name="intro">Головное устройство не может прочитать собственный адрес Wi-Fi — Android скрывает его от приложений. Этот телефон его видит, поэтому приложение находит адрес и передаёт его.\n\nОткройте на головном устройстве <b>Настройки › Настройка Wi-Fi</b> и убедитесь, что Android Auto <b>не</b> подключён.</string>
+    <string name="working">Поиск… это займёт около полминуты.</string>
+    <string name="busy_label">Выполняется…</string>
+
+    <string name="action_fix">Найти головное устройство</string>
+    <string name="action_retry">Искать снова</string>
+    <string name="action_send">Отправить на головное устройство</string>
+    <string name="pick_device">Какое из них — головное устройство?</string>
+    <string name="no_bonded_devices">Нет сопряжённых устройств Bluetooth. Сначала выполните сопряжение головного устройства с этим телефоном.</string>
+    <string name="sending">Передача адреса…</string>
+    <string name="sending_step">Передача адреса… (%1$s)\n\nКаждый шаг может занять до полминуты.</string>
+    <string name="action_copy">Копировать адрес</string>
+    <string name="copied">Скопировано</string>
+
+    <string name="found_heading">Головное устройство найдено</string>
+    <string name="found_body">Это его сеть Wi-Fi Direct. Передайте адрес ниже или введите его на головном устройстве вручную.</string>
+    <string name="label_network">Сеть</string>
+    <string name="label_address">Адрес</string>
+
+    <string name="not_found_heading">Головное устройство не обнаружено</string>
+    <string name="not_found_body">Телефон искал обоими доступными способами и не нашёл сеть головного устройства. Проверьте, что:</string>
+    <string name="check_power">головное устройство включено</string>
+    <string name="check_screen">на нём открыт экран Настройки › Настройка Wi-Fi</string>
+    <string name="check_auto">Android Auto не подключён</string>
+    <string name="near_miss">Самое похожее, что увидел телефон: %1$s (%2$s).</string>
+
+    <string name="action_send_anyway">Всё равно отправить</string>
+    <string name="send_anyway_note">Шансов немного. Головное устройство может узнать себя и по имени устройства Wi-Fi Direct, которое этот телефон не может прочитать как имя сети, — стоит попробовать один раз, прежде чем сдаться.</string>
+
+    <string name="handed_heading">Готово</string>
+    <string name="handed_body">Головное устройство сохранило адрес и теперь должно подключиться само.</string>
+
+    <string name="details_heading">Подробности</string>
+    <string name="action_copy_details">Копировать подробности</string>
+
+    <string name="stored">Готово. Головное устройство сохранило %1$s и теперь должно подключиться само.</string>
+    <string name="stored_none">Отправлено, но головное устройство не узнало ничего из того, что увидел телефон. Повторите поиск: пока оно ждёт, головное устройство каждые несколько секунд переименовывает свою сеть, поэтому прочитанное телефоном могло устареть.</string>
+
+    <string name="error_permission">Приложению нужны разрешения на доступ к местоположению и устройствам поблизости. Android требует их для чтения сетей Wi-Fi; ничего не сохраняется и никуда не отправляется.</string>
+    <string name="error_location_off">Включите геолокацию в настройках телефона. Пока она выключена, Android не возвращает сети Wi-Fi.</string>
+    <string name="error_wifi_off">Включите Wi-Fi на этом телефоне, чтобы он мог увидеть сеть головного устройства.</string>
+    <string name="error_bluetooth_off">Bluetooth выключен, поэтому адрес нельзя передать. Включите его и повторите попытку или введите адрес на головном устройстве вручную.</string>
+    <string name="error_no_listener">Головное устройство не слушает. Откройте на нём <b>Настройки › Настройка Wi-Fi</b> и повторите попытку.</string>
+    <string name="error_connection">Соединение Bluetooth с головным устройством потеряно. Повторите попытку или введите адрес на головном устройстве вручную.</string>
+</resources>
