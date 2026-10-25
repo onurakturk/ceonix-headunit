@@ -40,8 +40,8 @@
 
 ## What is CEONIX Ride?
 
-CEONIX Ride turns an Android device into a **wireless Android Auto head unit**, tailored for
-motorcycle use. Alongside standard Android Auto projection it adds a purpose-built **Ride
+CEONIX Ride turns an Android phone or table into a **wireless Android Auto head unit**, tailored for
+motorcycle use. Alongside standard Android Auto it adds a purpose-built **Ride
 dashboard** and a Material 3 home screen you can use as the device launcher.
 
 <p align="center">
@@ -55,7 +55,7 @@ dashboard** and a Material 3 home screen you can use as the device launcher.
 ## Features
 
 - **Wireless Android Auto** (Native AA) — connects to the phone over Wi-Fi Direct, without a
-  cable. On Android 10 and later the head unit cannot read its own Wi-Fi Direct address, so the
+  cable or always running helper app. On Android 10 and later the head unit cannot read its own Wi-Fi Direct address, so the
   small **CEONIX Ride Helper** app (`companion/`) fetches it from the phone once, during setup.
 - **Ride dashboard** — live speed, a sensor-fused lean angle with persisted max left/right, and a
   third card you swipe between: longitudinal **g-force** (acceleration and braking, with recorded
