@@ -88,6 +88,12 @@ class AapTransport(
     var ignoreNextStopRequest: Boolean = false
     /** Set by [AapControl] when VIDEO_FOCUS_NATIVE triggers a stop (user tapped Exit). */
     @Volatile var wasUserExit: Boolean = false
+    /**
+     * Set by [AapControl] when the phone ends the session with a `USER_SELECTION` byebye,
+     * i.e. the rider tapped Disconnect on the phone. Kept apart from [wasUserExit] so the
+     * dormant VIDEO_FOCUS_NATIVE path above stays exactly as it was.
+     */
+    @Volatile var endedByPhoneUser: Boolean = false
     @Volatile var onQuit: ((Boolean) -> Unit)? = null
     var onAudioFocusStateChanged: ((Boolean) -> Unit)? = null
     var onUpdateUiConfigReplyReceived: (() -> Unit)? = null
@@ -249,6 +255,7 @@ class AapTransport(
         AppLog.i("Start Aap transport handshake for $connection")
         this.connection = connection
         wasUserExit = false
+        endedByPhoneUser = false
 
         sendThread = HandlerThread("AapTransport:Handler::Send", Process.THREAD_PRIORITY_AUDIO)
         sendThread!!.start()

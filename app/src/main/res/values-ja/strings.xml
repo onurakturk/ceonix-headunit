@@ -213,6 +213,8 @@
     <string name="auto_connect_single_usb">USBデバイスを自動接続します</string>
     <string name="auto_connect_single_usb_description">互換性のあるデバイスが1台しかない場合に自動的に接続します</string>
     <string name="auto_connect_settings">自動接続設定</string>
+    <string name="stay_connected">常に接続を維持</string>
+    <string name="stay_connected_description">Android Auto を常に接続したままにします。スマートフォンで終了した後も Android Auto を閉じたままにしたい場合はオフにします。</string>
     <string name="auto_connect_settings_description">自動接続方法とその優先順位を設定します。</string>
     <string name="auto_connect_help">これらのメソッドはアプリ起動時に自動的に実行されます。必要なメソッドを有効にし、ドラッグして実行順序を設定してください。最初に有効になり、かつ正常に実行されたメソッドが使用されます。</string>
     <string name="auto_connect_priority">優先度 %d</string>

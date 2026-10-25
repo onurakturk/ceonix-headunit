@@ -219,6 +219,8 @@
     <string name="auto_connect_single_usb">USB cihazına otomatik bağlan</string>
     <string name="auto_connect_single_usb_description">Sadece bir uyumlu cihaz mevcut olduğunda otomatik olarak bağlan</string>
     <string name="auto_connect_settings">Otomatik Bağlantı Ayarları</string>
+    <string name="stay_connected">Sürekli bağlı kal</string>
+    <string name="stay_connected_description">Android Auto yayınının sürekli bağlı kalmasını sağlar. Telefondan kapattığınızda Android Auto\'nun kapalı kalmasını istiyorsanız kapatın.</string>
     <string name="auto_connect_settings_description">Otomatik bağlantı yöntemlerini ve öncelik sıralarını yapılandırın</string>
     <string name="auto_connect_help">Bu yöntemler uygulama açıldığında otomatik olarak çalışır. İstediklerinizi etkinleştirin, ardından sırayı ayarlamak için sürükleyin. Başarılı olan ilk etkin yöntem kullanılacaktır.</string>
     <string name="auto_connect_priority">Öncelik %d</string>

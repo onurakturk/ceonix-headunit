@@ -195,6 +195,8 @@
     <string name="auto_connect_single_usb">USB-apparaat automatisch verbinden</string>
     <string name="auto_connect_single_usb_description">Automatisch verbinden wanneer slechts één compatibel apparaat beschikbaar is</string>
     <string name="auto_connect_settings">Auto-Connect instellingen</string>
+    <string name="stay_connected">Altijd verbonden blijven</string>
+    <string name="stay_connected_description">Houdt Android Auto altijd verbonden. Zet uit als Android Auto gesloten moet blijven nadat je het op de telefoon hebt beëindigd.</string>
     <string name="auto_connect_settings_description">Auto-Connect methoden en hun prioriteit instellen</string>
     <string name="auto_connect_help">Deze methoden worden automatisch uitgevoerd bij het openen van de app. Schakel de gewenste in en sleep om de volgorde te bepalen. De eerste ingeschakelde methode die slaagt, wordt gebruikt.</string>
     <string name="auto_connect_priority">Prioriteit %d</string>

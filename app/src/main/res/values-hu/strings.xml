@@ -196,6 +196,8 @@
     <string name="auto_connect_single_usb_description">Automatikus csatlakozás, ha csak egy kompatibilis eszköz érhető el</string>
     <string name="auto_connecting_single_usb">Automatikus csatlakozás USB-eszközhöz…</string>
     <string name="auto_connect_settings">Automatikus csatlakozás beállítások</string>
+    <string name="stay_connected">Folyamatos kapcsolat</string>
+    <string name="stay_connected_description">Az Android Autót folyamatosan csatlakoztatva tartja. Kapcsolja ki, ha azt szeretné, hogy az Android Auto zárva maradjon, miután a telefonon befejezte.</string>
     <string name="auto_connect_settings_description">Az automatikus csatlakozási módok és prioritásuk konfigurálása</string>
     <string name="auto_connect_help">Ezek a módszerek automatikusan futnak az alkalmazás megnyitásakor. Engedélyezze a kívántakat, majd húzza őket a sorrend beállításához. Az első sikeres engedélyezett módszer kerül felhasználásra.</string>
     <string name="auto_connect_priority">Prioritás %d</string>

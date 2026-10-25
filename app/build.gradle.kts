@@ -99,8 +99,8 @@ android {
         applicationId = "com.ceonix.ride"
         minSdk = 16
         targetSdk = 36
-        versionCode = 149
-        versionName = "1.2.29"
+        versionCode = 152
+        versionName = "1.2.32"
         setProperty("archivesBaseName", "${applicationId}_${versionName}")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled = true
@@ -122,6 +122,11 @@ android {
         create("playstore") {
             dimension = "distribution"
             minSdk = 21
+            // The Play listing is a paid app. com.ceonix.ride was published there as a free app
+            // and Play never lets a free app become paid, so the Play build has its own id. The
+            // sideload build keeps com.ceonix.ride, so installs and settings on test devices stay.
+            // Its own copy of res/xml/shortcuts.xml carries this id; keep the two files in step.
+            applicationId = "com.ceonix.ride.app"
         }
         create("github") {
             dimension = "distribution"

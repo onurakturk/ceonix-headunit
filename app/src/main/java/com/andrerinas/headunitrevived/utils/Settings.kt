@@ -521,6 +521,16 @@ class Settings(private val context: Context) {
         get() = prefs.getBoolean("auto-start-on-boot", true)
         set(value) { prefs.edit().putBoolean("auto-start-on-boot", value).apply() }
 
+    // When true (default, the behaviour before this setting existed), a session the rider ends
+    // from the phone (USER_SELECTION byebye) is treated like a dropped link and reconnected right
+    // away. When false it is treated like our own Exit: no auto-reconnect until the screen is
+    // turned off and on or the Android Auto card is tapped. Also when false, any session the rider
+    // ends (phone or Exit) releases the Wi-Fi Direct group so the phone lets go; when true our
+    // Exit keeps the group up as before. Range loss is never affected.
+    var stayConnected: Boolean
+        get() = prefs.getBoolean("stay-connected", true)
+        set(value) { prefs.edit().putBoolean("stay-connected", value).apply() }
+
     // When true, the app acts as the device HOME launcher (via the enabled-toggled
     // LauncherAlias). See [com.andrerinas.headunitrevived.utils.LauncherMode].
     var useAsLauncher: Boolean

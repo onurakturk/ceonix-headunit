@@ -31,7 +31,7 @@
         android:required="false" />
 
     <permission
-        android:name="com.ceonix.ride.permission.NAVIGATION_UPDATE"
+        android:name="${applicationId}.permission.NAVIGATION_UPDATE"
         android:protectionLevel="signature" />
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />

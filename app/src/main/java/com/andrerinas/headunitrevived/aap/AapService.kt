@@ -1319,7 +1319,29 @@ class AapService : Service(), UsbReceiver.Listener {
 
             val settings = App.provide(this@AapService).settings
             if (settings.wifiConnectionMode == 3) {
-                if (state.isUserExit) {
+                if (state.endedByPhone || (state.isUserExit && !settings.stayConnected)) {
+                    // The rider ended the session (on the phone, or with our own Exit) and Stay
+                    // connected is off. Release the group as well: kept up, the phone stays joined to
+                    // it and keeps showing Android Auto as available. stopWirelessServer() drops
+                    // activeWifiMode, so unlocking the screen or the Android Auto card goes through
+                    // initWifiMode(force = true) and rebuilds everything, as on a cold start.
+                    // The BT servers stop at once, exactly as on a normal Exit; the group goes a
+                    // second later so our own byebye still reaches the phone, and not at all if the
+                    // rider asked to reconnect in the meantime (that clears userExitedAA) — then the
+                    // group and its credentials are intact and the usual post-Exit path takes over.
+                    nativeAaHandshakeManager?.stop(clearCredentials = false)
+                    serviceScope.launch {
+                        delay(1_000)
+                        if (userExitedAA && commManager.connectionState.value is CommManager.ConnectionState.Disconnected) {
+                            AppLog.i("AapService: Native AA: session ended with Stay connected off — Wi-Fi Direct group torn down so the phone lets go; unlock or the Android Auto card rebuilds it.")
+                            nativeAaHandshakeManager?.stop()
+                            stopWirelessServer()
+                            wifiDirectManager?.stop()
+                        } else {
+                            AppLog.i("AapService: Native AA: group teardown skipped — the rider asked to reconnect meanwhile.")
+                        }
+                    }
+                } else if (state.isUserExit) {
                     // User voluntarily exited AA. Stop the BT handshake servers, but leave the
                     // WiFi Direct group running (that is what lets AA come back when the rider
                     // unlocks the screen) — and with it the credentials that describe it, so the

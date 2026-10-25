@@ -208,6 +208,8 @@
     <string name="auto_connect_single_usb">Tự kết nối thiết bị USB</string>
     <string name="auto_connect_single_usb_description">Tự kết nối khi chỉ có một thiết bị tương thích</string>
     <string name="auto_connect_settings">Cài đặt tự kết nối</string>
+    <string name="stay_connected">Luôn giữ kết nối</string>
+    <string name="stay_connected_description">Giữ Android Auto luôn kết nối. Tắt nếu bạn muốn Android Auto vẫn đóng sau khi bạn kết thúc trên điện thoại.</string>
     <string name="auto_connect_settings_description">Cấu hình phương thức tự kết nối và thứ tự ưu tiên</string>
     <string name="auto_connect_help">Các phương thức này chạy tự động khi mở ứng dụng. Bật các mục mong muốn rồi kéo để sắp thứ tự. Phương thức đầu tiên thành công sẽ được dùng.</string>
     <string name="auto_connect_priority">Ưu tiên %d</string>

@@ -212,6 +212,8 @@
     <string name="auto_connect_single_usb">Conectare automată dispozitiv USB</string>
     <string name="auto_connect_single_usb_description">Se conectează automat când ai un singur dispozitiv compatibil disponibil</string>
     <string name="auto_connect_settings">Setări conectare automată</string>
+    <string name="stay_connected">Rămâi mereu conectat</string>
+    <string name="stay_connected_description">Menține Android Auto conectat în permanență. Dezactivează dacă vrei ca Android Auto să rămână închis după ce îl închizi de pe telefon.</string>
     <string name="auto_connect_settings_description">Configurează metodele de conectare automată și ordinea lor de prioritate</string>
     <string name="auto_connect_help">Aceste metode rulează automat la deschiderea aplicației. Activează-le pe cele dorite, apoi trage de ele pentru a le ordona. Se va folosi prima metodă reușită.</string>
     <string name="auto_connect_priority">Prioritate %d</string>

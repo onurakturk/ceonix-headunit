@@ -516,6 +516,15 @@ class SettingsFragment : Fragment() {
             onClick = { navigateSafely(R.id.action_settingsFragment_to_autoConnectFragment) }
         ))
 
+        // Read when the phone ends a session; nothing to restart, applies to the next disconnect.
+        items.add(SettingItem.ToggleSettingEntry(
+            stableId = "stayConnected",
+            nameResId = R.string.stay_connected,
+            descriptionResId = R.string.stay_connected_description,
+            isChecked = settings.stayConnected,
+            onCheckedChanged = { isChecked -> settings.stayConnected = isChecked }
+        ))
+
         // Language Selector
         val availableLocales = LocaleHelper.getAvailableLocales(requireContext())
         val currentLocale = LocaleHelper.stringToLocale(settings.appLanguage ?: "")

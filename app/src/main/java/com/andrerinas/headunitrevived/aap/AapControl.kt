@@ -296,7 +296,21 @@ internal class AapControlService(
 
     private fun byebyeRequest(request: Control.ByeByeRequest, channel: Int): Int {
         AppLog.i("!!! RECEIVED BYEBYE REQUEST FROM PHONE !!! Reason: ${request.reason}")
-        
+
+        // The rider tapped Disconnect on the phone. Without this the head unit treats it like
+        // a dropped link, rebuilds the group and pokes the phone straight back into the session
+        // it was just told to leave. Routed into the same path as our own Exit: unlocking the
+        // screen or the Android Auto card brings it back, range loss is unaffected (no byebye).
+        // Opt-out via Settings › General › Stay connected (on = the old reconnect-at-once behaviour).
+        if (request.reason == Control.ByeByeReason.USER_SELECTION) {
+            if (settings.stayConnected) {
+                AppLog.i("Byebye USER_SELECTION — Stay connected is on; reconnecting as before.")
+            } else {
+                AppLog.i("Byebye USER_SELECTION — rider ended the session on the phone; handling it like Exit (no auto-reconnect).")
+                aapTransport.endedByPhoneUser = true
+            }
+        }
+
         val msg = AapMessage(channel, Control.ControlMsgType.MESSAGE_BYEBYE_RESPONSE_VALUE, Control.ByeByeResponse.newBuilder().build())
         AppLog.i("Sending BYEYERESPONSE")
         aapTransport.send(msg)

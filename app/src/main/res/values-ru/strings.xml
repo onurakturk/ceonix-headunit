@@ -199,6 +199,8 @@
     <string name="auto_connect_single_usb">Автоподключение USB-устройства</string>
     <string name="auto_connect_single_usb_description">Автоматически подключаться, если доступно только одно совместимое устройство</string>
     <string name="auto_connect_settings">Настройки автоподключения</string>
+    <string name="stay_connected">Всегда оставаться на связи</string>
+    <string name="stay_connected_description">Android Auto всегда остаётся подключённым. Выключите, если хотите, чтобы Android Auto оставался закрытым после завершения на телефоне.</string>
     <string name="auto_connect_settings_description">Настройка методов автоподключения и их приоритета</string>
     <string name="auto_connect_help">Эти методы запускаются автоматически при открытии приложения. Включите нужные и перетащите для установки порядка. Будет использован первый включённый метод, который сработает.</string>
     <string name="auto_connect_priority">Приоритет %d</string>

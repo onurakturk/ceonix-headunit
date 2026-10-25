@@ -196,6 +196,8 @@
     <string name="auto_connect_single_usb">اتصال تلقائي بجهاز USB</string>
     <string name="auto_connect_single_usb_description">الاتصال تلقائيا عند توفر جهاز واحد متوافق فقط</string>
     <string name="auto_connect_settings">إعدادات الاتصال التلقائي</string>
+    <string name="stay_connected">البقاء متصلاً دائمًا</string>
+    <string name="stay_connected_description">يُبقي Android Auto متصلاً في جميع الأوقات. أوقفه إذا أردت أن يبقى Android Auto مغلقًا بعد إنهائه من الهاتف.</string>
     <string name="auto_connect_settings_description">تكوين طرق الاتصال التلقائي وترتيب أولوياتها</string>
     <string name="auto_connect_help">تعمل هذه الطرق تلقائيا عند فتح التطبيق. قم بتمكين الطرق التي تريدها، ثم اسحب لضبط الترتيب. سيتم استخدام أول طريقة ممكّنة تنجح.</string>
     <string name="auto_connect_priority">الأولوية %d</string>

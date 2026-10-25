@@ -196,6 +196,8 @@
     <string name="auto_connect_single_usb">Conectar automáticamente dispositivo USB</string>
     <string name="auto_connect_single_usb_description">Conectar automáticamente cuando solo hay un dispositivo compatible disponible</string>
     <string name="auto_connect_settings">Ajustes de autoconexión</string>
+    <string name="stay_connected">Mantener siempre conectado</string>
+    <string name="stay_connected_description">Mantiene Android Auto conectado en todo momento. Desactívalo si quieres que Android Auto siga cerrado después de finalizarlo en el teléfono.</string>
     <string name="auto_connect_settings_description">Configurar métodos de autoconexión y su orden de prioridad</string>
     <string name="auto_connect_help">Estos métodos se ejecutan automáticamente al abrir la app. Active los que desee y arrastre para establecer el orden. Se usará el primer método activo que tenga éxito.</string>
     <string name="auto_connect_priority">Prioridad %d</string>

@@ -80,10 +80,14 @@ class CommManager(
          * @param isClean `true` if the phone sent a graceful `ByeByeRequest` before closing;
          *                `false` for all other disconnect causes (USB detach, read error,
          *                socket timeout, explicit user disconnect).
+         * @param endedByPhone `true` when the rider ended the session on the phone and
+         *                Stay connected is off (implies [isUserExit]). With Stay connected off
+         *                the Wi-Fi Direct group is released for any user exit, see AapService.
          */
         data class Disconnected(
             val isClean: Boolean = false,
-            val isUserExit: Boolean = false
+            val isUserExit: Boolean = false,
+            val endedByPhone: Boolean = false
         ) : ConnectionState()
 
         /** Physical connection handshake in progress (USB open or TCP connect). */
@@ -318,7 +322,8 @@ class CommManager(
                         _transport = null
 
                         if (oldTransport != null) {
-                            transportedQuited(isClean)
+                            // Read off the captured transport: `_transport` is already null here.
+                            transportedQuited(isClean, phoneUserExit = oldTransport.endedByPhoneUser)
                         }
                     }
                     _transport!!.onAudioFocusStateChanged = { isPlaying -> onAudioFocusStateChanged?.invoke(isPlaying) }
@@ -377,13 +382,13 @@ class CommManager(
      * `false` immediately) then schedules cleanup. `sendByeBye` is `false` because the
      * connection is already dead — there is no point sending a `ByeByeRequest`.
      */
-    private fun transportedQuited(isClean: Boolean) {
-        val wasUserExit = _transport?.wasUserExit ?: false
+    private fun transportedQuited(isClean: Boolean, phoneUserExit: Boolean = false) {
+        val wasUserExit = phoneUserExit || (_transport?.wasUserExit ?: false)
         // Observation only: this is the other door into Disconnected. Together with the
         // DISCONNECT: line in disconnect() it tells apart "the transport died on its own"
         // from "someone called disconnect()", which decides whether userExitedAA gets armed.
-        AppLog.i("DISCONNECT: transportQuit(isClean=$isClean) wasUserExit=$wasUserExit")
-        _connectionState.value = ConnectionState.Disconnected(isClean, isUserExit = wasUserExit)
+        AppLog.i("DISCONNECT: transportQuit(isClean=$isClean) wasUserExit=$wasUserExit phoneUserExit=$phoneUserExit")
+        _connectionState.value = ConnectionState.Disconnected(isClean, isUserExit = wasUserExit, endedByPhone = phoneUserExit)
         // Transport already quit on its own — no ByeByeRequest needed (connection is dead).
         _disconnectJob = _scope.launch { doDisconnect(sendByeBye = false) }
         if (settings.killOnDisconnect) {

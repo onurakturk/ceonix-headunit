@@ -112,7 +112,7 @@
 | Ekran | Nereden açılır | Kategori | Satır |
 |---|---|---|---|
 | **S1** Settings (hub) | Home → Settings | — | 7 kart |
-| **S1.1** General | S1 kartı | — | 5 |
+| **S1.1** General | S1 kartı | — | 7 (Permissions + 6) |
 | **S1.2** Display | S1 kartı | — | 4 |
 | **S1.3** Audio | S1 kartı | — | 2 (1'i koşullu) |
 | **S1.5** Backup | S1 kartı | — | 2 |
@@ -157,6 +157,7 @@ solda ikon kutusu, başlık + kısa açıklama, sağda chevron). Kartların heps
 | S1.1.3 | Auto-Connect Settings | → S5 | Otomatik bağlanma önceliği | her zaman | ✅ | |
 | S1.1.4 | App Language | dialog | Uygulama dilini seçer (boş = sistem dili) | her zaman | ✅ | |
 | S1.1.5 | Vehicle information | → S3 | Telefona gönderilen araç kimliği (marka/model/yıl) | her zaman | ✅ | |
+| S1.1.6 | **Stay connected** | toggle | **Açık (varsayılan):** telefondan AA'yı kapatınca HU hemen yeniden bağlanır (eski davranış). **Kapalı:** telefon `USER_SELECTION` byebye'ı HU'nun Exit'i gibi işlenir — ekran kapat-aç ya da AA kartına kadar bağlanmaz; ayrıca kapalıyken **her kullanıcı çıkışı (telefon ya da HU Exit) Wi-Fi Direct grubunu da bırakır**, telefon ağdan düşer (**v1.2.31**; açıkken HU Exit grubu korur). Menzil kaybını etkilemez. Ekranda **Auto-Connect'in hemen altında** (numara, mevcut referanslar kaymasın diye sona eklendi). Anında yazar. **v1.2.30** | her zaman | ✅ | |
 
 ### S1.2 — Display
 | # | Satır | Tür | Ne yapar | Görünürlük | Native-AA | KARARIN |
@@ -435,7 +436,7 @@ Bu ekran adresi dışarıdan almanın yolu.
 
 ```
 Settings (hub — 7 kart)
-├── General       Launcher Mode · Auto-start settings · Auto-Connect Settings · App Language · Vehicle information
+├── General       Launcher Mode · Auto-start settings · Auto-Connect Settings · Stay connected · App Language · Vehicle information
 ├── Display       Interface size · Dark Mode Settings · Screen mode* · Stretch to fill screen*
 ├── Audio         Audio Sink* · Static Audio Focus*
 ├── Connection    → Wi-Fi Setup ekranı (doğrudan; Static BSSID elle giriş orada)

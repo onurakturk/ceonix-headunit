@@ -69,8 +69,10 @@ Requirements: Android SDK (compileSdk 36), NDK 27, JDK 17.
 adb install -r app/build/outputs/apk/github/debug/com.ceonix.ride_<version>_debug.apk
 ```
 
-There are two flavours. `github` is the sideload build. `playstore` is the Google Play build:
-it leaves out the dummy VPN service and three permissions Play restricts or that nothing uses.
+There are two flavours. `github` is the sideload build (`com.ceonix.ride`). `playstore` is the
+Google Play build (`com.ceonix.ride.app`): it leaves out the dummy VPN service and three
+permissions Play restricts or that nothing uses. The two have different package names, so they
+install side by side, but only one can run at a time: both open the same Android Auto port.
 
 ```bash
 ./gradlew :app:bundlePlaystoreRelease :companion:bundleRelease

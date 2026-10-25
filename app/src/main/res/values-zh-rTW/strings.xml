@@ -195,6 +195,8 @@
     <string name="auto_connect_single_usb">自動連接 USB 裝置</string>
     <string name="auto_connect_single_usb_description">當只有一個相容裝置可用時自動連接</string>
     <string name="auto_connect_settings">自動連接設定</string>
+    <string name="stay_connected">保持連線</string>
+    <string name="stay_connected_description">讓 Android Auto 隨時保持連線。若希望在手機上結束後 Android Auto 保持關閉，請關閉此選項。</string>
     <string name="auto_connect_settings_description">設定自動連接方式及其優先順序</string>
     <string name="auto_connect_help">這些方式會在開啟應用程式時自動執行。啟用您想要的方式，然後拖曳以設定順序。系統會使用第一個成功的已啟用方式。</string>
     <string name="auto_connect_priority">優先順序 %d</string>

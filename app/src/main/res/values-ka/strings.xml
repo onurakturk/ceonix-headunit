@@ -216,6 +216,8 @@
     <string name="auto_connect_single_usb">USB მოწყობილობის ავტო-კავშირი</string>
     <string name="auto_connect_single_usb_description">ავტომატური დაკავშირება, როდესაც ხელმისაწვდომია მხოლოდ ერთი თავსებადი მოწყობილობა</string>
     <string name="auto_connect_settings">ავტო-კავშირის პარამეტრები</string>
+    <string name="stay_connected">ყოველთვის დაკავშირებული</string>
+    <string name="stay_connected_description">Android Auto-ს ყოველთვის დაკავშირებულს ინარჩუნებს. გამორთეთ, თუ გსურთ, რომ Android Auto დახურული დარჩეს ტელეფონიდან დასრულების შემდეგ.</string>
     <string name="auto_connect_settings_description">ავტო-კავშირის მეთოდებისა და მათი პრიორიტეტების კონფიგურაცია</string>
     <string name="auto_connect_help">ეს მეთოდები ავტომატურად ეშვება აპის გახსნისას. ჩართეთ სასურველი მეთოდები, შემდეგ გადაათრიეთ რიგითობის დასაყენებლად. გამოყენებული იქნება პირველივე ჩართული მეთოდი, რომელიც წარმატებით დაუკავშირდება.</string>
     <string name="auto_connect_priority">პრიორიტეტი %d</string>
