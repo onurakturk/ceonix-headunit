@@ -45,6 +45,9 @@ motorcycle use. Alongside standard Android Auto projection it adds a purpose-bui
 dashboard** and a Material 3 home screen you can use as the device launcher.
 
 <p align="center">
+  <img src="docs/images/navigation.png" alt="Android Auto navigation projected from the phone" width="98%">
+</p>
+<p align="center">
   <img src="docs/images/home.png" alt="CEONIX Ride home screen" width="49%">
   <img src="docs/images/ride-dashboard.png" alt="Ride dashboard with speed, lean angle and g-force" width="49%">
 </p>
