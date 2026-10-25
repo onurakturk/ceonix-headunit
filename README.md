@@ -1,6 +1,6 @@
 ## What is CEONIX Ride?
 
-CEONIX Ride turns an Android phone or table into a **wireless Android Auto head unit**, tailored for
+CEONIX Ride turns an Android phone or tablet into a **wireless Android Auto head unit**, tailored for
 motorcycle use. Alongside standard Android Auto it adds a purpose-built **Ride
 dashboard** and a Material 3 home screen you can use as the device launcher.
 
