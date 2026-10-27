@@ -1,3 +1,21 @@
+CEONIX Headunit and CEONIX Setup
+Copyright (c) 2026 Onur Aktürk (CEONIX)
+
+CEONIX Headunit is a modified version of Headunit Revived, which is based on
+Headunit for Android Auto. The original copyright notices are kept below as
+the GNU Affero General Public License v3 requires. The full licence text is
+in the LICENSE file.
+
+
+======================================================================
+Headunit Revived
+Copyright (c) 2025-2026 André Rinas
+https://github.com/andreknieriem/headunit-revived
+
+
+======================================================================
+Headunit for Android Auto - original notice, unchanged
+======================================================================
 
 Headunit for Android Auto (tm) is a software based headunit compatible with Android Auto.
 
