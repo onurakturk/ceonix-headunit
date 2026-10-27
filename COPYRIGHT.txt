@@ -1,5 +1,5 @@
 CEONIX Headunit and CEONIX Setup
-Copyright (c) 2026 Onur Aktürk (CEONIX)
+Copyright © 2026 CEONIX Headunit
 
 CEONIX Headunit is a modified version of Headunit Revived, which is based on
 Headunit for Android Auto. The original copyright notices are kept below as
