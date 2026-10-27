@@ -44,4 +44,31 @@
     <string name="error_bluetooth_off">Bluetooth este oprit, deci adresa nu poate fi transmisă. Pornește-l și încearcă din nou sau tastează adresa manual pe unitate.</string>
     <string name="error_no_listener">Unitatea nu ascultă. Deschide <b>Setări › Configurare Wi-Fi</b> pe ea și încearcă din nou.</string>
     <string name="error_connection">Conexiunea Bluetooth cu unitatea s-a pierdut. Încearcă din nou sau tastează adresa manual pe unitate.</string>
+
+    <!-- Setup guide -->
+    <string name="guide_title">Cum configurezi</string>
+    <string name="guide_entry_desc">Pas cu pas, cu imagini</string>
+    <string name="guide_intro">Se face o singură dată, cu unitatea și acest telefon unul lângă altul. Durează cam cinci minute.</string>
+    <string name="guide_back">Înapoi</string>
+    <string name="guide_got_it">Am înțeles</string>
+    <string name="guide_section_head_unit">Pe unitate</string>
+    <string name="guide_section_phone">Pe acest telefon</string>
+    <string name="guide_permissions_title">Acordă permisiunile</string>
+    <string name="guide_permissions_text">Deschide CEONIX Headunit pe unitate. Permite toate cardurile de pe primul ecran, atinge %1$s și acceptă avertismentul de siguranță.</string>
+    <string name="guide_pair_title">Asociază prin Bluetooth</string>
+    <string name="guide_pair_text">Pe unitate, deschide setările Bluetooth din Android și atinge Asociază un dispozitiv nou. Pe acest telefon, alege unitatea din lista Bluetooth și confirmă același cod pe ambele ecrane.</string>
+    <string name="guide_aa_title">Apasă o dată Android Auto</string>
+    <string name="guide_aa_text">Pe ecranul principal al unității, apasă %1$s și alege acest telefon. Încă nu apare nimic, și e normal: unitatea își creează propria rețea Wi-Fi.</string>
+    <string name="guide_connection_title">Deschide ecranul Conexiune</string>
+    <string name="guide_connection_text">Pe unitate, deschide %1$s › %2$s. Lasă ecranul deschis cât timp scrie %3$s.</string>
+    <string name="guide_find_title">Găsește unitatea</string>
+    <string name="guide_find_text">Închide acest ghid, atinge %1$s și permite ce ți se cere. Căutarea durează cam jumătate de minut.</string>
+    <string name="guide_send_title">Trimite adresa</string>
+    <string name="guide_send_text">Când cardul scrie %1$s, atinge %2$s și alege unitatea din listă.</string>
+    <string name="guide_done_title">Gata</string>
+    <string name="guide_done_text">Acest telefon afișează %1$s. Apoi Android Auto se conectează singur; dacă nu, apasă o dată %2$s pe unitate. Prima dată, acceptă solicitările Android Auto pe acest telefon.</string>
+    <string name="hu_continue">Continuă</string>
+    <string name="hu_settings">Setări</string>
+    <string name="hu_connection">Conexiune</string>
+    <string name="hu_listening">Ascultă</string>
 </resources>

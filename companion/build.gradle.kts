@@ -9,15 +9,15 @@ plugins {
 
 android {
     compileSdk = 36
-    namespace = "com.ceonix.ride.helper"
+    namespace = "com.ceonix.setup"
 
     defaultConfig {
-        applicationId = "com.ceonix.ride.helper"
+        applicationId = "com.ceonix.setup"
         // Runs on the rider's phone, which is also the phone running Android Auto.
         minSdk = 21
         targetSdk = 36
-        versionCode = 8
-        versionName = "2.1"
+        versionCode = 10
+        versionName = "3.0"
         setProperty("archivesBaseName", "${applicationId}_${versionName}")
         // Ship only the languages this app is actually translated into. Without this the
         // libraries' own translations ride along and Play lists ~80 languages as supported.

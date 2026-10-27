@@ -44,4 +44,31 @@
     <string name="error_bluetooth_off">Bluetooth kapalı, bu yüzden adres iletilemiyor. Açıp tekrar deneyin ya da adresi kafa ünitesine elle yazın.</string>
     <string name="error_no_listener">Kafa ünitesi dinlemiyor. Üzerinde <b>Ayarlar › Wi-Fi Kurulumu</b> ekranını açıp tekrar deneyin.</string>
     <string name="error_connection">Kafa ünitesiyle Bluetooth bağlantısı koptu. Tekrar deneyin ya da adresi kafa ünitesine elle yazın.</string>
+
+    <!-- Setup guide -->
+    <string name="guide_title">Nasıl kurulur</string>
+    <string name="guide_entry_desc">Adım adım, resimlerle</string>
+    <string name="guide_intro">Bunu bir kez, kafa ünitesi ile bu telefon yan yanayken yapın. Yaklaşık beş dakika sürer.</string>
+    <string name="guide_back">Geri</string>
+    <string name="guide_got_it">Anladım</string>
+    <string name="guide_section_head_unit">Kafa ünitesinde</string>
+    <string name="guide_section_phone">Bu telefonda</string>
+    <string name="guide_permissions_title">İzinleri verin</string>
+    <string name="guide_permissions_text">Kafa ünitesinde CEONIX Headunit\'i açın. İlk ekrandaki tüm kartlara izin verin, %1$s düğmesine basın ve güvenlik uyarısını kabul edin.</string>
+    <string name="guide_pair_title">Bluetooth ile eşleştirin</string>
+    <string name="guide_pair_text">Kafa ünitesinde Android\'in Bluetooth ayarlarını açıp Yeni cihaz eşle\'ye basın. Bu telefonda Bluetooth listesinden kafa ünitesini seçin ve iki ekranda da aynı kodu onaylayın.</string>
+    <string name="guide_aa_title">Android Auto\'ya bir kez basın</string>
+    <string name="guide_aa_text">Kafa ünitesinin ana ekranında %1$s kartına basın ve bu telefonu seçin. Henüz bir şey görünmez, bu normaldir: kafa ünitesi kendi Wi-Fi ağını kuruyor.</string>
+    <string name="guide_connection_title">Bağlantı ekranını açın</string>
+    <string name="guide_connection_text">Kafa ünitesinde %1$s › %2$s ekranını açın. Ekranda %3$s yazarken açık bırakın.</string>
+    <string name="guide_find_title">Kafa ünitesini bulun</string>
+    <string name="guide_find_text">Bu rehberi kapatın, %1$s düğmesine basın ve istenen izinleri verin. Arama yaklaşık yarım dakika sürer.</string>
+    <string name="guide_send_title">Adresi gönderin</string>
+    <string name="guide_send_text">Kartta %1$s yazınca %2$s düğmesine basın ve listeden kafa ünitesini seçin.</string>
+    <string name="guide_done_title">Bitti</string>
+    <string name="guide_done_text">Bu telefonda %1$s yazar. Android Auto ardından kendiliğinden bağlanır; bağlanmazsa kafa ünitesinde %2$s kartına bir kez basın. İlk seferde bu telefonda Android Auto\'nun sorularını onaylayın.</string>
+    <string name="hu_continue">Devam</string>
+    <string name="hu_settings">Ayarlar</string>
+    <string name="hu_connection">Bağlantı</string>
+    <string name="hu_listening">Dinleniyor</string>
 </resources>

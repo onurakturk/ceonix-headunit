@@ -44,4 +44,31 @@
     <string name="error_bluetooth_off">Bluetooth je vypnuté, takže adresu nelze předat. Zapněte ho a zkuste to znovu, nebo adresu zadejte do jednotky ručně.</string>
     <string name="error_no_listener">Jednotka nenaslouchá. Otevřete na ní <b>Nastavení › Nastavení Wi-Fi</b> a zkuste to znovu.</string>
     <string name="error_connection">Spojení Bluetooth s jednotkou bylo ztraceno. Zkuste to znovu, nebo adresu zadejte do jednotky ručně.</string>
+
+    <!-- Setup guide -->
+    <string name="guide_title">Jak nastavit</string>
+    <string name="guide_entry_desc">Krok za krokem, s obrázky</string>
+    <string name="guide_intro">Stačí to udělat jednou, s jednotkou a tímto telefonem vedle sebe. Trvá to asi pět minut.</string>
+    <string name="guide_back">Zpět</string>
+    <string name="guide_got_it">Rozumím</string>
+    <string name="guide_section_head_unit">Na jednotce</string>
+    <string name="guide_section_phone">Na tomto telefonu</string>
+    <string name="guide_permissions_title">Povolte oprávnění</string>
+    <string name="guide_permissions_text">Na jednotce otevřete CEONIX Headunit. Povolte všechny karty na první obrazovce, klepněte na %1$s a potvrďte bezpečnostní upozornění.</string>
+    <string name="guide_pair_title">Spárujte přes Bluetooth</string>
+    <string name="guide_pair_text">Na jednotce otevřete nastavení Bluetooth v Androidu a klepněte na Spárovat nové zařízení. Na tomto telefonu vyberte jednotku v seznamu Bluetooth a na obou obrazovkách potvrďte stejný kód.</string>
+    <string name="guide_aa_title">Jednou stiskněte Android Auto</string>
+    <string name="guide_aa_text">Na domovské obrazovce jednotky klepněte na %1$s a vyberte tento telefon. Zatím se nic neobjeví, a to je v pořádku: jednotka si právě vytváří vlastní síť Wi-Fi.</string>
+    <string name="guide_connection_title">Otevřete obrazovku Připojení</string>
+    <string name="guide_connection_text">Na jednotce otevřete %1$s › %2$s. Nechte obrazovku otevřenou, dokud je na ní %3$s.</string>
+    <string name="guide_find_title">Najděte jednotku</string>
+    <string name="guide_find_text">Zavřete tohoto průvodce, klepněte na %1$s a povolte, co aplikace požaduje. Hledání trvá asi půl minuty.</string>
+    <string name="guide_send_title">Odešlete adresu</string>
+    <string name="guide_send_text">Až bude na kartě %1$s, klepněte na %2$s a vyberte jednotku ze seznamu.</string>
+    <string name="guide_done_title">Hotovo</string>
+    <string name="guide_done_text">Telefon zobrazí %1$s. Android Auto se pak připojí samo; pokud ne, klepněte jednou na jednotce na %2$s. Poprvé na tomto telefonu potvrďte dotazy Android Auto.</string>
+    <string name="hu_continue">Pokračovat</string>
+    <string name="hu_settings">Nastavení</string>
+    <string name="hu_connection">Připojení</string>
+    <string name="hu_listening">Naslouchá</string>
 </resources>

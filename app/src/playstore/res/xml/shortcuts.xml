@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
     Play Store copy of src/main/res/xml/shortcuts.xml. The only difference is targetPackage:
-    the Play build is com.ceonix.ride.app (see the playstore flavor in app/build.gradle.kts).
+    the Play build is com.ceonix.headunit, the sideload build com.ceonix.headunit.dev (see app/build.gradle.kts).
     Resource files cannot read applicationId, so a change to the shortcuts goes into both files.
 -->
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
@@ -13,7 +13,7 @@
         android:shortcutLongLabel="@string/shortcut_connect_desc">
         <intent
             android:action="com.andrerinas.headunitrevived.ACTION_CONNECT"
-            android:targetPackage="com.ceonix.ride.app"
+            android:targetPackage="com.ceonix.headunit"
             android:targetClass="com.andrerinas.headunitrevived.main.AutomationActivity" />
     </shortcut>
     <shortcut
@@ -24,7 +24,7 @@
         android:shortcutLongLabel="@string/shortcut_selfmode_desc">
         <intent
             android:action="com.andrerinas.headunitrevived.ACTION_START_SELF_MODE"
-            android:targetPackage="com.ceonix.ride.app"
+            android:targetPackage="com.ceonix.headunit"
             android:targetClass="com.andrerinas.headunitrevived.main.AutomationActivity" />
     </shortcut>
 
@@ -36,7 +36,7 @@
         android:shortcutLongLabel="@string/shortcut_disconnect_desc">
         <intent
             android:action="com.andrerinas.headunitrevived.ACTION_DISCONNECT"
-            android:targetPackage="com.ceonix.ride.app"
+            android:targetPackage="com.ceonix.headunit"
             android:targetClass="com.andrerinas.headunitrevived.main.AutomationActivity" />
     </shortcut>
 
@@ -48,7 +48,7 @@
         android:shortcutLongLabel="@string/shortcut_exit_desc">
         <intent
             android:action="com.andrerinas.headunitrevived.ACTION_STOP_SERVICE"
-            android:targetPackage="com.ceonix.ride.app"
+            android:targetPackage="com.ceonix.headunit"
             android:targetClass="com.andrerinas.headunitrevived.main.AutomationActivity" />
     </shortcut>
 
@@ -60,7 +60,7 @@
         android:shortcutLongLabel="@string/shortcut_night_mode_day_desc">
         <intent
             android:action="com.andrerinas.headunitrevived.ACTION_SET_NIGHT_MODE"
-            android:targetPackage="com.ceonix.ride.app"
+            android:targetPackage="com.ceonix.headunit"
             android:targetClass="com.andrerinas.headunitrevived.main.AutomationActivity">
             <extra android:name="state" android:value="day" />
         </intent>
@@ -74,7 +74,7 @@
         android:shortcutLongLabel="@string/shortcut_night_mode_night_desc">
         <intent
             android:action="com.andrerinas.headunitrevived.ACTION_SET_NIGHT_MODE"
-            android:targetPackage="com.ceonix.ride.app"
+            android:targetPackage="com.ceonix.headunit"
             android:targetClass="com.andrerinas.headunitrevived.main.AutomationActivity">
             <extra android:name="state" android:value="night" />
         </intent>
@@ -88,7 +88,7 @@
         android:shortcutLongLabel="@string/shortcut_night_mode_auto_desc">
         <intent
             android:action="com.andrerinas.headunitrevived.ACTION_SET_NIGHT_MODE"
-            android:targetPackage="com.ceonix.ride.app"
+            android:targetPackage="com.ceonix.headunit"
             android:targetClass="com.andrerinas.headunitrevived.main.AutomationActivity">
             <extra android:name="state" android:value="auto" />
         </intent>

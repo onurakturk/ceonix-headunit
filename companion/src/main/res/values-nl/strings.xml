@@ -44,4 +44,31 @@
     <string name="error_bluetooth_off">Bluetooth staat uit, dus het adres kan niet worden doorgegeven. Zet het aan en probeer opnieuw, of typ het adres met de hand in op de headunit.</string>
     <string name="error_no_listener">De headunit luistert niet. Open daar <b>Instellingen › Wifi-installatie</b> en probeer opnieuw.</string>
     <string name="error_connection">De Bluetooth-verbinding met de headunit is verbroken. Probeer opnieuw of typ het adres met de hand in op de headunit.</string>
+
+    <!-- Setup guide -->
+    <string name="guide_title">Zo stel je het in</string>
+    <string name="guide_entry_desc">Stap voor stap, met afbeeldingen</string>
+    <string name="guide_intro">Dit doe je maar één keer, met de headunit en deze telefoon naast elkaar. Het duurt ongeveer vijf minuten.</string>
+    <string name="guide_back">Terug</string>
+    <string name="guide_got_it">Begrepen</string>
+    <string name="guide_section_head_unit">Op de headunit</string>
+    <string name="guide_section_phone">Op deze telefoon</string>
+    <string name="guide_permissions_title">Geef de toestemmingen</string>
+    <string name="guide_permissions_text">Open CEONIX Headunit op de headunit. Sta elke kaart op het eerste scherm toe, tik op %1$s en accepteer de veiligheidsmelding.</string>
+    <string name="guide_pair_title">Koppel via Bluetooth</string>
+    <string name="guide_pair_text">Open op de headunit de Bluetooth-instellingen van Android en tik op Nieuw apparaat koppelen. Kies op deze telefoon de headunit in de Bluetooth-lijst en bevestig op beide schermen dezelfde code.</string>
+    <string name="guide_aa_title">Druk één keer op Android Auto</string>
+    <string name="guide_aa_text">Druk op het startscherm van de headunit op %1$s en kies deze telefoon. Er verschijnt nog niets, en dat klopt: de headunit zet nu zijn eigen wifi-netwerk op.</string>
+    <string name="guide_connection_title">Open het scherm Verbinding</string>
+    <string name="guide_connection_text">Open op de headunit %1$s › %2$s. Laat dat scherm open zolang er %3$s staat.</string>
+    <string name="guide_find_title">Zoek de headunit</string>
+    <string name="guide_find_text">Sluit deze uitleg, tik op %1$s en sta toe wat er gevraagd wordt. Het zoeken duurt ongeveer een halve minuut.</string>
+    <string name="guide_send_title">Stuur het adres</string>
+    <string name="guide_send_text">Als de kaart %1$s zegt, tik je op %2$s en kies je de headunit in de lijst.</string>
+    <string name="guide_done_title">Klaar</string>
+    <string name="guide_done_text">Deze telefoon toont %1$s. Android Auto maakt daarna zelf verbinding; zo niet, druk dan één keer op %2$s op de headunit. De allereerste keer accepteer je de vragen van Android Auto op deze telefoon.</string>
+    <string name="hu_continue">Doorgaan</string>
+    <string name="hu_settings">Instellingen</string>
+    <string name="hu_connection">Verbinding</string>
+    <string name="hu_listening">Luistert</string>
 </resources>

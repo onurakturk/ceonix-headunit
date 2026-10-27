@@ -44,4 +44,31 @@
     <string name="error_bluetooth_off">Bluetooth가 꺼져 있어 주소를 전달할 수 없습니다. 켜고 다시 시도하거나 헤드유닛에 주소를 직접 입력하세요.</string>
     <string name="error_no_listener">헤드유닛이 수신 대기 중이 아닙니다. 헤드유닛에서 <b>설정 › Wi-Fi 설정</b>을 열고 다시 시도하세요.</string>
     <string name="error_connection">헤드유닛과의 Bluetooth 연결이 끊어졌습니다. 다시 시도하거나 헤드유닛에 주소를 직접 입력하세요.</string>
+
+    <!-- Setup guide -->
+    <string name="guide_title">설정 방법</string>
+    <string name="guide_entry_desc">그림과 함께 단계별로</string>
+    <string name="guide_intro">헤드유닛과 이 휴대전화를 나란히 두고 한 번만 하면 됩니다. 약 5분 걸립니다.</string>
+    <string name="guide_back">뒤로</string>
+    <string name="guide_got_it">확인</string>
+    <string name="guide_section_head_unit">헤드유닛에서</string>
+    <string name="guide_section_phone">이 휴대전화에서</string>
+    <string name="guide_permissions_title">권한 허용</string>
+    <string name="guide_permissions_text">헤드유닛에서 CEONIX Headunit을 엽니다. 첫 화면의 모든 카드를 허용하고 %1$s을(를) 누른 다음 안전 안내에 동의합니다.</string>
+    <string name="guide_pair_title">블루투스로 페어링</string>
+    <string name="guide_pair_text">헤드유닛에서 Android 블루투스 설정을 열고 새 기기 페어링을 누릅니다. 이 휴대전화의 블루투스 목록에서 헤드유닛을 선택하고 두 화면에서 같은 코드를 확인합니다.</string>
+    <string name="guide_aa_title">Android Auto 한 번 누르기</string>
+    <string name="guide_aa_text">헤드유닛 홈 화면에서 %1$s을(를) 누르고 이 휴대전화를 선택합니다. 아직 아무것도 나타나지 않는 것이 정상입니다. 헤드유닛이 자체 Wi-Fi 네트워크를 만드는 중입니다.</string>
+    <string name="guide_connection_title">연결 화면 열기</string>
+    <string name="guide_connection_text">헤드유닛에서 %1$s › %2$s을(를) 엽니다. %3$s(이)라고 표시되는 동안 화면을 열어 둡니다.</string>
+    <string name="guide_find_title">헤드유닛 찾기</string>
+    <string name="guide_find_text">이 안내를 닫고 %1$s을(를) 누른 뒤 요청하는 권한을 허용합니다. 검색은 약 30초 걸립니다.</string>
+    <string name="guide_send_title">주소 보내기</string>
+    <string name="guide_send_text">카드에 %1$s(이)라고 표시되면 %2$s을(를) 누르고 목록에서 헤드유닛을 선택합니다.</string>
+    <string name="guide_done_title">완료</string>
+    <string name="guide_done_text">이 휴대전화에 %1$s(이)라고 표시됩니다. 그러면 Android Auto가 자동으로 연결됩니다. 연결되지 않으면 헤드유닛에서 %2$s을(를) 한 번 누르세요. 처음에는 이 휴대전화에서 Android Auto의 확인 요청에 동의하세요.</string>
+    <string name="hu_continue">계속</string>
+    <string name="hu_settings">설정</string>
+    <string name="hu_connection">연결</string>
+    <string name="hu_listening">대기 중</string>
 </resources>

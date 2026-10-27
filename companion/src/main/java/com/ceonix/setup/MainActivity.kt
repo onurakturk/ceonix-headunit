@@ -1,4 +1,4 @@
-package com.ceonix.ride.helper
+package com.ceonix.setup
 
 import android.Manifest
 import android.animation.LayoutTransition
@@ -7,6 +7,7 @@ import android.bluetooth.BluetoothDevice
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.os.Build
 import android.os.Bundle
@@ -152,7 +153,21 @@ class MainActivity : AppCompatActivity() {
         copyButton.setOnClickListener { copy(candidateBssid.text.toString()) }
         copyReportButton.setOnClickListener { copy(report.text.toString()) }
         detailsHeader.setOnClickListener { toggleDetails() }
+        findViewById<View>(R.id.guide_entry).setOnClickListener { openGuide() }
+
+        // A first-time rider usually arrives here before the head unit is ready for this step, so
+        // the guide opens by itself once. After that it is one tap away on the card above.
+        // savedInstanceState keeps a rotation or a theme change from opening it again.
+        if (savedInstanceState == null) {
+            val prefs = getPreferences(Context.MODE_PRIVATE)
+            if (!prefs.getBoolean(PREF_GUIDE_SEEN, false)) {
+                prefs.edit().putBoolean(PREF_GUIDE_SEEN, true).apply()
+                openGuide()
+            }
+        }
     }
+
+    private fun openGuide() = startActivity(Intent(this, GuideActivity::class.java))
 
     private fun requestPermissionsThenLook() {
         val needed = mutableListOf(Manifest.permission.ACCESS_FINE_LOCATION)
@@ -476,5 +491,9 @@ class MainActivity : AppCompatActivity() {
         action.isEnabled = !busy
         sendButton.isEnabled = !busy
         sendAnyway.isEnabled = !busy
+    }
+
+    private companion object {
+        const val PREF_GUIDE_SEEN = "guide_seen"
     }
 }

@@ -44,4 +44,31 @@
     <string name="error_bluetooth_off">Bluetooth がオフのため、アドレスを渡せません。オンにしてもう一度試すか、アドレスをヘッドユニットに手入力してください。</string>
     <string name="error_no_listener">ヘッドユニットが待ち受けていません。ヘッドユニットで<b>設定 › Wi-Fi セットアップ</b>を開いて、もう一度お試しください。</string>
     <string name="error_connection">ヘッドユニットとの Bluetooth 接続が切れました。もう一度試すか、アドレスをヘッドユニットに手入力してください。</string>
+
+    <!-- Setup guide -->
+    <string name="guide_title">設定のしかた</string>
+    <string name="guide_entry_desc">画像つきで順番に説明</string>
+    <string name="guide_intro">ヘッドユニットとこの電話を並べて、一度だけ行います。所要時間は約5分です。</string>
+    <string name="guide_back">戻る</string>
+    <string name="guide_got_it">OK</string>
+    <string name="guide_section_head_unit">ヘッドユニットで</string>
+    <string name="guide_section_phone">この電話で</string>
+    <string name="guide_permissions_title">権限を許可する</string>
+    <string name="guide_permissions_text">ヘッドユニットで CEONIX Headunit を開きます。最初の画面のカードをすべて許可し、%1$s をタップして、安全上の注意に同意します。</string>
+    <string name="guide_pair_title">Bluetooth でペア設定する</string>
+    <string name="guide_pair_text">ヘッドユニットで Android の Bluetooth 設定を開き、「新しいデバイスとペア設定」をタップします。この電話の Bluetooth 一覧でヘッドユニットを選び、両方の画面で同じコードを確認します。</string>
+    <string name="guide_aa_title">Android Auto を一度押す</string>
+    <string name="guide_aa_text">ヘッドユニットのホーム画面で %1$s を押し、この電話を選びます。まだ何も表示されませんが、それで正常です。ヘッドユニットが自分の Wi-Fi ネットワークを作っています。</string>
+    <string name="guide_connection_title">接続画面を開く</string>
+    <string name="guide_connection_text">ヘッドユニットで %1$s › %2$s を開きます。%3$s と表示されている間は、その画面を開いたままにします。</string>
+    <string name="guide_find_title">ヘッドユニットを探す</string>
+    <string name="guide_find_text">このガイドを閉じ、%1$s をタップして、求められた権限を許可します。検索には約30秒かかります。</string>
+    <string name="guide_send_title">アドレスを送る</string>
+    <string name="guide_send_text">カードに %1$s と表示されたら %2$s をタップし、一覧からヘッドユニットを選びます。</string>
+    <string name="guide_done_title">完了</string>
+    <string name="guide_done_text">この電話に %1$s と表示されます。そのあと Android Auto が自動で接続します。接続しない場合は、ヘッドユニットで %2$s を一度押してください。初回は、この電話で Android Auto の確認に同意してください。</string>
+    <string name="hu_continue">続行</string>
+    <string name="hu_settings">設定</string>
+    <string name="hu_connection">接続</string>
+    <string name="hu_listening">待ち受け中</string>
 </resources>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CEONIX Ride</string>
+    <string name="app_name">CEONIX Headunit</string>
     <string name="menu">Menu</string>
     <string name="settings">Nastavení</string>
 
@@ -12,7 +12,7 @@
     <string name="video">Android Auto</string>
     <string name="self_mode">Self Mode</string>
     <string name="to_android_auto">Do Android Auto</string>
-    <string name="title">CEONIX Ride</string>
+    <string name="title">CEONIX Headunit</string>
     <string name="remove">Odstranit</string>
     <string name="usb">USB</string>
     <string name="wifi">WiFi</string>
@@ -141,9 +141,9 @@
     <string name="usb_auto_connect">Auto-connect USB</string>
     <string name="usb_auto_connect_description">Automatically connect to a known USB device when the application is opened.</string>
     <string name="auto_start_bt_label">Automaticky spustit při Bluetooth</string>
-    <string name="auto_start_bt_description">Automaticky otevřít CEONIX Ride při připojení konkrétního Bluetooth zařízení.</string>
+    <string name="auto_start_bt_description">Automaticky otevřít CEONIX Headunit při připojení konkrétního Bluetooth zařízení.</string>
     <string name="auto_start_wifi_label">Automatické spuštění přes Wi-Fi</string>
-    <string name="auto_start_wifi_description">Automaticky otevřít CEONIX Ride při připojení k určité Wi-Fi síti (SSID).</string>
+    <string name="auto_start_wifi_description">Automaticky otevřít CEONIX Headunit při připojení k určité Wi-Fi síti (SSID).</string>
     <string name="auto_start_wifi_ssid_label">SSID Wi-Fi</string>
     <string name="auto_start_wifi_ssid_description">Připojovat se pouze při spojení s touto Wi-Fi sítí (SSID)</string>
     <string name="auto_start_wifi_warning">Zastaralá funkce: na Androidu 8+ může kvůli omezením na pozadí fungovat nespolehlivě. Ujistěte se, že aplikace je vyloučena z optimalizace baterie.</string>
@@ -166,7 +166,7 @@
     <string name="bt_permission_denied_title">Vyžadováno oprávnění Bluetooth</string>
     <string name="bt_permission_denied_message">Pro výběr spárovaných zařízení je vyžadováno oprávnění Bluetooth. Povolte ho prosím v nastavení aplikace.</string>
     <string name="overlay_permission_title">Oprávnění pro spuštění na pozadí</string>
-    <string name="overlay_permission_description">Pro automatické otevření CEONIX Ride při připojení Bluetooth povolte prosím oprávnění \"Zobrazit přes ostatní aplikace\" na další obrazovce.</string>
+    <string name="overlay_permission_description">Pro automatické otevření CEONIX Headunit při připojení Bluetooth povolte prosím oprávnění \"Zobrazit přes ostatní aplikace\" na další obrazovce.</string>
     <string name="open_settings">Nastavení</string>
     <string name="wireless_connection_settings">Bezdrátové připojení</string>
     <string name="right_hand_drive">Pravostranné řízení</string>
@@ -252,7 +252,7 @@
         <b>1. Věnujte se řízení</b><br/>
         Ovládání tohoto softwaru během jízdy může být rozptylující a nebezpečné. Vždy upřednostňujte bezpečnou jízdu a dodržujte všechny místní dopravní předpisy. Tuto aplikaci používejte pouze tehdy, když je to bezpečné.<br/><br/>
         <b>2. Omezení odpovědnosti</b><br/>
-        CEONIX Ride je poskytován „tak jak je“, bez záruky jakéhokoli druhu. Vývojáři nenesou žádnou odpovědnost za nehody, poškození vašeho vozidla/zařízení ani právní následky vyplývající z používání tohoto softwaru.<br/><br/>
+        CEONIX Headunit je poskytován „tak jak je“, bez záruky jakéhokoli druhu. Vývojáři nenesou žádnou odpovědnost za nehody, poškození vašeho vozidla/zařízení ani právní následky vyplývající z používání tohoto softwaru.<br/><br/>
         <b>3. Žádná spojitost</b><br/>
         Tento projekt je nezávislá open-source iniciativa a není spojen se společností Google LLC ani značkou Android Auto, není jimi podporován ani s nimi nijak nesouvisí.
     ]]></string>
@@ -293,7 +293,7 @@
     <string name="connection_interrupted">Spojení ztraceno</string>
     <string name="connection_interrupted_detail">Opětovné připojování…</string>
     <string name="wifi_disconnect_toast">Android Auto odpojeno: Pokud používáte bezdrátové AA, vypněte \"Přepínání mezi sítěmi\" nebo \"Zrychlení sítě\" v nastavení WiFi telefonu</string>
-    <string name="notification_service_running">CEONIX Ride je spuštěna</string>
+    <string name="notification_service_running">CEONIX Headunit je spuštěna</string>
     <string name="notification_projection_active">Android Auto je promítáno</string>
     <string name="shortcut_connect_title">Připojit</string>
     <string name="shortcut_connect_desc">Připojit k poslednímu známému zařízení</string>
@@ -510,15 +510,15 @@
     <string name="settings_backup_saved_to">Záloha nastavení uložena do:\n%1$s</string>
     <string name="share_settings_backup">Sdílet zálohu nastavení</string>
     <string name="import_settings">Importovat nastavení</string>
-    <string name="import_settings_description">Obnovit nastavení ze zálohy CEONIX Ride</string>
+    <string name="import_settings_description">Obnovit nastavení ze zálohy CEONIX Headunit</string>
     <string name="import_settings_app_folder">Importovat ze složky záloh aplikace</string>
     <string name="import_settings_downloads">Importovat ze Stažených souborů</string>
     <string name="import_settings_choose_file">Vyberte soubor zálohy</string>
     <string name="settings_imported">Nastavení importováno: %1$d použito, %2$d přeskočeno</string>
     <string name="settings_import_failed">Import nastavení selhal: %1$s</string>
     <string name="no_settings_backups_title">Žádné zálohy nenalezeny</string>
-    <string name="no_settings_backups_message">Ve složce záloh aplikace nebyly nalezeny žádné zálohy CEONIX Ride. Nejprve exportujte zálohu a poté ji odtud importujte.</string>
-    <string name="no_settings_backups_downloads_message">Ve Stažených souborech nebyly nalezeny žádné zálohy CEONIX Ride. Nejprve exportujte zálohu do Stažených souborů a poté ji odtud importujte.</string>
+    <string name="no_settings_backups_message">Ve složce záloh aplikace nebyly nalezeny žádné zálohy CEONIX Headunit. Nejprve exportujte zálohu a poté ji odtud importujte.</string>
+    <string name="no_settings_backups_downloads_message">Ve Stažených souborech nebyly nalezeny žádné zálohy CEONIX Headunit. Nejprve exportujte zálohu do Stažených souborů a poté ji odtud importujte.</string>
     <string name="no_file_picker_title">Není k dispozici výběr souborů</string>
     <string name="no_file_picker_message">Toto zařízení nemá kompatibilní výběr souborů. Místo toho můžete použít Stažené soubory nebo složku záloh aplikace.</string>
     <string name="storage_permission_denied_backup">Oprávnění k úložišti zamítnuto. Stažené soubory nebylo možné použít.</string>
@@ -538,7 +538,7 @@
     <string name="software_video_decoder_device">MediaCodec zařízení</string>
 
     <string name="btn_show_qr">Zobrazit QR kód</string>
-    <!-- CEONIX Ride: Home / Ride / Sunset / About / Apps -->
+    <!-- CEONIX Headunit: Home / Ride / Sunset / About / Apps -->
     <string name="ride">Jízda</string>
     <string name="home">Domů</string>
     <string name="ride_lean">NÁKLON</string>
@@ -573,7 +573,7 @@
     <!-- Wi-Fi Setup -->
     <string name="wifi_setup_settings">Nastavení Wi-Fi</string>
     <string name="category_wifi_setup">Nastavení Wi-Fi</string>
-    <string name="wifi_setup_intro">Android skrývá této jednotce její vlastní Wi-Fi adresu, takže je nutné jí ji jednou sdělit. Otevřete tuto obrazovku a poté spusťte v telefonu aplikaci CEONIX Ride Helper — nebo si adresu přečtěte v libovolné aplikaci pro analýzu Wi-Fi a zadejte ji níže.\n\nTato obrazovka se může sama zavřít, zatímco se Android Auto pokouší připojit. To nevadí: jednotka naslouchá ještě asi deset minut a po doručení adresy se objeví zpráva.\n\nAdresa se změní pouze tehdy, když se na této jednotce vypne a znovu zapne Wi-Fi.</string>
+    <string name="wifi_setup_intro">Android skrývá této jednotce její vlastní Wi-Fi adresu, takže je nutné jí ji jednou sdělit. Otevřete tuto obrazovku a poté spusťte v telefonu aplikaci CEONIX Setup — nebo si adresu přečtěte v libovolné aplikaci pro analýzu Wi-Fi a zadejte ji níže.\n\nTato obrazovka se může sama zavřít, zatímco se Android Auto pokouší připojit. To nevadí: jednotka naslouchá ještě asi deset minut a po doručení adresy se objeví zpráva.\n\nAdresa se změní pouze tehdy, když se na této jednotce vypne a znovu zapne Wi-Fi.</string>
     <string name="wifi_setup_network_name">Název sítě</string>
     <string name="wifi_setup_network_none">Zatím žádná — stiskněte jednou Android Auto na hlavní obrazovce</string>
     <string name="wifi_setup_helper">Pomocník v telefonu</string>
@@ -613,11 +613,11 @@
     <string name="launcher_mode_settings">Režim launcheru</string>
     <string name="launcher_mode_settings_summary">Používat tuto aplikaci jako domovskou obrazovku zařízení</string>
     <string name="use_as_launcher">Použít jako launcher</string>
-    <string name="use_as_launcher_description">Nastaví CEONIX Ride jako domovskou obrazovku zařízení. Když je zapnuto, tlačítko Domů otevře tuto aplikaci.</string>
+    <string name="use_as_launcher_description">Nastaví CEONIX Headunit jako domovskou obrazovku zařízení. Když je zapnuto, tlačítko Domů otevře tuto aplikaci.</string>
     <string name="exit_pause">Pozastavit</string>
     <string name="permission_dashboard_title">Oprávnění</string>
-    <string name="permission_welcome_title">Vítejte v CEONIX Ride</string>
-    <string name="permission_welcome_subtitle">Pro začátek potřebuje CEONIX Ride několik oprávnění, aby Android Auto fungovalo bez potíží. Klepnutím na kartu oprávnění udělíte.</string>
+    <string name="permission_welcome_title">Vítejte v CEONIX Headunit</string>
+    <string name="permission_welcome_subtitle">Pro začátek potřebuje CEONIX Headunit několik oprávnění, aby Android Auto fungovalo bez potíží. Klepnutím na kartu oprávnění udělíte.</string>
     <string name="permission_bluetooth_title">Bluetooth</string>
     <string name="permission_bluetooth_desc">Povinné. Telefon se najde přes Bluetooth a přes něj také začíná handshake Android Auto. Bez něj se nic nepřipojí.</string>
     <string name="permission_nearby_wifi_title">Zařízení Wi-Fi v okolí</string>
@@ -627,11 +627,11 @@
     <string name="permission_microphone_title">Mikrofon</string>
     <string name="permission_microphone_desc">Doporučené. Předává se přímo Asistentovi Google a hands-free hovorům. Tato aplikace data z mikrofonu nezpracovává ani neukládá.</string>
     <string name="permission_notifications_title">Oznámení</string>
-    <string name="permission_notifications_desc">Doporučené. Umožní CEONIX Ride ukazovat, co dělá připojení, když běží na pozadí.</string>
+    <string name="permission_notifications_desc">Doporučené. Umožní CEONIX Headunit ukazovat, co dělá připojení, když běží na pozadí.</string>
     <string name="permission_overlay_title">Zobrazení přes jiné aplikace</string>
     <string name="permission_overlay_desc">Povinné. Umožní Android Auto objevit se samo, když se telefon připojí. Bez něj vypadá automatické spuštění jako zapnuté, ale potichu nedělá nic.</string>
     <string name="permission_battery_title">Běh na pozadí</string>
-    <string name="permission_battery_desc">Povinné. Zabrání Androidu uspat CEONIX Ride mezi jízdami, takže připojení přežije vypnutí a zapnutí zapalování.</string>
+    <string name="permission_battery_desc">Povinné. Zabrání Androidu uspat CEONIX Headunit mezi jízdami, takže připojení přežije vypnutí a zapnutí zapalování.</string>
     <string name="permission_open_app_settings_hint">Zamítnuto. Android se už nezeptá – klepnutím otevřete nastavení aplikace a zapněte ho tam.</string>
     <string name="permission_continue">Pokračovat</string>
     <string name="permission_refresh">Obnovit stav</string>

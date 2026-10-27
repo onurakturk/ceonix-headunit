@@ -49,14 +49,14 @@ object BssidHelperProtocol {
     val SERVICE_UUID: UUID = UUID.fromString("b7d1f2c4-6a3e-4c85-9f0b-2e7a41d8c530")
 
     /** Name attached to the SDP record, so the service is recognisable in a scan. */
-    const val SERVICE_NAME = "CEONIX Ride BSSID Helper"
+    const val SERVICE_NAME = "CEONIX Headunit BSSID Helper"
 
     /**
      * First line the helper sends. Bumped only if the format changes incompatibly.
      *
      * The `CEON` in here is a wire token, not the product name — the head unit compares it for
-     * equality and drops the connection on anything else, so it deliberately survived the rename to
-     * CEONIX Ride. Renaming it would break every helper APK already on a phone. See
+     * equality and drops the connection on anything else, so it deliberately survived the renames to
+     * CEONIX Ride and CEONIX Headunit. Renaming it would break every helper APK already on a phone. See
      * docs/BRANDING_MAP.md B4.
      */
     const val HELLO = "CEON-BSSID/2"

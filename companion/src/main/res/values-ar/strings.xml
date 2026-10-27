@@ -44,4 +44,31 @@
     <string name="error_bluetooth_off">Bluetooth متوقف، لذا لا يمكن تسليم العنوان. شغّله وحاول مجددًا، أو اكتب العنوان يدويًا على الوحدة الرئيسية.</string>
     <string name="error_no_listener">الوحدة الرئيسية لا تستمع. افتح <b>الإعدادات › إعداد Wi-Fi</b> عليها وحاول مجددًا.</string>
     <string name="error_connection">انقطع اتصال Bluetooth بالوحدة الرئيسية. حاول مجددًا أو اكتب العنوان يدويًا على الوحدة الرئيسية.</string>
+
+    <!-- Setup guide -->
+    <string name="guide_title">طريقة الإعداد</string>
+    <string name="guide_entry_desc">خطوة بخطوة، مع صور</string>
+    <string name="guide_intro">يتم ذلك مرة واحدة فقط، والوحدة الرئيسية وهذا الهاتف بجانب بعضهما. يستغرق نحو خمس دقائق.</string>
+    <string name="guide_back">رجوع</string>
+    <string name="guide_got_it">فهمت</string>
+    <string name="guide_section_head_unit">على الوحدة الرئيسية</string>
+    <string name="guide_section_phone">على هذا الهاتف</string>
+    <string name="guide_permissions_title">امنح الأذونات</string>
+    <string name="guide_permissions_text">افتح CEONIX Headunit على الوحدة الرئيسية. اسمح بكل البطاقات في الشاشة الأولى، ثم اضغط %1$s، ثم وافق على تنبيه السلامة.</string>
+    <string name="guide_pair_title">الإقران عبر البلوتوث</string>
+    <string name="guide_pair_text">على الوحدة الرئيسية، افتح إعدادات البلوتوث في Android واضغط إقران جهاز جديد. على هذا الهاتف، اختر الوحدة الرئيسية من قائمة البلوتوث وأكّد الرمز نفسه على الشاشتين.</string>
+    <string name="guide_aa_title">اضغط Android Auto مرة واحدة</string>
+    <string name="guide_aa_text">على الشاشة الرئيسية للوحدة، اضغط %1$s واختر هذا الهاتف. لن يظهر شيء بعد، وهذا طبيعي: الوحدة الرئيسية تُنشئ شبكة Wi-Fi الخاصة بها.</string>
+    <string name="guide_connection_title">افتح شاشة الاتصال</string>
+    <string name="guide_connection_text">على الوحدة الرئيسية، افتح %1$s › %2$s. اترك الشاشة مفتوحة ما دامت تعرض %3$s.</string>
+    <string name="guide_find_title">ابحث عن الوحدة الرئيسية</string>
+    <string name="guide_find_text">أغلق هذا الدليل، واضغط %1$s، واسمح بما يطلبه. يستغرق البحث نحو نصف دقيقة.</string>
+    <string name="guide_send_title">أرسل العنوان</string>
+    <string name="guide_send_text">عندما تعرض البطاقة %1$s، اضغط %2$s واختر الوحدة الرئيسية من القائمة.</string>
+    <string name="guide_done_title">تم</string>
+    <string name="guide_done_text">سيعرض هذا الهاتف %1$s. بعدها يتصل Android Auto تلقائيًا؛ وإن لم يتصل، اضغط %2$s مرة واحدة على الوحدة الرئيسية. في المرة الأولى، وافق على أسئلة Android Auto على هذا الهاتف.</string>
+    <string name="hu_continue">متابعة</string>
+    <string name="hu_settings">الإعدادات</string>
+    <string name="hu_connection">الاتصال</string>
+    <string name="hu_listening">يستمع</string>
 </resources>

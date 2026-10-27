@@ -463,7 +463,7 @@ class AapProjectionActivity : SurfaceActivity(), IProjectionView.Callbacks, Vide
         ContextCompat.registerReceiver(this, finishReceiver, android.content.IntentFilter("com.andrerinas.headunitrevived.ACTION_FINISH_ACTIVITIES"), ContextCompat.RECEIVER_NOT_EXPORTED)
         isFinishReceiverRegistered = true
 
-        AppLog.i("AapProjectionActivity: onCreate (CEONIX Ride)")
+        AppLog.i("AapProjectionActivity: onCreate (CEONIX Headunit)")
 
         val container = findViewById<FrameLayout>(R.id.container)
         setupProjectionView()
@@ -911,7 +911,7 @@ class AapProjectionActivity : SurfaceActivity(), IProjectionView.Callbacks, Vide
 
     /**
      * Pause: leave the projection screen but keep the Android Auto session running (no
-     * disconnect — that is what Exit is for), and land on the CEONIX Ride home screen.
+     * disconnect — that is what Exit is for), and land on the CEONIX Headunit home screen.
      *
      * Targets [MainActivity] explicitly rather than firing ACTION_MAIN/CATEGORY_HOME. That
      * intent means "go to whatever the current HOME app is": with launcher mode on it resolves
@@ -930,7 +930,7 @@ class AapProjectionActivity : SurfaceActivity(), IProjectionView.Callbacks, Vide
      */
     private fun moveToBackground() {
         com.andrerinas.headunitrevived.main.MainActivity.projectionPausedByUser = true
-        AppLog.i("AapProjectionActivity: Pause - returning to the CEONIX Ride home screen")
+        AppLog.i("AapProjectionActivity: Pause - returning to the CEONIX Headunit home screen")
         val backToHomeScreen = Intent(this, com.andrerinas.headunitrevived.main.MainActivity::class.java).apply {
             addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT or Intent.FLAG_ACTIVITY_SINGLE_TOP)
             putExtra(com.andrerinas.headunitrevived.main.MainActivity.EXTRA_LAUNCH_SOURCE, "Pause")

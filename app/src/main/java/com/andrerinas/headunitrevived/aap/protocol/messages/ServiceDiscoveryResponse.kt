@@ -26,11 +26,11 @@ class ServiceDiscoveryResponse(private val context: Context)
          */
         // Changing either of these makes the phone treat this as a different car: it stops trusting
         // the pairing and stops reconnecting on its own, with no error anywhere. That price was paid
-        // once, deliberately, when the product was renamed to CEONIX Ride — every saved car had to be
+        // twice, deliberately, when the product was renamed (CEONIX Ride, then CEONIX Headunit) — every saved car had to be
         // forgotten on the phone and paired again. Do not edit them for anything less than a rename.
         // See docs/BRANDING_MAP.md B2.
-        private const val HEAD_UNIT_MAKE = "CEONIX Ride"
-        private const val HEAD_UNIT_MODEL = "CEONIX Ride"
+        private const val HEAD_UNIT_MAKE = "CEONIX Headunit"
+        private const val HEAD_UNIT_MODEL = "CEONIX Headunit"
 
         private fun makeProto(context: Context): Message {
             val settings = App.provide(context).settings

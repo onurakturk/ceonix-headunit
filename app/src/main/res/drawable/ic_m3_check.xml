@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Filled check circle. Copied from the CEONIX Ride Helper companion app so both apps speak the same
+  Filled check circle. Copied from the CEONIX Setup companion app so both apps speak the same
   visual language. Tinted at the call site; the glyph is punched out of the disc so a single
   tint colour still reads as "white mark on a coloured circle".
 -->

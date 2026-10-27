@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CEONIX Ride</string>
+    <string name="app_name">CEONIX Headunit</string>
     <string name="menu">メニュー</string>
     <string name="settings">設定</string>
 
@@ -12,7 +12,7 @@
     <string name="video">Android Auto</string>
     <string name="self_mode">セルフモード</string>
     <string name="to_android_auto">To Android Auto</string>
-    <string name="title">CEONIX Ride</string>
+    <string name="title">CEONIX Headunit</string>
     <string name="remove">取り除く</string>
     <string name="usb">USB</string>
     <string name="wifi">WiFi</string>
@@ -159,9 +159,9 @@
     <string name="usb_auto_connect">USB自動接続</string>
     <string name="usb_auto_connect_description">アプリケーションが開始された時に既知のUSBデバイスに接続されると自動的に接続します。</string>
     <string name="auto_start_bt_label">Bluetooth自動開始</string>
-    <string name="auto_start_bt_description">特定のBluetoothデバイスが接続されたときに、CEONIX Rideを自動的に起動します。</string>
+    <string name="auto_start_bt_description">特定のBluetoothデバイスが接続されたときに、CEONIX Headunitを自動的に起動します。</string>
     <string name="auto_start_wifi_label">Wi-Fi自動起動</string>
-    <string name="auto_start_wifi_description">特定のWi-Fi SSIDに接続されたときにCEONIX Rideを自動的に起動します。</string>
+    <string name="auto_start_wifi_description">特定のWi-Fi SSIDに接続されたときにCEONIX Headunitを自動的に起動します。</string>
     <string name="auto_start_wifi_ssid_label">Wi-Fi SSID</string>
     <string name="auto_start_wifi_ssid_description">このWi-Fi SSIDに接続されている場合のみ接続を試みます</string>
     <string name="auto_start_wifi_warning">レガシー機能：バックグラウンド制限のため、Android 8以降では動作が不安定になる場合があります。アプリをバッテリー最適化から除外してください。</string>
@@ -184,7 +184,7 @@
     <string name="bt_permission_denied_title">Bluetooth 許可が必要です</string>
     <string name="bt_permission_denied_message">ペアリング済みデバイスを選択するには、Bluetoothのアクセス許可が必要です。アプリの設定で許可してください。</string>
     <string name="overlay_permission_title">バックグラウンド起動許可</string>
-    <string name="overlay_permission_description">Bluetooth接続時にCEONIX Rideが自動的に起動するようにするには、次の画面で「他のアプリの上に表示する」権限を有効にしてください。</string>
+    <string name="overlay_permission_description">Bluetooth接続時にCEONIX Headunitが自動的に起動するようにするには、次の画面で「他のアプリの上に表示する」権限を有効にしてください。</string>
     <string name="open_settings">設定</string>
     <string name="wireless_connection_settings">ワイヤレス接続</string>
     <string name="right_hand_drive">右ハンドル</string>
@@ -270,7 +270,7 @@
         <b>1. 運転に集中する</b><br/>
         運転中にこのソフトウェアを操作することは、脇見運転になり危険です。常に安全運転を最優先し、交通規則を遵守してください。このアプリケーションは、安全な状況でのみ使用してください。<br/><br/>
         <b>2. 責任の制限</b><br/>
-        CEONIX Rideは、いかなる保証もなしに「現状のまま」提供されます。開発者は、本ソフトウェアの使用に起因する事故、車両／機器の損傷、または法的結果について一切の責任を負いません。<br/><br/>
+        CEONIX Headunitは、いかなる保証もなしに「現状のまま」提供されます。開発者は、本ソフトウェアの使用に起因する事故、車両／機器の損傷、または法的結果について一切の責任を負いません。<br/><br/>
         <b>3. 他のサービスとの関連</b><br/>
         このプロジェクトは独立したオープンソースの取り組みであり、Google LLCまたはAndroid Autoブランドとは一切関係がなく、承認も受けておらず、関連性もありません。
     ]]></string>
@@ -313,7 +313,7 @@
     <string name="wifi_disconnect_toast">Android Autoが切断されました：ワイヤレスAAを使用している場合は、スマートフォンのWi-Fi設定で「ネットワークを切り替える」または「ネットワークアクセラレーション」を無効にしてください。</string>
     <string name="reset_usb_option">USB接続をリセットする</string>
     <string name="reset_usb_timeout">USBデバイスが見つかりません。接続を確認してください。</string>
-    <string name="notification_service_running">CEONIX Rideが起動中</string>
+    <string name="notification_service_running">CEONIX Headunitが起動中</string>
     <string name="notification_projection_active">Android Autoを起動中</string>
     <string name="shortcut_connect_title">接続</string>
     <string name="shortcut_connect_desc">最後に認識されたデバイスに接続する</string>
@@ -518,15 +518,15 @@
     <string name="settings_backup_saved_to">設定のバックアップを保存しました:\n%1$s</string>
     <string name="share_settings_backup">設定のバックアップを共有</string>
     <string name="import_settings">設定をインポート</string>
-    <string name="import_settings_description">CEONIX Ride のバックアップから設定を復元</string>
+    <string name="import_settings_description">CEONIX Headunit のバックアップから設定を復元</string>
     <string name="import_settings_app_folder">アプリのバックアップフォルダからインポート</string>
     <string name="import_settings_downloads">ダウンロードからインポート</string>
     <string name="import_settings_choose_file">バックアップファイルを選択</string>
     <string name="settings_imported">設定をインポートしました: %1$d 件適用、%2$d 件スキップ</string>
     <string name="settings_import_failed">設定のインポートに失敗しました: %1$s</string>
     <string name="no_settings_backups_title">バックアップが見つかりません</string>
-    <string name="no_settings_backups_message">アプリのバックアップフォルダに CEONIX Ride のバックアップが見つかりません。先にバックアップをエクスポートしてからインポートしてください。</string>
-    <string name="no_settings_backups_downloads_message">ダウンロードに CEONIX Ride のバックアップが見つかりません。先にバックアップをダウンロードへエクスポートしてからインポートしてください。</string>
+    <string name="no_settings_backups_message">アプリのバックアップフォルダに CEONIX Headunit のバックアップが見つかりません。先にバックアップをエクスポートしてからインポートしてください。</string>
+    <string name="no_settings_backups_downloads_message">ダウンロードに CEONIX Headunit のバックアップが見つかりません。先にバックアップをダウンロードへエクスポートしてからインポートしてください。</string>
     <string name="no_file_picker_title">利用可能なファイルピッカーがありません</string>
     <string name="no_file_picker_message">このデバイスには対応するファイルピッカーがありません。代わりにダウンロードまたはアプリのバックアップフォルダをご利用ください。</string>
     <string name="storage_permission_denied_backup">ストレージへのアクセスが拒否されました。ダウンロードを使用できませんでした。</string>
@@ -546,7 +546,7 @@
     <string name="software_video_decoder_device">デバイスのMediaCodec</string>
 
     <string name="btn_show_qr">QRコードを表示</string>
-    <!-- CEONIX Ride: Home / Ride / Sunset / About / Apps -->
+    <!-- CEONIX Headunit: Home / Ride / Sunset / About / Apps -->
     <string name="ride">走行</string>
     <string name="home">ホーム</string>
     <string name="ride_lean">バンク角</string>
@@ -581,7 +581,7 @@
     <!-- Wi-Fi Setup -->
     <string name="wifi_setup_settings">Wi-Fi セットアップ</string>
     <string name="category_wifi_setup">Wi-Fi セットアップ</string>
-    <string name="wifi_setup_intro">Android はこのヘッドユニット自身の Wi-Fi アドレスを隠すため、一度だけ教える必要があります。この画面を開いたまま、スマートフォンで CEONIX Ride Helper アプリを実行してください。または任意の Wi-Fi 解析アプリでアドレスを確認し、下に入力してください。\n\nAndroid Auto が接続を試みる間、この画面が自動的に閉じることがあります。問題ありません。ヘッドユニットは約 10 分間待ち受けを続け、アドレスが届くとメッセージが表示されます。\n\nアドレスが変わるのは、このヘッドユニットで Wi-Fi をオフにして再びオンにしたときだけです。</string>
+    <string name="wifi_setup_intro">Android はこのヘッドユニット自身の Wi-Fi アドレスを隠すため、一度だけ教える必要があります。この画面を開いたまま、スマートフォンで CEONIX Setup アプリを実行してください。または任意の Wi-Fi 解析アプリでアドレスを確認し、下に入力してください。\n\nAndroid Auto が接続を試みる間、この画面が自動的に閉じることがあります。問題ありません。ヘッドユニットは約 10 分間待ち受けを続け、アドレスが届くとメッセージが表示されます。\n\nアドレスが変わるのは、このヘッドユニットで Wi-Fi をオフにして再びオンにしたときだけです。</string>
     <string name="wifi_setup_network_name">ネットワーク名</string>
     <string name="wifi_setup_network_none">まだありません。ホーム画面で Android Auto を一度押してください</string>
     <string name="wifi_setup_helper">スマートフォンのヘルパー</string>
@@ -621,11 +621,11 @@
     <string name="launcher_mode_settings">ランチャーモード</string>
     <string name="launcher_mode_settings_summary">このアプリをデバイスのホーム画面として使用する</string>
     <string name="use_as_launcher">ランチャーとして使用</string>
-    <string name="use_as_launcher_description">CEONIX Ride をデバイスのホーム画面にします。オンにすると、ホームボタンでこのアプリが開きます。</string>
+    <string name="use_as_launcher_description">CEONIX Headunit をデバイスのホーム画面にします。オンにすると、ホームボタンでこのアプリが開きます。</string>
     <string name="exit_pause">一時停止</string>
     <string name="permission_dashboard_title">権限</string>
-    <string name="permission_welcome_title">CEONIX Ride へようこそ</string>
-    <string name="permission_welcome_subtitle">はじめに、Android Auto を快適に使うために CEONIX Ride にいくつかの権限が必要です。カードをタップして許可してください。</string>
+    <string name="permission_welcome_title">CEONIX Headunit へようこそ</string>
+    <string name="permission_welcome_subtitle">はじめに、Android Auto を快適に使うために CEONIX Headunit にいくつかの権限が必要です。カードをタップして許可してください。</string>
     <string name="permission_bluetooth_title">Bluetooth</string>
     <string name="permission_bluetooth_desc">必須。スマートフォンは Bluetooth で検出され、Android Auto のハンドシェイクもそこから始まります。これがないと何も接続されません。</string>
     <string name="permission_nearby_wifi_title">付近の Wi-Fi デバイス</string>
@@ -635,11 +635,11 @@
     <string name="permission_microphone_title">マイク</string>
     <string name="permission_microphone_desc">推奨。Google アシスタントとハンズフリー通話にそのまま渡されます。このアプリがマイクのデータを処理または保存することはありません。</string>
     <string name="permission_notifications_title">通知</string>
-    <string name="permission_notifications_desc">推奨。バックグラウンドで動作している間、CEONIX Ride が接続の状態を表示できるようにします。</string>
+    <string name="permission_notifications_desc">推奨。バックグラウンドで動作している間、CEONIX Headunit が接続の状態を表示できるようにします。</string>
     <string name="permission_overlay_title">他のアプリの上に重ねて表示</string>
     <string name="permission_overlay_desc">必須。スマートフォンが接続されたときに Android Auto が自動で表示されるようにします。これがないと、自動起動は有効に見えても何も起こりません。</string>
     <string name="permission_battery_title">バックグラウンドで実行</string>
-    <string name="permission_battery_desc">必須。走行の合間に Android が CEONIX Ride をスリープさせないようにし、イグニッションのオフ・オンをまたいでも接続が維持されるようにします。</string>
+    <string name="permission_battery_desc">必須。走行の合間に Android が CEONIX Headunit をスリープさせないようにし、イグニッションのオフ・オンをまたいでも接続が維持されるようにします。</string>
     <string name="permission_open_app_settings_hint">拒否されました。Android は再度確認しません。タップしてアプリの設定を開き、そこでオンにしてください。</string>
     <string name="permission_continue">続行</string>
     <string name="permission_refresh">状態を更新</string>

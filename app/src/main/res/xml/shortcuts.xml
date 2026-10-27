@@ -8,7 +8,7 @@
         android:shortcutLongLabel="@string/shortcut_connect_desc">
         <intent
             android:action="com.andrerinas.headunitrevived.ACTION_CONNECT"
-            android:targetPackage="com.ceonix.ride"
+            android:targetPackage="com.ceonix.headunit.dev"
             android:targetClass="com.andrerinas.headunitrevived.main.AutomationActivity" />
     </shortcut>
     <shortcut
@@ -19,7 +19,7 @@
         android:shortcutLongLabel="@string/shortcut_selfmode_desc">
         <intent
             android:action="com.andrerinas.headunitrevived.ACTION_START_SELF_MODE"
-            android:targetPackage="com.ceonix.ride"
+            android:targetPackage="com.ceonix.headunit.dev"
             android:targetClass="com.andrerinas.headunitrevived.main.AutomationActivity" />
     </shortcut>
 
@@ -31,7 +31,7 @@
         android:shortcutLongLabel="@string/shortcut_disconnect_desc">
         <intent
             android:action="com.andrerinas.headunitrevived.ACTION_DISCONNECT"
-            android:targetPackage="com.ceonix.ride"
+            android:targetPackage="com.ceonix.headunit.dev"
             android:targetClass="com.andrerinas.headunitrevived.main.AutomationActivity" />
     </shortcut>
 
@@ -43,7 +43,7 @@
         android:shortcutLongLabel="@string/shortcut_exit_desc">
         <intent
             android:action="com.andrerinas.headunitrevived.ACTION_STOP_SERVICE"
-            android:targetPackage="com.ceonix.ride"
+            android:targetPackage="com.ceonix.headunit.dev"
             android:targetClass="com.andrerinas.headunitrevived.main.AutomationActivity" />
     </shortcut>
 
@@ -55,7 +55,7 @@
         android:shortcutLongLabel="@string/shortcut_night_mode_day_desc">
         <intent
             android:action="com.andrerinas.headunitrevived.ACTION_SET_NIGHT_MODE"
-            android:targetPackage="com.ceonix.ride"
+            android:targetPackage="com.ceonix.headunit.dev"
             android:targetClass="com.andrerinas.headunitrevived.main.AutomationActivity">
             <extra android:name="state" android:value="day" />
         </intent>
@@ -69,7 +69,7 @@
         android:shortcutLongLabel="@string/shortcut_night_mode_night_desc">
         <intent
             android:action="com.andrerinas.headunitrevived.ACTION_SET_NIGHT_MODE"
-            android:targetPackage="com.ceonix.ride"
+            android:targetPackage="com.ceonix.headunit.dev"
             android:targetClass="com.andrerinas.headunitrevived.main.AutomationActivity">
             <extra android:name="state" android:value="night" />
         </intent>
@@ -83,7 +83,7 @@
         android:shortcutLongLabel="@string/shortcut_night_mode_auto_desc">
         <intent
             android:action="com.andrerinas.headunitrevived.ACTION_SET_NIGHT_MODE"
-            android:targetPackage="com.ceonix.ride"
+            android:targetPackage="com.ceonix.headunit.dev"
             android:targetClass="com.andrerinas.headunitrevived.main.AutomationActivity">
             <extra android:name="state" android:value="auto" />
         </intent>

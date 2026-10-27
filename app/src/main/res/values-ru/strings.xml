@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CEONIX Ride</string>
+    <string name="app_name">CEONIX Headunit</string>
     <string name="menu">Меню</string>
     <string name="settings">Настройки</string>
 
@@ -12,7 +12,7 @@
     <string name="video">Android Auto</string>
     <string name="self_mode">Автономный режим</string>
     <string name="to_android_auto">В Android Auto</string>
-    <string name="title">CEONIX Ride</string>
+    <string name="title">CEONIX Headunit</string>
     <string name="remove">Удалить</string>
     <string name="usb">USB</string>
     <string name="wifi">Wi‑Fi</string>
@@ -141,9 +141,9 @@
     <string name="usb_auto_connect">Автоподключение USB</string>
     <string name="usb_auto_connect_description">Автоматически подключаться к известному USB-устройству при запуске приложения.</string>
     <string name="auto_start_bt_label">Автозапуск при Bluetooth</string>
-    <string name="auto_start_bt_description">Автоматически открывать CEONIX Ride при подключении определенного Bluetooth-устройства.</string>
+    <string name="auto_start_bt_description">Автоматически открывать CEONIX Headunit при подключении определенного Bluetooth-устройства.</string>
     <string name="auto_start_wifi_label">Автозапуск при Wi‑Fi</string>
-    <string name="auto_start_wifi_description">Автоматически открывать CEONIX Ride при подключении к определенной Wi‑Fi сети (SSID).</string>
+    <string name="auto_start_wifi_description">Автоматически открывать CEONIX Headunit при подключении к определенной Wi‑Fi сети (SSID).</string>
     <string name="auto_start_wifi_ssid_label">SSID Wi‑Fi</string>
     <string name="auto_start_wifi_ssid_description">Подключаться только при подключении к этой Wi‑Fi сети (SSID)</string>
     <string name="auto_start_wifi_warning">Устаревшая функция: может работать нестабильно на Android 8+ из-за фоновых ограничений. Убедитесь, что приложение исключено из оптимизации батареи.</string>
@@ -166,7 +166,7 @@
     <string name="bt_permission_denied_title">Требуется разрешение Bluetooth</string>
     <string name="bt_permission_denied_message">Разрешение Bluetooth необходимо для выбора сопряжённых устройств. Предоставьте его в настройках приложения.</string>
     <string name="overlay_permission_title">Разрешение на запуск в фоне</string>
-    <string name="overlay_permission_description">Чтобы CEONIX Ride мог автоматически открываться при подключении Bluetooth, включите разрешение \"Показывать поверх других приложений\" на следующем экране.</string>
+    <string name="overlay_permission_description">Чтобы CEONIX Headunit мог автоматически открываться при подключении Bluetooth, включите разрешение \"Показывать поверх других приложений\" на следующем экране.</string>
     <string name="open_settings">Настройки</string>
     <string name="wireless_connection_settings">Беспроводное соединение</string>
     <string name="right_hand_drive">Праворульный автомобиль</string>
@@ -255,7 +255,7 @@
         <b>1. Cосредоточьтесь на вождении</b><br/>
         Использование этого ПО за рулем может отвлекать и быть опасным. Всегда отдавайте приоритет безопасному вождению и соблюдайте все правила дорожного движения. Используйте это приложение только тогда, когда это безопасно.<br/><br/>
         <b>2. Отказ от ответственности</b><br/>
-        CEONIX Ride предоставляется «как есть» без каких-либо гарантий. Разработчики не несут ответственности за несчастные случаи, повреждения транспортного средства/устройства или юридические последствия, возникающие в результате использования этого ПО.<br/><br/>
+        CEONIX Headunit предоставляется «как есть» без каких-либо гарантий. Разработчики не несут ответственности за несчастные случаи, повреждения транспортного средства/устройства или юридические последствия, возникающие в результате использования этого ПО.<br/><br/>
         <b>3. Отсутствие аффилированности</b><br/>
         Этот проект является независимой инициативой с открытым исходным кодом и никак не связан с Google LLC или брендом Android Auto.
     ]]></string>
@@ -296,7 +296,7 @@
     <string name="connection_interrupted">Соединение потеряно</string>
     <string name="connection_interrupted_detail">Повторное подключение…</string>
     <string name="wifi_disconnect_toast">Android Auto отключён: При беспроводном AA отключите \"Переключение между сетями\" или \"Ускорение сети\" в настройках Wi‑Fi телефона</string>
-    <string name="notification_service_running">CEONIX Ride запущен</string>
+    <string name="notification_service_running">CEONIX Headunit запущен</string>
     <string name="notification_projection_active">Трансляция Android Auto активна</string>
     <string name="shortcut_connect_title">Подключить</string>
     <string name="shortcut_connect_desc">Подключиться к последнему устройству</string>
@@ -513,15 +513,15 @@
     <string name="settings_backup_saved_to">Резервная копия настроек сохранена в:\n%1$s</string>
     <string name="share_settings_backup">Поделиться резервной копией</string>
     <string name="import_settings">Импорт настроек</string>
-    <string name="import_settings_description">Восстановить настройки из резервной копии CEONIX Ride</string>
+    <string name="import_settings_description">Восстановить настройки из резервной копии CEONIX Headunit</string>
     <string name="import_settings_app_folder">Импорт из папки резервных копий приложения</string>
     <string name="import_settings_downloads">Импорт из Загрузок</string>
     <string name="import_settings_choose_file">Выбрать файл резервной копии</string>
     <string name="settings_imported">Настройки импортированы: %1$d применено, %2$d пропущено</string>
     <string name="settings_import_failed">Не удалось импортировать настройки: %1$s</string>
     <string name="no_settings_backups_title">Резервные копии не найдены</string>
-    <string name="no_settings_backups_message">В папке резервных копий приложения не найдено резервных копий CEONIX Ride. Сначала экспортируйте резервную копию, затем импортируйте её отсюда.</string>
-    <string name="no_settings_backups_downloads_message">В Загрузках не найдено резервных копий CEONIX Ride. Сначала экспортируйте копию в Загрузки, затем импортируйте её отсюда.</string>
+    <string name="no_settings_backups_message">В папке резервных копий приложения не найдено резервных копий CEONIX Headunit. Сначала экспортируйте резервную копию, затем импортируйте её отсюда.</string>
+    <string name="no_settings_backups_downloads_message">В Загрузках не найдено резервных копий CEONIX Headunit. Сначала экспортируйте копию в Загрузки, затем импортируйте её отсюда.</string>
     <string name="no_file_picker_title">Выбор файлов недоступен</string>
     <string name="no_file_picker_message">На этом устройстве нет совместимого выбора файлов. Вы можете использовать Загрузки или папку резервных копий приложения.</string>
     <string name="storage_permission_denied_backup">В доступе к хранилищу отказано. Не удалось использовать Загрузки.</string>
@@ -537,7 +537,7 @@
     <!-- Native USB Driver -->
 
     <string name="btn_show_qr">Показать QR-код</string>
-    <!-- CEONIX Ride: Home / Ride / Sunset / About / Apps -->
+    <!-- CEONIX Headunit: Home / Ride / Sunset / About / Apps -->
     <string name="ride">Поездка</string>
     <string name="home">Главная</string>
     <string name="ride_lean">НАКЛОН</string>
@@ -572,7 +572,7 @@
     <!-- Wi-Fi Setup -->
     <string name="wifi_setup_settings">Настройка Wi-Fi</string>
     <string name="category_wifi_setup">Настройка Wi-Fi</string>
-    <string name="wifi_setup_intro">Android скрывает от этого устройства его собственный адрес Wi-Fi, поэтому адрес нужно указать один раз. Откройте этот экран, затем запустите на телефоне приложение CEONIX Ride Helper — или посмотрите адрес в любом анализаторе Wi-Fi и введите его ниже.\n\nЭтот экран может закрыться сам, пока Android Auto пытается подключиться. Это нормально: устройство продолжает слушать ещё около десяти минут, и при получении адреса появится сообщение.\n\nАдрес меняется только если на этом устройстве выключить и снова включить Wi-Fi.</string>
+    <string name="wifi_setup_intro">Android скрывает от этого устройства его собственный адрес Wi-Fi, поэтому адрес нужно указать один раз. Откройте этот экран, затем запустите на телефоне приложение CEONIX Setup — или посмотрите адрес в любом анализаторе Wi-Fi и введите его ниже.\n\nЭтот экран может закрыться сам, пока Android Auto пытается подключиться. Это нормально: устройство продолжает слушать ещё около десяти минут, и при получении адреса появится сообщение.\n\nАдрес меняется только если на этом устройстве выключить и снова включить Wi-Fi.</string>
     <string name="wifi_setup_network_name">Имя сети</string>
     <string name="wifi_setup_network_none">Пока нет — нажмите Android Auto на главном экране один раз</string>
     <string name="wifi_setup_helper">Помощник на телефоне</string>
@@ -612,11 +612,11 @@
     <string name="launcher_mode_settings">Режим лаунчера</string>
     <string name="launcher_mode_settings_summary">Использовать это приложение как главный экран устройства</string>
     <string name="use_as_launcher">Использовать как лаунчер</string>
-    <string name="use_as_launcher_description">Делает CEONIX Ride главным экраном устройства. Когда включено, кнопка «Домой» открывает это приложение.</string>
+    <string name="use_as_launcher_description">Делает CEONIX Headunit главным экраном устройства. Когда включено, кнопка «Домой» открывает это приложение.</string>
     <string name="exit_pause">Пауза</string>
     <string name="permission_dashboard_title">Разрешения</string>
-    <string name="permission_welcome_title">Добро пожаловать в CEONIX Ride</string>
-    <string name="permission_welcome_subtitle">Для начала CEONIX Ride нужно несколько разрешений, чтобы Android Auto работал без сбоев. Нажмите на карточку, чтобы выдать разрешение.</string>
+    <string name="permission_welcome_title">Добро пожаловать в CEONIX Headunit</string>
+    <string name="permission_welcome_subtitle">Для начала CEONIX Headunit нужно несколько разрешений, чтобы Android Auto работал без сбоев. Нажмите на карточку, чтобы выдать разрешение.</string>
     <string name="permission_bluetooth_title">Bluetooth</string>
     <string name="permission_bluetooth_desc">Обязательно. Телефон находится по Bluetooth, и через него начинается согласование Android Auto. Без этого ничего не подключится.</string>
     <string name="permission_nearby_wifi_title">Устройства Wi-Fi поблизости</string>
@@ -626,11 +626,11 @@
     <string name="permission_microphone_title">Микрофон</string>
     <string name="permission_microphone_desc">Рекомендуется. Передаётся напрямую в Google Ассистент и для звонков по громкой связи. Это приложение не обрабатывает и не хранит данные микрофона.</string>
     <string name="permission_notifications_title">Уведомления</string>
-    <string name="permission_notifications_desc">Рекомендуется. Позволяет CEONIX Ride показывать, что происходит с подключением, пока приложение работает в фоне.</string>
+    <string name="permission_notifications_desc">Рекомендуется. Позволяет CEONIX Headunit показывать, что происходит с подключением, пока приложение работает в фоне.</string>
     <string name="permission_overlay_title">Поверх других приложений</string>
     <string name="permission_overlay_desc">Обязательно. Позволяет Android Auto появляться самостоятельно, когда телефон подключается. Без этого автозапуск выглядит включённым, но молча ничего не делает.</string>
     <string name="permission_battery_title">Работа в фоне</string>
-    <string name="permission_battery_desc">Обязательно. Не даёт Android усыплять CEONIX Ride между поездками, чтобы подключение переживало выключение и включение зажигания.</string>
+    <string name="permission_battery_desc">Обязательно. Не даёт Android усыплять CEONIX Headunit между поездками, чтобы подключение переживало выключение и включение зажигания.</string>
     <string name="permission_open_app_settings_hint">Отклонено. Android больше не спросит — нажмите, чтобы открыть настройки приложения и включить разрешение там.</string>
     <string name="permission_continue">Продолжить</string>
     <string name="permission_refresh">Обновить состояние</string>

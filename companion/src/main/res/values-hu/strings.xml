@@ -44,4 +44,31 @@
     <string name="error_bluetooth_off">A Bluetooth ki van kapcsolva, ezért a cím nem adható át. Kapcsolja be és próbálja újra, vagy írja be kézzel a címet a fejegységen.</string>
     <string name="error_no_listener">A fejegység nem figyel. Nyissa meg rajta a <b>Beállítások › Wi-Fi beállítás</b> képernyőt, és próbálja újra.</string>
     <string name="error_connection">Megszakadt a Bluetooth-kapcsolat a fejegységgel. Próbálja újra, vagy írja be kézzel a címet a fejegységen.</string>
+
+    <!-- Setup guide -->
+    <string name="guide_title">Beállítás lépésről lépésre</string>
+    <string name="guide_entry_desc">Képekkel, lépésenként</string>
+    <string name="guide_intro">Ezt csak egyszer kell elvégezni, egymás mellé téve a fejegységet és ezt a telefont. Körülbelül öt percig tart.</string>
+    <string name="guide_back">Vissza</string>
+    <string name="guide_got_it">Értem</string>
+    <string name="guide_section_head_unit">A fejegységen</string>
+    <string name="guide_section_phone">Ezen a telefonon</string>
+    <string name="guide_permissions_title">Adja meg az engedélyeket</string>
+    <string name="guide_permissions_text">Nyissa meg a CEONIX Headunit alkalmazást a fejegységen. Engedélyezze az első képernyő összes kártyáját, koppintson a(z) %1$s gombra, majd fogadja el a biztonsági figyelmeztetést.</string>
+    <string name="guide_pair_title">Párosítás Bluetooth-on</string>
+    <string name="guide_pair_text">A fejegységen nyissa meg az Android Bluetooth-beállításait, és koppintson az Új eszköz párosítása elemre. Ezen a telefonon válassza ki a fejegységet a Bluetooth-listából, és mindkét képernyőn hagyja jóvá ugyanazt a kódot.</string>
+    <string name="guide_aa_title">Nyomja meg egyszer az Android Autót</string>
+    <string name="guide_aa_text">A fejegység kezdőképernyőjén nyomja meg a(z) %1$s kártyát, és válassza ki ezt a telefont. Még nem jelenik meg semmi, és ez így rendben van: a fejegység most hozza létre a saját Wi-Fi-hálózatát.</string>
+    <string name="guide_connection_title">Nyissa meg a Kapcsolat képernyőt</string>
+    <string name="guide_connection_text">A fejegységen nyissa meg: %1$s › %2$s. Hagyja nyitva a képernyőt, amíg ezt mutatja: %3$s.</string>
+    <string name="guide_find_title">Keresse meg a fejegységet</string>
+    <string name="guide_find_text">Zárja be ezt az útmutatót, koppintson a(z) %1$s gombra, és engedélyezze, amit kér. A keresés körülbelül fél percig tart.</string>
+    <string name="guide_send_title">Küldje el a címet</string>
+    <string name="guide_send_text">Amikor a kártyán ez áll: %1$s, koppintson a(z) %2$s gombra, és válassza ki a fejegységet a listából.</string>
+    <string name="guide_done_title">Kész</string>
+    <string name="guide_done_text">A telefonon ez jelenik meg: %1$s. Ezután az Android Auto magától csatlakozik; ha mégsem, nyomja meg egyszer a(z) %2$s kártyát a fejegységen. Legelőször fogadja el az Android Auto kérdéseit ezen a telefonon.</string>
+    <string name="hu_continue">Tovább</string>
+    <string name="hu_settings">Beállítások</string>
+    <string name="hu_connection">Kapcsolat</string>
+    <string name="hu_listening">Figyel</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.ceonix.ride.helper
+package com.ceonix.setup
 
 import android.Manifest
 import android.annotation.SuppressLint

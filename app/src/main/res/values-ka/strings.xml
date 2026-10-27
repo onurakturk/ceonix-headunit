@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CEONIX Ride</string>
+    <string name="app_name">CEONIX Headunit</string>
     <string name="menu">მენიუ</string>
     <string name="settings">პარამეტრები</string>
 
@@ -12,7 +12,7 @@
     <string name="video">Android Auto</string>
     <string name="self_mode">ავტონომიური რეჟიმი</string>
     <string name="to_android_auto">Android Auto-ზე გადასვლა</string>
-    <string name="title">CEONIX Ride</string>
+    <string name="title">CEONIX Headunit</string>
     <string name="remove">წაშლა</string>
     <string name="usb">USB</string>
     <string name="wifi">WiFi</string>
@@ -160,7 +160,7 @@
     <string name="usb_auto_connect">USB ავტო-კავშირი</string>
     <string name="usb_auto_connect_description">ცნობილ USB მოწყობილობასთან ავტომატური დაკავშირება აპლიკაციის გახსნისას.</string>
     <string name="auto_start_bt_label">ავტო-გაშვება Bluetooth-ით</string>
-    <string name="auto_start_bt_description">CEONIX Ride-ის ავტომატური გახსნა კონკრეტული Bluetooth მოწყობილობის დაკავშირებისას.</string>
+    <string name="auto_start_bt_description">CEONIX Headunit-ის ავტომატური გახსნა კონკრეტული Bluetooth მოწყობილობის დაკავშირებისას.</string>
     <string name="listen_for_usb_devices_label">USB მოწყობილობების მონიტორინგი</string>
     <string name="listen_for_usb_devices_description">USB მოწყობილობის შეერთებისას Android სისტემური მოთხოვნის ჩვენება.</string>
     <string name="auto_start_usb_label">ავტო-გაშვება USB-ით</string>
@@ -175,7 +175,7 @@
     <string name="select_bt_device">აირჩიეთ Bluetooth მოწყობილობა</string>
     <string name="bt_device_not_set">არ არის მითითებული</string>
     <string name="auto_start_wifi_label">ავტო-გაშვება WiFi-ით</string>
-    <string name="auto_start_wifi_description">CEONIX Ride-ის ავტომატური გახსნა კონკრეტულ WiFi SSID-თან დაკავშირებისას.</string>
+    <string name="auto_start_wifi_description">CEONIX Headunit-ის ავტომატური გახსნა კონკრეტულ WiFi SSID-თან დაკავშირებისას.</string>
     <string name="auto_start_wifi_ssid_label">WiFi SSID</string>
     <string name="auto_start_wifi_ssid_description">დაკავშირება მხოლოდ ამ WiFi SSID-თან ყოფნისას</string>
     <string name="auto_start_wifi_warning">მოძველებული ფუნქცია: შესაძლოა საიმედოდ არ იმუშაოს Android 8+ ვერსიებზე ფონური შეზღუდვების გამო. დარწმუნდით, რომ აპლიკაცია ამოღებულია ელემენტის ოპტიმიზაციიდან.</string>
@@ -184,7 +184,7 @@
     <string name="bt_permission_denied_title">საჭიროა Bluetooth ნებართვა</string>
     <string name="bt_permission_denied_message">დაწყვილებული მოწყობილობების ასარჩევად საჭიროა Bluetooth ნებართვა. გთხოვთ, მიანიჭოთ იგი აპლიკაციის პარამეტრებიდან.</string>
     <string name="overlay_permission_title">ფონური გაშვების ნებართვა</string>
-    <string name="overlay_permission_description">იმისათვის, რომ CEONIX Ride ავტომატურად გაიხსნას Bluetooth-ის დაკავშირებისას, გთხოვთ, შემდეგ ეკრანზე ჩართოთ ნებართვა \"ჩვენება სხვა აპების ზემოთ\" (Display over other apps).</string>
+    <string name="overlay_permission_description">იმისათვის, რომ CEONIX Headunit ავტომატურად გაიხსნას Bluetooth-ის დაკავშირებისას, გთხოვთ, შემდეგ ეკრანზე ჩართოთ ნებართვა \"ჩვენება სხვა აპების ზემოთ\" (Display over other apps).</string>
     <string name="open_settings">პარამეტრები</string>
     <string name="right_hand_drive">მარჯვენასაჭიანი მართვა</string>
     <string name="right_hand_drive_description">ინტერფეისის მორგება მარჯვენა საჭის მქონე ავტომობილებისთვის</string>
@@ -279,7 +279,7 @@
         <b>1. ყურადღება გზაზე</b><br/>
         მართვის დროს ამ პროგრამის გამოყენებამ შეიძლება გაგიფანტოთ ყურადღება და შექმნას საფრთხე. ყოველთვის მიანიჭეთ უპირატესობა უსაფრთხო მართვას და დაიცავით საგზაო მოძრაობის ყველა ადგილობრივი წესი. გამოიყენეთ ეს აპლიკაცია მხოლოდ მაშინ, როდესაც ეს უსაფრთხოა.<br/><br/>
         <b>2. პასუხისმგებლობის შეზღუდვა</b><br/>
-        CEONIX Ride მოწოდებულია "როგორც არის" (as is) ყოველგვარი გარანტიის გარეშე. დეველოპერები არ იღებენ პასუხისმგებლობას რაიმე სახის ავარიაზე, თქვენი ავტომობილის/მოწყობილობის დაზიანებაზე ან სამართლებრივ შედეგებზე, რომლებიც გამოწვეულია ამ პროგრამის გამოყენებით.<br/><br/>
+        CEONIX Headunit მოწოდებულია "როგორც არის" (as is) ყოველგვარი გარანტიის გარეშე. დეველოპერები არ იღებენ პასუხისმგებლობას რაიმე სახის ავარიაზე, თქვენი ავტომობილის/მოწყობილობის დაზიანებაზე ან სამართლებრივ შედეგებზე, რომლებიც გამოწვეულია ამ პროგრამის გამოყენებით.<br/><br/>
         <b>3. დამოუკიდებლობა</b><br/>
         ეს პროექტი არის დამოუკიდებელი ღია კოდის მქონე ინიციატივა და არ არის ასოცირებული, დამტკიცებული ან დაკავშირებული Google LLC-სთან ან Android Auto ბრენდთან.
     ]]></string>
@@ -307,7 +307,7 @@
     <string name="export_settings_downloads">ჩამოტვირთვებში (Downloads) შენახვა</string>
     <string name="export_settings_app_folder">აპის სარეზერვო საქაღალდეში შენახვა</string>
     <string name="import_settings">პარამეტრების იმპორტი</string>
-    <string name="import_settings_description">პარამეტრების აღდგენა CEONIX Ride-ის სარეზერვო ასლიდან</string>
+    <string name="import_settings_description">პარამეტრების აღდგენა CEONIX Headunit-ის სარეზერვო ასლიდან</string>
     <string name="import_settings_choose_file">აირჩიეთ სარეზერვო ფაილი</string>
     <string name="import_settings_downloads">იმპორტი ჩამოტვირთვებიდან (Downloads)</string>
     <string name="import_settings_app_folder">იმპორტი აპის სარეზერვო საქაღალდიდან</string>
@@ -324,8 +324,8 @@
     <string name="no_file_picker_title">ფაილების მენეჯერი ვერ მოიძებნა</string>
     <string name="no_file_picker_message">ამ მოწყობილობას არ აქვს თავსებადი ფაილების მენეჯერი. ამის ნაცვლად შეგიძლიათ გამოიყენოთ ჩამოტვირთვები ან აპის სარეზერვო საქაღალდე.</string>
     <string name="no_settings_backups_title">სარეზერვო ასლები ვერ მოიძებნა</string>
-    <string name="no_settings_backups_message">აპის სარეზერვო საქაღალდეში CEONIX Ride-ის ასლები ვერ მოიძებნა. ჯერ გააკეთეთ ექსპორტი ამ საქაღალდეში, შემდეგ კი სცადეთ იმპორტი.</string>
-    <string name="no_settings_backups_downloads_message">ჩამოტვირთვებში CEONIX Ride-ის სარეზერვო ასლები ვერ მოიძებნა. ჯერ გააკეთეთ ექსპორტი ჩამოტვირთვებში, შემდეგ კი სცადეთ იმპორტი.</string>
+    <string name="no_settings_backups_message">აპის სარეზერვო საქაღალდეში CEONIX Headunit-ის ასლები ვერ მოიძებნა. ჯერ გააკეთეთ ექსპორტი ამ საქაღალდეში, შემდეგ კი სცადეთ იმპორტი.</string>
+    <string name="no_settings_backups_downloads_message">ჩამოტვირთვებში CEONIX Headunit-ის სარეზერვო ასლები ვერ მოიძებნა. ჯერ გააკეთეთ ექსპორტი ჩამოტვირთვებში, შემდეგ კი სცადეთ იმპორტი.</string>
     <string name="share_settings_backup">პარამეტრების სარეზერვო ასლის გაზიარება</string>
     <string name="logs_exported">ლოგების ექსპორტი შესრულებულია</string>
     <string name="log_saved_to">ლოგი შენახულია აქ:\n%s</string>
@@ -348,7 +348,7 @@
     <string name="wifi_disconnect_toast">Android Auto გაითიშა: თუ იყენებთ უ線ო კავშირს, გამორთეთ ფუნქციები \"Switch between networks\" ან \"Network acceleration\" ტელეფონის WiFi პარამეტრებიდან</string>
     <string name="reset_usb_option">USB კავშირის გადატვირთვა</string>
     <string name="reset_usb_timeout">USB მოწყობილობა ვერ მოიძებნა. გთხოვთ, შეამოწმოთ კავშირი.</string>
-    <string name="notification_service_running">CEONIX Ride აქტიურია</string>
+    <string name="notification_service_running">CEONIX Headunit აქტიურია</string>
     <string name="notification_projection_active">Android Auto პროეცირებულია</string>
     <string name="shortcut_connect_title">დაკავშირება</string>
     <string name="shortcut_connect_desc">ავტო-კავშირი ბოლო ტელეფონთან</string>
@@ -525,7 +525,7 @@
     <string name="software_video_decoder_device">მოწყობილობის MediaCodec</string>
 
     <string name="btn_show_qr">QR კოდის ჩვენება</string>
-    <!-- CEONIX Ride: Home / Ride / Sunset / About / Apps -->
+    <!-- CEONIX Headunit: Home / Ride / Sunset / About / Apps -->
     <string name="ride">მართვა</string>
     <string name="home">მთავარი</string>
     <string name="ride_lean">დახრა</string>
@@ -560,7 +560,7 @@
     <!-- Wi-Fi Setup -->
     <string name="wifi_setup_settings">Wi-Fi კონფიგურაცია</string>
     <string name="category_wifi_setup">Wi-Fi კონფიგურაცია</string>
-    <string name="wifi_setup_intro">Android მალავს ამ მოწყობილობისგან მის საკუთარ Wi-Fi მისამართს, ამიტომ ის ერთხელ უნდა მიეთითოს. გახსენით ეს ეკრანი და შემდეგ ტელეფონზე გაუშვით აპლიკაცია CEONIX Ride Helper — ან წაიკითხეთ მისამართი ნებისმიერ Wi-Fi ანალიზატორში და შეიყვანეთ ქვემოთ.\n\nეს ეკრანი შეიძლება თავისით დაიხუროს, სანამ Android Auto შეერთებას ცდილობს. ეს ნორმალურია: მოწყობილობა კიდევ დაახლოებით ათი წუთი აგრძელებს მოსმენას და მისამართის მიღებისას გამოჩნდება შეტყობინება.\n\nმისამართი იცვლება მხოლოდ მაშინ, თუ ამ მოწყობილობაზე Wi-Fi გამოირთვება და ისევ ჩაირთვება.</string>
+    <string name="wifi_setup_intro">Android მალავს ამ მოწყობილობისგან მის საკუთარ Wi-Fi მისამართს, ამიტომ ის ერთხელ უნდა მიეთითოს. გახსენით ეს ეკრანი და შემდეგ ტელეფონზე გაუშვით აპლიკაცია CEONIX Setup — ან წაიკითხეთ მისამართი ნებისმიერ Wi-Fi ანალიზატორში და შეიყვანეთ ქვემოთ.\n\nეს ეკრანი შეიძლება თავისით დაიხუროს, სანამ Android Auto შეერთებას ცდილობს. ეს ნორმალურია: მოწყობილობა კიდევ დაახლოებით ათი წუთი აგრძელებს მოსმენას და მისამართის მიღებისას გამოჩნდება შეტყობინება.\n\nმისამართი იცვლება მხოლოდ მაშინ, თუ ამ მოწყობილობაზე Wi-Fi გამოირთვება და ისევ ჩაირთვება.</string>
     <string name="wifi_setup_network_name">ქსელის სახელი</string>
     <string name="wifi_setup_network_none">ჯერ არ არის — მთავარ ეკრანზე ერთხელ დააჭირეთ Android Auto-ს</string>
     <string name="wifi_setup_helper">ტელეფონის დამხმარე</string>
@@ -600,11 +600,11 @@
     <string name="launcher_mode_settings">ლაუნჩერის რეჟიმი</string>
     <string name="launcher_mode_settings_summary">ამ აპის გამოყენება მოწყობილობის მთავარ ეკრანად</string>
     <string name="use_as_launcher">ლაუნჩერად გამოყენება</string>
-    <string name="use_as_launcher_description">CEONIX Ride ხდება მოწყობილობის მთავარი ეკრანი. ჩართვისას მთავარი ეკრანის ღილაკი ამ აპს ხსნის.</string>
+    <string name="use_as_launcher_description">CEONIX Headunit ხდება მოწყობილობის მთავარი ეკრანი. ჩართვისას მთავარი ეკრანის ღილაკი ამ აპს ხსნის.</string>
     <string name="exit_pause">პაუზა</string>
     <string name="permission_dashboard_title">ნებართვები</string>
-    <string name="permission_welcome_title">კეთილი იყოს თქვენი მობრძანება CEONIX Ride-ში</string>
-    <string name="permission_welcome_subtitle">დასაწყებად CEONIX Ride-ს რამდენიმე ნებართვა სჭირდება, რომ Android Auto შეუფერხებლად იმუშაოს. ნებართვის მისაცემად შეეხეთ ბარათს.</string>
+    <string name="permission_welcome_title">კეთილი იყოს თქვენი მობრძანება CEONIX Headunit-ში</string>
+    <string name="permission_welcome_subtitle">დასაწყებად CEONIX Headunit-ს რამდენიმე ნებართვა სჭირდება, რომ Android Auto შეუფერხებლად იმუშაოს. ნებართვის მისაცემად შეეხეთ ბარათს.</string>
     <string name="permission_bluetooth_title">Bluetooth</string>
     <string name="permission_bluetooth_desc">აუცილებელია. თქვენი ტელეფონი Bluetooth-ით მოიძებნება და Android Auto-ს კავშირის დამყარებაც იქიდან იწყება. ამის გარეშე არაფერი დაკავშირდება.</string>
     <string name="permission_nearby_wifi_title">ახლომდებარე Wi-Fi მოწყობილობები</string>
@@ -614,11 +614,11 @@
     <string name="permission_microphone_title">მიკროფონი</string>
     <string name="permission_microphone_desc">რეკომენდებულია. პირდაპირ გადაეცემა Google ასისტენტს და უხელო ზარებს. ეს აპი მიკროფონის მონაცემებს არ ამუშავებს და არ ინახავს.</string>
     <string name="permission_notifications_title">შეტყობინებები</string>
-    <string name="permission_notifications_desc">რეკომენდებულია. CEONIX Ride-ს საშუალებას აძლევს აჩვენოს, რას აკეთებს კავშირი, სანამ ფონურად მუშაობს.</string>
+    <string name="permission_notifications_desc">რეკომენდებულია. CEONIX Headunit-ს საშუალებას აძლევს აჩვენოს, რას აკეთებს კავშირი, სანამ ფონურად მუშაობს.</string>
     <string name="permission_overlay_title">სხვა აპების ზემოდან ჩვენება</string>
     <string name="permission_overlay_desc">აუცილებელია. Android Auto-ს საშუალებას აძლევს თავისით გამოჩნდეს, როცა ტელეფონი დაუკავშირდება. ამის გარეშე ავტომატური გაშვება ჩართული ჩანს, მაგრამ ჩუმად არაფერს აკეთებს.</string>
     <string name="permission_battery_title">ფონურად მუშაობა</string>
-    <string name="permission_battery_desc">აუცილებელია. ხელს უშლის Android-ს, მგზავრობებს შორის დააძინოს CEONIX Ride, რათა კავშირმა გაუძლოს ანთების გამორთვასა და ჩართვას.</string>
+    <string name="permission_battery_desc">აუცილებელია. ხელს უშლის Android-ს, მგზავრობებს შორის დააძინოს CEONIX Headunit, რათა კავშირმა გაუძლოს ანთების გამორთვასა და ჩართვას.</string>
     <string name="permission_open_app_settings_hint">უარყოფილია. Android აღარ იკითხავს — შეეხეთ, რომ გახსნათ აპის პარამეტრები და იქ ჩართოთ.</string>
     <string name="permission_continue">გაგრძელება</string>
     <string name="permission_refresh">სტატუსის განახლება</string>

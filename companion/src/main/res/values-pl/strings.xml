@@ -44,4 +44,31 @@
     <string name="error_bluetooth_off">Bluetooth jest wyłączony, więc nie można przekazać adresu. Włącz go i spróbuj ponownie albo wpisz adres ręcznie na jednostce.</string>
     <string name="error_no_listener">Jednostka nie nasłuchuje. Otwórz na niej <b>Ustawienia › Konfiguracja Wi-Fi</b> i spróbuj ponownie.</string>
     <string name="error_connection">Utracono połączenie Bluetooth z jednostką. Spróbuj ponownie albo wpisz adres ręcznie na jednostce.</string>
+
+    <!-- Setup guide -->
+    <string name="guide_title">Jak skonfigurować</string>
+    <string name="guide_entry_desc">Krok po kroku, z obrazkami</string>
+    <string name="guide_intro">Zrób to raz, z jednostką i tym telefonem obok siebie. Zajmuje to około pięciu minut.</string>
+    <string name="guide_back">Wstecz</string>
+    <string name="guide_got_it">Rozumiem</string>
+    <string name="guide_section_head_unit">Na jednostce głównej</string>
+    <string name="guide_section_phone">Na tym telefonie</string>
+    <string name="guide_permissions_title">Przyznaj uprawnienia</string>
+    <string name="guide_permissions_text">Otwórz CEONIX Headunit na jednostce. Zezwól na wszystkie karty na pierwszym ekranie, dotknij %1$s i zaakceptuj ostrzeżenie o bezpieczeństwie.</string>
+    <string name="guide_pair_title">Sparuj przez Bluetooth</string>
+    <string name="guide_pair_text">Na jednostce otwórz ustawienia Bluetooth Androida i dotknij Sparuj nowe urządzenie. Na tym telefonie wybierz jednostkę z listy Bluetooth i potwierdź ten sam kod na obu ekranach.</string>
+    <string name="guide_aa_title">Naciśnij raz Android Auto</string>
+    <string name="guide_aa_text">Na ekranie głównym jednostki naciśnij %1$s i wybierz ten telefon. Na razie nic się nie pojawi i tak ma być: jednostka tworzy właśnie własną sieć Wi-Fi.</string>
+    <string name="guide_connection_title">Otwórz ekran Połączenie</string>
+    <string name="guide_connection_text">Na jednostce otwórz %1$s › %2$s. Zostaw ten ekran otwarty, dopóki widnieje na nim %3$s.</string>
+    <string name="guide_find_title">Znajdź jednostkę</string>
+    <string name="guide_find_text">Zamknij ten przewodnik, dotknij %1$s i zezwól na to, o co prosi. Wyszukiwanie trwa około pół minuty.</string>
+    <string name="guide_send_title">Wyślij adres</string>
+    <string name="guide_send_text">Gdy na karcie pojawi się %1$s, dotknij %2$s i wybierz jednostkę z listy.</string>
+    <string name="guide_done_title">Gotowe</string>
+    <string name="guide_done_text">Ten telefon pokaże %1$s. Potem Android Auto połączy się samo; jeśli nie, naciśnij raz %2$s na jednostce. Za pierwszym razem zaakceptuj pytania Android Auto na tym telefonie.</string>
+    <string name="hu_continue">Dalej</string>
+    <string name="hu_settings">Ustawienia</string>
+    <string name="hu_connection">Połączenie</string>
+    <string name="hu_listening">Nasłuchuje</string>
 </resources>

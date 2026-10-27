@@ -44,4 +44,31 @@
     <string name="error_bluetooth_off">Bluetooth đang tắt nên không thể chuyển địa chỉ. Hãy bật lên và thử lại, hoặc tự nhập địa chỉ vào đầu máy.</string>
     <string name="error_no_listener">Đầu máy không lắng nghe. Hãy mở <b>Cài đặt › Thiết lập Wi-Fi</b> trên đầu máy rồi thử lại.</string>
     <string name="error_connection">Mất kết nối Bluetooth với đầu máy. Hãy thử lại hoặc tự nhập địa chỉ vào đầu máy.</string>
+
+    <!-- Setup guide -->
+    <string name="guide_title">Cách thiết lập</string>
+    <string name="guide_entry_desc">Từng bước, có hình minh họa</string>
+    <string name="guide_intro">Chỉ cần làm một lần, khi đặt đầu máy và điện thoại này cạnh nhau. Mất khoảng năm phút.</string>
+    <string name="guide_back">Quay lại</string>
+    <string name="guide_got_it">Đã hiểu</string>
+    <string name="guide_section_head_unit">Trên đầu máy</string>
+    <string name="guide_section_phone">Trên điện thoại này</string>
+    <string name="guide_permissions_title">Cấp quyền</string>
+    <string name="guide_permissions_text">Mở CEONIX Headunit trên đầu máy. Cho phép mọi thẻ ở màn hình đầu tiên, nhấn %1$s rồi chấp nhận thông báo an toàn.</string>
+    <string name="guide_pair_title">Ghép nối Bluetooth</string>
+    <string name="guide_pair_text">Trên đầu máy, mở cài đặt Bluetooth của Android và nhấn Ghép nối thiết bị mới. Trên điện thoại này, chọn đầu máy trong danh sách Bluetooth và xác nhận cùng một mã trên cả hai màn hình.</string>
+    <string name="guide_aa_title">Nhấn Android Auto một lần</string>
+    <string name="guide_aa_text">Trên màn hình chính của đầu máy, nhấn %1$s và chọn điện thoại này. Chưa có gì hiện ra, như vậy là bình thường: đầu máy đang tạo mạng Wi-Fi riêng.</string>
+    <string name="guide_connection_title">Mở màn hình Kết nối</string>
+    <string name="guide_connection_text">Trên đầu máy, mở %1$s › %2$s. Để màn hình đó mở khi nó còn hiện %3$s.</string>
+    <string name="guide_find_title">Tìm đầu máy</string>
+    <string name="guide_find_text">Đóng hướng dẫn này, nhấn %1$s và cho phép những gì được yêu cầu. Việc tìm kiếm mất khoảng nửa phút.</string>
+    <string name="guide_send_title">Gửi địa chỉ</string>
+    <string name="guide_send_text">Khi thẻ hiện %1$s, nhấn %2$s và chọn đầu máy trong danh sách.</string>
+    <string name="guide_done_title">Xong</string>
+    <string name="guide_done_text">Điện thoại này hiện %1$s. Sau đó Android Auto tự kết nối; nếu không, hãy nhấn %2$s một lần trên đầu máy. Lần đầu tiên, hãy chấp nhận các câu hỏi của Android Auto trên điện thoại này.</string>
+    <string name="hu_continue">Tiếp tục</string>
+    <string name="hu_settings">Cài đặt</string>
+    <string name="hu_connection">Kết nối</string>
+    <string name="hu_listening">Đang lắng nghe</string>
 </resources>

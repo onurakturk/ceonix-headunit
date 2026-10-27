@@ -1,6 +1,6 @@
-## What is CEONIX Ride?
+## What is CEONIX Headunit?
 
-CEONIX Ride turns an Android phone or tablet into a **wireless Android Auto head unit**, tailored for
+CEONIX Headunit turns an Android phone or tablet into a **wireless Android Auto head unit**, tailored for
 motorcycle use. Alongside standard Android Auto it adds a purpose-built **Ride
 dashboard** and a Material 3 home screen you can use as the device launcher.
 
@@ -8,7 +8,7 @@ dashboard** and a Material 3 home screen you can use as the device launcher.
   <img src="docs/images/navigation.png" alt="Android Auto navigation projected from the phone" width="98%">
 </p>
 <p align="center">
-  <img src="docs/images/home.png" alt="CEONIX Ride home screen" width="49%">
+  <img src="docs/images/home.png" alt="CEONIX Headunit home screen" width="49%">
   <img src="docs/images/ride-dashboard.png" alt="Ride dashboard with speed, lean angle and g-force" width="49%">
 </p>
 
@@ -16,12 +16,12 @@ dashboard** and a Material 3 home screen you can use as the device launcher.
 
 - **Wireless Android Auto** (Native AA) — connects to the phone over Wi-Fi Direct, without a
   cable or always running helper app. On Android 10 and later the head unit cannot read its own Wi-Fi Direct address, so the
-  small **CEONIX Ride Helper** app (`companion/`) fetches it from the phone once, during setup.
+  small **CEONIX Setup** app (`companion/`) fetches it from the phone once, during setup.
 - **Ride dashboard** — live speed, a sensor-fused lean angle with persisted max left/right, and a
   third card you swipe between: longitudinal **g-force** (acceleration and braking, with recorded
   maxima) or a GPS-based **sunset countdown** with a headlights reminder. The card you pick is
   remembered across restarts, reboots and updates.
-- **Launcher Mode** — use CEONIX Ride as the device home screen, with an APPS drawer for the
+- **Launcher Mode** — use CEONIX Headunit as the device home screen, with an APPS drawer for the
   installed apps.
 - **Material 3 UI** — tonal cards, a dark/light theme toggle, and a status bar with clock,
   battery, GPS and Bluetooth indicators.
@@ -34,11 +34,11 @@ Requirements: Android SDK (compileSdk 36), NDK 27, JDK 17.
 
 ```bash
 ./gradlew :app:assembleGithubDebug
-adb install -r app/build/outputs/apk/github/debug/com.ceonix.ride_<version>_debug.apk
+adb install -r app/build/outputs/apk/github/debug/com.ceonix.headunit.dev_<version>_debug.apk
 ```
 
-There are two flavours. `github` is the sideload build (`com.ceonix.ride`). `playstore` is the
-Google Play build (`com.ceonix.ride.app`): it leaves out the dummy VPN service and three
+There are two flavours. `github` is the sideload build (`com.ceonix.headunit.dev`). `playstore` is the
+Google Play build (`com.ceonix.headunit`): it leaves out the dummy VPN service and three
 permissions Play restricts or that nothing uses. The two have different package names, so they
 install side by side, but only one can run at a time: both open the same Android Auto port.
 
@@ -58,14 +58,15 @@ HEADUNIT_KEY_PASSWORD=...
 
 ## License
 
-CEONIX Ride is distributed under the **GNU Affero General Public License v3** — see
+CEONIX Headunit is distributed under the **GNU Affero General Public License v3** — see
 [LICENSE](LICENSE). Attribution for the upstream projects this work is based on is in the
-notice at the top of this file.
-# CEONIX Ride
+notice at the end of this file.
+
+# CEONIX Headunit
 
 > ### Modified version notice (AGPLv3 §5a)
 >
-> **CEONIX Ride** is a **modified version** of
+> **CEONIX Headunit** is a **modified version** of
 > [headunit-revived](https://github.com/andreknieriem/headunit-revived) by André Rinas,
 > which is itself based on the original
 > [headunit](https://github.com/mikereidis/headunit) by Michael A. Reid.
@@ -75,8 +76,8 @@ notice at the top of this file.
 > **First modified:** 21 July 2026
 >
 > **Changes made in this fork:**
-> - Rebranded to "CEONIX Ride" (new name, new launcher icon, `applicationId` changed to
->   `com.ceonix.ride`, version reset to 1.0)
+> - Rebranded to "CEONIX Headunit" (new name, new launcher icon, `applicationId` changed to
+>   `com.ceonix.headunit`, version reset to 1.0)
 > - Wi-Fi Direct: fixed an `IllegalStateException` from `WifiP2pConfig.Builder` when a
 >   band-only config is built on some Android 12+ / OEM frameworks
 > - Wi-Fi Direct: added an idempotency guard so repeated Bluetooth `ACL_CONNECTED` events
@@ -89,7 +90,7 @@ notice at the top of this file.
 >   session, and auto-start on boot are enabled by default
 >
 > **Source code for this modified version:**
-> <https://github.com/onurakturk/ceonix-ride> — each released version is tagged there.
+> <https://github.com/onurakturk/ceonix-headunit> — each released version is tagged there.
 > The AGPL requires that everyone who receives the app can also obtain this source; the same
 > address is shown in the app under Settings › Info › Open-source licence.
 >

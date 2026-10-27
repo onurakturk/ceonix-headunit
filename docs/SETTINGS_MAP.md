@@ -1,12 +1,13 @@
-# CEONIX Ride — Settings Menü Haritası
+# CEONIX Headunit — Settings Menü Haritası
 
 > **Ne işe yarar:** Settings menüsünü yeniden düzenlerken referans dokümanı. Her satırın **sabit bir
 > numarası** var (`S1.2.3`). Karar vermek için `KARARIN` sütununu doldur, ya da sohbete
 > "S2.3.4'ü kaldır" gibi yaz.
 >
-> **v1.2.0'da (2026-08-31):** ürün adı **"CEONIX Ride"** oldu, `applicationId` = `com.ceonix.ride`.
+> **v1.2.0'da (2026-08-31):** ürün adı "CEONIX Ride" oldu; **v1.3.0'da (2026-10-27): "CEONIX Headunit"**,
+> `applicationId` = `com.ceonix.headunit` (Play) / `com.ceonix.headunit.dev` (sideload).
 > Aşağıdaki v1.0.84/85 notları o günkü durumu anlatıyor; `HEAD_UNIT_MAKE/_MODEL` **artık
-> `"CEONIX Ride"`**. Markanın kodun neresinde geçtiği ve neyin değiştirilebilir olduğu için →
+> `"CEONIX Headunit"`**. Markanın kodun neresinde geçtiği ve neyin değiştirilebilir olduğu için →
 > **`docs/BRANDING_MAP.md`**.
 >
 > **v1.0.84'te:** `Vehicle information` ekranındaki **Head Unit kategorisi (Make + Model) kaldırıldı**
@@ -55,7 +56,7 @@
 > **v1.0.72-78'de:** Ana ekrana **Wi-Fi Setup** kategorisi eklendi (S1.6), Backup ile Advanced
 > arasına → *Advanced ve Info bir aşağı kaydı* (eski S1.6 → **S1.7**, eski S1.7 → **S1.8**).
 > (v1.0.80'de bu kategori **Connection** kartına dönüştü.)
-> Yeni **S11 — Wi-Fi Setup** ekranı: HU'ya kendi Wi-Fi adresini öğretir; telefondaki **CEONIX Ride Helper**
+> Yeni **S11 — Wi-Fi Setup** ekranı: HU'ya kendi Wi-Fi adresini öğretir; telefondaki **CEONIX Setup**
 > uygulamasından Bluetooth ile otomatik alır, elle giriş yedek yol olarak durur. Developer'daki
 > **Static BSSID (S2.1.9) aynen duruyor** — aynı değeri gösterir, kaldırılmadı.
 > v1.0.76'da bu ekrandan *Connect now* butonu kaldırıldı (sessizdi; bağlanma ana ekranın işi).
@@ -152,7 +153,7 @@ solda ikon kutusu, başlık + kısa açıklama, sağda chevron). Kartların heps
 ### S1.1 — General
 | # | Satır | Tür | Ne yapar | Görünürlük | Native-AA | KARARIN |
 |---|---|---|---|---|---|---|
-| S1.1.1 | Launcher Mode | → S7 | CEONIX Ride'ı cihazın ana ekranı (launcher) yapma | her zaman | ✅ | |
+| S1.1.1 | Launcher Mode | → S7 | CEONIX Headunit'ı cihazın ana ekranı (launcher) yapma | her zaman | ✅ | |
 | S1.1.2 | Auto-start settings | → S4 | Açılışta / ekran açılınca / Bluetooth ile otomatik başlatma | her zaman | ✅ **en kritik** | |
 | S1.1.3 | Auto-Connect Settings | → S5 | Otomatik bağlanma önceliği | her zaman | ✅ | |
 | S1.1.4 | App Language | dialog | Uygulama dilini seçer (boş = sistem dili) | her zaman | ✅ | |
@@ -369,7 +370,7 @@ Sürükle-sırala listesi: sıra = deneme önceliği. Her satırın kendi aç/ka
 ## S7 — Launcher Mode  *(S1.4.1'den)*
 | # | Satır | Tür | Ne yapar | Önerim | KARARIN |
 |---|---|---|---|---|---|
-| S7.1 | Use as launcher | toggle | CEONIX Ride'ı cihazın ana ekranı yapar (anında uygulanır, Save yok) | KALSIN | |
+| S7.1 | Use as launcher | toggle | CEONIX Headunit'ı cihazın ana ekranı yapar (anında uygulanır, Save yok) | KALSIN | |
 
 ---
 

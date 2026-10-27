@@ -44,4 +44,31 @@
     <string name="error_bluetooth_off">Bluetooth вимкнено, тому адресу неможливо передати. Увімкніть його та повторіть спробу або введіть адресу на головному пристрої вручну.</string>
     <string name="error_no_listener">Головний пристрій не слухає. Відкрийте на ньому <b>Налаштування › Налаштування Wi-Fi</b> і повторіть спробу.</string>
     <string name="error_connection">Звʼязок Bluetooth із головним пристроєм втрачено. Повторіть спробу або введіть адресу на головному пристрої вручну.</string>
+
+    <!-- Setup guide -->
+    <string name="guide_title">Як налаштувати</string>
+    <string name="guide_entry_desc">Покроково, з картинками</string>
+    <string name="guide_intro">Це робиться один раз, коли головний пристрій і цей телефон лежать поруч. Займає близько п\'яти хвилин.</string>
+    <string name="guide_back">Назад</string>
+    <string name="guide_got_it">Зрозуміло</string>
+    <string name="guide_section_head_unit">На головному пристрої</string>
+    <string name="guide_section_phone">На цьому телефоні</string>
+    <string name="guide_permissions_title">Надайте дозволи</string>
+    <string name="guide_permissions_text">Відкрийте CEONIX Headunit на головному пристрої. Дозвольте всі картки на першому екрані, натисніть %1$s і прийміть попередження про безпеку.</string>
+    <string name="guide_pair_title">Створіть пару через Bluetooth</string>
+    <string name="guide_pair_text">На головному пристрої відкрийте налаштування Bluetooth Android і натисніть «Підключити новий пристрій». На цьому телефоні виберіть головний пристрій у списку Bluetooth і підтвердьте однаковий код на обох екранах.</string>
+    <string name="guide_aa_title">Натисніть Android Auto один раз</string>
+    <string name="guide_aa_text">На головному екрані пристрою натисніть %1$s і виберіть цей телефон. Поки нічого не з\'явиться, і це нормально: головний пристрій створює власну мережу Wi-Fi.</string>
+    <string name="guide_connection_title">Відкрийте екран «Підключення»</string>
+    <string name="guide_connection_text">На головному пристрої відкрийте %1$s › %2$s. Не закривайте цей екран, поки на ньому написано %3$s.</string>
+    <string name="guide_find_title">Знайдіть головний пристрій</string>
+    <string name="guide_find_text">Закрийте цю інструкцію, натисніть %1$s і дозвольте те, що попросить застосунок. Пошук триває близько пів хвилини.</string>
+    <string name="guide_send_title">Надішліть адресу</string>
+    <string name="guide_send_text">Коли на картці з\'явиться %1$s, натисніть %2$s і виберіть головний пристрій у списку.</string>
+    <string name="guide_done_title">Готово</string>
+    <string name="guide_done_text">Телефон покаже %1$s. Потім Android Auto підключиться сам; якщо ні, один раз натисніть %2$s на головному пристрої. Уперше підтвердьте запити Android Auto на цьому телефоні.</string>
+    <string name="hu_continue">Продовжити</string>
+    <string name="hu_settings">Налаштування</string>
+    <string name="hu_connection">Підключення</string>
+    <string name="hu_listening">Слухає</string>
 </resources>

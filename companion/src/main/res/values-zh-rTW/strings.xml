@@ -44,4 +44,31 @@
     <string name="error_bluetooth_off">藍牙已關閉，因此無法交付位址。請開啟後再試一次，或手動在主機上輸入位址。</string>
     <string name="error_no_listener">主機沒有在等候。請在主機上開啟<b>設定 › Wi-Fi 設定</b>後再試一次。</string>
     <string name="error_connection">與主機的藍牙連線已中斷。請再試一次，或手動在主機上輸入位址。</string>
+
+    <!-- Setup guide -->
+    <string name="guide_title">設定方式</string>
+    <string name="guide_entry_desc">逐步說明，附圖片</string>
+    <string name="guide_intro">只需要做一次，請把主機和這支手機放在一起。大約需要五分鐘。</string>
+    <string name="guide_back">返回</string>
+    <string name="guide_got_it">知道了</string>
+    <string name="guide_section_head_unit">在主機上</string>
+    <string name="guide_section_phone">在這支手機上</string>
+    <string name="guide_permissions_title">授予權限</string>
+    <string name="guide_permissions_text">在主機上開啟 CEONIX Headunit。允許第一個畫面中的所有卡片，輕觸 %1$s，然後接受安全提醒。</string>
+    <string name="guide_pair_title">透過藍牙配對</string>
+    <string name="guide_pair_text">在主機上開啟 Android 的藍牙設定，輕觸「配對新裝置」。在這支手機的藍牙清單中選擇主機，並在兩個畫面上確認相同的配對碼。</string>
+    <string name="guide_aa_title">按一次 Android Auto</string>
+    <string name="guide_aa_text">在主機的主畫面按 %1$s，然後選擇這支手機。目前還不會出現任何畫面，這是正常的：主機正在建立自己的 Wi-Fi 網路。</string>
+    <string name="guide_connection_title">開啟連線畫面</string>
+    <string name="guide_connection_text">在主機上開啟 %1$s › %2$s。畫面顯示 %3$s 時，請讓它保持開啟。</string>
+    <string name="guide_find_title">尋找主機</string>
+    <string name="guide_find_text">關閉這份說明，輕觸 %1$s，並允許它要求的權限。搜尋大約需要半分鐘。</string>
+    <string name="guide_send_title">傳送位址</string>
+    <string name="guide_send_text">卡片顯示 %1$s 時，輕觸 %2$s，並從清單中選擇主機。</string>
+    <string name="guide_done_title">完成</string>
+    <string name="guide_done_text">這支手機會顯示 %1$s。接著 Android Auto 會自動連線；如果沒有，請在主機上按一次 %2$s。第一次使用時，請在這支手機上接受 Android Auto 的提示。</string>
+    <string name="hu_continue">繼續</string>
+    <string name="hu_settings">設定</string>
+    <string name="hu_connection">連線</string>
+    <string name="hu_listening">等待中</string>
 </resources>

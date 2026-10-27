@@ -44,4 +44,31 @@
     <string name="error_bluetooth_off">Bluetooth ist aus, daher kann die Adresse nicht übergeben werden. Schalte es ein und versuche es erneut oder tippe die Adresse von Hand in die Haupteinheit ein.</string>
     <string name="error_no_listener">Die Haupteinheit hört nicht zu. Öffne dort <b>Einstellungen › WLAN-Einrichtung</b> und versuche es erneut.</string>
     <string name="error_connection">Die Bluetooth-Verbindung zur Haupteinheit ist abgebrochen. Versuche es erneut oder tippe die Adresse von Hand in die Haupteinheit ein.</string>
+
+    <!-- Setup guide -->
+    <string name="guide_title">So richtest du es ein</string>
+    <string name="guide_entry_desc">Schritt für Schritt, mit Bildern</string>
+    <string name="guide_intro">Das machst du nur einmal, mit Haupteinheit und Telefon nebeneinander. Es dauert etwa fünf Minuten.</string>
+    <string name="guide_back">Zurück</string>
+    <string name="guide_got_it">Verstanden</string>
+    <string name="guide_section_head_unit">Auf der Haupteinheit</string>
+    <string name="guide_section_phone">Auf diesem Telefon</string>
+    <string name="guide_permissions_title">Berechtigungen erteilen</string>
+    <string name="guide_permissions_text">Öffne CEONIX Headunit auf der Haupteinheit. Erlaube jede Karte auf dem ersten Bildschirm, tippe auf %1$s und bestätige den Sicherheitshinweis.</string>
+    <string name="guide_pair_title">Per Bluetooth koppeln</string>
+    <string name="guide_pair_text">Öffne auf der Haupteinheit die Bluetooth-Einstellungen von Android und tippe auf Neues Gerät koppeln. Wähle auf diesem Telefon die Haupteinheit in der Bluetooth-Liste und bestätige auf beiden Bildschirmen denselben Code.</string>
+    <string name="guide_aa_title">Einmal Android Auto drücken</string>
+    <string name="guide_aa_text">Tippe auf dem Startbildschirm der Haupteinheit auf %1$s und wähle dieses Telefon. Noch erscheint nichts, und das ist richtig so: Die Haupteinheit richtet gerade ihr eigenes WLAN ein.</string>
+    <string name="guide_connection_title">Verbindungsbildschirm öffnen</string>
+    <string name="guide_connection_text">Öffne auf der Haupteinheit %1$s › %2$s. Lass den Bildschirm offen, solange dort %3$s steht.</string>
+    <string name="guide_find_title">Haupteinheit suchen</string>
+    <string name="guide_find_text">Schließe diese Anleitung, tippe auf %1$s und erlaube, was abgefragt wird. Die Suche dauert etwa eine halbe Minute.</string>
+    <string name="guide_send_title">Adresse senden</string>
+    <string name="guide_send_text">Wenn auf der Karte %1$s steht, tippe auf %2$s und wähle die Haupteinheit in der Liste.</string>
+    <string name="guide_done_title">Fertig</string>
+    <string name="guide_done_text">Dieses Telefon zeigt %1$s. Android Auto verbindet sich dann von selbst; falls nicht, tippe auf der Haupteinheit einmal auf %2$s. Beim allerersten Mal bestätige die Abfragen von Android Auto auf diesem Telefon.</string>
+    <string name="hu_continue">Weiter</string>
+    <string name="hu_settings">Einstellungen</string>
+    <string name="hu_connection">Verbindung</string>
+    <string name="hu_listening">Wartet</string>
 </resources>

@@ -96,11 +96,11 @@ android {
 
 
     defaultConfig {
-        applicationId = "com.ceonix.ride"
+        applicationId = "com.ceonix.headunit"
         minSdk = 16
         targetSdk = 36
-        versionCode = 152
-        versionName = "1.2.32"
+        versionCode = 153
+        versionName = "1.3.0"
         setProperty("archivesBaseName", "${applicationId}_${versionName}")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled = true
@@ -122,15 +122,16 @@ android {
         create("playstore") {
             dimension = "distribution"
             minSdk = 21
-            // The Play listing is a paid app. com.ceonix.ride was published there as a free app
-            // and Play never lets a free app become paid, so the Play build has its own id. The
-            // sideload build keeps com.ceonix.ride, so installs and settings on test devices stay.
-            // Its own copy of res/xml/shortcuts.xml carries this id; keep the two files in step.
-            applicationId = "com.ceonix.ride.app"
+            // The Play build uses the plain id from defaultConfig (com.ceonix.headunit). Its own copy
+            // of res/xml/shortcuts.xml carries that id; keep the two shortcut files in step.
         }
         create("github") {
             dimension = "distribution"
             // Default minSdk 16 from defaultConfig is used
+            // The sideload/development build gets its own id (com.ceonix.headunit.dev), so it can sit
+            // next to the Play install on one device without a signing clash (the two still cannot
+            // run at the same time: same Android Auto port and Wi-Fi Direct group).
+            applicationIdSuffix = ".dev"
         }
     }
 

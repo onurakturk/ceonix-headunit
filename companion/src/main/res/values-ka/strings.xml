@@ -44,4 +44,31 @@
     <string name="error_bluetooth_off">Bluetooth გამორთულია, ამიტომ მისამართის გადაცემა ვერ ხერხდება. ჩართეთ და სცადეთ ხელახლა, ან მისამართი ხელით შეიყვანეთ მთავარ მოწყობილობაზე.</string>
     <string name="error_no_listener">მთავარი მოწყობილობა არ უსმენს. გახსენით მასზე <b>პარამეტრები › Wi-Fi კონფიგურაცია</b> და სცადეთ ხელახლა.</string>
     <string name="error_connection">მთავარ მოწყობილობასთან Bluetooth კავშირი გაწყდა. სცადეთ ხელახლა ან მისამართი ხელით შეიყვანეთ მთავარ მოწყობილობაზე.</string>
+
+    <!-- Setup guide -->
+    <string name="guide_title">როგორ დავაყენოთ</string>
+    <string name="guide_entry_desc">ნაბიჯ-ნაბიჯ, სურათებით</string>
+    <string name="guide_intro">ეს ერთხელ კეთდება, როცა მთავარი მოწყობილობა და ეს ტელეფონი ერთმანეთთან ახლოსაა. დაახლოებით ხუთ წუთს გრძელდება.</string>
+    <string name="guide_back">უკან</string>
+    <string name="guide_got_it">გასაგებია</string>
+    <string name="guide_section_head_unit">მთავარ მოწყობილობაზე</string>
+    <string name="guide_section_phone">ამ ტელეფონზე</string>
+    <string name="guide_permissions_title">მიეცით ნებართვები</string>
+    <string name="guide_permissions_text">გახსენით CEONIX Headunit მთავარ მოწყობილობაზე. დაუშვით პირველი ეკრანის ყველა ბარათი, შეეხეთ %1$s-ს და დაეთანხმეთ უსაფრთხოების გაფრთხილებას.</string>
+    <string name="guide_pair_title">დააწყვილეთ Bluetooth-ით</string>
+    <string name="guide_pair_text">მთავარ მოწყობილობაზე გახსენით Android-ის Bluetooth პარამეტრები და შეეხეთ ახალი მოწყობილობის დაწყვილებას. ამ ტელეფონზე Bluetooth სიაში აირჩიეთ მთავარი მოწყობილობა და ორივე ეკრანზე დაადასტურეთ ერთი და იგივე კოდი.</string>
+    <string name="guide_aa_title">ერთხელ დააჭირეთ Android Auto-ს</string>
+    <string name="guide_aa_text">მთავარი მოწყობილობის მთავარ ეკრანზე დააჭირეთ %1$s-ს და აირჩიეთ ეს ტელეფონი. ჯერ არაფერი გამოჩნდება და ეს ნორმალურია: მთავარი მოწყობილობა საკუთარ Wi-Fi ქსელს ქმნის.</string>
+    <string name="guide_connection_title">გახსენით კავშირის ეკრანი</string>
+    <string name="guide_connection_text">მთავარ მოწყობილობაზე გახსენით %1$s › %2$s. ეკრანი ღია დატოვეთ, სანამ მასზე წერია %3$s.</string>
+    <string name="guide_find_title">იპოვეთ მთავარი მოწყობილობა</string>
+    <string name="guide_find_text">დახურეთ ეს სახელმძღვანელო, შეეხეთ %1$s-ს და დაუშვით, რასაც მოითხოვს. ძებნას დაახლოებით ნახევარი წუთი სჭირდება.</string>
+    <string name="guide_send_title">გაგზავნეთ მისამართი</string>
+    <string name="guide_send_text">როცა ბარათზე დაიწერება %1$s, შეეხეთ %2$s-ს და სიაში აირჩიეთ მთავარი მოწყობილობა.</string>
+    <string name="guide_done_title">მზადაა</string>
+    <string name="guide_done_text">ტელეფონი აჩვენებს: %1$s. შემდეგ Android Auto თავად დაუკავშირდება; თუ არა, მთავარ მოწყობილობაზე ერთხელ დააჭირეთ %2$s-ს. პირველად ამ ტელეფონზე დაეთანხმეთ Android Auto-ს შეკითხვებს.</string>
+    <string name="hu_continue">გაგრძელება</string>
+    <string name="hu_settings">პარამეტრები</string>
+    <string name="hu_connection">კავშირი</string>
+    <string name="hu_listening">უსმენს</string>
 </resources>

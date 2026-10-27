@@ -44,4 +44,31 @@
     <string name="error_bluetooth_off">Bluetooth выключен, поэтому адрес нельзя передать. Включите его и повторите попытку или введите адрес на головном устройстве вручную.</string>
     <string name="error_no_listener">Головное устройство не слушает. Откройте на нём <b>Настройки › Настройка Wi-Fi</b> и повторите попытку.</string>
     <string name="error_connection">Соединение Bluetooth с головным устройством потеряно. Повторите попытку или введите адрес на головном устройстве вручную.</string>
+
+    <!-- Setup guide -->
+    <string name="guide_title">Как настроить</string>
+    <string name="guide_entry_desc">Пошагово, с картинками</string>
+    <string name="guide_intro">Это делается один раз, когда головное устройство и этот телефон лежат рядом. Занимает около пяти минут.</string>
+    <string name="guide_back">Назад</string>
+    <string name="guide_got_it">Понятно</string>
+    <string name="guide_section_head_unit">На головном устройстве</string>
+    <string name="guide_section_phone">На этом телефоне</string>
+    <string name="guide_permissions_title">Выдайте разрешения</string>
+    <string name="guide_permissions_text">Откройте CEONIX Headunit на головном устройстве. Разрешите все карточки на первом экране, нажмите %1$s и примите предупреждение о безопасности.</string>
+    <string name="guide_pair_title">Сопрягите по Bluetooth</string>
+    <string name="guide_pair_text">На головном устройстве откройте настройки Bluetooth Android и нажмите «Подключить новое устройство». На этом телефоне выберите головное устройство в списке Bluetooth и подтвердите одинаковый код на обоих экранах.</string>
+    <string name="guide_aa_title">Нажмите Android Auto один раз</string>
+    <string name="guide_aa_text">На главном экране головного устройства нажмите %1$s и выберите этот телефон. Пока ничего не появится, и это нормально: головное устройство создаёт свою сеть Wi-Fi.</string>
+    <string name="guide_connection_title">Откройте экран «Подключение»</string>
+    <string name="guide_connection_text">На головном устройстве откройте %1$s › %2$s. Не закрывайте этот экран, пока на нём написано %3$s.</string>
+    <string name="guide_find_title">Найдите головное устройство</string>
+    <string name="guide_find_text">Закройте эту инструкцию, нажмите %1$s и разрешите то, что попросит приложение. Поиск занимает около полуминуты.</string>
+    <string name="guide_send_title">Отправьте адрес</string>
+    <string name="guide_send_text">Когда на карточке появится %1$s, нажмите %2$s и выберите головное устройство в списке.</string>
+    <string name="guide_done_title">Готово</string>
+    <string name="guide_done_text">Телефон покажет %1$s. Затем Android Auto подключится сам; если нет, один раз нажмите %2$s на головном устройстве. В самый первый раз подтвердите запросы Android Auto на этом телефоне.</string>
+    <string name="hu_continue">Продолжить</string>
+    <string name="hu_settings">Настройки</string>
+    <string name="hu_connection">Подключение</string>
+    <string name="hu_listening">Ожидание</string>
 </resources>

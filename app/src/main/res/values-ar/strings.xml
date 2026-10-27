@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CEONIX Ride</string>
+    <string name="app_name">CEONIX Headunit</string>
     <string name="menu">القائمة</string>
     <string name="settings">الإعدادات</string>
 
@@ -12,7 +12,7 @@
     <string name="video">Android Auto</string>
     <string name="self_mode">الوضع الذاتي</string>
     <string name="to_android_auto">إلى Android Auto</string>
-    <string name="title">CEONIX Ride</string>
+    <string name="title">CEONIX Headunit</string>
     <string name="remove">إزالة</string>
     <string name="usb">USB</string>
     <string name="wifi">واي فاي</string>
@@ -141,9 +141,9 @@
     <string name="usb_auto_connect">الاتصال التلقائي بـ USB</string>
     <string name="usb_auto_connect_description">الاتصال تلقائيا بجهاز USB معروف عند فتح التطبيق.</string>
     <string name="auto_start_bt_label">التشغيل التلقائي عبر البلوتوث</string>
-    <string name="auto_start_bt_description">فتح CEONIX Ride تلقائيا عند اتصال جهاز بلوتوث محدد.</string>
+    <string name="auto_start_bt_description">فتح CEONIX Headunit تلقائيا عند اتصال جهاز بلوتوث محدد.</string>
     <string name="auto_start_wifi_label">تشغيل تلقائي عبر الواي فاي</string>
-    <string name="auto_start_wifi_description">فتح CEONIX Ride تلقائياً عند الاتصال بشبكة واي فاي محددة (SSID).</string>
+    <string name="auto_start_wifi_description">فتح CEONIX Headunit تلقائياً عند الاتصال بشبكة واي فاي محددة (SSID).</string>
     <string name="auto_start_wifi_ssid_label">اسم شبكة الواي فاي (SSID)</string>
     <string name="auto_start_wifi_ssid_description">الاتصال فقط عند الارتباط بشبكة الواي فاي هذه</string>
     <string name="auto_start_wifi_warning">ميزة قديمة: قد لا تعمل بشكل موثوق على Android 8+ بسبب قيود الخلفية. تأكد من استثناء التطبيق من تحسين البطارية.</string>
@@ -166,7 +166,7 @@
     <string name="bt_permission_denied_title">مطلوب إذن البلوتوث</string>
     <string name="bt_permission_denied_message">إذن البلوتوث مطلوب لاختيار الأجهزة المقترنة. يرجى منحه في إعدادات التطبيق.</string>
     <string name="overlay_permission_title">إذن البدء في الخلفية</string>
-    <string name="overlay_permission_description">للسماح لـ CEONIX Ride بالفتح التلقائي عند اتصال البلوتوث، يرجى تفعيل إذن \"العرض فوق التطبيقات الأخرى\" في الشاشة التالية.</string>
+    <string name="overlay_permission_description">للسماح لـ CEONIX Headunit بالفتح التلقائي عند اتصال البلوتوث، يرجى تفعيل إذن \"العرض فوق التطبيقات الأخرى\" في الشاشة التالية.</string>
     <string name="open_settings">الإعدادات</string>
     <string name="wireless_connection_settings">اتصال لاسلكي</string>
     <string name="right_hand_drive">القيادة على اليمين</string>
@@ -252,7 +252,7 @@
         <b>١. التركيز على الطريق</b><br/>
         استخدام هذا البرنامج أثناء القيادة قد يشتت الانتباه ويكون خطيرا. أول الأولوية دائما للقيادة الآمنة والالتزام بأنظمة المرور المحلية. استخدم هذا التطبيق فقط عند الأمان التام.<br/><br/>
         <b>٢. تحديد المسؤولية</b><br/>
-        يقدم CEONIX Ride "كما هو" دون أي ضمان من أي نوع. لا يتحمل المطورون أي مسؤولية عن الحوادث أو الأضرار التي تلحق بسيارتك/جهازك أو أي تبعات قانونية ناجمة عن استخدام هذا البرنامج.<br/><br/>
+        يقدم CEONIX Headunit "كما هو" دون أي ضمان من أي نوع. لا يتحمل المطورون أي مسؤولية عن الحوادث أو الأضرار التي تلحق بسيارتك/جهازك أو أي تبعات قانونية ناجمة عن استخدام هذا البرنامج.<br/><br/>
         <b>٣. عدم الانتساب</b><br/>
         هذا المشروع مبادرة مفتوحة المصدر مستقلة، وليس له أي صلة أو اعتماد أو ارتباط بشركة Google LLC أو علامة Android Auto التجارية.
     ]]></string>
@@ -293,7 +293,7 @@
     <string name="connection_interrupted">فُقد الاتصال</string>
     <string name="connection_interrupted_detail">جارٍ إعادة المحاولة…</string>
     <string name="wifi_disconnect_toast">تم قطع اتصال Android Auto: إذا كنت تستخدم AA لاسلكي، عطّل \"التبديل بين الشبكات\" أو \"تسريع الشبكة\" في إعدادات WiFi الهاتف</string>
-    <string name="notification_service_running">CEONIX Ride يعمل</string>
+    <string name="notification_service_running">CEONIX Headunit يعمل</string>
     <string name="notification_projection_active">Android Auto قيد الإسقاط</string>
     <string name="shortcut_connect_title">اتصال</string>
     <string name="shortcut_connect_desc">الاتصال بآخر جهاز معروف</string>
@@ -510,15 +510,15 @@
     <string name="settings_backup_saved_to">تم حفظ النسخة الاحتياطية في:\n%1$s</string>
     <string name="share_settings_backup">مشاركة النسخة الاحتياطية</string>
     <string name="import_settings">استيراد الإعدادات</string>
-    <string name="import_settings_description">استعادة الإعدادات من نسخة احتياطية لـ CEONIX Ride</string>
+    <string name="import_settings_description">استعادة الإعدادات من نسخة احتياطية لـ CEONIX Headunit</string>
     <string name="import_settings_app_folder">استيراد من مجلد نسخ التطبيق</string>
     <string name="import_settings_downloads">استيراد من التنزيلات</string>
     <string name="import_settings_choose_file">اختر ملف النسخة الاحتياطية</string>
     <string name="settings_imported">تم استيراد الإعدادات: %1$d مطبَّقة، %2$d تم تجاوزها</string>
     <string name="settings_import_failed">فشل استيراد الإعدادات: %1$s</string>
     <string name="no_settings_backups_title">لا توجد نسخ احتياطية</string>
-    <string name="no_settings_backups_message">لم يتم العثور على أي نسخ احتياطية لـ CEONIX Ride في مجلد نسخ التطبيق. قم بتصدير نسخة احتياطية أولاً ثم استوردها من هنا.</string>
-    <string name="no_settings_backups_downloads_message">لم يتم العثور على أي نسخ احتياطية لـ CEONIX Ride في التنزيلات. قم بتصدير نسخة احتياطية إلى التنزيلات أولاً ثم استوردها من هنا.</string>
+    <string name="no_settings_backups_message">لم يتم العثور على أي نسخ احتياطية لـ CEONIX Headunit في مجلد نسخ التطبيق. قم بتصدير نسخة احتياطية أولاً ثم استوردها من هنا.</string>
+    <string name="no_settings_backups_downloads_message">لم يتم العثور على أي نسخ احتياطية لـ CEONIX Headunit في التنزيلات. قم بتصدير نسخة احتياطية إلى التنزيلات أولاً ثم استوردها من هنا.</string>
     <string name="no_file_picker_title">لا يوجد منتقي ملفات</string>
     <string name="no_file_picker_message">هذا الجهاز لا يحتوي على منتقي ملفات متوافق. يمكنك استخدام التنزيلات أو مجلد نسخ التطبيق بدلاً من ذلك.</string>
     <string name="storage_permission_denied_backup">تم رفض إذن التخزين. تعذر استخدام التنزيلات.</string>
@@ -538,7 +538,7 @@
     <string name="software_video_decoder_device">MediaCodec للجهاز</string>
 
     <string name="btn_show_qr">عرض رمز QR</string>
-    <!-- CEONIX Ride: Home / Ride / Sunset / About / Apps -->
+    <!-- CEONIX Headunit: Home / Ride / Sunset / About / Apps -->
     <string name="ride">القيادة</string>
     <string name="home">الرئيسية</string>
     <string name="ride_lean">الميلان</string>
@@ -573,7 +573,7 @@
     <!-- Wi-Fi Setup -->
     <string name="wifi_setup_settings">إعداد Wi-Fi</string>
     <string name="category_wifi_setup">إعداد Wi-Fi</string>
-    <string name="wifi_setup_intro">يُخفي Android عن هذه الوحدة عنوان Wi-Fi الخاص بها، لذا يجب إخبارها به مرة واحدة. افتح هذه الشاشة ثم شغّل تطبيق CEONIX Ride Helper على هاتفك — أو اقرأ العنوان من أي تطبيق لتحليل Wi-Fi واكتبه بالأسفل.\n\nقد تُغلق هذه الشاشة من تلقاء نفسها أثناء محاولة Android Auto الاتصال. لا بأس بذلك: تظل الوحدة تستمع نحو عشر دقائق، وتظهر رسالة عند وصول العنوان.\n\nلا يتغير العنوان إلا إذا أُطفئ Wi-Fi في هذه الوحدة ثم أُعيد تشغيله.</string>
+    <string name="wifi_setup_intro">يُخفي Android عن هذه الوحدة عنوان Wi-Fi الخاص بها، لذا يجب إخبارها به مرة واحدة. افتح هذه الشاشة ثم شغّل تطبيق CEONIX Setup على هاتفك — أو اقرأ العنوان من أي تطبيق لتحليل Wi-Fi واكتبه بالأسفل.\n\nقد تُغلق هذه الشاشة من تلقاء نفسها أثناء محاولة Android Auto الاتصال. لا بأس بذلك: تظل الوحدة تستمع نحو عشر دقائق، وتظهر رسالة عند وصول العنوان.\n\nلا يتغير العنوان إلا إذا أُطفئ Wi-Fi في هذه الوحدة ثم أُعيد تشغيله.</string>
     <string name="wifi_setup_network_name">اسم الشبكة</string>
     <string name="wifi_setup_network_none">لا توجد بعد — اضغط Android Auto في الشاشة الرئيسية مرة واحدة</string>
     <string name="wifi_setup_helper">مساعد الهاتف</string>
@@ -613,11 +613,11 @@
     <string name="launcher_mode_settings">وضع المشغّل</string>
     <string name="launcher_mode_settings_summary">استخدام هذا التطبيق كشاشة رئيسية للجهاز</string>
     <string name="use_as_launcher">استخدام كمشغّل</string>
-    <string name="use_as_launcher_description">يجعل CEONIX Ride الشاشة الرئيسية للجهاز. عند التفعيل، يفتح زر الشاشة الرئيسية هذا التطبيق.</string>
+    <string name="use_as_launcher_description">يجعل CEONIX Headunit الشاشة الرئيسية للجهاز. عند التفعيل، يفتح زر الشاشة الرئيسية هذا التطبيق.</string>
     <string name="exit_pause">إيقاف مؤقت</string>
     <string name="permission_dashboard_title">الأذونات</string>
-    <string name="permission_welcome_title">مرحبًا بك في CEONIX Ride</string>
-    <string name="permission_welcome_subtitle">للبدء، يحتاج CEONIX Ride إلى بعض الأذونات ليعمل Android Auto بسلاسة. انقر على بطاقة لمنح الإذن.</string>
+    <string name="permission_welcome_title">مرحبًا بك في CEONIX Headunit</string>
+    <string name="permission_welcome_subtitle">للبدء، يحتاج CEONIX Headunit إلى بعض الأذونات ليعمل Android Auto بسلاسة. انقر على بطاقة لمنح الإذن.</string>
     <string name="permission_bluetooth_title">Bluetooth</string>
     <string name="permission_bluetooth_desc">مطلوب. يُعثر على هاتفك عبر Bluetooth ومنه تبدأ مصافحة Android Auto. بدونه لن يتصل أي شيء.</string>
     <string name="permission_nearby_wifi_title">أجهزة Wi-Fi المجاورة</string>
@@ -627,11 +627,11 @@
     <string name="permission_microphone_title">الميكروفون</string>
     <string name="permission_microphone_desc">موصى به. يُمرَّر مباشرة إلى مساعد Google والمكالمات بدون استخدام اليدين. لا يعالج هذا التطبيق بيانات الميكروفون ولا يخزّنها.</string>
     <string name="permission_notifications_title">الإشعارات</string>
-    <string name="permission_notifications_desc">موصى به. يتيح لـ CEONIX Ride عرض ما يفعله الاتصال أثناء عمله في الخلفية.</string>
+    <string name="permission_notifications_desc">موصى به. يتيح لـ CEONIX Headunit عرض ما يفعله الاتصال أثناء عمله في الخلفية.</string>
     <string name="permission_overlay_title">الظهور فوق التطبيقات الأخرى</string>
     <string name="permission_overlay_desc">مطلوب. يتيح لـ Android Auto الظهور تلقائيًا عند اتصال هاتفك. بدونه يبدو التشغيل التلقائي مفعّلًا لكنه لا يفعل شيئًا بصمت.</string>
     <string name="permission_battery_title">العمل في الخلفية</string>
-    <string name="permission_battery_desc">مطلوب. يمنع Android من إيقاف CEONIX Ride بين الرحلات، ليبقى الاتصال قائمًا بعد إطفاء المحرّك وتشغيله.</string>
+    <string name="permission_battery_desc">مطلوب. يمنع Android من إيقاف CEONIX Headunit بين الرحلات، ليبقى الاتصال قائمًا بعد إطفاء المحرّك وتشغيله.</string>
     <string name="permission_open_app_settings_hint">تم الرفض. لن يسأل Android مجددًا، انقر لفتح إعدادات التطبيق وتفعيله من هناك.</string>
     <string name="permission_continue">متابعة</string>
     <string name="permission_refresh">تحديث الحالة</string>

@@ -44,4 +44,31 @@
     <string name="error_bluetooth_off">O Bluetooth está desativado, então o endereço não pode ser entregue. Ative-o e tente de novo, ou digite o endereço manualmente na central.</string>
     <string name="error_no_listener">A central não está escutando. Abra <b>Configurações › Configuração de Wi-Fi</b> nela e tente de novo.</string>
     <string name="error_connection">A conexão Bluetooth com a central foi perdida. Tente de novo ou digite o endereço manualmente na central.</string>
+
+    <!-- Setup guide -->
+    <string name="guide_title">Como configurar</string>
+    <string name="guide_entry_desc">Passo a passo, com imagens</string>
+    <string name="guide_intro">Faça isso uma vez só, com a central e este telefone lado a lado. Leva cerca de cinco minutos.</string>
+    <string name="guide_back">Voltar</string>
+    <string name="guide_got_it">Entendi</string>
+    <string name="guide_section_head_unit">Na central</string>
+    <string name="guide_section_phone">Neste telefone</string>
+    <string name="guide_permissions_title">Conceda as permissões</string>
+    <string name="guide_permissions_text">Abra o CEONIX Headunit na central. Permita todos os cartões da primeira tela, toque em %1$s e aceite o aviso de segurança.</string>
+    <string name="guide_pair_title">Pareie por Bluetooth</string>
+    <string name="guide_pair_text">Na central, abra as configurações de Bluetooth do Android e toque em Parear novo dispositivo. Neste telefone, escolha a central na lista de Bluetooth e confirme o mesmo código nas duas telas.</string>
+    <string name="guide_aa_title">Toque em Android Auto uma vez</string>
+    <string name="guide_aa_text">Na tela inicial da central, toque em %1$s e escolha este telefone. Ainda não aparece nada, e isso é normal: a central está criando a própria rede Wi-Fi.</string>
+    <string name="guide_connection_title">Abra a tela Conexão</string>
+    <string name="guide_connection_text">Na central, abra %1$s › %2$s. Deixe essa tela aberta enquanto ela mostrar %3$s.</string>
+    <string name="guide_find_title">Encontre a central</string>
+    <string name="guide_find_text">Feche este guia, toque em %1$s e permita o que for pedido. A busca leva cerca de meio minuto.</string>
+    <string name="guide_send_title">Envie o endereço</string>
+    <string name="guide_send_text">Quando o cartão mostrar %1$s, toque em %2$s e escolha a central na lista.</string>
+    <string name="guide_done_title">Pronto</string>
+    <string name="guide_done_text">Este telefone mostra %1$s. Depois o Android Auto se conecta sozinho; se não conectar, toque em %2$s uma vez na central. Na primeira vez, aceite as perguntas do Android Auto neste telefone.</string>
+    <string name="hu_continue">Continuar</string>
+    <string name="hu_settings">Configurações</string>
+    <string name="hu_connection">Conexão</string>
+    <string name="hu_listening">Ouvindo</string>
 </resources>
