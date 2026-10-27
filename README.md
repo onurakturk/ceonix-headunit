@@ -30,6 +30,9 @@ dashboard** and a Material 3 home screen you can use as the device launcher.
 
 ## Build & install
 
+This repository holds source code only: no prebuilt APKs are published here. Build the app
+yourself as described below.
+
 Requirements: Android SDK (compileSdk 36), NDK 27, JDK 17.
 
 ```bash
