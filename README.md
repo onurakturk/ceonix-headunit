@@ -28,37 +28,6 @@ dashboard** and a Material 3 home screen you can use as the device launcher.
 - **Auto-connect & auto-start** — reconnects on unlock and can start on boot.
 - **19 languages**, application dark mode, and a separate Android Auto night mode.
 
-## Build & install
-
-This repository holds source code only: no prebuilt APKs are published here. Build the app
-yourself as described below.
-
-Requirements: Android SDK (compileSdk 36), NDK 27, JDK 17.
-
-```bash
-./gradlew :app:assembleGithubDebug
-adb install -r app/build/outputs/apk/github/debug/com.ceonix.headunit.dev_<version>_debug.apk
-```
-
-There are two flavours. `github` is the sideload build (`com.ceonix.headunit.dev`). `playstore` is the
-Google Play build (`com.ceonix.headunit`): it leaves out the dummy VPN service and three
-permissions Play restricts or that nothing uses. The two have different package names, so they
-install side by side, but only one can run at a time: both open the same Android Auto port.
-
-```bash
-./gradlew :app:bundlePlaystoreRelease :companion:bundleRelease
-```
-
-A release build is signed with your upload key when `secrets.properties` (git-ignored, in the
-project root) provides it; without it the debug key is used so the build can still be tested.
-
-```properties
-HEADUNIT_KEYSTORE_FILE=your-upload-key.jks
-HEADUNIT_KEY_ALIAS=your-alias
-HEADUNIT_KEYSTORE_PASSWORD=...
-HEADUNIT_KEY_PASSWORD=...
-```
-
 ## License
 
 CEONIX Headunit is distributed under the **GNU Affero General Public License v3** — see
