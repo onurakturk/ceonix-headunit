@@ -4,6 +4,12 @@ CEONIX Headunit is a fork of [headunit-revived](https://github.com/andreknieriem
 taken from its 3.1.1 release. This file lists only the changes made in CEONIX Headunit and
 CEONIX Setup. For the history before the fork, see the upstream project.
 
+## 1.3.3 (2026-10-28)
+
+- Google Play build: on a head unit with a screen lock, the licence was asked for again after
+  every restart. The app starts before the first unlock, when the stored licence cannot be read
+  yet; it now waits for the unlock instead of concluding there is none, then starts Android Auto.
+
 ## 1.3.2 (2026-10-28)
 
 - Google Play build: fixes the "This copy has been modified" screen shown after installing from

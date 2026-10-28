@@ -1,6 +1,8 @@
 package com.ceonix.licensing
 
 import android.content.Context
+import android.os.Build
+import android.os.UserManager
 
 /** Where a copy of the app stands. Only [LICENSED] opens the gate. */
 enum class LicenseState {
@@ -49,14 +51,27 @@ class LicenseGate(context: Context, private val config: LicenseConfig) {
     private val client = PlayLicenseClient(appContext, config.checkTimeoutMs, log)
 
     private var integrity: Boolean? = null
-    private var recordLoaded = false
+    // Only a successful read is remembered. "Nothing there" is never cached: before the first unlock
+    // after a boot the file is simply not readable yet (see [isStorageAvailable]).
     private var record: StoredLicense? = null
+    private var unreadableLogged = false
     private var deniedByGoogle = false
     private var inFlight: MutableList<(LicenseState) -> Unit>? = null
 
     init {
         if (verifier == null) log("gate: public key missing or malformed — every check will fail")
     }
+
+    /**
+     * Whether the stored answer can be read at all right now. False between a boot and the first
+     * unlock: the app is direct-boot aware and starts on LOCKED_BOOT_COMPLETED, while the record
+     * lives in credential-encrypted storage. Measured 28 Oct on the Mi 9T (PIN lock, starts locked):
+     * the gate read "nothing stored" at boot, cached it, and asked for the internet again after every
+     * restart. Devices without a lock screen (the Mi A3) never showed it.
+     */
+    val isStorageAvailable: Boolean
+        get() = Build.VERSION.SDK_INT < 24 ||
+            (appContext.getSystemService(Context.USER_SERVICE) as UserManager).isUserUnlocked
 
     val isChecking: Boolean
         @Synchronized get() = inFlight != null
@@ -127,14 +142,12 @@ class LicenseGate(context: Context, private val config: LicenseConfig) {
                 val fresh = StoredLicense(outcome.signedData!!, outcome.signature!!, currentInstaller())
                 if (!store.write(fresh)) log("gate: could not persist; valid for this run only")
                 record = fresh
-                recordLoaded = true
                 deniedByGoogle = false
                 log("gate: LICENSED (signed), stored")
             }
             response.responseCode == ResponseCodes.NOT_LICENSED -> {
                 store.delete()
                 record = null
-                recordLoaded = true
                 deniedByGoogle = true
                 log("gate: NOT_LICENSED (signed), stored answer revoked")
             }
@@ -151,15 +164,17 @@ class LicenseGate(context: Context, private val config: LicenseConfig) {
     }
 
     private fun loadRecord(): StoredLicense? {
-        if (!recordLoaded) {
-            recordLoaded = true
-            record = when (val read = store.read()) {
-                is BoundStore.Read.Ok -> read.record
-                BoundStore.Read.Missing -> null
-                BoundStore.Read.Unreadable -> null.also { log("gate: stored answer unreadable on this device") }
+        record?.let { return it }
+        if (!isStorageAvailable) return null
+        return when (val read = store.read()) {
+            is BoundStore.Read.Ok -> read.record.also { record = it }
+            BoundStore.Read.Missing -> null
+            BoundStore.Read.Unreadable -> {
+                if (!unreadableLogged) log("gate: stored answer unreadable on this device")
+                unreadableLogged = true
+                null
             }
         }
-        return record
     }
 
     private fun currentInstaller(): String = IntegrityChecks.installer(appContext) ?: ""

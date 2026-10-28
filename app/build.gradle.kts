@@ -99,8 +99,8 @@ android {
         applicationId = "com.ceonix.headunit"
         minSdk = 16
         targetSdk = 36
-        versionCode = 155
-        versionName = "1.3.2"
+        versionCode = 156
+        versionName = "1.3.3"
         setProperty("archivesBaseName", "${applicationId}_${versionName}")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled = true

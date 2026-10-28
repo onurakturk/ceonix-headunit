@@ -1,7 +1,10 @@
 package com.andrerinas.headunitrevived.license
 
+import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
+import androidx.core.content.ContextCompat
 import com.andrerinas.headunitrevived.BuildConfig
 import com.andrerinas.headunitrevived.aap.AapService
 import com.andrerinas.headunitrevived.utils.AppLog
@@ -58,9 +61,22 @@ object LicenseGuard {
     private fun watch(context: Context): NetworkWatch =
         watch ?: NetworkWatch(context).also { watch = it }
 
-    /** Once per process, from App.onCreate. */
+    /**
+     * Once per process, from App.onCreate.
+     *
+     * The app is direct-boot aware: on a device with a lock screen it starts before the first
+     * unlock, when the stored licence cannot be read yet. Then nothing is decided here; the work
+     * waits for ACTION_USER_UNLOCKED and the Android Auto host, which the gate kept down meanwhile,
+     * is started once the licence reads back.
+     */
     fun init(context: Context) {
         if (initialised) return
+        val app = context.applicationContext
+        if (!gate(app).isStorageAvailable) {
+            AppLog.i("LICENSE: started before the first unlock, waiting for it")
+            awaitUnlock(app)
+            return
+        }
         initialised = true
         val state = evaluate(context)
         AppLog.i("LICENSE: startup state $state")
@@ -95,6 +111,31 @@ object LicenseGuard {
     }
 
     fun verifiedAtMillis(context: Context): Long? = gate(context).verifiedAtMillis()
+
+    @Volatile private var unlockReceiver: BroadcastReceiver? = null
+
+    private fun awaitUnlock(app: Context) {
+        if (unlockReceiver != null) return
+        val receiver = object : BroadcastReceiver() {
+            override fun onReceive(c: Context, intent: Intent) {
+                try {
+                    app.unregisterReceiver(this)
+                } catch (e: Exception) {
+                    // Already gone.
+                }
+                unlockReceiver = null
+                AppLog.i("LICENSE: user unlocked, reading the stored licence")
+                init(app)
+                if (_status.value == LicenseStatus.LICENSED) startWireless(app)
+            }
+        }
+        unlockReceiver = receiver
+        ContextCompat.registerReceiver(
+            app, receiver, IntentFilter(Intent.ACTION_USER_UNLOCKED), ContextCompat.RECEIVER_NOT_EXPORTED
+        )
+        // Unlocked between the check above and the registration: the broadcast is already gone.
+        if (gate(app).isStorageAvailable && unlockReceiver === receiver) receiver.onReceive(app, Intent())
+    }
 
     private fun quietRefresh(context: Context) {
         if (refreshedThisRun) return
