@@ -27,6 +27,7 @@ import com.andrerinas.headunitrevived.aap.AapProjectionActivity
 import com.andrerinas.headunitrevived.aap.AapService
 import com.andrerinas.headunitrevived.app.BaseActivity
 import com.andrerinas.headunitrevived.connection.CommManager
+import com.andrerinas.headunitrevived.license.LicenseGuard
 import com.andrerinas.headunitrevived.main.permissions.PermissionItem
 import com.andrerinas.headunitrevived.utils.AppLog
 import android.content.res.Configuration
@@ -166,6 +167,12 @@ class MainActivity : BaseActivity() {
             }
             ScreenFocus.onDestination(destination.id, name)
             AppLog.i("FOCUS: screen=${ScreenFocus.describe()}")
+            // Play build without a verified licence: however the rider got back to Home (Back,
+            // the Home key in launcher mode, Ride stepping aside), the lock screen comes back on
+            // top. Posted, because navigating from inside this callback is not allowed.
+            if (LicenseGuard.enforced && destination.id == R.id.homeFragment) {
+                window.decorView.post { navigateToLicenseLockIfNeeded() }
+            }
         }
 
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
@@ -176,6 +183,14 @@ class MainActivity : BaseActivity() {
                 // navigation behavior there.
                 if (autoConnectInProgress && autoConnectMode == ConnectionUiMode.OVERLAY) {
                     cancelAutoConnect()
+                    return
+                }
+                // The licence lock screen is not left with Back; it leaves by itself once the
+                // licence verifies. Decided here rather than by a callback in the fragment: this
+                // callback is re-registered every time the activity starts again, which puts it
+                // ahead of any fragment's — returning from the Play Store and pressing Back used
+                // to fall through to Home that way.
+                if (navController.currentDestination?.id == R.id.licenseLockFragment) {
                     return
                 }
                 if (navController.navigateUp()) {
@@ -872,12 +887,34 @@ class MainActivity : BaseActivity() {
      * automatically now, so nothing is asked about the display any more.
      */
     fun checkSetupFlow() {
+        if (navigateToLicenseLockIfNeeded()) return
         val appSettings = Settings(this)
         if (navigateToPermissionSetupIfNeeded(appSettings)) return
 
         if (!appSettings.hasAcceptedDisclaimer) {
             SafetyDisclaimerDialog.show(supportFragmentManager)
         }
+    }
+
+    /**
+     * Play build only: shows the licence lock screen while the licence is not verified.
+     *
+     * Ahead of the permission dashboard because nothing else matters until it clears, and with the
+     * dashboard's own guards: never stacked on itself, and only from Home, so it does not pull the
+     * rider off a screen they chose. The lock screen leaves by itself once the licence verifies and
+     * calls back into [checkSetupFlow].
+     *
+     * @return true if the setup chain should stop here for now.
+     */
+    private fun navigateToLicenseLockIfNeeded(): Boolean {
+        if (!LicenseGuard.enforced || LicenseGuard.isUsable(this)) return false
+        val nav = navController ?: return false
+        if (nav.currentDestination?.id == R.id.licenseLockFragment) return true
+        if (nav.currentDestination?.id != R.id.homeFragment) return false
+        findViewById<View>(R.id.splash_overlay)?.visibility = View.GONE
+        AppLog.i("LICENSE: opening the lock screen (${LicenseGuard.status.value})")
+        nav.navigate(R.id.action_homeFragment_to_licenseLockFragment)
+        return true
     }
 
     /**

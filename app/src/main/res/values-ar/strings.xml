@@ -641,4 +641,18 @@
     <string name="permission_summary_recommended_missing">الأذونات الموصى بها الناقصة: %1$d</string>
     <string name="open_source_licence">ترخيص المصدر المفتوح</string>
     <string name="open_source_licence_desc">الترخيص والحقوق وشيفرة المصدر</string>
+
+    <string name="license_lock_title_unverified">أكّد عملية الشراء</string>
+    <string name="license_lock_body_unverified">يجب تأكيد عملية الشراء من Google Play مرة واحدة. اتصل بالإنترنت (Wi-Fi) من هذا الجهاز لحظة واحدة ثم اضغط «تحقق الآن». بعد ذلك يعمل التطبيق دون اتصال بشكل دائم.</string>
+    <string name="license_lock_title_not_licensed">لم يتم العثور على عملية شراء</string>
+    <string name="license_lock_body_not_licensed">يفيد Google Play بأن الحساب على هذا الجهاز لم يشترِ هذا التطبيق. اشترِه من Google Play أو سجّل الدخول إلى متجر Play بالحساب الذي اشتريته به، ثم تحقق مرة أخرى.</string>
+    <string name="license_lock_title_tampered">تم تعديل هذه النسخة</string>
+    <string name="license_lock_body_tampered">لم يُثبَّت هذا التطبيق كما قدّمه Google Play. أزل تثبيته ثم ثبّته من جديد من Google Play.</string>
+    <string name="license_lock_checking">جارٍ التحقق عبر Google Play…</string>
+    <string name="license_lock_verify">تحقق الآن</string>
+    <string name="license_lock_wifi">إعدادات Wi-Fi</string>
+    <string name="license_status">الترخيص</string>
+    <string name="license_status_verified">تم التحقق في %1$s</string>
+    <string name="license_status_unverified">لم يتم التحقق</string>
+    <string name="license_kept_on_reset">يتم الاحتفاظ بترخيصك.</string>
 </resources>

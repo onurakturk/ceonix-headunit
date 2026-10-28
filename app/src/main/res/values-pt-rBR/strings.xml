@@ -642,4 +642,18 @@
     <string name="permission_summary_recommended_missing">Permissões recomendadas faltando: %1$d</string>
     <string name="open_source_licence">Licença de código aberto</string>
     <string name="open_source_licence_desc">Licença, créditos e código-fonte</string>
+
+    <string name="license_lock_title_unverified">Confirme sua compra</string>
+    <string name="license_lock_body_unverified">Sua compra no Google Play precisa ser confirmada uma vez. Conecte este dispositivo à internet (Wi-Fi) por um momento e toque em Verificar agora. Depois disso, o app funciona off-line para sempre.</string>
+    <string name="license_lock_title_not_licensed">Nenhuma compra encontrada</string>
+    <string name="license_lock_body_not_licensed">O Google Play informa que a conta deste dispositivo não comprou este app. Compre no Google Play ou entre na Play Store com a conta usada na compra e verifique novamente.</string>
+    <string name="license_lock_title_tampered">Esta cópia foi modificada</string>
+    <string name="license_lock_body_tampered">Este app não foi instalado como o Google Play o entregou. Desinstale e instale novamente pelo Google Play.</string>
+    <string name="license_lock_checking">Verificando com o Google Play…</string>
+    <string name="license_lock_verify">Verificar agora</string>
+    <string name="license_lock_wifi">Configurações de Wi-Fi</string>
+    <string name="license_status">Licença</string>
+    <string name="license_status_verified">Verificada em %1$s</string>
+    <string name="license_status_unverified">Não verificada</string>
+    <string name="license_kept_on_reset">Sua licença é mantida.</string>
 </resources>

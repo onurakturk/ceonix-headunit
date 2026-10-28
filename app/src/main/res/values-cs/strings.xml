@@ -641,4 +641,18 @@
     <string name="permission_summary_recommended_missing">Chybějící doporučená oprávnění: %1$d</string>
     <string name="open_source_licence">Licence open source</string>
     <string name="open_source_licence_desc">Licence, autoři a zdrojový kód</string>
+
+    <string name="license_lock_title_unverified">Potvrďte nákup</string>
+    <string name="license_lock_body_unverified">Váš nákup v Google Play je třeba jednou potvrdit. Připojte toto zařízení na chvíli k internetu (Wi-Fi) a klepněte na Ověřit nyní. Poté aplikace funguje trvale offline.</string>
+    <string name="license_lock_title_not_licensed">Nákup nebyl nalezen</string>
+    <string name="license_lock_body_not_licensed">Google Play hlásí, že účet v tomto zařízení tuto aplikaci nezakoupil. Kupte ji v Google Play nebo se v Obchodě Play přihlaste účtem, kterým jste ji koupili, a ověřte znovu.</string>
+    <string name="license_lock_title_tampered">Tato kopie byla upravena</string>
+    <string name="license_lock_body_tampered">Tato aplikace nebyla nainstalována tak, jak ji dodal Google Play. Odinstalujte ji a nainstalujte znovu z Google Play.</string>
+    <string name="license_lock_checking">Ověřování v Google Play…</string>
+    <string name="license_lock_verify">Ověřit nyní</string>
+    <string name="license_lock_wifi">Nastavení Wi-Fi</string>
+    <string name="license_status">Licence</string>
+    <string name="license_status_verified">Ověřeno %1$s</string>
+    <string name="license_status_unverified">Neověřeno</string>
+    <string name="license_kept_on_reset">Vaše licence zůstane zachována.</string>
 </resources>

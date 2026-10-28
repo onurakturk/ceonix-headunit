@@ -640,4 +640,18 @@
     <string name="permission_summary_recommended_missing">Не хватает рекомендуемых разрешений: %1$d</string>
     <string name="open_source_licence">Лицензия открытого ПО</string>
     <string name="open_source_licence_desc">Лицензия, авторы и исходный код</string>
+
+    <string name="license_lock_title_unverified">Подтвердите покупку</string>
+    <string name="license_lock_body_unverified">Покупку в Google Play нужно подтвердить один раз. Ненадолго подключите это устройство к интернету (Wi-Fi) и нажмите «Проверить сейчас». После этого приложение навсегда работает без интернета.</string>
+    <string name="license_lock_title_not_licensed">Покупка не найдена</string>
+    <string name="license_lock_body_not_licensed">Google Play сообщает, что аккаунт на этом устройстве не покупал это приложение. Купите его в Google Play или войдите в Play Маркет с аккаунтом, с которого оно было куплено, и проверьте снова.</string>
+    <string name="license_lock_title_tampered">Эта копия изменена</string>
+    <string name="license_lock_body_tampered">Это приложение установлено не в том виде, в каком его доставил Google Play. Удалите его и установите заново из Google Play.</string>
+    <string name="license_lock_checking">Проверка в Google Play…</string>
+    <string name="license_lock_verify">Проверить сейчас</string>
+    <string name="license_lock_wifi">Настройки Wi-Fi</string>
+    <string name="license_status">Лицензия</string>
+    <string name="license_status_verified">Подтверждена %1$s</string>
+    <string name="license_status_unverified">Не подтверждена</string>
+    <string name="license_kept_on_reset">Лицензия сохраняется.</string>
 </resources>

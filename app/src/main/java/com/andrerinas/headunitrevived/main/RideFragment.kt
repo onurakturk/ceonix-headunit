@@ -30,6 +30,7 @@ import com.andrerinas.headunitrevived.R
 import com.andrerinas.headunitrevived.aap.AapProjectionActivity
 import com.andrerinas.headunitrevived.aap.AapService
 import com.andrerinas.headunitrevived.connection.CommManager
+import com.andrerinas.headunitrevived.license.LicenseGuard
 import com.andrerinas.headunitrevived.main.ride.RideCardsController
 import com.andrerinas.headunitrevived.main.ride.RideTelemetry
 import com.andrerinas.headunitrevived.main.ride.ease
@@ -209,6 +210,14 @@ class RideFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
+        // Play build without a verified licence: Ride stays closed. Back to Home, which shows the
+        // lock screen; nothing below (sensors, GPS) gets started.
+        if (!LicenseGuard.isUsable(requireContext())) {
+            AppLog.w("LICENSE: Ride opened without a verified licence, leaving")
+            findNavController().navigateUp()
+            (activity as? MainActivity)?.checkSetupFlow()
+            return
+        }
         statusBar.start()
         LeanEstimator.acquire("ride", requireContext())
         rideCards.start(requireContext())

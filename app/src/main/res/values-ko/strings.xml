@@ -648,4 +648,18 @@
     <string name="permission_summary_recommended_missing">권장 권한 %1$d개 누락</string>
     <string name="open_source_licence">오픈 소스 라이선스</string>
     <string name="open_source_licence_desc">라이선스, 제작자 및 소스 코드</string>
+
+    <string name="license_lock_title_unverified">구매를 확인하세요</string>
+    <string name="license_lock_body_unverified">Google Play 구매를 한 번 확인해야 합니다. 이 기기를 잠시 인터넷(Wi-Fi)에 연결하고 지금 확인을 누르세요. 이후에는 계속 오프라인으로 작동합니다.</string>
+    <string name="license_lock_title_not_licensed">구매 내역이 없습니다</string>
+    <string name="license_lock_body_not_licensed">Google Play에 따르면 이 기기의 계정은 이 앱을 구매하지 않았습니다. Google Play에서 구매하거나 구매한 계정으로 Play 스토어에 로그인한 뒤 다시 확인하세요.</string>
+    <string name="license_lock_title_tampered">이 사본은 변경되었습니다</string>
+    <string name="license_lock_body_tampered">이 앱은 Google Play에서 제공한 상태로 설치되지 않았습니다. 삭제한 뒤 Google Play에서 다시 설치하세요.</string>
+    <string name="license_lock_checking">Google Play에서 확인 중…</string>
+    <string name="license_lock_verify">지금 확인</string>
+    <string name="license_lock_wifi">Wi-Fi 설정</string>
+    <string name="license_status">라이선스</string>
+    <string name="license_status_verified">%1$s에 확인됨</string>
+    <string name="license_status_unverified">확인되지 않음</string>
+    <string name="license_kept_on_reset">라이선스는 유지됩니다.</string>
 </resources>

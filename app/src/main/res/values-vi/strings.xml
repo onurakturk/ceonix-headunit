@@ -647,4 +647,18 @@
     <string name="permission_summary_recommended_missing">Thiếu %1$d quyền nên cấp</string>
     <string name="open_source_licence">Giấy phép nguồn mở</string>
     <string name="open_source_licence_desc">Giấy phép, tác giả và mã nguồn</string>
+
+    <string name="license_lock_title_unverified">Xác nhận giao dịch mua</string>
+    <string name="license_lock_body_unverified">Giao dịch mua trên Google Play cần được xác nhận một lần. Hãy kết nối thiết bị này với internet (Wi-Fi) trong chốc lát rồi nhấn Xác minh ngay. Sau đó ứng dụng sẽ hoạt động ngoại tuyến vĩnh viễn.</string>
+    <string name="license_lock_title_not_licensed">Không tìm thấy giao dịch mua</string>
+    <string name="license_lock_body_not_licensed">Google Play cho biết tài khoản trên thiết bị này chưa mua ứng dụng này. Hãy mua trên Google Play hoặc đăng nhập Cửa hàng Play bằng tài khoản đã mua, rồi xác minh lại.</string>
+    <string name="license_lock_title_tampered">Bản sao này đã bị sửa đổi</string>
+    <string name="license_lock_body_tampered">Ứng dụng này không được cài đặt nguyên vẹn như Google Play cung cấp. Hãy gỡ cài đặt và cài lại từ Google Play.</string>
+    <string name="license_lock_checking">Đang kiểm tra với Google Play…</string>
+    <string name="license_lock_verify">Xác minh ngay</string>
+    <string name="license_lock_wifi">Cài đặt Wi-Fi</string>
+    <string name="license_status">Giấy phép</string>
+    <string name="license_status_verified">Đã xác minh ngày %1$s</string>
+    <string name="license_status_unverified">Chưa xác minh</string>
+    <string name="license_kept_on_reset">Giấy phép của bạn được giữ lại.</string>
 </resources>

@@ -641,4 +641,18 @@
     <string name="permission_summary_recommended_missing">缺少 %1$d 項建議權限</string>
     <string name="open_source_licence">開放原始碼授權</string>
     <string name="open_source_licence_desc">授權、致謝與原始碼</string>
+
+    <string name="license_lock_title_unverified">確認您的購買</string>
+    <string name="license_lock_body_unverified">您在 Google Play 的購買需要確認一次。請讓此裝置短暫連上網路 (Wi-Fi)，然後輕觸「立即驗證」。之後應用程式即可永久離線使用。</string>
+    <string name="license_lock_title_not_licensed">找不到購買紀錄</string>
+    <string name="license_lock_body_not_licensed">Google Play 回報此裝置上的帳戶並未購買此應用程式。請在 Google Play 購買，或以購買時使用的帳戶登入 Play 商店，然後再次驗證。</string>
+    <string name="license_lock_title_tampered">此副本已遭修改</string>
+    <string name="license_lock_body_tampered">此應用程式並非以 Google Play 提供的原樣安裝。請解除安裝，再從 Google Play 重新安裝。</string>
+    <string name="license_lock_checking">正在向 Google Play 確認…</string>
+    <string name="license_lock_verify">立即驗證</string>
+    <string name="license_lock_wifi">Wi-Fi 設定</string>
+    <string name="license_status">授權</string>
+    <string name="license_status_verified">已於 %1$s 驗證</string>
+    <string name="license_status_unverified">未驗證</string>
+    <string name="license_kept_on_reset">您的授權會保留。</string>
 </resources>

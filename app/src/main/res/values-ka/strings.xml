@@ -628,4 +628,18 @@
     <string name="permission_summary_recommended_missing">აკლია %1$d რეკომენდებული ნებართვა</string>
     <string name="open_source_licence">ღია კოდის ლიცენზია</string>
     <string name="open_source_licence_desc">ლიცენზია, ავტორები და საწყისი კოდი</string>
+
+    <string name="license_lock_title_unverified">დაადასტურეთ შეძენა</string>
+    <string name="license_lock_body_unverified">Google Play-ში შეძენა ერთხელ უნდა დადასტურდეს. ცოტა ხნით დააკავშირეთ ეს მოწყობილობა ინტერნეტს (Wi-Fi) და შეეხეთ ღილაკს „შემოწმება ახლავე“. ამის შემდეგ აპი სამუდამოდ იმუშავებს ინტერნეტის გარეშე.</string>
+    <string name="license_lock_title_not_licensed">შეძენა ვერ მოიძებნა</string>
+    <string name="license_lock_body_not_licensed">Google Play-ის მიხედვით, ამ მოწყობილობის ანგარიშს ეს აპი არ შეუძენია. შეიძინეთ Google Play-ში ან შედით Play Store-ში იმ ანგარიშით, რომლითაც შეიძინეთ, და ხელახლა შეამოწმეთ.</string>
+    <string name="license_lock_title_tampered">ეს ასლი შეცვლილია</string>
+    <string name="license_lock_body_tampered">ეს აპი ისე არ არის დაინსტალირებული, როგორც Google Play-მ მიაწოდა. წაშალეთ და ხელახლა დააინსტალირეთ Google Play-დან.</string>
+    <string name="license_lock_checking">მოწმდება Google Play-ში…</string>
+    <string name="license_lock_verify">შემოწმება ახლავე</string>
+    <string name="license_lock_wifi">Wi-Fi-ის პარამეტრები</string>
+    <string name="license_status">ლიცენზია</string>
+    <string name="license_status_verified">დადასტურდა %1$s</string>
+    <string name="license_status_unverified">არ არის დადასტურებული</string>
+    <string name="license_kept_on_reset">ლიცენზია შენარჩუნდება.</string>
 </resources>

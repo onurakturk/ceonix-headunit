@@ -640,4 +640,18 @@
     <string name="permission_summary_recommended_missing">%1$d ajánlott engedély hiányzik</string>
     <string name="open_source_licence">Nyílt forráskódú licenc</string>
     <string name="open_source_licence_desc">Licenc, készítők és forráskód</string>
+
+    <string name="license_lock_title_unverified">Erősítse meg a vásárlást</string>
+    <string name="license_lock_body_unverified">A Google Play-vásárlást egyszer meg kell erősíteni. Csatlakoztassa ezt az eszközt rövid időre az internethez (Wi-Fi), és koppintson az Ellenőrzés most gombra. Ezután az alkalmazás véglegesen offline is működik.</string>
+    <string name="license_lock_title_not_licensed">Nem található vásárlás</string>
+    <string name="license_lock_body_not_licensed">A Google Play szerint az eszközön lévő fiók nem vásárolta meg ezt az alkalmazást. Vásárolja meg a Google Playen, vagy jelentkezzen be a Play Áruházba azzal a fiókkal, amellyel megvásárolta, majd ellenőrizze újra.</string>
+    <string name="license_lock_title_tampered">Ez a példány módosítva lett</string>
+    <string name="license_lock_body_tampered">Ezt az alkalmazást nem úgy telepítették, ahogyan a Google Play szállította. Távolítsa el, és telepítse újra a Google Playről.</string>
+    <string name="license_lock_checking">Ellenőrzés a Google Playjel…</string>
+    <string name="license_lock_verify">Ellenőrzés most</string>
+    <string name="license_lock_wifi">Wi-Fi-beállítások</string>
+    <string name="license_status">Licenc</string>
+    <string name="license_status_verified">Ellenőrizve: %1$s</string>
+    <string name="license_status_unverified">Nincs ellenőrizve</string>
+    <string name="license_kept_on_reset">A licenc megmarad.</string>
 </resources>

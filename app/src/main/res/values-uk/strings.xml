@@ -642,4 +642,18 @@
     <string name="permission_summary_recommended_missing">Бракує рекомендованих дозволів: %1$d</string>
     <string name="open_source_licence">Ліцензія відкритого ПЗ</string>
     <string name="open_source_licence_desc">Ліцензія, автори та вихідний код</string>
+
+    <string name="license_lock_title_unverified">Підтвердьте покупку</string>
+    <string name="license_lock_body_unverified">Покупку в Google Play потрібно підтвердити один раз. Ненадовго підключіть цей пристрій до інтернету (Wi-Fi) і натисніть «Перевірити зараз». Після цього застосунок назавжди працює без інтернету.</string>
+    <string name="license_lock_title_not_licensed">Покупку не знайдено</string>
+    <string name="license_lock_body_not_licensed">Google Play повідомляє, що обліковий запис на цьому пристрої не купував цей застосунок. Купіть його в Google Play або увійдіть у Play Маркет з обліковим записом, з якого його куплено, і перевірте знову.</string>
+    <string name="license_lock_title_tampered">Цю копію змінено</string>
+    <string name="license_lock_body_tampered">Цей застосунок встановлено не в тому вигляді, у якому його доставив Google Play. Видаліть його й установіть знову з Google Play.</string>
+    <string name="license_lock_checking">Перевірка в Google Play…</string>
+    <string name="license_lock_verify">Перевірити зараз</string>
+    <string name="license_lock_wifi">Налаштування Wi-Fi</string>
+    <string name="license_status">Ліцензія</string>
+    <string name="license_status_verified">Підтверджено %1$s</string>
+    <string name="license_status_unverified">Не підтверджено</string>
+    <string name="license_kept_on_reset">Ліцензія зберігається.</string>
 </resources>

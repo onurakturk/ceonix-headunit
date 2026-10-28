@@ -641,4 +641,18 @@
     <string name="permission_summary_recommended_missing">%1$d aanbevolen machtiging(en) ontbreken</string>
     <string name="open_source_licence">Opensourcelicentie</string>
     <string name="open_source_licence_desc">Licentie, makers en broncode</string>
+
+    <string name="license_lock_title_unverified">Bevestig je aankoop</string>
+    <string name="license_lock_body_unverified">Je aankoop in Google Play moet één keer worden bevestigd. Verbind dit apparaat even met internet (wifi) en tik op Nu controleren. Daarna werkt de app voorgoed offline.</string>
+    <string name="license_lock_title_not_licensed">Geen aankoop gevonden</string>
+    <string name="license_lock_body_not_licensed">Google Play meldt dat het account op dit apparaat deze app niet heeft gekocht. Koop de app in Google Play of meld je in de Play Store aan met het account waarmee je hem hebt gekocht, en controleer opnieuw.</string>
+    <string name="license_lock_title_tampered">Deze kopie is gewijzigd</string>
+    <string name="license_lock_body_tampered">Deze app is niet geïnstalleerd zoals Google Play hem heeft geleverd. Verwijder hem en installeer hem opnieuw via Google Play.</string>
+    <string name="license_lock_checking">Controleren bij Google Play…</string>
+    <string name="license_lock_verify">Nu controleren</string>
+    <string name="license_lock_wifi">Wifi-instellingen</string>
+    <string name="license_status">Licentie</string>
+    <string name="license_status_verified">Bevestigd op %1$s</string>
+    <string name="license_status_unverified">Niet bevestigd</string>
+    <string name="license_kept_on_reset">Je licentie blijft behouden.</string>
 </resources>

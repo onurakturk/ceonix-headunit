@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import com.andrerinas.headunitrevived.R
+import com.andrerinas.headunitrevived.license.LicenseGuard
 import com.andrerinas.headunitrevived.sensors.GForceEstimator
 import java.util.Locale
 import kotlin.math.abs
@@ -64,7 +65,10 @@ class GForceCard : RideCard(ID, R.layout.item_ride_card_gforce) {
         tvMaxBrake = null
     }
 
-    override fun onPageActive(context: Context) = GForceEstimator.acquire(OWNER, context)
+    override fun onPageActive(context: Context) {
+        // No measuring without a verified licence (Play build); the card simply stays at zero.
+        if (LicenseGuard.isUsable(context)) GForceEstimator.acquire(OWNER, context)
+    }
 
     override fun onPageInactive() = GForceEstimator.release(OWNER)
 

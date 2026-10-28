@@ -642,4 +642,18 @@
     <string name="permission_summary_recommended_missing">Permisiuni recomandate lipsă: %1$d</string>
     <string name="open_source_licence">Licență open source</string>
     <string name="open_source_licence_desc">Licență, autori și cod sursă</string>
+
+    <string name="license_lock_title_unverified">Confirmați achiziția</string>
+    <string name="license_lock_body_unverified">Achiziția dvs. din Google Play trebuie confirmată o singură dată. Conectați acest dispozitiv la internet (Wi-Fi) pentru scurt timp și atingeți Verifică acum. După aceea aplicația funcționează offline definitiv.</string>
+    <string name="license_lock_title_not_licensed">Nu s-a găsit nicio achiziție</string>
+    <string name="license_lock_body_not_licensed">Google Play raportează că contul de pe acest dispozitiv nu a cumpărat această aplicație. Cumpărați-o din Google Play sau conectați-vă în Magazinul Play cu contul cu care ați cumpărat-o, apoi verificați din nou.</string>
+    <string name="license_lock_title_tampered">Această copie a fost modificată</string>
+    <string name="license_lock_body_tampered">Această aplicație nu a fost instalată așa cum a livrat-o Google Play. Dezinstalați-o și instalați-o din nou din Google Play.</string>
+    <string name="license_lock_checking">Se verifică cu Google Play…</string>
+    <string name="license_lock_verify">Verifică acum</string>
+    <string name="license_lock_wifi">Setări Wi-Fi</string>
+    <string name="license_status">Licență</string>
+    <string name="license_status_verified">Verificată la %1$s</string>
+    <string name="license_status_unverified">Neverificată</string>
+    <string name="license_kept_on_reset">Licența dvs. se păstrează.</string>
 </resources>

@@ -674,4 +674,21 @@
          product names (Android Auto, Wi-Fi Direct) are left alone across the 19 locales. -->
     <string name="splash_wordmark" translatable="false">CEONIX</string>
     <string name="splash_tagline" translatable="false">RIDE CONNECTED</string>
+
+    <!-- Licence lock screen (Play build only). Never names the product: the same text works for any
+         build of the app. -->
+    <string name="license_lock_title_unverified">Confirm your purchase</string>
+    <string name="license_lock_body_unverified">Your Google Play purchase needs to be confirmed once. Connect this device to the internet (Wi-Fi) for a moment and tap Verify now. After that the app works offline for good.</string>
+    <string name="license_lock_title_not_licensed">No purchase found</string>
+    <string name="license_lock_body_not_licensed">Google Play reports that the account on this device has not bought this app. Buy it on Google Play, or sign in to the Play Store with the account you bought it with, then verify again.</string>
+    <string name="license_lock_title_tampered">This copy has been modified</string>
+    <string name="license_lock_body_tampered">This app was not installed as Google Play delivered it. Uninstall it and install it again from Google Play.</string>
+    <string name="license_lock_checking">Checking with Google Play…</string>
+    <string name="license_lock_verify">Verify now</string>
+    <string name="license_lock_wifi">Wi-Fi settings</string>
+    <string name="license_lock_play" translatable="false">Google Play</string>
+    <string name="license_status">Licence</string>
+    <string name="license_status_verified">Verified on %1$s</string>
+    <string name="license_status_unverified">Not verified</string>
+    <string name="license_kept_on_reset">Your licence is kept.</string>
 </resources>

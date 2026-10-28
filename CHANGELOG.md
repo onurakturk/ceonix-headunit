@@ -4,6 +4,16 @@ CEONIX Headunit is a fork of [headunit-revived](https://github.com/andreknieriem
 taken from its 3.1.1 release. This file lists only the changes made in CEONIX Headunit and
 CEONIX Setup. For the history before the fork, see the upstream project.
 
+## 1.3.1 (2026-10-28)
+
+- Google Play build only: the purchase is confirmed once with Google Play, on first launch. An
+  internet connection is needed only for that one check; after it the app works offline for good.
+  Until the purchase is confirmed, a screen explains what to do and Android Auto and Ride stay
+  closed. Settings › Info shows when it was confirmed. Builds made from the source code have no
+  such check.
+- New module `licensing/`: Play licence check (LVL) that verifies Google's RSA signature and keeps
+  the signed answer encrypted with an Android Keystore key bound to the device.
+
 ## 1.3.0 · CEONIX Setup 3.0 (2026-10-27)
 
 - The apps have new names: **CEONIX Headunit** (was CEONIX Ride) and **CEONIX Setup** (was

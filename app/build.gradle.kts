@@ -99,8 +99,8 @@ android {
         applicationId = "com.ceonix.headunit"
         minSdk = 16
         targetSdk = 36
-        versionCode = 153
-        versionName = "1.3.0"
+        versionCode = 154
+        versionName = "1.3.1"
         setProperty("archivesBaseName", "${applicationId}_${versionName}")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled = true
@@ -210,5 +210,29 @@ android {
                 }
                 output.outputFileName = outputFileName
             }
+    }
+}
+
+// Play licence check (offline after one verification). Play flavour only: the GitHub build has a
+// no-op LicenseGuard and must not even link the Play Store client. Declared here, after android {},
+// because the playstoreImplementation configuration only exists once the flavour does.
+dependencies {
+    "playstoreImplementation"(project(":licensing"))
+}
+
+// A Play release without its licensing values would lock every customer out (no key: nothing
+// verifies; no app signing certificate: every APK Google delivers reads as re-signed). Refuse to
+// build one. The markers are the placeholder comments in LicenseKeys.kt; delete each once filled in.
+gradle.taskGraph.whenReady {
+    val keys = file("src/playstore/java/com/andrerinas/headunitrevived/license/LicenseKeys.kt")
+    fun require(marker: String, what: String) {
+        if (keys.readText().contains(marker)) {
+            throw GradleException("Play licensing: $what is not set in ${keys.name} ($marker).")
+        }
+    }
+    val playRelease = allTasks.any { it.path == ":app:prePlaystoreReleaseBuild" }
+    if (playRelease) require("LICENSE_KEY_NOT_SET", "the licensing public key")
+    if (allTasks.any { it.path == ":app:bundlePlaystoreRelease" }) {
+        require("APP_SIGNING_CERT_NOT_SET", "the Play app signing certificate")
     }
 }

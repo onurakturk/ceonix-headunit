@@ -24,6 +24,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.andrerinas.headunitrevived.App
 import com.andrerinas.headunitrevived.R
 import com.andrerinas.headunitrevived.aap.AapService
+import com.andrerinas.headunitrevived.license.LicenseGuard
 import com.andrerinas.headunitrevived.main.permissions.PermissionItem
 import com.andrerinas.headunitrevived.main.permissions.PermissionKind
 import com.andrerinas.headunitrevived.main.settings.SettingItem
@@ -331,6 +332,23 @@ class SettingsFragment : Fragment() {
             value = BuildConfig.VERSION_NAME,
             onClick = { /* Read only */ }
         ))
+
+        if (LicenseGuard.enforced) {
+            val verifiedAt = LicenseGuard.verifiedAtMillis(requireContext())
+            items.add(SettingItem.SettingEntry(
+                stableId = "licenseStatus",
+                nameResId = R.string.license_status,
+                value = if (verifiedAt != null) {
+                    getString(
+                        R.string.license_status_verified,
+                        java.text.DateFormat.getDateInstance(java.text.DateFormat.MEDIUM).format(java.util.Date(verifiedAt))
+                    )
+                } else {
+                    getString(R.string.license_status_unverified)
+                },
+                onClick = { /* Read only */ }
+            ))
+        }
 
         items.add(SettingItem.SettingEntry(
             stableId = "licence",
@@ -1266,7 +1284,12 @@ class SettingsFragment : Fragment() {
         items.add(SettingItem.SettingEntry(
             stableId = "resetSettings",
             nameResId = R.string.reset_settings,
-            value = getString(R.string.reset_settings_description),
+            // Reset only clears settings.xml; the Play licence lives in its own device-bound file.
+            value = if (LicenseGuard.enforced) {
+                getString(R.string.reset_settings_description) + " " + getString(R.string.license_kept_on_reset)
+            } else {
+                getString(R.string.reset_settings_description)
+            },
             onClick = {
                 MaterialAlertDialogBuilder(requireContext(), R.style.DarkAlertDialog)
                     .setTitle(R.string.reset_settings)

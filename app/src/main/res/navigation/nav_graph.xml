@@ -38,7 +38,15 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <!-- Play build: MainActivity sends the rider here while the licence is not verified. -->
+        <action
+            android:id="@+id/action_homeFragment_to_licenseLockFragment"
+            app:destination="@id/licenseLockFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/licenseLockFragment"
+        android:name="com.andrerinas.headunitrevived.main.LicenseLockFragment" />
 
     <!--
       One destination serves both hosts: SettingsActivity inflates this same graph and only swaps

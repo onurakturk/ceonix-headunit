@@ -1,4 +1,4 @@
-include(":app", ":contract", ":companion")
+include(":app", ":contract", ":companion", ":licensing")
 
 
 rootProject.name = "headunit"

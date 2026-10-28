@@ -639,4 +639,18 @@
     <string name="permission_summary_recommended_missing">%1$d önerilen izin eksik</string>
     <string name="open_source_licence">Açık kaynak lisansı</string>
     <string name="open_source_licence_desc">Lisans, emeği geçenler ve kaynak kodu</string>
+
+    <string name="license_lock_title_unverified">Satın alımınızı doğrulayın</string>
+    <string name="license_lock_body_unverified">Google Play satın alımınızın bir kez doğrulanması gerekiyor. Bu cihazı kısa bir süre internete (Wi-Fi) bağlayın ve Şimdi doğrula düğmesine dokunun. Bundan sonra uygulama internetsiz de çalışmaya devam eder.</string>
+    <string name="license_lock_title_not_licensed">Satın alım bulunamadı</string>
+    <string name="license_lock_body_not_licensed">Google Play, bu cihazdaki hesabın bu uygulamayı satın almadığını bildiriyor. Uygulamayı Google Play\'den satın alın ya da Play Store\'da satın aldığınız hesapla oturum açın, sonra yeniden doğrulayın.</string>
+    <string name="license_lock_title_tampered">Bu kopya değiştirilmiş</string>
+    <string name="license_lock_body_tampered">Bu uygulama Google Play\'in teslim ettiği hâliyle yüklenmemiş. Kaldırın ve Google Play\'den yeniden yükleyin.</string>
+    <string name="license_lock_checking">Google Play ile doğrulanıyor…</string>
+    <string name="license_lock_verify">Şimdi doğrula</string>
+    <string name="license_lock_wifi">Wi-Fi ayarları</string>
+    <string name="license_status">Lisans</string>
+    <string name="license_status_verified">%1$s tarihinde doğrulandı</string>
+    <string name="license_status_unverified">Doğrulanmadı</string>
+    <string name="license_kept_on_reset">Lisansınız korunur.</string>
 </resources>

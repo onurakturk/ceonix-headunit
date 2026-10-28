@@ -36,6 +36,7 @@ import com.andrerinas.headunitrevived.R
 import com.andrerinas.headunitrevived.aap.protocol.messages.NightModeEvent
 import com.andrerinas.headunitrevived.aap.protocol.proto.MediaPlayback
 import com.andrerinas.headunitrevived.connection.CommManager
+import com.andrerinas.headunitrevived.license.LicenseGuard
 import com.andrerinas.headunitrevived.connection.NetworkDiscovery
 import com.andrerinas.headunitrevived.connection.WifiDirectManager
 import android.support.v4.media.session.MediaSessionCompat
@@ -907,6 +908,13 @@ class AapService : Service(), UsbReceiver.Listener {
                         onConnected()
                     }
                     is CommManager.ConnectionState.HandshakeComplete -> {
+                        // Second line behind initWifiMode: covers USB and any session that came up
+                        // through another path.
+                        if (!LicenseGuard.isUsable(this@AapService)) {
+                            AppLog.w("LICENSE: handshake completed without a verified licence, disconnecting")
+                            commManager.disconnect()
+                            return@collect
+                        }
                         val decision = ProjectionFocusPolicy.evaluate(
                             ProjectionFocusPolicy.Trigger.SPONTANEOUS
                         )
@@ -1664,6 +1672,13 @@ class AapService : Service(), UsbReceiver.Listener {
 
     /** Starts [WirelessServer] if the user has configured server WiFi mode. */
     private fun initWifiMode(force: Boolean = false) {
+        // Play build without a verified licence: no host, so the phone never sees a head unit to
+        // connect to. Nothing is torn down here — a host that is already up stays up for this run.
+        // LicenseGuard starts the host itself once the licence verifies.
+        if (!LicenseGuard.isUsable(this)) {
+            AppLog.w("LICENSE: not starting the wireless host (licence not verified)")
+            return
+        }
         val settings = App.provide(this).settings
         val mode = settings.wifiConnectionMode
         val strategy = settings.helperConnectionStrategy

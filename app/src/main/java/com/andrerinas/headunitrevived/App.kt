@@ -8,6 +8,7 @@ import android.app.NotificationManager
 import android.content.Context
 import android.os.Bundle
 import com.andrerinas.headunitrevived.aap.AapProjectionActivity
+import com.andrerinas.headunitrevived.license.LicenseGuard
 import com.andrerinas.headunitrevived.location.GpsFixMonitor
 import com.andrerinas.headunitrevived.sensors.GForceEstimator
 import com.andrerinas.headunitrevived.sensors.LeanEstimator
@@ -115,6 +116,10 @@ class App : Application() {
         // Register the main broadcast receiver safely for Android 14+ using ContextCompat
         ContextCompat.registerReceiver(this, AapBroadcastReceiver(), AapBroadcastReceiver.filter, ContextCompat.RECEIVER_NOT_EXPORTED)
 
+        // Play build: evaluate the stored licence and, if there is internet, ask the Play Store.
+        // The GitHub build has nothing to check.
+        LicenseGuard.init(this)
+
         // Keep the Ride lean estimator running while Android Auto is projecting, so the recorded
         // lean and g-force maxima accumulate across a ride even though the Ride screen is not visible.
         // Also track which of our screens is in front, so a connection coming up in the background
@@ -133,7 +138,7 @@ class App : Application() {
                 resumedActivities++
                 gnssHandler.removeCallbacks(releaseGnssKeepAlive)
                 GpsFixMonitor.acquire(GNSS_KEEP_ALIVE_OWNER, this@App)
-                if (activity is AapProjectionActivity) {
+                if (activity is AapProjectionActivity && LicenseGuard.isUsable(this@App)) {
                     LeanEstimator.acquire("aa", this@App)
                     GForceEstimator.acquire("aa", this@App)
                 }

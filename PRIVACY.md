@@ -1,6 +1,6 @@
 Privacy Policy for CEONIX Headunit
 
-Last updated: October 27, 2026
+Last updated: October 28, 2026
 
 This Privacy Policy describes how CEONIX Headunit and its companion app CEONIX Setup ("we", "our", or "us") handle your data when you use our Android applications.
 
@@ -17,6 +17,7 @@ The application works as a display and input receiver for your Android phone via
 * Microphone: Passed directly to the connected phone for Android Auto voice control and hands-free calls. No audio is recorded or stored by CEONIX Headunit.
 * Diagnostic logs: Only if you switch log capture on in the developer settings, the app writes its own log output to a file on the head unit. Nothing is uploaded; the file leaves the device only if you export or share it yourself.
 * Settings backup: If you export your settings, a file is written to the Downloads folder of the head unit. It stays there until you delete it.
+* Purchase check (Google Play version only): Once, and again whenever the head unit happens to be online, the app asks the Google Play Store app on the device to confirm that your Google account owns it. This uses Google Play's licensing service, subject to Google's own privacy policies; nothing is sent to us. Google's signed answer is stored, encrypted with a key that never leaves the head unit, so the check does not have to be repeated offline.
 
 3. Permissions
 
