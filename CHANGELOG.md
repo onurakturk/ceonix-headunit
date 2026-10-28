@@ -4,6 +4,14 @@ CEONIX Headunit is a fork of [headunit-revived](https://github.com/andreknieriem
 taken from its 3.1.1 release. This file lists only the changes made in CEONIX Headunit and
 CEONIX Setup. For the history before the fork, see the upstream project.
 
+## 1.3.2 (2026-10-28)
+
+- Google Play build: fixes the "This copy has been modified" screen shown after installing from
+  Google Play on recent Android versions. Google Play's APK carries a signing-key rotation record
+  there, so the platform reports a newer Play key as the current signer; the check now accepts
+  the proven key history (`PackageManager.hasSigningCertificate`), which a re-signed copy cannot
+  fake.
+
 ## 1.3.1 (2026-10-28)
 
 - Google Play build only: the purchase is confirmed once with Google Play, on first launch. An

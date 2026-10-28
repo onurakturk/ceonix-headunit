@@ -13,28 +13,69 @@ internal object IntegrityChecks {
     const val PLAY_STORE_PACKAGE = "com.android.vending"
 
     /**
-     * SHA-256 digests (upper-case hex, no separators) of the certificates the installed APK is
-     * signed with right now. Empty if the package manager would not say — which callers treat as
-     * a failure, never as a pass.
+     * Whether the installed APK is signed with one of [allowedSha256] (normalised digests).
+     *
+     * API 28+: asks [PackageManager.hasSigningCertificate], which also accepts a certificate the
+     * package has *proven* it rotated away from. That matters for Google Play: on recent Android
+     * the APK Play delivers carries a key-rotation record, and the platform then reports a
+     * different, newer Play key as the current signer — measured 28 Oct on a Galaxy S23 (Android
+     * 16): the app signing certificate from Play Console (86:D0…) was the oldest entry of a
+     * three-certificate lineage and apkContentsSigners returned another one (85:9F…), so every
+     * Play copy read as re-signed. Accepting the lineage is safe: a rotation proof has to be signed
+     * by the old key, which a repackager does not have.
+     *
+     * Below 28 there is no rotation; the current signers must all be allowed.
      */
     @SuppressLint("PackageManagerGetSignatures")
     @Suppress("DEPRECATION")
-    fun signingCertDigests(context: Context): Set<String> {
+    fun isSignedByAllowed(context: Context, allowedSha256: Set<String>): Boolean {
+        if (allowedSha256.isEmpty()) return false
         val pm = context.packageManager
-        val signatures: Array<Signature> = try {
+        return try {
             if (Build.VERSION.SDK_INT >= 28) {
-                val info = pm.getPackageInfo(context.packageName, PackageManager.GET_SIGNING_CERTIFICATES)
-                // The current signers only, not past certificates from a key rotation: a copy
-                // re-signed with someone else's key must not pass on the strength of our history.
-                info.signingInfo?.apkContentsSigners ?: emptyArray()
+                allowedSha256.any { digest ->
+                    val bytes = hexToBytes(digest) ?: return@any false
+                    pm.hasSigningCertificate(context.packageName, bytes, PackageManager.CERT_INPUT_SHA256)
+                }
             } else {
-                pm.getPackageInfo(context.packageName, PackageManager.GET_SIGNATURES).signatures
-                    ?: emptyArray()
+                val signatures = pm.getPackageInfo(context.packageName, PackageManager.GET_SIGNATURES)
+                    .signatures ?: emptyArray<Signature>()
+                val actual = signatures.map { sha256Hex(it.toByteArray()) }.toSet()
+                actual.isNotEmpty() && allowedSha256.containsAll(actual)
             }
         } catch (e: Exception) {
-            emptyArray()
+            false
         }
-        return signatures.map { sha256Hex(it.toByteArray()) }.toSet()
+    }
+
+    /**
+     * For diagnostics only: digests of the current signers and, on API 28+, of the whole proven
+     * signing history. Never used to decide anything.
+     */
+    @SuppressLint("PackageManagerGetSignatures")
+    @Suppress("DEPRECATION")
+    fun describeSigners(context: Context): String = try {
+        val pm = context.packageManager
+        if (Build.VERSION.SDK_INT >= 28) {
+            val info = pm.getPackageInfo(context.packageName, PackageManager.GET_SIGNING_CERTIFICATES).signingInfo
+            val current = info?.apkContentsSigners.orEmpty().map { sha256Hex(it.toByteArray()) }
+            val history = info?.signingCertificateHistory.orEmpty().map { sha256Hex(it.toByteArray()) }
+            "current=$current history=$history"
+        } else {
+            val sigs = pm.getPackageInfo(context.packageName, PackageManager.GET_SIGNATURES).signatures.orEmpty()
+            "current=${sigs.map { sha256Hex(it.toByteArray()) }}"
+        }
+    } catch (e: Exception) {
+        "unavailable (${e.javaClass.simpleName})"
+    }
+
+    private fun hexToBytes(hex: String): ByteArray? {
+        if (hex.length % 2 != 0) return null
+        return try {
+            ByteArray(hex.length / 2) { i -> hex.substring(i * 2, i * 2 + 2).toInt(16).toByte() }
+        } catch (e: NumberFormatException) {
+            null
+        }
     }
 
     /** Package name of whatever installed this app, or null (adb, a file manager, unknown). */

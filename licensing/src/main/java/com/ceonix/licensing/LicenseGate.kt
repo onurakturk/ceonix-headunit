@@ -144,9 +144,8 @@ class LicenseGate(context: Context, private val config: LicenseConfig) {
 
     private fun integrityOk(): Boolean {
         integrity?.let { return it }
-        val actual = IntegrityChecks.signingCertDigests(appContext)
-        val ok = actual.isNotEmpty() && config.allowedCertSha256.containsAll(actual)
-        if (!ok) log("gate: signing certificate not allowed: $actual")
+        val ok = IntegrityChecks.isSignedByAllowed(appContext, config.allowedCertSha256)
+        if (!ok) log("gate: signing certificate not allowed: ${IntegrityChecks.describeSigners(appContext)}")
         integrity = ok
         return ok
     }
