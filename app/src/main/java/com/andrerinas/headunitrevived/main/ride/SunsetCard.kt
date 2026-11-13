@@ -11,7 +11,6 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
-import kotlin.math.roundToInt
 
 /**
  * ALTITUDE + SUNSET card - two readouts sharing the slot, separated by a rule.
@@ -23,7 +22,8 @@ import kotlin.math.roundToInt
  *
  * Altitude comes from [AltitudeTracker], which this card also feeds. The tracker is
  * application-scoped, so the trace keeps filling while Android Auto is projecting and is already
- * populated when the rider swipes back here.
+ * populated when the rider swipes back here. Drawing it is [AltitudeReadout]'s job, shared with the
+ * Drive screen.
  *
  * NOTE the id stays "sunset" even though the card now shows two things: RideCards documents it as a
  * persisted wire format, and changing it would silently reset every rider page choice.
@@ -33,14 +33,8 @@ class SunsetCard : RideCard(ID, R.layout.item_ride_card_sunset) {
     private var tvSunsetTime: TextView? = null
     private var tvSunsetSub: TextView? = null
     private var ivHeadlight: View? = null
-    private var tvAltitude: TextView? = null
-    private var spark: AltitudeSparkView? = null
-
-    // Smoothed altitude, and the whole metres actually on screen. Both are also the memoisation
-    // keys: most of the 60 frames a second change neither view.
-    private var dispAltitude = Float.NaN
-    private var shownAltitude = Int.MIN_VALUE
-    private var lastSparkVersion = -1
+    /** Shared with the Drive screen's altitude/compass card. */
+    private val altitude = AltitudeReadout()
 
     private var haveLocation = false
     private var lastLat = 0.0
@@ -53,21 +47,14 @@ class SunsetCard : RideCard(ID, R.layout.item_ride_card_sunset) {
         tvSunsetTime = v.findViewById(R.id.tv_sunset_time)
         tvSunsetSub = v.findViewById(R.id.tv_sunset_sub)
         ivHeadlight = v.findViewById(R.id.iv_headlight)
-        tvAltitude = v.findViewById(R.id.tv_altitude)
-        spark = v.findViewById(R.id.altitude_spark)
-        // Cleared so the first frame back seeds the filter from the live reading: returning to this
-        // card shows the right figure at once instead of easing up to it over a quarter of a minute.
-        dispAltitude = Float.NaN
-        shownAltitude = Int.MIN_VALUE
-        lastSparkVersion = -1
+        altitude.bind(v.findViewById(R.id.tv_altitude), v.findViewById(R.id.altitude_spark))
     }
 
     override fun onUnbind() {
         tvSunsetTime = null
         tvSunsetSub = null
         ivHeadlight = null
-        tvAltitude = null
-        spark = null
+        altitude.unbind()
     }
 
     override fun onLocation(loc: Location, precise: Boolean) {
@@ -83,7 +70,7 @@ class SunsetCard : RideCard(ID, R.layout.item_ride_card_sunset) {
     }
 
     override fun render(t: RideTelemetry) {
-        renderAltitude(t)
+        altitude.render(t.frameDtSec, t.speedKmh)
 
         val tvTime = tvSunsetTime ?: return
         val tvSub = tvSunsetSub ?: return
@@ -139,65 +126,7 @@ class SunsetCard : RideCard(ID, R.layout.item_ride_card_sunset) {
         }
     }
 
-    /**
-     * Altitude readout and its trace.
-     *
-     * The raw figure moves several metres a second - that is GPS vertical accuracy, not the bike
-     * climbing - so it is filtered on the way to the screen while [AltitudeTracker] keeps the raw
-     * value, the same split GForceCard uses for its deadband.
-     *
-     * Three things happen here, and the look depends on all three:
-     *  - an EMA takes the noise out;
-     *  - the displayed metres then follow it **one step at a time**, past a metre of hysteresis, so
-     *    the number creeps like a mechanical altimeter instead of jumping and never flickers
-     *    between two values at a boundary;
-     *  - and while the bike is stopped nothing moves at all, because a parked bike's altitude does
-     *    not change - anything on screen then would be pure noise. Same reasoning as the trace's
-     *    one-kilometre gate.
-     */
-    private fun renderAltitude(t: RideTelemetry) {
-        val tv = tvAltitude ?: return
-
-        val raw = AltitudeTracker.current
-        if (raw.isNaN()) {
-            if (shownAltitude != Int.MIN_VALUE) {
-                shownAltitude = Int.MIN_VALUE
-                tv.text = tv.context.getString(R.string.ride_no_signal)
-            }
-        } else {
-            if (dispAltitude.isNaN()) dispAltitude = raw
-            else if (t.speedKmh >= MOVING_KMH) {
-                dispAltitude = ease(dispAltitude, raw, t.frameDtSec, TAU_ALTITUDE)
-            }
-
-            val before = shownAltitude
-            if (shownAltitude == Int.MIN_VALUE) shownAltitude = dispAltitude.roundToInt()
-            else if (dispAltitude - shownAltitude > STEP_HYSTERESIS_M) shownAltitude++
-            else if (shownAltitude - dispAltitude > STEP_HYSTERESIS_M) shownAltitude--
-            if (shownAltitude != before) tv.text = shownAltitude.toString()
-        }
-
-        val v = AltitudeTracker.version
-        if (v != lastSparkVersion) {
-            lastSparkVersion = v
-            spark?.refresh()
-        }
-    }
-
     companion object {
         const val ID = "sunset"
-
-        /**
-         * Long enough to bury GPS vertical noise (about 10 m of it, down to 3), short enough that a
-         * climb is not left behind: on a 5% grade at 60 km/h the figure trails the bike by roughly
-         * ten metres.
-         */
-        private const val TAU_ALTITUDE = 12f
-
-        /** The number moves only once the filtered value has genuinely drifted this far. */
-        private const val STEP_HYSTERESIS_M = 1f
-
-        /** Below this the bike is parked; same threshold family as GForceEstimator's park speed. */
-        private const val MOVING_KMH = 3f
     }
 }

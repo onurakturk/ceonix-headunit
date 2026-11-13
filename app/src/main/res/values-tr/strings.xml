@@ -653,4 +653,27 @@
     <string name="license_status_verified">%1$s tarihinde doğrulandı</string>
     <string name="license_status_unverified">Doğrulanmadı</string>
     <string name="license_kept_on_reset">Lisansınız korunur.</string>
+    <string name="drive">Sürüş</string>
+    <string name="vehicle_type">Araç tipi</string>
+    <string name="vehicle_type_motorcycle">Motosiklet</string>
+    <string name="vehicle_type_car">Araba</string>
+    <string name="drive_attitude">EĞİM VE YATIŞ</string>
+    <string name="drive_pitch">EĞİM</string>
+    <string name="drive_roll">YATIŞ</string>
+    <string name="drive_heading">YÖN</string>
+    <string name="drive_attitude_learning">Montaj açısı öğreniliyor — sürmeye devam edin ya da araç düzken uzun basın</string>
+    <string name="drive_level_set">Düz konum ayarlandı</string>
+    <string name="drive_gforce_max_left">M. SOL</string>
+    <string name="drive_gforce_max_right">M. SAĞ</string>
+    <string-array name="drive_cardinals">
+        <item>K</item><item>KD</item><item>D</item><item>GD</item><item>G</item><item>GB</item><item>B</item><item>KB</item>
+    </string-array>
+    <string name="drive_arm_brake">FREN</string>
+    <string name="drive_arm_acc">GAZ</string>
+    <string name="drive_arm_left">SOL</string>
+    <string name="drive_arm_right">SAĞ</string>
+    <string name="drive_max">MAKS</string>
+    <string name="drive_reset_max">Maksimumları sıfırla</string>
+    <string name="drive_set_level">Burayı düz kabul et</string>
+    <string name="drive_max_reset_done">Maksimumlar sıfırlandı</string>
 </resources>

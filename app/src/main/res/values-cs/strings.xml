@@ -655,4 +655,27 @@
     <string name="license_status_verified">Ověřeno %1$s</string>
     <string name="license_status_unverified">Neověřeno</string>
     <string name="license_kept_on_reset">Vaše licence zůstane zachována.</string>
+    <string name="drive">Jízda</string>
+    <string name="vehicle_type">Typ vozidla</string>
+    <string name="vehicle_type_motorcycle">Motocykl</string>
+    <string name="vehicle_type_car">Auto</string>
+    <string name="drive_attitude">SKLON A NÁKLON</string>
+    <string name="drive_pitch">SKLON</string>
+    <string name="drive_roll">NÁKLON</string>
+    <string name="drive_heading">KURZ</string>
+    <string name="drive_attitude_learning">Učím se uchycení — jeďte dál, nebo dlouze stiskněte ve vodorovné poloze</string>
+    <string name="drive_level_set">Vodorovná poloha nastavena</string>
+    <string name="drive_gforce_max_left">M. VLEVO</string>
+    <string name="drive_gforce_max_right">M. VPRAVO</string>
+    <string-array name="drive_cardinals">
+        <item>S</item><item>SV</item><item>V</item><item>JV</item><item>J</item><item>JZ</item><item>Z</item><item>SZ</item>
+    </string-array>
+    <string name="drive_arm_brake">BRZ</string>
+    <string name="drive_arm_acc">ZRY</string>
+    <string name="drive_arm_left">L</string>
+    <string name="drive_arm_right">P</string>
+    <string name="drive_max">MAX</string>
+    <string name="drive_reset_max">Vynulovat maxima</string>
+    <string name="drive_set_level">Nastavit vodorovnou polohu zde</string>
+    <string name="drive_max_reset_done">Maxima vynulována</string>
 </resources>

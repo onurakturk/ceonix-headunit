@@ -655,4 +655,27 @@
     <string name="license_status_verified">已於 %1$s 驗證</string>
     <string name="license_status_unverified">未驗證</string>
     <string name="license_kept_on_reset">您的授權會保留。</string>
+    <string name="drive">駕駛</string>
+    <string name="vehicle_type">車輛類型</string>
+    <string name="vehicle_type_motorcycle">機車</string>
+    <string name="vehicle_type_car">汽車</string>
+    <string name="drive_attitude">俯仰與側傾</string>
+    <string name="drive_pitch">俯仰</string>
+    <string name="drive_roll">側傾</string>
+    <string name="drive_heading">航向</string>
+    <string name="drive_attitude_learning">正在學習安裝角度 — 繼續行駛，或在水平時長按</string>
+    <string name="drive_level_set">已設定水平</string>
+    <string name="drive_gforce_max_left">最大左</string>
+    <string name="drive_gforce_max_right">最大右</string>
+    <string-array name="drive_cardinals">
+        <item>北</item><item>東北</item><item>東</item><item>東南</item><item>南</item><item>西南</item><item>西</item><item>西北</item>
+    </string-array>
+    <string name="drive_arm_brake">煞車</string>
+    <string name="drive_arm_acc">加速</string>
+    <string name="drive_arm_left">左</string>
+    <string name="drive_arm_right">右</string>
+    <string name="drive_max">最大</string>
+    <string name="drive_reset_max">重設最大值</string>
+    <string name="drive_set_level">在此設定水平</string>
+    <string name="drive_max_reset_done">已重設最大值</string>
 </resources>

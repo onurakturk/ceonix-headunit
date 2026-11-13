@@ -124,6 +124,8 @@ object SettingsBackupManager {
         // Which card the Ride screen's third slot shows. A genuine preference, so it is backed up
         // and cleared by Reset - unlike lean-max-*, which is ride state and deliberately absent.
         Settings.KEY_RIDE_CARD_ID to ValueType.STRING,
+        Settings.KEY_DRIVE_CARD_ID to ValueType.STRING,
+        Settings.KEY_VEHICLE_TYPE to ValueType.STRING,
         "enable-rotary" to ValueType.BOOLEAN,
         "kill-on-disconnect" to ValueType.BOOLEAN,
         "auto-enable-hotspot" to ValueType.BOOLEAN,

@@ -10,6 +10,7 @@ import android.os.Bundle
 import com.andrerinas.headunitrevived.aap.AapProjectionActivity
 import com.andrerinas.headunitrevived.license.LicenseGuard
 import com.andrerinas.headunitrevived.location.GpsFixMonitor
+import com.andrerinas.headunitrevived.sensors.DriveEstimator
 import com.andrerinas.headunitrevived.sensors.GForceEstimator
 import com.andrerinas.headunitrevived.sensors.LeanEstimator
 import android.os.Handler
@@ -36,6 +37,22 @@ class App : Application() {
 
     /** How many of our activities are resumed right now — drives the GNSS keep-alive below. */
     private var resumedActivities = 0
+
+    /**
+     * Which estimator family Android Auto is holding: null none, true the Drive engine, false the
+     * Ride pair. Remembered rather than re-read on release, because the vehicle type can change
+     * while the projection is up and the release must match what was actually taken.
+     */
+    private var aaHeldCar: Boolean? = null
+
+    private fun releaseAaEstimators() {
+        when (aaHeldCar) {
+            true -> DriveEstimator.release("aa")
+            false -> { LeanEstimator.release("aa"); GForceEstimator.release("aa") }
+            null -> {}
+        }
+        aaHeldCar = null
+    }
     private val gnssHandler = Handler(Looper.getMainLooper())
     private val releaseGnssKeepAlive = Runnable { GpsFixMonitor.release(GNSS_KEEP_ALIVE_OWNER) }
 
@@ -139,8 +156,17 @@ class App : Application() {
                 gnssHandler.removeCallbacks(releaseGnssKeepAlive)
                 GpsFixMonitor.acquire(GNSS_KEEP_ALIVE_OWNER, this@App)
                 if (activity is AapProjectionActivity && LicenseGuard.isUsable(this@App)) {
-                    LeanEstimator.acquire("aa", this@App)
-                    GForceEstimator.acquire("aa", this@App)
+                    // In a car the lean engine stays off: car corners read as huge "lean" and
+                    // would poison the recorded maxima (the v1.0.47 lesson). The Drive engine
+                    // holds GForceEstimator itself.
+                    releaseAaEstimators()
+                    aaHeldCar = provide(this@App).settings.isCar
+                    if (aaHeldCar == true) {
+                        DriveEstimator.acquire("aa", this@App)
+                    } else {
+                        LeanEstimator.acquire("aa", this@App)
+                        GForceEstimator.acquire("aa", this@App)
+                    }
                 }
             }
             override fun onActivityPaused(activity: Activity) {
@@ -153,10 +179,7 @@ class App : Application() {
                     gnssHandler.removeCallbacks(releaseGnssKeepAlive)
                     gnssHandler.postDelayed(releaseGnssKeepAlive, GNSS_KEEP_ALIVE_LINGER_MS)
                 }
-                if (activity is AapProjectionActivity) {
-                    LeanEstimator.release("aa")
-                    GForceEstimator.release("aa")
-                }
+                if (activity is AapProjectionActivity) releaseAaEstimators()
             }
             override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {}
             override fun onActivityStarted(activity: Activity) {}

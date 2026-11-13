@@ -504,11 +504,14 @@ class HomeFragment : Fragment() {
             true
         }
 
-        // "Ride" tile — opens the instrument-cluster dashboard.
+        // "Ride" tile — opens the instrument-cluster dashboard: Ride on a bike, Drive in a car.
         rideButton.setOnClickListener {
             val controller = findNavController()
             if (controller.currentDestination?.id == R.id.homeFragment) {
-                controller.navigate(R.id.action_homeFragment_to_rideFragment)
+                controller.navigate(
+                    if (App.provide(requireContext()).settings.isCar) R.id.action_homeFragment_to_driveFragment
+                    else R.id.action_homeFragment_to_rideFragment
+                )
             }
         }
 
@@ -628,6 +631,7 @@ class HomeFragment : Fragment() {
         super.onResume()
         AppLog.i("HomeFragment: onResume. isConnected=${commManager.isConnected}")
         refreshThemeToggle()
+        refreshDashboardTile()
         updateClock()
         refreshStatusIndicators()
         val batteryIntent = requireContext().registerReceiver(batteryReceiver, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
@@ -642,6 +646,21 @@ class HomeFragment : Fragment() {
         // returning restores it in place (same listener/behavior).
         exitButton.visibility =
             if (App.provide(requireContext()).settings.useAsLauncher) View.GONE else View.VISIBLE
+    }
+
+    /**
+     * The dashboard tile follows Settings › General › Vehicle type. Re-read on every resume, since
+     * the setting is changed in SettingsActivity and Home comes back without being rebuilt.
+     */
+    private fun refreshDashboardTile() {
+        val view = view ?: return
+        val car = App.provide(requireContext()).settings.isCar
+        val label = getString(if (car) R.string.drive else R.string.ride)
+        view.findViewById<TextView>(R.id.ride_label)?.text = label
+        view.findViewById<ImageView>(R.id.ride_icon)?.let {
+            it.setImageResource(if (car) R.drawable.ic_m3_car else R.drawable.ic_m3_motorcycle)
+            it.contentDescription = label
+        }
     }
 
     override fun onPause() {

@@ -654,4 +654,27 @@
     <string name="license_status_verified">Ellenőrizve: %1$s</string>
     <string name="license_status_unverified">Nincs ellenőrizve</string>
     <string name="license_kept_on_reset">A licenc megmarad.</string>
+    <string name="drive">Vezetés</string>
+    <string name="vehicle_type">Járműtípus</string>
+    <string name="vehicle_type_motorcycle">Motorkerékpár</string>
+    <string name="vehicle_type_car">Autó</string>
+    <string name="drive_attitude">BÓLINTÁS ÉS DŐLÉS</string>
+    <string name="drive_pitch">BÓLINTÁS</string>
+    <string name="drive_roll">DŐLÉS</string>
+    <string name="drive_heading">IRÁNY</string>
+    <string name="drive_attitude_learning">A rögzítés tanulása – vezessen tovább, vagy vízszintes helyzetben nyomja hosszan</string>
+    <string name="drive_level_set">Vízszint beállítva</string>
+    <string name="drive_gforce_max_left">M. BAL</string>
+    <string name="drive_gforce_max_right">M. JOBB</string>
+    <string-array name="drive_cardinals">
+        <item>É</item><item>ÉK</item><item>K</item><item>DK</item><item>D</item><item>DNy</item><item>Ny</item><item>ÉNy</item>
+    </string-array>
+    <string name="drive_arm_brake">FÉK</string>
+    <string name="drive_arm_acc">GÁZ</string>
+    <string name="drive_arm_left">B</string>
+    <string name="drive_arm_right">J</string>
+    <string name="drive_max">MAX</string>
+    <string name="drive_reset_max">Maximumok nullázása</string>
+    <string name="drive_set_level">Itt vízszintes</string>
+    <string name="drive_max_reset_done">Maximumok nullázva</string>
 </resources>

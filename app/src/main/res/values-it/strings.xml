@@ -662,4 +662,27 @@
     <string name="license_status_verified">Verificata il %1$s</string>
     <string name="license_status_unverified">Non verificata</string>
     <string name="license_kept_on_reset">La tua licenza viene conservata.</string>
+    <string name="drive">Guida</string>
+    <string name="vehicle_type">Tipo di veicolo</string>
+    <string name="vehicle_type_motorcycle">Moto</string>
+    <string name="vehicle_type_car">Auto</string>
+    <string name="drive_attitude">BECCHEGGIO E ROLLIO</string>
+    <string name="drive_pitch">BECCHEGGIO</string>
+    <string name="drive_roll">ROLLIO</string>
+    <string name="drive_heading">DIREZIONE</string>
+    <string name="drive_attitude_learning">Apprendimento del supporto: continua a guidare o tieni premuto quando sei in piano</string>
+    <string name="drive_level_set">Livello impostato</string>
+    <string name="drive_gforce_max_left">M. SIN.</string>
+    <string name="drive_gforce_max_right">M. DES.</string>
+    <string-array name="drive_cardinals">
+        <item>N</item><item>NE</item><item>E</item><item>SE</item><item>S</item><item>SO</item><item>O</item><item>NO</item>
+    </string-array>
+    <string name="drive_arm_brake">FRENO</string>
+    <string name="drive_arm_acc">ACC</string>
+    <string name="drive_arm_left">S</string>
+    <string name="drive_arm_right">D</string>
+    <string name="drive_max">MAX</string>
+    <string name="drive_reset_max">Azzera i massimi</string>
+    <string name="drive_set_level">Imposta il piano qui</string>
+    <string name="drive_max_reset_done">Massimi azzerati</string>
 </resources>

@@ -656,4 +656,27 @@
     <string name="license_status_verified">Підтверджено %1$s</string>
     <string name="license_status_unverified">Не підтверджено</string>
     <string name="license_kept_on_reset">Ліцензія зберігається.</string>
+    <string name="drive">Водіння</string>
+    <string name="vehicle_type">Тип транспортного засобу</string>
+    <string name="vehicle_type_motorcycle">Мотоцикл</string>
+    <string name="vehicle_type_car">Автомобіль</string>
+    <string name="drive_attitude">ТАНГАЖ І КРЕН</string>
+    <string name="drive_pitch">ТАНГАЖ</string>
+    <string name="drive_roll">КРЕН</string>
+    <string name="drive_heading">КУРС</string>
+    <string name="drive_attitude_learning">Визначається положення кріплення — продовжуйте рух або натисніть і утримуйте на рівному місці</string>
+    <string name="drive_level_set">Горизонт задано</string>
+    <string name="drive_gforce_max_left">М. ЛІВО</string>
+    <string name="drive_gforce_max_right">М. ПРАВО</string>
+    <string-array name="drive_cardinals">
+        <item>Пн</item><item>ПнСх</item><item>Сх</item><item>ПдСх</item><item>Пд</item><item>ПдЗх</item><item>Зх</item><item>ПнЗх</item>
+    </string-array>
+    <string name="drive_arm_brake">ГАЛЬМ</string>
+    <string name="drive_arm_acc">РОЗГ</string>
+    <string name="drive_arm_left">Л</string>
+    <string name="drive_arm_right">П</string>
+    <string name="drive_max">МАКС</string>
+    <string name="drive_reset_max">Скинути максимуми</string>
+    <string name="drive_set_level">Задати горизонт тут</string>
+    <string name="drive_max_reset_done">Максимуми скинуто</string>
 </resources>

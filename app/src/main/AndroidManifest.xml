@@ -123,52 +123,22 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
-            <!-- Navigation Role Registration (allows selecting as default nav app) -->
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.APP_MAPS" />
-                <category android:name="android.intent.category.APP_NAVIGATION" />
-            </intent-filter>
-
-            <!-- Navigation Intent Filter (handles system navigate actions) -->
-            <intent-filter>
-                <action android:name="android.intent.action.NAVIGATE" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
+            <!-- The upstream map/navigation filters (APP_MAPS, NAVIGATE, geo:, google.navigation:,
+                 http(s)://maps.google.com) were removed in 1.3.14: no code ever handled them, so the
+                 app only showed up in the chooser for map links, and Play flagged the unverifiable
+                 maps.google.com web links as broken deep links. -->
 
             <meta-data
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
 
-            <!-- Navigation Intent Filters & Deep Links -->
+            <!-- Deep Links -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="headunit" />
                 <data android:host="selfmode" />
-            </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="geo" />
-            </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="google.navigation" />
-            </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="http" android:host="maps.google.com" />
-                <data android:scheme="https" android:host="maps.google.com" />
             </intent-filter>
         </activity>
 

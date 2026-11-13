@@ -655,4 +655,27 @@
     <string name="license_status_verified">تم التحقق في %1$s</string>
     <string name="license_status_unverified">لم يتم التحقق</string>
     <string name="license_kept_on_reset">يتم الاحتفاظ بترخيصك.</string>
+    <string name="drive">القيادة</string>
+    <string name="vehicle_type">نوع المركبة</string>
+    <string name="vehicle_type_motorcycle">دراجة نارية</string>
+    <string name="vehicle_type_car">سيارة</string>
+    <string name="drive_attitude">الميل الأمامي والجانبي</string>
+    <string name="drive_pitch">أمامي</string>
+    <string name="drive_roll">جانبي</string>
+    <string name="drive_heading">الاتجاه</string>
+    <string name="drive_attitude_learning">جارٍ تعلّم وضع التثبيت — تابع القيادة أو اضغط مطولاً والسيارة مستوية</string>
+    <string name="drive_level_set">تم ضبط الاستواء</string>
+    <string name="drive_gforce_max_left">أقصى يسار</string>
+    <string name="drive_gforce_max_right">أقصى يمين</string>
+    <string-array name="drive_cardinals">
+        <item>ش</item><item>ش ق</item><item>ق</item><item>ج ق</item><item>ج</item><item>ج غ</item><item>غ</item><item>ش غ</item>
+    </string-array>
+    <string name="drive_arm_brake">فرامل</string>
+    <string name="drive_arm_acc">تسارع</string>
+    <string name="drive_arm_left">يسار</string>
+    <string name="drive_arm_right">يمين</string>
+    <string name="drive_max">أقصى</string>
+    <string name="drive_reset_max">إعادة ضبط القيم القصوى</string>
+    <string name="drive_set_level">اعتبار الوضع الحالي مستوياً</string>
+    <string name="drive_max_reset_done">تمت إعادة ضبط القيم القصوى</string>
 </resources>

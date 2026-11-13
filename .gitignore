@@ -86,3 +86,6 @@ deploy_old_tablet.sh
 # Source snapshots for publication, and the personal strings they are checked against
 dist/
 tools/leak-patterns.local
+
+# make_shot.sh scratch page
+tools/store_shots/_page.html

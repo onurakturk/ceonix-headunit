@@ -662,4 +662,27 @@
     <string name="license_status_verified">%1$s에 확인됨</string>
     <string name="license_status_unverified">확인되지 않음</string>
     <string name="license_kept_on_reset">라이선스는 유지됩니다.</string>
+    <string name="drive">드라이브</string>
+    <string name="vehicle_type">차량 유형</string>
+    <string name="vehicle_type_motorcycle">오토바이</string>
+    <string name="vehicle_type_car">자동차</string>
+    <string name="drive_attitude">피치 및 롤</string>
+    <string name="drive_pitch">피치</string>
+    <string name="drive_roll">롤</string>
+    <string name="drive_heading">방위</string>
+    <string name="drive_attitude_learning">거치 각도 학습 중 — 계속 주행하거나 수평일 때 길게 누르세요</string>
+    <string name="drive_level_set">수평이 설정되었습니다</string>
+    <string name="drive_gforce_max_left">최대 좌</string>
+    <string name="drive_gforce_max_right">최대 우</string>
+    <string-array name="drive_cardinals">
+        <item>북</item><item>북동</item><item>동</item><item>남동</item><item>남</item><item>남서</item><item>서</item><item>북서</item>
+    </string-array>
+    <string name="drive_arm_brake">제동</string>
+    <string name="drive_arm_acc">가속</string>
+    <string name="drive_arm_left">좌</string>
+    <string name="drive_arm_right">우</string>
+    <string name="drive_max">최대</string>
+    <string name="drive_reset_max">최대값 초기화</string>
+    <string name="drive_set_level">현재 위치를 수평으로 설정</string>
+    <string name="drive_max_reset_done">최대값이 초기화되었습니다</string>
 </resources>

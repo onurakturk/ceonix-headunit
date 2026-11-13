@@ -7,6 +7,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.andrerinas.headunitrevived.R
 import com.andrerinas.headunitrevived.utils.AppLog
 import com.andrerinas.headunitrevived.utils.Settings
+import kotlin.reflect.KMutableProperty0
 
 /**
  * Owns the Ride screen's pageable third card slot: the pager, the page indicator, which card holds
@@ -15,10 +16,19 @@ import com.andrerinas.headunitrevived.utils.Settings
  * Shaped like StatusBarController - a plain wrapper over an already-inflated view, with
  * attach/detach and start/stop mirrored to the fragment lifecycle - so RideFragment, which sits
  * next to the connection path, keeps a small diff.
+ *
+ * The Drive screen reuses it for its middle slot: it passes its own [cards] and the setting that
+ * stores its choice, and lays out a pager and dots under the same view ids. The defaults are the
+ * Ride slot's, so RideFragment's call is unchanged.
  */
-class RideCardsController(root: View, private val settings: Settings) {
+class RideCardsController(
+    root: View,
+    settings: Settings,
+    private val cards: List<RideCard> = RideCards.create(),
+    private val selectedId: KMutableProperty0<String> = settings::rideCardId,
+    private val logTag: String = "RideCards"
+) {
 
-    private val cards = RideCards.create()
     private val adapter = RideCardAdapter(cards)
     private val pager: ViewPager2 = root.findViewById(R.id.ride_card_pager)
     private val dots: RideCardDotsView = root.findViewById(R.id.ride_card_dots)
@@ -53,8 +63,8 @@ class RideCardsController(root: View, private val settings: Settings) {
             swapActiveCard(position)
             if (!persistPageChanges) return
             val card = cards.getOrNull(position) ?: return
-            settings.rideCardId = card.id
-            AppLog.i("RideCards: page selected -> " + card.id + " (saved)")
+            selectedId.set(card.id)
+            AppLog.i(logTag + ": page selected -> " + card.id + " (saved)")
         }
     }
 
@@ -62,7 +72,7 @@ class RideCardsController(root: View, private val settings: Settings) {
         dots.count = cards.size
         // Order matters: setAdapter resets the current item, so the restore has to follow it.
         pager.adapter = adapter
-        val index = RideCards.indexOfId(cards, settings.rideCardId)
+        val index = RideCards.indexOfId(cards, selectedId.get())
         pager.setCurrentItem(index, false)
         dots.selected = index
         pager.registerOnPageChangeCallback(pageCallback)

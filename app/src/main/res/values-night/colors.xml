@@ -34,6 +34,7 @@
     <color name="m3_apps_cont">#0F4C3A</color>
     <color name="m3_on_apps_cont">#8DF0C4</color>
     <color name="m3_error">#FFB4AB</color>
+    <color name="drive_warn">#FF5A4E</color>
     <color name="m3_sunset">#F0946A</color>
     <color name="m3_headlight">#6FE38A</color>
 </resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PITCH & ROLL page of the Drive screen's middle slot: the inclinometer from the design handoff
+    (design-assets/Pitch & Roll göstergesi tasarımı). PitchRollGaugeView draws the arcs, dots, cars
+    and readouts itself, scaled to whatever the card gives it.
+
+    Root is match_parent/match_parent for ViewPager2, and it is the long-press target ("level right
+    now"). The title sits top-left like every other card; the top-right is the page indicator's.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.andrerinas.headunitrevived.main.drive.PitchRollGaugeView
+        android:id="@+id/pitch_roll_gauge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/drive_attitude"
+        android:textColor="@color/m3_primary"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.14" />
+
+    <!-- Shown until the mount has been learned; centred above the bottom label rows, so it clears the MAX text. -->
+    <TextView
+        android:id="@+id/tv_attitude_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="40dp"
+        android:maxWidth="150dp"
+        android:gravity="center_horizontal"
+        android:text="@string/drive_attitude_learning"
+        android:textColor="@color/m3_on_surface_variant"
+        android:textSize="10sp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:visibility="gone" />
+
+</FrameLayout>

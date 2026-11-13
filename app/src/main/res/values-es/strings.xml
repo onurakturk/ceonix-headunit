@@ -663,4 +663,27 @@
     <string name="license_status_verified">Verificada el %1$s</string>
     <string name="license_status_unverified">Sin verificar</string>
     <string name="license_kept_on_reset">Su licencia se conserva.</string>
+    <string name="drive">Conducir</string>
+    <string name="vehicle_type">Tipo de vehículo</string>
+    <string name="vehicle_type_motorcycle">Motocicleta</string>
+    <string name="vehicle_type_car">Auto</string>
+    <string name="drive_attitude">CABECEO Y BALANCEO</string>
+    <string name="drive_pitch">CABECEO</string>
+    <string name="drive_roll">BALANCEO</string>
+    <string name="drive_heading">RUMBO</string>
+    <string name="drive_attitude_learning">Aprendiendo el soporte: sigue conduciendo o mantén pulsado cuando esté nivelado</string>
+    <string name="drive_level_set">Nivel establecido</string>
+    <string name="drive_gforce_max_left">M. IZQ.</string>
+    <string name="drive_gforce_max_right">M. DER.</string>
+    <string-array name="drive_cardinals">
+        <item>N</item><item>NE</item><item>E</item><item>SE</item><item>S</item><item>SO</item><item>O</item><item>NO</item>
+    </string-array>
+    <string name="drive_arm_brake">FRENO</string>
+    <string name="drive_arm_acc">ACEL</string>
+    <string name="drive_arm_left">I</string>
+    <string name="drive_arm_right">D</string>
+    <string name="drive_max">MÁX</string>
+    <string name="drive_reset_max">Restablecer máximos</string>
+    <string name="drive_set_level">Fijar nivel aquí</string>
+    <string name="drive_max_reset_done">Máximos restablecidos</string>
 </resources>

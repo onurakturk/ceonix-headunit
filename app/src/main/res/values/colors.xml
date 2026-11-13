@@ -60,6 +60,8 @@
     <color name="m3_apps_cont">#A8F2CE</color>
     <color name="m3_on_apps_cont">#002014</color>
     <color name="m3_error">#BA1A1A</color>
+    <!-- Drive pitch & roll warning (design handoff red; m3_error is a pale pink in dark). -->
+    <color name="drive_warn">#BA1A1A</color>
     <color name="m3_sunset">#C15A2E</color>
     <color name="m3_headlight">#2E9E4B</color>
 

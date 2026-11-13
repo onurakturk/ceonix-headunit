@@ -15,6 +15,8 @@ import com.ceonix.licensing.NetworkWatch
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import java.security.MessageDigest
+import java.util.Locale
 
 /**
  * The Play build's licence: checked once online, then valid on this device for good.
@@ -80,6 +82,11 @@ object LicenseGuard {
         initialised = true
         val state = evaluate(context)
         AppLog.i("LICENSE: startup state $state")
+        // Google's review devices: opened with the access code, nothing to ask the Play Store.
+        if (reviewAccess(app)) {
+            AppLog.i("LICENSE: review access is active on this device")
+            return
+        }
         when (state) {
             LicenseStatus.UNVERIFIED -> whenOnline(context) { verifyNow(context) }
             LicenseStatus.LICENSED -> whenOnline(context) { quietRefresh(context) }
@@ -149,9 +156,71 @@ object LicenseGuard {
         if (w.hasInternet()) action() else w.awaitInternet(action)
     }
 
-    private fun evaluate(context: Context): LicenseStatus = publish(gate(context).evaluate())
+    /**
+     * Opens this device for Google Play's app review, whose test devices get a signed NOT_LICENSED
+     * answer and would otherwise only ever see the lock screen. The code is handed to the reviewers
+     * in Play Console › App access; the app holds only its hash ([LicenseKeys.REVIEW_CODE_SHA256]).
+     * Once accepted it stays open on this device, whatever the Play Store answers later.
+     */
+    fun unlockForReview(context: Context, code: String): Boolean {
+        val app = context.applicationContext
+        val normalised = code.uppercase(Locale.ROOT).filter { it in 'A'..'Z' || it in '0'..'9' }
+        if (normalised.isEmpty() || sha256Hex(normalised) != LicenseKeys.REVIEW_CODE_SHA256) {
+            AppLog.w("LICENSE: review access code rejected")
+            return false
+        }
+        try {
+            reviewPrefs(app).edit().putBoolean(KEY_REVIEW_ACCESS, true).apply()
+        } catch (e: Exception) {
+            AppLog.w("LICENSE: could not store review access: ${e.message}")
+        }
+        reviewAccessCached = true
+        val before = _status.value
+        _status.value = LicenseStatus.LICENSED
+        AppLog.i("LICENSE: review access granted")
+        if (before != LicenseStatus.LICENSED) startWireless(app)
+        return true
+    }
+
+    private const val REVIEW_PREFS = "license_review"
+    private const val KEY_REVIEW_ACCESS = "review-access"
+
+    /** Cached once read; null until the credential-encrypted storage could be read. */
+    @Volatile private var reviewAccessCached: Boolean? = null
+
+    private fun reviewPrefs(app: Context) = app.getSharedPreferences(REVIEW_PREFS, Context.MODE_PRIVATE)
+
+    private fun reviewAccess(context: Context): Boolean {
+        reviewAccessCached?.let { return it }
+        val app = context.applicationContext
+        // Before the first unlock the preferences cannot be read; ask again later.
+        if (!gate(app).isStorageAvailable) return false
+        val stored = try {
+            reviewPrefs(app).getBoolean(KEY_REVIEW_ACCESS, false)
+        } catch (e: Exception) {
+            false
+        }
+        reviewAccessCached = stored
+        return stored
+    }
+
+    private fun sha256Hex(text: String): String =
+        MessageDigest.getInstance("SHA-256").digest(text.toByteArray(Charsets.UTF_8))
+            .joinToString("") { "%02x".format(it) }
+
+    private fun evaluate(context: Context): LicenseStatus {
+        if (reviewAccess(context)) {
+            _status.value = LicenseStatus.LICENSED
+            return LicenseStatus.LICENSED
+        }
+        return publish(gate(context).evaluate())
+    }
 
     private fun publish(state: LicenseState): LicenseStatus {
+        if (reviewAccessCached == true) {
+            _status.value = LicenseStatus.LICENSED
+            return LicenseStatus.LICENSED
+        }
         val status = when (state) {
             LicenseState.LICENSED -> LicenseStatus.LICENSED
             LicenseState.UNVERIFIED -> LicenseStatus.UNVERIFIED

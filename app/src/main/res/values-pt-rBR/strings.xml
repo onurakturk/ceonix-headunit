@@ -656,4 +656,27 @@
     <string name="license_status_verified">Verificada em %1$s</string>
     <string name="license_status_unverified">Não verificada</string>
     <string name="license_kept_on_reset">Sua licença é mantida.</string>
+    <string name="drive">Dirigir</string>
+    <string name="vehicle_type">Tipo de veículo</string>
+    <string name="vehicle_type_motorcycle">Motocicleta</string>
+    <string name="vehicle_type_car">Carro</string>
+    <string name="drive_attitude">ARFAGEM E ROLAGEM</string>
+    <string name="drive_pitch">ARFAGEM</string>
+    <string name="drive_roll">ROLAGEM</string>
+    <string name="drive_heading">RUMO</string>
+    <string name="drive_attitude_learning">Aprendendo o suporte — continue dirigindo ou pressione e segure quando estiver nivelado</string>
+    <string name="drive_level_set">Nível definido</string>
+    <string name="drive_gforce_max_left">M. ESQ.</string>
+    <string name="drive_gforce_max_right">M. DIR.</string>
+    <string-array name="drive_cardinals">
+        <item>N</item><item>NE</item><item>L</item><item>SE</item><item>S</item><item>SO</item><item>O</item><item>NO</item>
+    </string-array>
+    <string name="drive_arm_brake">FREIO</string>
+    <string name="drive_arm_acc">ACEL</string>
+    <string name="drive_arm_left">E</string>
+    <string name="drive_arm_right">D</string>
+    <string name="drive_max">MÁX</string>
+    <string name="drive_reset_max">Zerar máximos</string>
+    <string name="drive_set_level">Definir nível aqui</string>
+    <string name="drive_max_reset_done">Máximos zerados</string>
 </resources>

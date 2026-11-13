@@ -31,4 +31,7 @@ object LicenseGuard {
     }
 
     fun verifiedAtMillis(context: Context): Long? = null
+
+    /** Never needed here: the lock screen does not exist in this build. */
+    fun unlockForReview(context: Context, code: String): Boolean = true
 }

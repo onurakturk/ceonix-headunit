@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    G-FORCE page of the Drive screen's middle slot: the segmented "+" from the design handoff
+    (design-assets/Pitch & Roll göstergesi tasarımı/design_handoff_gforce_card). GForce4GaugeView
+    draws the cross, the combined figure and the maxima grid itself, scaled to the card.
+
+    Root is match_parent/match_parent for ViewPager2. The title sits top-left like every other
+    card; the top-right is the page indicator's. Long-press on the gauge resets the maxima.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.andrerinas.headunitrevived.main.drive.GForce4GaugeView
+        android:id="@+id/gforce4_gauge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/ride_gforce"
+        android:textColor="@color/m3_primary"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.14" />
+
+</FrameLayout>

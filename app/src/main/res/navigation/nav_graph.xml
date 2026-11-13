@@ -23,6 +23,13 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
         <action
+            android:id="@+id/action_homeFragment_to_driveFragment"
+            app:destination="@id/driveFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
             android:id="@+id/action_homeFragment_to_rideFragment"
             app:destination="@id/rideFragment"
             app:enterAnim="@anim/slide_in_right"
@@ -69,6 +76,19 @@
         android:label="@string/ride">
         <action
             android:id="@+id/action_rideFragment_to_appsDrawerFragment"
+            app:destination="@id/appsDrawerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/driveFragment"
+        android:name="com.andrerinas.headunitrevived.main.DriveFragment"
+        android:label="@string/drive">
+        <action
+            android:id="@+id/action_driveFragment_to_appsDrawerFragment"
             app:destination="@id/appsDrawerFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"

@@ -4,10 +4,15 @@ import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.text.InputType
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.FrameLayout
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -54,6 +59,12 @@ class LicenseLockFragment : Fragment() {
         verifyButton.setOnClickListener {
             AppLog.i("LICENSE: verify requested from the lock screen")
             LicenseGuard.verifyNow(requireContext())
+        }
+        // Hidden entry for Google Play's app review (Play Console › App access tells the reviewers
+        // to long-press the title). Not a crash path and not advertised anywhere in the UI.
+        title.setOnLongClickListener {
+            showReviewAccessDialog()
+            true
         }
         view.findViewById<MaterialButton>(R.id.license_wifi).setOnClickListener {
             open(Intent(android.provider.Settings.ACTION_WIFI_SETTINGS))
@@ -105,6 +116,31 @@ class LicenseLockFragment : Fragment() {
         nav.popBackStack()
         // Carry on with the setup chain (permissions, disclaimer) the lock screen interrupted.
         (activity as? MainActivity)?.checkSetupFlow()
+    }
+
+    private fun showReviewAccessDialog() {
+        val ctx = requireContext()
+        val input = EditText(ctx).apply {
+            setHint(R.string.license_review_hint)
+            isSingleLine = true
+            inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_CAP_CHARACTERS
+        }
+        val pad = (20 * resources.displayMetrics.density).toInt()
+        val box = FrameLayout(ctx).apply {
+            setPadding(pad, pad / 2, pad, 0)
+            addView(input)
+        }
+        AlertDialog.Builder(ctx)
+            .setTitle(R.string.license_review_title)
+            .setView(box)
+            .setPositiveButton(android.R.string.ok) { _, _ ->
+                if (!LicenseGuard.unlockForReview(ctx, input.text.toString())) {
+                    Toast.makeText(ctx, R.string.license_review_wrong, Toast.LENGTH_LONG).show()
+                }
+                // On success the status flow turns LICENSED and render() leaves this screen.
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
     }
 
     private fun open(intent: Intent): Boolean = try {

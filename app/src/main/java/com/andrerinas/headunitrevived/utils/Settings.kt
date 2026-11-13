@@ -579,6 +579,83 @@ class Settings(private val context: Context) {
         get() = prefs.getInt("gforce-max-brake", 0)
         set(value) { prefs.edit().putInt("gforce-max-brake", value).apply() }
 
+    /**
+     * What the head unit is fitted to: [VEHICLE_MOTORCYCLE] (the default, so an update changes
+     * nobody's setup) or [VEHICLE_CAR]. Decides whether Home opens the Ride or the Drive dashboard,
+     * and which estimators run in the background while Android Auto projects - in a car the lean
+     * engine is left off, so corners taken at car speeds cannot inflate the recorded lean maxima.
+     */
+    var vehicleType: String
+        get() = prefs.getString(KEY_VEHICLE_TYPE, VEHICLE_MOTORCYCLE)!!
+        set(value) { prefs.edit().putString(KEY_VEHICLE_TYPE, value).apply() }
+
+    val isCar: Boolean get() = vehicleType == VEHICLE_CAR
+
+    /** Drive screen's pageable middle slot; same stable-id rules as [rideCardId]. */
+    var driveCardId: String
+        get() = prefs.getString(KEY_DRIVE_CARD_ID, "")!!
+        set(value) { prefs.edit().putString(KEY_DRIVE_CARD_ID, value).apply() }
+
+    /**
+     * Drive four-way g maxima, in milli-g like [gforceMaxAcc]. Kept apart from the Ride ones so a
+     * car and a bike never share a record. Ride state, not preferences: not in the backup.
+     */
+    var driveMaxAcc: Int
+        get() = prefs.getInt("drive-max-acc", 0)
+        set(value) { prefs.edit().putInt("drive-max-acc", value).apply() }
+
+    var driveMaxBrake: Int
+        get() = prefs.getInt("drive-max-brake", 0)
+        set(value) { prefs.edit().putInt("drive-max-brake", value).apply() }
+
+    var driveMaxLeft: Int
+        get() = prefs.getInt("drive-max-left", 0)
+        set(value) { prefs.edit().putInt("drive-max-left", value).apply() }
+
+    var driveMaxRight: Int
+        get() = prefs.getInt("drive-max-right", 0)
+        set(value) { prefs.edit().putInt("drive-max-right", value).apply() }
+
+    /** Drive pitch & roll maxima in **tenths of a degree**, Lean-style ride state; not backed up. */
+    var driveMaxPitchUp: Int
+        get() = prefs.getInt("drive-max-pitch-up", 0)
+        set(value) { prefs.edit().putInt("drive-max-pitch-up", value).apply() }
+
+    var driveMaxPitchDown: Int
+        get() = prefs.getInt("drive-max-pitch-down", 0)
+        set(value) { prefs.edit().putInt("drive-max-pitch-down", value).apply() }
+
+    var driveMaxRollLeft: Int
+        get() = prefs.getInt("drive-max-roll-left", 0)
+        set(value) { prefs.edit().putInt("drive-max-roll-left", value).apply() }
+
+    var driveMaxRollRight: Int
+        get() = prefs.getInt("drive-max-roll-right", 0)
+        set(value) { prefs.edit().putInt("drive-max-roll-right", value).apply() }
+
+    /**
+     * The handset's "up" while the car stands level, in device coordinates, as "x,y,z" - the mount
+     * offset the Drive pitch & roll readout is measured against. Learned automatically while
+     * driving, or set on the spot by a long-press. Empty until either has happened. Device state
+     * (it describes this mount), not a preference: not in the backup.
+     */
+    var driveLevelUp: String
+        get() = prefs.getString("drive-level-up", "")!!
+        set(value) { prefs.edit().putString("drive-level-up", value).apply() }
+
+    /**
+     * Debug builds only (Developer › Debug): the Drive dashboard plays a synthetic drive instead of
+     * measuring, so its gauges can be judged on the bench. Not in the backup.
+     */
+    var driveDemo: Boolean
+        get() = prefs.getBoolean("drive-demo", false)
+        set(value) { prefs.edit().putBoolean("drive-demo", value).apply() }
+
+    /** Last heading the Drive compass showed, so a cold start opens on it. NaN until one exists. */
+    var driveLastHeading: Float
+        get() = prefs.getFloat("drive-last-heading", Float.NaN)
+        set(value) { prefs.edit().putFloat("drive-last-heading", value).apply() }
+
     var autoStartOnScreenOn: Boolean
         get() = prefs.getBoolean("auto-start-on-screen-on", false)
         set(value) { prefs.edit().putBoolean("auto-start-on-screen-on", value).apply() }
@@ -816,6 +893,10 @@ class Settings(private val context: Context) {
         /** SharedPreferences key; also used by [AapService] for change listener. */
         const val KEY_SYNC_MEDIA_SESSION_AA_METADATA = "sync-media-session-aa-metadata"
         const val KEY_RIDE_CARD_ID = "ride-card-id"
+        const val KEY_DRIVE_CARD_ID = "drive-card-id"
+        const val KEY_VEHICLE_TYPE = "vehicle-type"
+        const val VEHICLE_MOTORCYCLE = "motorcycle"
+        const val VEHICLE_CAR = "car"
 
         /** SharedPreferences key; also used by [AapService] for change listener. */
         const val KEY_LOG_LEVEL = "log-level"

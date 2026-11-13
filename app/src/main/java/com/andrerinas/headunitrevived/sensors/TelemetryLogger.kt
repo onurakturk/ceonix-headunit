@@ -25,7 +25,12 @@ import java.util.Locale
  *   /sdcard/Android/data/<pkg>/files/Documents/LeanTelemetry_yyyyMMdd_HHmmss.csv
  * Pull them with `pull_telemetry.sh` in the repo root.
  */
-class TelemetryLogger(context: Context) {
+class TelemetryLogger(
+    context: Context,
+    /** File name prefix; also what rotation matches, so each log keeps its own history. */
+    private val prefix: String = "LeanTelemetry_",
+    private val header: String = LEAN_HEADER
+) {
 
     private val appContext = context.applicationContext
     private val ioThread = HandlerThread("TelemetryLogger").apply { start() }
@@ -49,10 +54,10 @@ class TelemetryLogger(context: Context) {
                 if (!dir.exists()) dir.mkdirs()
                 rotateOldFiles(dir)
                 val stamp = java.text.SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(Date())
-                val f = File(dir, "LeanTelemetry_$stamp.csv")
+                val f = File(dir, "$prefix$stamp.csv")
                 file = f
                 val w = BufferedWriter(OutputStreamWriter(FileOutputStream(f, true), Charsets.UTF_8))
-                w.write("Time_ms,Speed_kmh,Raw_YawRate,Filtered_YawRate,Accel_Z,Fused_LeanAngle,Kin_Lean,Corner_s,Cornering,Active,Longitudinal_G,G_Gps,G_Conf")
+                w.write(header)
                 w.newLine()
                 w.flush()
                 writer = w
@@ -89,6 +94,26 @@ class TelemetryLogger(context: Context) {
         }
     }
 
+    /**
+     * Generic row for loggers other than the lean one: [values] in header order after the time
+     * column, four decimals each. The array is handed to the I/O thread, so pass a fresh one.
+     */
+    fun logRow(timeMs: Long, values: FloatArray) {
+        if (closed) return
+        io.post {
+            val w = writer ?: return@post
+            try {
+                val sb = StringBuilder(16 + values.size * 10).append(timeMs)
+                for (v in values) sb.append(',').append(String.format(Locale.US, "%.4f", v))
+                w.write(sb.toString())
+                w.newLine()
+                if (++rowsSinceFlush >= FLUSH_EVERY) { w.flush(); rowsSinceFlush = 0 }
+            } catch (e: Exception) {
+                AppLog.w("TelemetryLogger: write failed: ${e.message}")
+            }
+        }
+    }
+
     /** Flush, close, and stop the I/O thread. Idempotent; safe from any thread. */
     fun close() {
         if (closed) return
@@ -104,7 +129,7 @@ class TelemetryLogger(context: Context) {
     /** Keep only the most recent [MAX_FILES] telemetry CSVs; delete the oldest beyond that. */
     private fun rotateOldFiles(dir: File) {
         try {
-            val files = dir.listFiles { f -> f.name.startsWith("LeanTelemetry_") && f.name.endsWith(".csv") }
+            val files = dir.listFiles { f -> f.name.startsWith(prefix) && f.name.endsWith(".csv") }
                 ?: return
             if (files.size <= MAX_FILES) return
             files.sortedBy { it.lastModified() }
@@ -114,6 +139,10 @@ class TelemetryLogger(context: Context) {
     }
 
     companion object {
+        /** The lean log's columns - unchanged, LeanEstimator writes them through [log]. */
+        const val LEAN_HEADER =
+            "Time_ms,Speed_kmh,Raw_YawRate,Filtered_YawRate,Accel_Z,Fused_LeanAngle,Kin_Lean,Corner_s,Cornering,Active,Longitudinal_G,G_Gps,G_Conf"
+
         private const val FLUSH_EVERY = 20   // ~1 s at 20 Hz
         private const val MAX_FILES = 20
     }

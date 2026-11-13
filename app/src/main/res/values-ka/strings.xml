@@ -642,4 +642,27 @@
     <string name="license_status_verified">დადასტურდა %1$s</string>
     <string name="license_status_unverified">არ არის დადასტურებული</string>
     <string name="license_kept_on_reset">ლიცენზია შენარჩუნდება.</string>
+    <string name="drive">მართვა</string>
+    <string name="vehicle_type">სატრანსპორტო საშუალების ტიპი</string>
+    <string name="vehicle_type_motorcycle">მოტოციკლი</string>
+    <string name="vehicle_type_car">ავტომობილი</string>
+    <string name="drive_attitude">დახრა და გადახრა</string>
+    <string name="drive_pitch">დახრა</string>
+    <string name="drive_roll">გადახრა</string>
+    <string name="drive_heading">მიმართულება</string>
+    <string name="drive_attitude_learning">სამაგრის შესწავლა — განაგრძეთ მოძრაობა ან ხანგრძლივად დააჭირეთ ჰორიზონტალურ მდგომარეობაში</string>
+    <string name="drive_level_set">ჰორიზონტალი დაყენებულია</string>
+    <string name="drive_gforce_max_left">მ. მარცხ.</string>
+    <string name="drive_gforce_max_right">მ. მარჯ.</string>
+    <string-array name="drive_cardinals">
+        <item>ჩ</item><item>ჩა</item><item>ა</item><item>სა</item><item>ს</item><item>სდ</item><item>დ</item><item>ჩდ</item>
+    </string-array>
+    <string name="drive_arm_brake">მუხრ.</string>
+    <string name="drive_arm_acc">აჩქ.</string>
+    <string name="drive_arm_left">მარცხ.</string>
+    <string name="drive_arm_right">მარჯ.</string>
+    <string name="drive_max">მაქს</string>
+    <string name="drive_reset_max">მაქსიმუმების განულება</string>
+    <string name="drive_set_level">აქ ჰორიზონტალის დაყენება</string>
+    <string name="drive_max_reset_done">მაქსიმუმები განულდა</string>
 </resources>

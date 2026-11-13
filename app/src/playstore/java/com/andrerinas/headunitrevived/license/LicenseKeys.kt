@@ -41,6 +41,13 @@ internal object LicenseKeys {
     const val DEBUG_CERT =
         "54:F8:E1:4F:B2:9E:CF:4E:FA:C7:8B:C1:AB:19:8F:1F:8C:6F:2C:C0:ED:99:46:E5:43:E1:0D:E5:7F:DE:90:B4"
 
+    /**
+     * SHA-256 (hex) of the Play review access code, normalised to its letters and digits in upper
+     * case. The code itself lives only in Play Console › App content › App access and in the
+     * git-ignored dist folder; to revoke it, generate a new code and replace this hash.
+     */
+    const val REVIEW_CODE_SHA256 = "7959fab4b1b2a4e3a28bd4362e10c7c6ca55f33193fb7a67d3fd052404873c52"
+
     fun publicKey(): String {
         val out = StringBuilder()
         var i = 0

@@ -534,6 +534,27 @@ class SettingsFragment : Fragment() {
             onClick = { navigateSafely(R.id.action_settingsFragment_to_autoConnectFragment) }
         ))
 
+        // Picks the dashboard Home opens (Ride or Drive) and which estimators Android Auto keeps
+        // running in the background. Nothing to restart: both are read the next time they are used.
+        items.add(SettingItem.SettingEntry(
+            stableId = "vehicleType",
+            nameResId = R.string.vehicle_type,
+            value = getString(if (settings.isCar) R.string.vehicle_type_car else R.string.vehicle_type_motorcycle),
+            onClick = { _ ->
+                val values = arrayOf(Settings.VEHICLE_MOTORCYCLE, Settings.VEHICLE_CAR)
+                val labels = arrayOf(getString(R.string.vehicle_type_motorcycle), getString(R.string.vehicle_type_car))
+                MaterialAlertDialogBuilder(requireContext(), R.style.DarkAlertDialog)
+                    .setTitle(R.string.vehicle_type)
+                    .setSingleChoiceItems(labels, values.indexOf(settings.vehicleType).coerceAtLeast(0)) { dialog, which ->
+                        dialog.dismiss()
+                        settings.vehicleType = values[which]
+                        applyChange()
+                        updateSettingsList()
+                    }
+                    .show()
+            }
+        ))
+
         // Read when the phone ends a session; nothing to restart, applies to the next disconnect.
         items.add(SettingItem.ToggleSettingEntry(
             stableId = "stayConnected",
@@ -1127,6 +1148,21 @@ class SettingsFragment : Fragment() {
 
         // --- Debug Settings ---
         items.add(SettingItem.CategoryHeader("debug", R.string.category_debug))
+
+        // Debug builds only: animates the Drive dashboard with a synthetic drive so its gauges can
+        // be judged on the bench. Never shipped to Play users; the screen shows a DEMO badge.
+        if (BuildConfig.DEBUG) {
+            items.add(SettingItem.ToggleSettingEntry(
+                stableId = "driveDemo",
+                nameResId = R.string.drive_demo,
+                descriptionResId = R.string.drive_demo_description,
+                isChecked = settings.driveDemo,
+                onCheckedChanged = { isChecked ->
+                    settings.driveDemo = isChecked
+                    com.andrerinas.headunitrevived.sensors.DriveEstimator.setDemo(isChecked)
+                }
+            ))
+        }
 
         items.add(SettingItem.ToggleSettingEntry(
             stableId = "showFpsCounter",

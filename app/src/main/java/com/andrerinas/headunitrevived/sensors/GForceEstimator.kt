@@ -163,6 +163,17 @@ object GForceEstimator : SensorEventListener {
     val gpsG: Float get() = gGps
     val confidence: Float get() = fwdConfidence
 
+    /**
+     * Copies the learned forward axis (device coordinates, unit length) into [out] and returns how
+     * far it has been learned - 0 while nothing is. Read-only, for DriveEstimator, which needs the
+     * vehicle's forward direction to split tilt into pitch and roll. Same main-looper thread as the
+     * learning itself, so no locking.
+     */
+    fun forwardAxis(out: FloatArray): Float {
+        System.arraycopy(fwdRef, 0, out, 0, 3)
+        return fwdConfidence
+    }
+
     // ===== lifecycle =====
 
     @Synchronized

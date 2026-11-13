@@ -660,4 +660,27 @@
     <string name="license_status_verified">Bestätigt am %1$s</string>
     <string name="license_status_unverified">Nicht bestätigt</string>
     <string name="license_kept_on_reset">Deine Lizenz bleibt erhalten.</string>
+    <string name="drive">Fahren</string>
+    <string name="vehicle_type">Fahrzeugtyp</string>
+    <string name="vehicle_type_motorcycle">Motorrad</string>
+    <string name="vehicle_type_car">Auto</string>
+    <string name="drive_attitude">NICKEN UND WANKEN</string>
+    <string name="drive_pitch">NICKEN</string>
+    <string name="drive_roll">WANKEN</string>
+    <string name="drive_heading">KURS</string>
+    <string name="drive_attitude_learning">Halterung wird gelernt – weiterfahren oder in waagerechter Lage lange drücken</string>
+    <string name="drive_level_set">Waagerecht gesetzt</string>
+    <string name="drive_gforce_max_left">M. LINKS</string>
+    <string name="drive_gforce_max_right">M. RECHTS</string>
+    <string-array name="drive_cardinals">
+        <item>N</item><item>NO</item><item>O</item><item>SO</item><item>S</item><item>SW</item><item>W</item><item>NW</item>
+    </string-array>
+    <string name="drive_arm_brake">BREMS</string>
+    <string name="drive_arm_acc">GAS</string>
+    <string name="drive_arm_left">L</string>
+    <string name="drive_arm_right">R</string>
+    <string name="drive_max">MAX</string>
+    <string name="drive_reset_max">Maximalwerte zurücksetzen</string>
+    <string name="drive_set_level">Hier als waagerecht setzen</string>
+    <string name="drive_max_reset_done">Maximalwerte zurückgesetzt</string>
 </resources>

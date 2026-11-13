@@ -4,6 +4,32 @@ CEONIX Headunit is a fork of [headunit-revived](https://github.com/andreknieriem
 taken from its 3.1.1 release. This file lists only the changes made in CEONIX Headunit and
 CEONIX Setup. For the history before the fork, see the upstream project.
 
+## 1.3.15 (2026-11-13)
+
+- Drive: a dashboard for cars. Settings › General › Vehicle type › Car turns the home screen's Ride
+  card into Drive. Speed on the left; a swipeable centre card with pitch and roll (pitch is the
+  road grade, from the barometer or GPS altitude; roll is a 3-second average of the phone's tilt
+  against an axis it learns from braking and cornering) or a four-way g-force cross gauge (0.5 g
+  full scale); altitude and a heading arrow (GPS course plus gyroscope) on the right. Maxima for
+  each direction are kept; a long press offers "Reset maxima" and "Set level here". While Android
+  Auto is on screen in car mode, the Drive estimator runs instead of the motorcycle's lean and
+  g-force ones. The motorcycle Ride dashboard is unchanged.
+- Removed the map and navigation intent filters inherited from upstream (`geo:`,
+  `google.navigation:`, `http(s)://maps.google.com`, `NAVIGATE`, `APP_MAPS`): no code handled
+  them, so the app only appeared in the chooser for map links, and Google Play reported the
+  maps.google.com links as unverifiable deep links.
+- Google Play build: Conscrypt is no longer bundled. It was only installed below Android 5.0,
+  which the Play build does not support, and Play flagged its native library for 16 KB page
+  devices. The sideload build keeps it.
+- Google Play build: carries the review access code from 1.3.3.1.
+
+## 1.3.3.1 (2026-11-09)
+
+- Google Play build: an access code for Google Play's app review. Review devices are told the app
+  was not bought, so the reviewers only ever saw the purchase screen. A long press on its title
+  now asks for a code that is given to the reviewers in Play Console; the app holds only its
+  SHA-256 hash. Nothing changes for buyers.
+
 ## 1.3.3 (2026-10-28)
 
 - Google Play build: on a head unit with a screen lock, the licence was asked for again after

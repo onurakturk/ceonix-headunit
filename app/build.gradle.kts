@@ -10,9 +10,7 @@ plugins {
 }
 
 dependencies {
-    // Conscrypt
-    implementation("org.conscrypt:conscrypt-android:2.5.3")
-
+    // Conscrypt: GitHub flavour only, declared after android {} below.
     implementation("com.google.protobuf:protobuf-java:3.25.1")
     implementation("androidx.activity:activity-ktx:1.8.2")
     implementation("androidx.fragment:fragment-ktx:1.6.2")
@@ -99,8 +97,8 @@ android {
         applicationId = "com.ceonix.headunit"
         minSdk = 16
         targetSdk = 36
-        versionCode = 156
-        versionName = "1.3.3"
+        versionCode = 168
+        versionName = "1.3.15"
         setProperty("archivesBaseName", "${applicationId}_${versionName}")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled = true
@@ -218,6 +216,12 @@ android {
 // because the playstoreImplementation configuration only exists once the flavour does.
 dependencies {
     "playstoreImplementation"(project(":licensing"))
+
+    // Conscrypt: only installed below API 21 (ConscryptInitializer.isNeededForTls12), and reached
+    // only through reflection. The Play build is minSdk 21, so there it never ran — and Play
+    // flagged its prebuilt libconscrypt_jni.so as built with an NDK older than r28 (16 KB pages).
+    // The sideload build keeps it for API 16-20 head units.
+    "githubImplementation"("org.conscrypt:conscrypt-android:2.5.3")
 }
 
 // A Play release without its licensing values would lock every customer out (no key: nothing

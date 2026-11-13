@@ -684,6 +684,10 @@
     <string name="license_lock_title_tampered">This copy has been modified</string>
     <string name="license_lock_body_tampered">This app was not installed as Google Play delivered it. Uninstall it and install it again from Google Play.</string>
     <string name="license_lock_checking">Checking with Google Play…</string>
+    <!-- Google Play app review only (code given in Play Console › App access); English on purpose. -->
+    <string name="license_review_title" translatable="false">Review access</string>
+    <string name="license_review_hint" translatable="false">Access code</string>
+    <string name="license_review_wrong" translatable="false">That code is not valid.</string>
     <string name="license_lock_verify">Verify now</string>
     <string name="license_lock_wifi">Wi-Fi settings</string>
     <string name="license_lock_play" translatable="false">Google Play</string>
@@ -691,4 +695,30 @@
     <string name="license_status_verified">Verified on %1$s</string>
     <string name="license_status_unverified">Not verified</string>
     <string name="license_kept_on_reset">Your licence is kept.</string>
+    <string name="drive">Drive</string>
+    <string name="vehicle_type">Vehicle type</string>
+    <string name="vehicle_type_motorcycle">Motorcycle</string>
+    <string name="vehicle_type_car">Car</string>
+    <string name="drive_attitude">PITCH &amp; ROLL</string>
+    <string name="drive_pitch">PITCH</string>
+    <string name="drive_roll">ROLL</string>
+    <string name="drive_heading">HEADING</string>
+    <string name="drive_attitude_learning">Learning the mount — drive on, or long-press while level</string>
+    <string name="drive_level_set">Level set</string>
+    <string name="drive_demo" translatable="false">Drive demo</string>
+    <string name="drive_demo_description" translatable="false">Debug builds only. The Drive dashboard plays a synthetic drive instead of measuring, to check how the gauges look and move.</string>
+    <string name="drive_demo_badge" translatable="false">DEMO</string>
+    <string name="drive_gforce_max_left">M. LEFT</string>
+    <string name="drive_gforce_max_right">M. RIGHT</string>
+    <string-array name="drive_cardinals">
+        <item>N</item><item>NE</item><item>E</item><item>SE</item><item>S</item><item>SW</item><item>W</item><item>NW</item>
+    </string-array>
+    <string name="drive_arm_brake">BRK</string>
+    <string name="drive_arm_acc">ACC</string>
+    <string name="drive_arm_left">L</string>
+    <string name="drive_arm_right">R</string>
+    <string name="drive_max">MAX</string>
+    <string name="drive_reset_max">Reset maxima</string>
+    <string name="drive_set_level">Set level here</string>
+    <string name="drive_max_reset_done">Maxima reset</string>
 </resources>

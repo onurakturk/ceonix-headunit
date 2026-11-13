@@ -663,4 +663,27 @@
     <string name="license_status_verified">%1$s に確認済み</string>
     <string name="license_status_unverified">未確認</string>
     <string name="license_kept_on_reset">ライセンスは保持されます。</string>
+    <string name="drive">ドライブ</string>
+    <string name="vehicle_type">車両タイプ</string>
+    <string name="vehicle_type_motorcycle">オートバイ</string>
+    <string name="vehicle_type_car">自動車</string>
+    <string name="drive_attitude">ピッチとロール</string>
+    <string name="drive_pitch">ピッチ</string>
+    <string name="drive_roll">ロール</string>
+    <string name="drive_heading">方位</string>
+    <string name="drive_attitude_learning">取り付け角度を学習中 — 走行を続けるか、水平な場所で長押ししてください</string>
+    <string name="drive_level_set">水平を設定しました</string>
+    <string name="drive_gforce_max_left">最大左</string>
+    <string name="drive_gforce_max_right">最大右</string>
+    <string-array name="drive_cardinals">
+        <item>北</item><item>北東</item><item>東</item><item>南東</item><item>南</item><item>南西</item><item>西</item><item>北西</item>
+    </string-array>
+    <string name="drive_arm_brake">ブレーキ</string>
+    <string name="drive_arm_acc">加速</string>
+    <string name="drive_arm_left">左</string>
+    <string name="drive_arm_right">右</string>
+    <string name="drive_max">最大</string>
+    <string name="drive_reset_max">最大値をリセット</string>
+    <string name="drive_set_level">ここを水平に設定</string>
+    <string name="drive_max_reset_done">最大値をリセットしました</string>
 </resources>

@@ -656,4 +656,27 @@
     <string name="license_status_verified">Verificată la %1$s</string>
     <string name="license_status_unverified">Neverificată</string>
     <string name="license_kept_on_reset">Licența dvs. se păstrează.</string>
+    <string name="drive">Condus</string>
+    <string name="vehicle_type">Tip vehicul</string>
+    <string name="vehicle_type_motorcycle">Motocicletă</string>
+    <string name="vehicle_type_car">Autoturism</string>
+    <string name="drive_attitude">TANGAJ ȘI RULIU</string>
+    <string name="drive_pitch">TANGAJ</string>
+    <string name="drive_roll">RULIU</string>
+    <string name="drive_heading">DIRECȚIE</string>
+    <string name="drive_attitude_learning">Se învață suportul — continuați să conduceți sau apăsați lung când mașina este la nivel</string>
+    <string name="drive_level_set">Nivel setat</string>
+    <string name="drive_gforce_max_left">M. STÂNGA</string>
+    <string name="drive_gforce_max_right">M. DREAPTA</string>
+    <string-array name="drive_cardinals">
+        <item>N</item><item>NE</item><item>E</item><item>SE</item><item>S</item><item>SV</item><item>V</item><item>NV</item>
+    </string-array>
+    <string name="drive_arm_brake">FRÂNĂ</string>
+    <string name="drive_arm_acc">ACC</string>
+    <string name="drive_arm_left">S</string>
+    <string name="drive_arm_right">D</string>
+    <string name="drive_max">MAX</string>
+    <string name="drive_reset_max">Resetează maximele</string>
+    <string name="drive_set_level">Setează nivelul aici</string>
+    <string name="drive_max_reset_done">Maxime resetate</string>
 </resources>

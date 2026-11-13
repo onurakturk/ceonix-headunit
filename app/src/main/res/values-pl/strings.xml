@@ -656,4 +656,27 @@
     <string name="license_status_verified">Potwierdzono %1$s</string>
     <string name="license_status_unverified">Niepotwierdzona</string>
     <string name="license_kept_on_reset">Licencja zostaje zachowana.</string>
+    <string name="drive">Jazda</string>
+    <string name="vehicle_type">Typ pojazdu</string>
+    <string name="vehicle_type_motorcycle">Motocykl</string>
+    <string name="vehicle_type_car">Samochód</string>
+    <string name="drive_attitude">POCHYLENIE I PRZECHYŁ</string>
+    <string name="drive_pitch">POCHYLENIE</string>
+    <string name="drive_roll">PRZECHYŁ</string>
+    <string name="drive_heading">KURS</string>
+    <string name="drive_attitude_learning">Uczenie mocowania – jedź dalej lub przytrzymaj, gdy auto stoi poziomo</string>
+    <string name="drive_level_set">Poziom ustawiony</string>
+    <string name="drive_gforce_max_left">M. LEWO</string>
+    <string name="drive_gforce_max_right">M. PRAWO</string>
+    <string-array name="drive_cardinals">
+        <item>N</item><item>NE</item><item>E</item><item>SE</item><item>S</item><item>SW</item><item>W</item><item>NW</item>
+    </string-array>
+    <string name="drive_arm_brake">HAM</string>
+    <string name="drive_arm_acc">GAZ</string>
+    <string name="drive_arm_left">L</string>
+    <string name="drive_arm_right">P</string>
+    <string name="drive_max">MAKS</string>
+    <string name="drive_reset_max">Wyzeruj maksima</string>
+    <string name="drive_set_level">Ustaw poziom tutaj</string>
+    <string name="drive_max_reset_done">Maksima wyzerowane</string>
 </resources>

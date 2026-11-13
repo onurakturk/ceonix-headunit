@@ -661,4 +661,27 @@
     <string name="license_status_verified">Đã xác minh ngày %1$s</string>
     <string name="license_status_unverified">Chưa xác minh</string>
     <string name="license_kept_on_reset">Giấy phép của bạn được giữ lại.</string>
+    <string name="drive">Lái xe</string>
+    <string name="vehicle_type">Loại phương tiện</string>
+    <string name="vehicle_type_motorcycle">Xe máy</string>
+    <string name="vehicle_type_car">Ô tô</string>
+    <string name="drive_attitude">CHÚC NGẨNG VÀ NGHIÊNG</string>
+    <string name="drive_pitch">CHÚC NGẨNG</string>
+    <string name="drive_roll">NGHIÊNG</string>
+    <string name="drive_heading">HƯỚNG</string>
+    <string name="drive_attitude_learning">Đang học vị trí giá đỡ — tiếp tục lái hoặc nhấn giữ khi xe ở mặt phẳng</string>
+    <string name="drive_level_set">Đã đặt mặt phẳng</string>
+    <string name="drive_gforce_max_left">M. TRÁI</string>
+    <string name="drive_gforce_max_right">M. PHẢI</string>
+    <string-array name="drive_cardinals">
+        <item>B</item><item>ĐB</item><item>Đ</item><item>ĐN</item><item>N</item><item>TN</item><item>T</item><item>TB</item>
+    </string-array>
+    <string name="drive_arm_brake">PHANH</string>
+    <string name="drive_arm_acc">TĂNG</string>
+    <string name="drive_arm_left">T</string>
+    <string name="drive_arm_right">P</string>
+    <string name="drive_max">TỐI ĐA</string>
+    <string name="drive_reset_max">Đặt lại giá trị tối đa</string>
+    <string name="drive_set_level">Đặt mặt phẳng tại đây</string>
+    <string name="drive_max_reset_done">Đã đặt lại giá trị tối đa</string>
 </resources>

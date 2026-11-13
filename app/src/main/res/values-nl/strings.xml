@@ -655,4 +655,27 @@
     <string name="license_status_verified">Bevestigd op %1$s</string>
     <string name="license_status_unverified">Niet bevestigd</string>
     <string name="license_kept_on_reset">Je licentie blijft behouden.</string>
+    <string name="drive">Rijden</string>
+    <string name="vehicle_type">Voertuigtype</string>
+    <string name="vehicle_type_motorcycle">Motorfiets</string>
+    <string name="vehicle_type_car">Auto</string>
+    <string name="drive_attitude">STAMPEN EN ROLLEN</string>
+    <string name="drive_pitch">STAMPEN</string>
+    <string name="drive_roll">ROLLEN</string>
+    <string name="drive_heading">KOERS</string>
+    <string name="drive_attitude_learning">Houder wordt geleerd – rij verder of houd ingedrukt als de auto waterpas staat</string>
+    <string name="drive_level_set">Waterpas ingesteld</string>
+    <string name="drive_gforce_max_left">M. LINKS</string>
+    <string name="drive_gforce_max_right">M. RECHTS</string>
+    <string-array name="drive_cardinals">
+        <item>N</item><item>NO</item><item>O</item><item>ZO</item><item>Z</item><item>ZW</item><item>W</item><item>NW</item>
+    </string-array>
+    <string name="drive_arm_brake">REM</string>
+    <string name="drive_arm_acc">GAS</string>
+    <string name="drive_arm_left">L</string>
+    <string name="drive_arm_right">R</string>
+    <string name="drive_max">MAX</string>
+    <string name="drive_reset_max">Maxima resetten</string>
+    <string name="drive_set_level">Hier waterpas instellen</string>
+    <string name="drive_max_reset_done">Maxima gereset</string>
 </resources>
